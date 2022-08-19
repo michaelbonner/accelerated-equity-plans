@@ -3,21 +3,28 @@
 </svelte:head>
 
 <div class="flex min-h-[90vh] w-full justify-center items-center">
-	<div class="px-8 py-12 max-w-lg text-center grid gap-16">
-		<img
-			src="/images/accelerated-equity-plans.png"
-			alt="Accelerated Equity Plans logo"
-			width="484"
-			height="381"
-		/>
-		<div class="grid gap-16">
+	<div class="px-8 py-8 md:py-12 max-w-lg text-center grid gap-16">
+		<div class="grid gap-4 md:gap-8 text-center">
+			<img
+				class="mx-auto scale-90 md:scale-100"
+				src="/images/accelerated-equity-plans-mark.png"
+				alt="Accelerated Equity Plans logo"
+				width="191"
+				height="191"
+			/>
+			<h1 class="font-serif uppercase">
+				<span class="block text-4xl md:text-5xl font-bold">Accelerated</span>
+				<span class="block text-3xl md:text-4xl font-light">Equity Plans</span>
+			</h1>
+		</div>
+		<div class="grid gap-12 md:gap-24">
 			<h1 class="sr-only">Accelerated Equity Plans</h1>
 			<p>
 				Accelerated Equity Plans helps you create, manage, and implement equity compensation plans.
 				We’ll help you create a plan that’s right for your business and your needs.
 			</p>
 			<div class="grid gap-4">
-				<h2 class="text-2xl font-bold">Get in touch</h2>
+				<h2 class="text-3xl font-bold font-serif">Get in touch</h2>
 				<p>
 					<a
 						class="flex flex-wrap gap-2 underline underline-offset-2 items-center justify-center"
