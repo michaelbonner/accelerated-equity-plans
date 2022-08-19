@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import '../app.css';
 </script>
 
@@ -14,11 +14,13 @@
 
 		gtag('config', 'G-252472179V');
 	</script>
+
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
 	<link
+		as="style"
 		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Lora:wght@400;500;700&display=swap"
-		rel="stylesheet"
+		rel="preload"
 	/>
 </svelte:head>
 
