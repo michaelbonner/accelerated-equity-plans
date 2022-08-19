@@ -1,3 +1,7 @@
+<script lang="ts">
+	import Image from 'svimg';
+</script>
+
 <svelte:head>
 	<title>Accelerated Equity Plans</title>
 	<meta
@@ -19,13 +23,14 @@
 	<div class="flex min-h-[90vh] w-full items-center justify-center">
 		<div class="grid max-w-lg gap-16 px-8 py-8 text-center md:py-12">
 			<div class="grid gap-4 text-center md:gap-8">
-				<img
-					class="mx-auto scale-90 opacity-70 dark:invert md:scale-100"
-					src="/images/accelerated-equity-plans-mark.png"
-					alt="Accelerated Equity Plans logo"
-					width="191"
-					height="191"
-				/>
+				<div>
+					<Image
+						class="mx-auto scale-90 opacity-70 dark:invert md:scale-100"
+						src="/images/accelerated-equity-plans-mark.png"
+						alt="Accelerated Equity Plans logo"
+						width="191"
+					/>
+				</div>
 				<h1 class="font-serif uppercase">
 					<span class="block text-4xl font-bold md:text-5xl">Accelerated</span>
 					<span class="block text-3xl font-light md:text-4xl">Equity Plans</span>
