@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Accelerated Equity Plans</title>
+</svelte:head>
+
 <div class="flex h-[90vh] w-full justify-center items-center">
 	<div class="px-8 py-12 max-w-lg text-center grid gap-8">
 		<img
