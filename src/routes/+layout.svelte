@@ -1,5 +1,13 @@
 <script lang="ts">
 	import '../app.css';
+
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		document.querySelectorAll('link[rel="preload"]').forEach((link) => {
+			link.setAttribute('rel', 'stylesheet');
+		});
+	});
 </script>
 
 <svelte:head>
