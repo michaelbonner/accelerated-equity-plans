@@ -1,5 +1,14 @@
 <svelte:head>
 	<title>Accelerated Equity Plans</title>
+	<meta property="og:title" content="Accelerated Equity Plans" />
+	<meta
+		property="og:description"
+		content="Accelerated Equity Plans helps you create, manage, and implement equity compensation plans."
+	/>
+	<meta
+		property="og:image"
+		content="https://accelerated-equity-plans.vercel.app/images/og-image.jpg"
+	/>
 </svelte:head>
 
 <div class="text-zinc-800 dark:text-zinc-100">
