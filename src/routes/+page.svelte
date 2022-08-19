@@ -12,32 +12,32 @@
 </svelte:head>
 
 <div class="text-zinc-800 dark:text-zinc-100">
-	<div class="flex min-h-[90vh] w-full justify-center items-center">
-		<div class="px-8 py-8 md:py-12 max-w-lg text-center grid gap-16">
-			<div class="grid gap-4 md:gap-8 text-center">
+	<div class="flex min-h-[90vh] w-full items-center justify-center">
+		<div class="grid max-w-lg gap-16 px-8 py-8 text-center md:py-12">
+			<div class="grid gap-4 text-center md:gap-8">
 				<img
-					class="mx-auto scale-90 md:scale-100 opacity-70 dark:invert"
+					class="mx-auto scale-90 opacity-70 dark:invert md:scale-100"
 					src="/images/accelerated-equity-plans-mark.png"
 					alt="Accelerated Equity Plans logo"
 					width="191"
 					height="191"
 				/>
 				<h1 class="font-serif uppercase">
-					<span class="block text-4xl md:text-5xl font-bold">Accelerated</span>
-					<span class="block text-3xl md:text-4xl font-light">Equity Plans</span>
+					<span class="block text-4xl font-bold md:text-5xl">Accelerated</span>
+					<span class="block text-3xl font-light md:text-4xl">Equity Plans</span>
 				</h1>
 			</div>
 			<div class="grid gap-12 md:gap-24">
 				<h1 class="sr-only">Accelerated Equity Plans</h1>
-				<p class="md:text-lg font-light">
+				<p class="font-light md:text-lg">
 					Accelerated Equity Plans helps you create, manage, and implement equity compensation
 					plans. We’ll help you create a plan that’s right for your business and your needs.
 				</p>
 				<div class="grid gap-4">
-					<h2 class="text-3xl font-bold font-serif">Get in touch</h2>
+					<h2 class="font-serif text-3xl font-bold">Get in touch</h2>
 					<p>
 						<a
-							class="flex flex-wrap gap-2 underline underline-offset-2 items-center justify-center"
+							class="flex flex-wrap items-center justify-center gap-2 underline underline-offset-2"
 							href="https://linkedin.com/in/emily-bone-mba-cep"
 						>
 							<svg
@@ -60,7 +60,7 @@
 			</div>
 		</div>
 	</div>
-	<p class="max-w-5xl mx-auto font-light text-center text-sm pb-4">
+	<p class="mx-auto max-w-5xl pb-4 text-center text-sm font-light">
 		&copy;{new Date().getFullYear()} Accelerated Equity Plans, LLC
 	</p>
 </div>
