@@ -2,7 +2,7 @@
 	<title>Accelerated Equity Plans</title>
 </svelte:head>
 
-<div class="text-slate-800 dark:text-slate-100">
+<div class="text-stone-800 dark:text-stone-100">
 	<div class="flex min-h-[90vh] w-full justify-center items-center">
 		<div class="px-8 py-8 md:py-12 max-w-lg text-center grid gap-16">
 			<div class="grid gap-4 md:gap-8 text-center">
