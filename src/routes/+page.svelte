@@ -60,7 +60,7 @@
 			</div>
 		</div>
 	</div>
-	<p class="max-w-5xl mx-auto font-light text-center pb-4">
+	<p class="max-w-5xl mx-auto font-light text-center text-sm pb-4">
 		&copy;{new Date().getFullYear()} Accelerated Equity Plans, LLC
 	</p>
 </div>
