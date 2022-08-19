@@ -19,7 +19,7 @@
 		</div>
 		<div class="grid gap-12 md:gap-24">
 			<h1 class="sr-only">Accelerated Equity Plans</h1>
-			<p>
+			<p class="md:text-lg font-light">
 				Accelerated Equity Plans helps you create, manage, and implement equity compensation plans.
 				We’ll help you create a plan that’s right for your business and your needs.
 			</p>
