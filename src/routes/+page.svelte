@@ -2,7 +2,7 @@
 	<title>Accelerated Equity Plans</title>
 </svelte:head>
 
-<div class="flex h-[90vh] w-full justify-center items-center">
+<div class="flex min-h-[90vh] w-full justify-center items-center">
 	<div class="px-8 py-12 max-w-lg text-center grid gap-16">
 		<img
 			src="/images/accelerated-equity-plans.png"
@@ -43,6 +43,6 @@
 		</div>
 	</div>
 </div>
-<p class="max-w-5xl mx-auto font-light text-center">
+<p class="max-w-5xl mx-auto font-light text-center pb-4">
 	&copy;{new Date().getFullYear()} Accelerated Equity Plans, LLC
 </p>
