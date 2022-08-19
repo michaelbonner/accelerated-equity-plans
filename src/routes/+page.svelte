@@ -12,6 +12,6 @@
 		/>
 	</div>
 </div>
-<h1 class="max-w-5xl mx-auto font-light">
+<h1 class="max-w-5xl mx-auto font-light text-center">
 	&copy;{new Date().getFullYear()} Accelerated Equity Plans, LLC
 </h1>
