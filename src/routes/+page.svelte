@@ -1,5 +1,9 @@
 <svelte:head>
 	<title>Accelerated Equity Plans</title>
+	<meta
+		name="description"
+		content="Accelerated Equity Plans helps you create, manage, and implement equity compensation plans."
+	/>
 	<meta property="og:title" content="Accelerated Equity Plans" />
 	<meta
 		property="og:description"
