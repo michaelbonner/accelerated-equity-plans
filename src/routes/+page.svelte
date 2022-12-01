@@ -222,12 +222,10 @@
 			</div>
 		</div>
 		<div
-			class="mx-auto min-h-[40vh] max-w-7xl px-8 pt-8 text-center lg:grid lg:grid-cols-3 lg:gap-8"
+			class="mx-auto min-h-[40vh] max-w-7xl px-8 pt-8 lg:grid lg:grid-cols-3 lg:gap-8"
 			id="administration-support"
 		>
-			<h2 class="shrink-0 text-3xl font-bold tracking-tight sm:text-center sm:text-4xl">
-				Administration Support
-			</h2>
+			<h2 class="shrink-0 text-3xl font-bold tracking-tight sm:text-4xl">Administration Support</h2>
 			<div class="col-span-2 lg:text-left">
 				<p class="text-lg leading-8 text-gray-600">
 					Let us be a knowledgeable extension of your in-house equity team!
@@ -243,12 +241,10 @@
 			</div>
 		</div>
 		<div
-			class="mx-auto min-h-[40vh] max-w-7xl px-8 pt-8 text-center lg:grid lg:grid-cols-3 lg:gap-8"
+			class="mx-auto min-h-[40vh] max-w-7xl px-8 pt-8 lg:grid lg:grid-cols-3 lg:gap-8"
 			id="project-management"
 		>
-			<h2 class="shrink-0 text-3xl font-bold tracking-tight sm:text-center sm:text-4xl">
-				Project Management
-			</h2>
+			<h2 class="shrink-0 text-3xl font-bold tracking-tight sm:text-4xl">Project Management</h2>
 			<div class="col-span-2 lg:text-left">
 				<ul class="ml-8 list-inside list-disc">
 					<li>Equity platform implementation</li>
@@ -263,10 +259,10 @@
 			</div>
 		</div>
 		<div
-			class="mx-auto min-h-[40vh] max-w-7xl px-8 pt-8 text-center lg:grid lg:grid-cols-3 lg:gap-8"
+			class="mx-auto min-h-[40vh] max-w-7xl px-8 pt-8 lg:grid lg:grid-cols-3 lg:gap-8"
 			id="equity-ateam"
 		>
-			<h2 class="text-3xl font-bold tracking-tight sm:text-center sm:text-4xl">Equity A-Team</h2>
+			<h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Equity A-Team</h2>
 
 			<p class="col-span-2 text-left">
 				As subject matter experts, we can provide your organization with a complete Stock Plan
