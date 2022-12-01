@@ -53,9 +53,9 @@
 			</defs>
 		</svg>
 	</div>
-	<div class="px-6 pt-6 lg:px-8">
+	<div class="sticky top-0 z-10 bg-white px-6 py-4 lg:px-8 lg:py-6">
 		<div>
-			<nav class="flex h-9 items-center justify-between" aria-label="Global">
+			<nav class="flex items-center justify-between" aria-label="Global">
 				<div class="flex lg:min-w-0 lg:flex-1" aria-label="Global">
 					<a href="/" class="-m-1.5 p-1.5">
 						<span class="sr-only">Accelearated Equity Plans</span>
