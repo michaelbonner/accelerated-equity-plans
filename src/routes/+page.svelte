@@ -229,7 +229,7 @@
 				<p class="text-lg leading-8 text-gray-600">
 					Let us be a knowledgeable extension of your in-house equity team!
 				</p>
-				<ul class="mt-8 ml-8 list-inside list-disc">
+				<ul class="mt-8 ml-8 list-outside list-disc text-lg">
 					<li>Last minute and emergency coverage for all Plan matters</li>
 					<li>Ownership of assigned/daily tasks</li>
 					<li>
@@ -245,7 +245,7 @@
 		>
 			<h2 class="shrink-0 text-3xl font-bold tracking-tight sm:text-4xl">Project Management</h2>
 			<div class="col-span-2 lg:text-left">
-				<ul class="ml-8 list-inside list-disc">
+				<ul class="ml-8 list-outside list-disc text-lg">
 					<li>Equity platform implementation</li>
 					<li>3rd party vendor integrations for payroll, HRIS, mobility, etc.</li>
 					<li>Administration system functionality adoption and vetting</li>
