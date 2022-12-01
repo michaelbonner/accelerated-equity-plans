@@ -173,11 +173,10 @@
 						</h1>
 						<p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
 							Bringing industry leading expertise and support to your equity programs to deliver a
-							best-in-class experience for your team, partners and participants
-						</p>
-						<p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
-							Founded by industry experts with issuer and vendor experience for both Private and
-							Public organizations, we can handle all of your Equity Administration needs
+							best-in-class experience for your team, partners and participants. Founded by <span
+								class="font-bold">industry experts</span
+							> with issuer and vendor experience for both Private and Public organizations, we can handle
+							all of your Equity Administration needs
 						</p>
 						<div class="mt-8 flex gap-x-4 sm:justify-center">
 							<a
@@ -264,10 +263,18 @@
 		>
 			<h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Equity A-Team</h2>
 
-			<p class="col-span-2 text-left">
-				As subject matter experts, we can provide your organization with a complete Stock Plan
-				Administration team to handle all equity concerns!
-			</p>
+			<div class="col-span-2 ">
+				<p>
+					As subject matter experts, we can provide your organization with a complete Stock Plan
+					Administration team to handle all equity concerns!
+				</p>
+				<p class="mt-8 ">
+					Contact us: <a
+						class="text-red-800 underline underline-offset-4 transition-colors hover:text-red-900"
+						href="mailto:info@acceleratedep.com">info@acceleratedep.com</a
+					>
+				</p>
+			</div>
 		</div>
 	</main>
 	<footer class="bg-gray-800 px-8 py-12 text-gray-100">
