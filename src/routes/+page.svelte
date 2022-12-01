@@ -1,7 +1,3 @@
-<script lang="ts">
-	import Image from 'svimg';
-</script>
-
 <svelte:head>
 	<title>Accelerated Equity Plans</title>
 	<meta

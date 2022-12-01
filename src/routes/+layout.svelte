@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 
+	import Analytics from '$lib/analytics.svelte';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
@@ -32,5 +33,7 @@
 	/>
 	<meta name="google-site-verification" content="P9yZQUWa7MG_9CkMXW0nuZ0yUkn95LNLzUQMdNJOBtU" />
 </svelte:head>
+
+<Analytics />
 
 <slot />
