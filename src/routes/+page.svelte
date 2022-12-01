@@ -16,7 +16,7 @@
 </svelte:head>
 
 <!-- This example requires Tailwind CSS v3.0+ -->
-<div class="isolate bg-white font-serif">
+<div class="isolate bg-white">
 	<div
 		class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
 	>
