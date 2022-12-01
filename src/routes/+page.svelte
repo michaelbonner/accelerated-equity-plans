@@ -1,3 +1,11 @@
+<script>
+	let mobileMenuOpen = false;
+
+	function toggleMobileMenu() {
+		mobileMenuOpen = !mobileMenuOpen;
+	}
+</script>
+
 <svelte:head>
 	<title>Accelerated Equity Plans</title>
 	<meta
@@ -15,7 +23,6 @@
 	/>
 </svelte:head>
 
-<!-- This example requires Tailwind CSS v3.0+ -->
 <div class="isolate bg-white">
 	<div
 		class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
@@ -63,6 +70,7 @@
 					<button
 						type="button"
 						class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+						on:click={toggleMobileMenu}
 					>
 						<span class="sr-only">Open main menu</span>
 						<!-- Heroicon name: outline/bars-3 -->
@@ -97,66 +105,76 @@
 					>
 				</div>
 			</nav>
-			<!-- Mobile menu, show/hide based on menu open state. -->
-			<div role="dialog" aria-modal="true">
-				<div class="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
-					<div class="flex h-9 items-center justify-between">
-						<div class="flex">
-							<a href="/" class="-m-1.5 p-1.5">
-								<span class="sr-only">Accelle</span>
-								<img
-									class="h-8"
-									src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-									alt=""
-								/>
-							</a>
-						</div>
-						<div class="flex">
-							<button
-								type="button"
-								class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-							>
-								<span class="sr-only">Close menu</span>
-								<!-- Heroicon name: outline/x-mark -->
-								<svg
-									class="h-6 w-6"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									aria-hidden="true"
-								>
-									<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-								</svg>
-							</button>
-						</div>
-					</div>
-					<div class="mt-6 flow-root">
-						<div class="-my-6 divide-y divide-gray-500/10">
-							<div class="space-y-2 py-6">
-								<a
-									href="#administration-support"
-									class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
-									>Administration Support</a
-								>
 
-								<a
-									href="#project-management"
-									class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
-									>Project Management</a
+			{#if mobileMenuOpen}
+				<!-- Mobile menu, show/hide based on menu open state. -->
+				<div role="dialog" aria-modal="true">
+					<div class="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
+						<div class="flex h-9 items-center justify-between">
+							<div class="flex">
+								<a href="/" class="-m-1.5 p-1.5">
+									<span class="sr-only">Accellerated Equity Plans</span>
+									<img
+										class="h-12"
+										src="/images/accelerated-equity-plans.png"
+										alt="Accelearated Equity Plans Logo"
+									/>
+								</a>
+							</div>
+							<div class="flex">
+								<button
+									type="button"
+									class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+									on:click={toggleMobileMenu}
 								>
+									<span class="sr-only">Close menu</span>
+									<!-- Heroicon name: outline/x-mark -->
+									<svg
+										class="h-6 w-6"
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor"
+										aria-hidden="true"
+									>
+										<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="mt-6 flow-root">
+							<div class="-my-6 divide-y divide-gray-500/10">
+								<div class="space-y-2 py-6">
+									<a
+										href="#administration-support"
+										class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
+										on:click={toggleMobileMenu}
+									>
+										Administration Support
+									</a>
 
-								<a
-									href="#equity-ateam"
-									class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
-									>Equity A-Team</a
-								>
+									<a
+										href="#project-management"
+										class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
+										on:click={toggleMobileMenu}
+									>
+										Project Management
+									</a>
+
+									<a
+										href="#equity-ateam"
+										class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
+										on:click={toggleMobileMenu}
+									>
+										Equity A-Team
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			{/if}
 		</div>
 	</div>
 	<main>
@@ -220,7 +238,9 @@
 			class="mx-auto min-h-[40vh] max-w-7xl px-8 pt-8 lg:grid lg:grid-cols-3 lg:gap-8"
 			id="administration-support"
 		>
-			<h2 class="shrink-0 text-3xl font-bold tracking-tight sm:text-4xl">Administration Support</h2>
+			<h2 class="mb-8 shrink-0 text-3xl font-bold tracking-tight sm:text-4xl lg:mb-0">
+				Administration Support
+			</h2>
 			<div class="col-span-2 lg:text-left">
 				<p class="text-lg leading-8 text-gray-600">
 					Let us be a knowledgeable extension of your in-house equity team!
@@ -239,7 +259,9 @@
 			class="mx-auto min-h-[40vh] max-w-7xl px-8 pt-8 lg:grid lg:grid-cols-3 lg:gap-8"
 			id="project-management"
 		>
-			<h2 class="shrink-0 text-3xl font-bold tracking-tight sm:text-4xl">Project Management</h2>
+			<h2 class="mb-8 shrink-0 text-3xl font-bold tracking-tight sm:text-4xl lg:mb-0">
+				Project Management
+			</h2>
 			<div class="col-span-2 lg:text-left">
 				<ul class="ml-8 list-outside list-disc text-lg">
 					<li>Equity platform implementation</li>
@@ -257,7 +279,7 @@
 			class="mx-auto min-h-[40vh] max-w-7xl px-8 pt-8 lg:grid lg:grid-cols-3 lg:gap-8"
 			id="equity-ateam"
 		>
-			<h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Equity A-Team</h2>
+			<h2 class="mb-8 text-3xl font-bold tracking-tight sm:text-4xl lg:mb-0">Equity A-Team</h2>
 
 			<div class="col-span-2 ">
 				<p>
