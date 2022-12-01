@@ -19,57 +19,264 @@
 	/>
 </svelte:head>
 
-<div class="text-zinc-800 dark:text-zinc-100">
-	<div class="flex min-h-[90vh] w-full items-center justify-center">
-		<div class="grid max-w-lg gap-16 px-8 py-8 text-center md:py-12">
-			<div class="grid gap-4 text-center md:gap-8">
-				<div>
-					<Image
-						class="mx-auto scale-90 opacity-70 dark:invert md:scale-100"
-						src="/images/accelerated-equity-plans-mark.png"
-						alt="Accelerated Equity Plans logo"
-						width="191"
-					/>
+<!-- This example requires Tailwind CSS v3.0+ -->
+<div class="isolate bg-white font-serif">
+	<div
+		class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+	>
+		<svg
+			class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
+			viewBox="0 0 1155 678"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
+				fill-opacity=".3"
+				d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
+			/>
+			<defs>
+				<linearGradient
+					id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533"
+					x1="1155.49"
+					x2="-78.208"
+					y1=".177"
+					y2="474.645"
+					gradientUnits="userSpaceOnUse"
+				>
+					<stop stop-color="#9089FC" />
+					<stop offset="1" stop-color="#FF80B5" />
+				</linearGradient>
+			</defs>
+		</svg>
+	</div>
+	<div class="px-6 pt-6 lg:px-8">
+		<div>
+			<nav class="flex h-9 items-center justify-between" aria-label="Global">
+				<div class="flex lg:min-w-0 lg:flex-1" aria-label="Global">
+					<a href="/" class="-m-1.5 p-1.5">
+						<span class="sr-only">Accelearated Equity Plans</span>
+						<img
+							class="h-12"
+							src="/images/accelerated-equity-plans.png"
+							alt="Accelearated Equity Plans Logo"
+						/>
+					</a>
 				</div>
-				<h1 class="font-serif uppercase">
-					<span class="block text-4xl font-bold md:text-5xl">Accelerated</span>
-					<span class="block text-3xl font-light md:text-4xl">Equity Plans</span>
-				</h1>
-			</div>
-			<div class="grid gap-12 md:gap-24">
-				<h1 class="sr-only">Accelerated Equity Plans</h1>
-				<p class="font-light md:text-lg">
-					Accelerated Equity Plans helps you create, manage, and implement equity compensation
-					plans. We’ll help you create a plan that’s right for your business and your needs.
-				</p>
-				<div class="grid gap-4">
-					<h2 class="font-serif text-3xl font-bold">Get in touch</h2>
-					<p>
-						<a
-							class="flex flex-wrap items-center justify-center gap-2 underline underline-offset-2"
-							href="https://linkedin.com/in/emily-bone-mba-cep"
+				<div class="flex lg:hidden">
+					<button
+						type="button"
+						class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+					>
+						<span class="sr-only">Open main menu</span>
+						<!-- Heroicon name: outline/bars-3 -->
+						<svg
+							class="h-6 w-6"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							aria-hidden="true"
 						>
-							<svg
-								stroke="currentColor"
-								fill="currentColor"
-								stroke-width="0"
-								viewBox="0 0 24 24"
-								height="1em"
-								width="1em"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M20.45175,20.45025 L16.89225,20.45025 L16.89225,14.88075 C16.89225,13.5525 16.86975,11.844 15.04275,11.844 C13.191,11.844 12.90825,13.2915 12.90825,14.7855 L12.90825,20.45025 L9.3525,20.45025 L9.3525,8.997 L12.765,8.997 L12.765,10.563 L12.81375,10.563 C13.2885,9.66225 14.4495,8.71275 16.18125,8.71275 C19.78575,8.71275 20.45175,11.08425 20.45175,14.169 L20.45175,20.45025 Z M5.33925,7.4325 C4.1955,7.4325 3.27375,6.50775 3.27375,5.36775 C3.27375,4.2285 4.1955,3.30375 5.33925,3.30375 C6.47775,3.30375 7.4025,4.2285 7.4025,5.36775 C7.4025,6.50775 6.47775,7.4325 5.33925,7.4325 L5.33925,7.4325 Z M7.11975,20.45025 L3.5565,20.45025 L3.5565,8.997 L7.11975,8.997 L7.11975,20.45025 Z M23.00025,0 L1.0005,0 C0.44775,0 0,0.44775 0,0.99975 L0,22.9995 C0,23.55225 0.44775,24 1.0005,24 L23.00025,24 C23.55225,24 24,23.55225 24,22.9995 L24,0.99975 C24,0.44775 23.55225,0 23.00025,0 L23.00025,0 Z"
-								/></svg
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+							/>
+						</svg>
+					</button>
+				</div>
+				<div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
+					<a href="#administration-support" class="font-semibold text-gray-900 hover:text-gray-900"
+						>Administration Support</a
+					>
+
+					<a href="#project-management" class="font-semibold text-gray-900 hover:text-gray-900"
+						>Project Management</a
+					>
+
+					<a href="#equity-ateam" class="font-semibold text-gray-900 hover:text-gray-900"
+						>Equity A-Team</a
+					>
+				</div>
+			</nav>
+			<!-- Mobile menu, show/hide based on menu open state. -->
+			<div role="dialog" aria-modal="true">
+				<div class="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
+					<div class="flex h-9 items-center justify-between">
+						<div class="flex">
+							<a href="/" class="-m-1.5 p-1.5">
+								<span class="sr-only">Accelle</span>
+								<img
+									class="h-8"
+									src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+									alt=""
+								/>
+							</a>
+						</div>
+						<div class="flex">
+							<button
+								type="button"
+								class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
 							>
-							<span> linkedin.com/in/emily-bone-mba-cep </span>
-						</a>
-					</p>
+								<span class="sr-only">Close menu</span>
+								<!-- Heroicon name: outline/x-mark -->
+								<svg
+									class="h-6 w-6"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor"
+									aria-hidden="true"
+								>
+									<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="mt-6 flow-root">
+						<div class="-my-6 divide-y divide-gray-500/10">
+							<div class="space-y-2 py-6">
+								<a
+									href="#administration-support"
+									class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
+									>Administration Support</a
+								>
+
+								<a
+									href="#project-management"
+									class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
+									>Project Management</a
+								>
+
+								<a
+									href="#equity-ateam"
+									class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
+									>Equity A-Team</a
+								>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<p class="mx-auto max-w-5xl pb-4 text-center text-sm font-light">
-		&copy;{new Date().getFullYear()} Accelerated Equity Plans, LLC
-	</p>
+	<main>
+		<div class="relative px-6 lg:px-8">
+			<div class="mx-auto grid min-h-[60vh] max-w-3xl items-center pt-20 pb-32 sm:pt-48 sm:pb-40">
+				<div>
+					<div>
+						<h1 class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
+							Accelearated Equity Plans
+						</h1>
+						<p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
+							Bringing industry leading expertise and support to your equity programs to deliver a
+							best-in-class experience for your team, partners and participants
+						</p>
+						<p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
+							Founded by industry experts with issuer and vendor experience for both Private and
+							Public organizations, we can handle all of your Equity Administration needs
+						</p>
+						<div class="mt-8 flex gap-x-4 sm:justify-center">
+							<a
+								href="mailto:info@acceleratedep.com"
+								class="inline-block rounded-lg bg-red-700 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-red-700 hover:bg-red-800 hover:ring-red-800"
+							>
+								Get in touch
+								<span class="text-red-200" aria-hidden="true">&rarr;</span>
+							</a>
+						</div>
+					</div>
+					<div
+						class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+					>
+						<svg
+							class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
+							viewBox="0 0 1155 678"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)"
+								fill-opacity=".3"
+								d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
+							/>
+							<defs>
+								<linearGradient
+									id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc"
+									x1="1155.49"
+									x2="-78.208"
+									y1=".177"
+									y2="474.645"
+									gradientUnits="userSpaceOnUse"
+								>
+									<stop stop-color="hsl(358deg 66% 40%)" />
+									<stop offset="1" stop-color="#dbdbdb" />
+								</linearGradient>
+							</defs>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="mx-auto min-h-[40vh] max-w-7xl px-8 pt-8 text-center lg:grid lg:grid-cols-3 lg:gap-8"
+			id="administration-support"
+		>
+			<h2 class="shrink-0 text-3xl font-bold tracking-tight sm:text-center sm:text-4xl">
+				Administration Support
+			</h2>
+			<div class="col-span-2 lg:text-left">
+				<p class="text-lg leading-8 text-gray-600">
+					Let us be a knowledgeable extension of your in-house equity team!
+				</p>
+				<ul class="mt-8 ml-8 list-inside list-disc">
+					<li>Last minute and emergency coverage for all Plan matters</li>
+					<li>Ownership of assigned/daily tasks</li>
+					<li>
+						Process review, enhancement, and documentation &ndash; setting your team up for success
+						for years to come!
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div
+			class="mx-auto min-h-[40vh] max-w-7xl px-8 pt-8 text-center lg:grid lg:grid-cols-3 lg:gap-8"
+			id="project-management"
+		>
+			<h2 class="shrink-0 text-3xl font-bold tracking-tight sm:text-center sm:text-4xl">
+				Project Management
+			</h2>
+			<div class="col-span-2 lg:text-left">
+				<ul class="ml-8 list-inside list-disc">
+					<li>Equity platform implementation</li>
+					<li>3rd party vendor integrations for payroll, HRIS, mobility, etc.</li>
+					<li>Administration system functionality adoption and vetting</li>
+					<li>Process review and documentation of best practices</li>
+					<li>Employee education and resources</li>
+					<li>Plan design</li>
+					<li>Corporate Actions</li>
+					<li>Vendor selection</li>
+				</ul>
+			</div>
+		</div>
+		<div
+			class="mx-auto min-h-[40vh] max-w-7xl px-8 pt-8 text-center lg:grid lg:grid-cols-3 lg:gap-8"
+			id="equity-ateam"
+		>
+			<h2 class="text-3xl font-bold tracking-tight sm:text-center sm:text-4xl">Equity A-Team</h2>
+
+			<p class="col-span-2 text-left">
+				As subject matter experts, we can provide your organization with a complete Stock Plan
+				Administration team to handle all equity concerns!
+			</p>
+		</div>
+	</main>
+	<footer class="bg-gray-800 px-8 py-12 text-gray-100">
+		<div class="mx-auto max-w-7xl ">
+			&copy; {new Date().getFullYear()} Accelearated Equity Plans
+		</div>
+	</footer>
 </div>
