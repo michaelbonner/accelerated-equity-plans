@@ -58,11 +58,11 @@
 			<nav class="flex items-center justify-between" aria-label="Global">
 				<div class="flex lg:min-w-0 lg:flex-1" aria-label="Global">
 					<a href="/" class="-m-1.5 p-1.5">
-						<span class="sr-only">Accelearated Equity Plans</span>
+						<span class="sr-only">Accelerated Equity Plans</span>
 						<img
 							class="h-12"
 							src="/images/accelerated-equity-plans.png"
-							alt="Accelearated Equity Plans Logo"
+							alt="Accelerated Equity Plans Logo"
 						/>
 					</a>
 				</div>
@@ -73,7 +73,6 @@
 						on:click={toggleMobileMenu}
 					>
 						<span class="sr-only">Open main menu</span>
-						<!-- Heroicon name: outline/bars-3 -->
 						<svg
 							class="h-6 w-6"
 							xmlns="http://www.w3.org/2000/svg"
@@ -113,11 +112,11 @@
 						<div class="flex h-9 items-center justify-between">
 							<div class="flex">
 								<a href="/" class="-m-1.5 p-1.5">
-									<span class="sr-only">Accellerated Equity Plans</span>
+									<span class="sr-only">Accelerated Equity Plans</span>
 									<img
 										class="h-12"
 										src="/images/accelerated-equity-plans.png"
-										alt="Accelearated Equity Plans Logo"
+										alt="Accelerated Equity Plans Logo"
 									/>
 								</a>
 							</div>
@@ -128,7 +127,6 @@
 									on:click={toggleMobileMenu}
 								>
 									<span class="sr-only">Close menu</span>
-									<!-- Heroicon name: outline/x-mark -->
 									<svg
 										class="h-6 w-6"
 										xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +181,7 @@
 				<div>
 					<div>
 						<h1 class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
-							Accelearated Equity Plans
+							Accelerated Equity Plans
 						</h1>
 						<p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
 							Bringing industry leading expertise and support to your equity programs to deliver a
@@ -297,7 +295,7 @@
 	</main>
 	<footer class="bg-gray-800 px-8 py-12 text-gray-100">
 		<div class="mx-auto max-w-7xl ">
-			&copy; {new Date().getFullYear()} Accelearated Equity Plans
+			&copy; {new Date().getFullYear()} Accelerated Equity Plans
 		</div>
 	</footer>
 </div>
