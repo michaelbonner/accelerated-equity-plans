@@ -1,4 +1,4 @@
-![AEP Image](./static/images/og-image.jpg)
+![AEP Image](./static/images/og-image.png)
 
 # Accelerated Equity Plans
 

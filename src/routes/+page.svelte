@@ -19,7 +19,7 @@
 	/>
 	<meta
 		property="og:image"
-		content="https://accelerated-equity-plans.vercel.app/images/og-image.jpg"
+		content="https://accelerated-equity-plans.vercel.app/images/og-image.png"
 	/>
 </svelte:head>
 
