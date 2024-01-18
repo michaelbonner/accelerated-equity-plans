@@ -314,38 +314,21 @@
 						>
 					</div>
 					<p>
-						Emily is a distinguished professional and the visionary founder of Accelerated Equity
-						Plans. With a stellar background in business administration and a Master's in Business
-						Administration (MBA) to her name, Emily brings a wealth of knowledge and strategic
-						acumen to the realm of equity programs.
+						Through positions held with both equity compensation issuers and administration vendors,
+						Emily's career has equipped her with extensive knowledge in equity matters for both
+						private and public equity plans. Her unique blend of hands-on experience and exposure to
+						the intricacies of many equity plans positions her as a trusted partner in the ever
+						evolving landscape of equity compensation.
 					</p>
 					<p>
-						As a Certified Equity Professional (CEP), Emily has demonstrated a mastery of the
-						intricacies of equity compensation, making her a trusted authority in the field. Her
-						commitment to excellence is reflected in the industry-leading expertise she provides,
-						ensuring that clients receive unparalleled support for all their equity program needs.
+						With specialties in plan administration, process analysis and design, system and
+						functionality implementation, as well as project management and execution, she has
+						empowered organizations to optimize their equity compensation procedures, strategies and
+						overall value.
 					</p>
-
 					<p>
-						With a passion for innovation and a keen understanding of market dynamics, Emily founded
-						Accelerated Equity Plans to address the evolving landscape of equity compensation. Under
-						her leadership, the company has become synonymous with cutting-edge solutions, tailored
-						to meet the unique requirements of each client.
-					</p>
-
-					<p>
-						Emily's approach is characterized by a blend of financial acuity, strategic vision, and
-						a dedication to client success. She is known for her ability to navigate the
-						complexities of equity programs, offering insights that empower organizations to
-						optimize their equity compensation strategies.
-					</p>
-
-					<p>
-						A trailblazer in her field, Emily Bone continues to shape the landscape of equity
-						compensation, providing clients with the tools and guidance they need to thrive in an
-						ever-changing business environment. As the founder of Accelerated Equity Plans, she
-						remains at the forefront of industry innovation, ensuring that businesses receive the
-						support they require for sustainable growth and success.
+						Emily has obtained her Certified Equity Professional (CEP) designation, and has also
+						earned an MBA in Finance from Pepperdine University.
 					</p>
 				</div>
 				<div class="prose pt-6 pb-12 px-8 rounded-lg shadow-2xl min-w-full">
@@ -370,39 +353,21 @@
 						>
 					</div>
 					<p>
-						Neil is a seasoned professional and a valued Partner at Accelerated Equity Plans, where
-						he spearheads the Global Equity & Incentives division. With a focus on equity
-						compensation and a Certified Equity Professional (CEP) designation, Neil brings a wealth
-						of expertise to the strategic management of global equity programs.
+						Neil's career, shaped by roles at Deloitte and equity administration vendors, reflects
+						his deep expertise in guiding both private and public organizations through the
+						complexities of equity compensation. His consulting expertise extends across vital
+						domains, including payroll and mobility, financial reporting, HR, and the nuanced global
+						tax implications associated with equity compensation.
 					</p>
-
 					<p>
-						Having demonstrated exceptional proficiency in navigating the intricacies of equity
-						incentives, Neil has emerged as a key player in the field. As a Partner at Accelerated
-						Equity Plans, he plays a pivotal role in shaping and executing comprehensive strategies
-						that align with clients' global equity objectives.
+						Neil specializes in establishing innovative processes for organizations seeking
+						efficiency and strategic alignment - empowering companies to seamlessly integrate and
+						automate essential functions including equity administration, payroll and HRIS system
+						integrations.
 					</p>
-
 					<p>
-						Neil's career journey is marked by a commitment to excellence and a dedication to
-						helping organizations maximize the potential of their equity and incentive programs. His
-						role as a Partner reflects his leadership and collaborative approach, ensuring that
-						clients receive tailored solutions that address their unique needs in the global arena.
-					</p>
-
-					<p>
-						With a keen understanding of the complexities surrounding international equity programs,
-						Neil is adept at crafting strategies that account for regulatory nuances and market
-						dynamics. His guidance empowers organizations to navigate the challenges of a globalized
-						business landscape, providing them with the tools they need to attract and retain top
-						talent.
-					</p>
-
-					<p>
-						In his capacity as Partner, Global Equity & Incentives, Neil Birrell continues to drive
-						innovation and deliver results for clients at Accelerated Equity Plans. His strategic
-						vision and in-depth knowledge make him an invaluable asset, contributing to the
-						company's reputation as a leader in the field of global equity compensation.
+						Neil holds his Certified Equity Professional (CEP) designation and has also obtained a
+						BS in Finance from the University of Utah.
 					</p>
 				</div>
 			</div>
