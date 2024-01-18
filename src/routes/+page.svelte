@@ -273,18 +273,15 @@
 				</ul>
 			</div>
 		</div>
-		<div
-			class="mx-auto min-h-[40vh] max-w-7xl px-8 pt-8 lg:grid lg:grid-cols-3 lg:gap-8"
-			id="equity-ateam"
-		>
+		<div class="mx-auto max-w-7xl px-8 pt-8 lg:grid lg:grid-cols-3 lg:gap-8" id="equity-ateam">
 			<h2 class="mb-8 text-3xl font-bold tracking-tight sm:text-4xl lg:mb-0">Equity A-Team</h2>
 
-			<div class="col-span-2 ">
+			<div class="col-span-2 pb-12">
 				<p>
 					As subject matter experts, we can provide your organization with a complete Stock Plan
 					Administration team to handle all equity concerns!
 				</p>
-				<p class="mt-8 ">
+				<p class="mt-8">
 					Contact us: <a
 						class="text-red-800 underline underline-offset-4 transition-colors hover:text-red-900"
 						href="mailto:info@acceleratedep.com">info@acceleratedep.com</a
@@ -292,9 +289,92 @@
 				</p>
 			</div>
 		</div>
+
+		<div class="mx-auto max-w-7xl px-8 pt-8">
+			<div class="grid lg:grid-cols-2 gap-8 mb-12">
+				<div class="prose pt-6 pb-12 px-8 rounded-lg shadow-2xl min-w-full">
+					<div class="flex items-center gap-4">
+						<img src="/images/emily-headshot.jpg" alt="Emily Bone" class="rounded-full w-24" />
+						<h3 class="m-0">Emily Bone, MBA, CEP</h3>
+						<a href="https://www.linkedin.com/in/emily-bone-mba-cep/" target="_blank">
+							<svg
+								class="w-5 h-5 text-blue-600"
+								stroke="currentColor"
+								fill="currentColor"
+								stroke-width="0"
+								viewBox="0 0 24 24"
+								height="200px"
+								width="200px"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M20.45175,20.45025 L16.89225,20.45025 L16.89225,14.88075 C16.89225,13.5525 16.86975,11.844 15.04275,11.844 C13.191,11.844 12.90825,13.2915 12.90825,14.7855 L12.90825,20.45025 L9.3525,20.45025 L9.3525,8.997 L12.765,8.997 L12.765,10.563 L12.81375,10.563 C13.2885,9.66225 14.4495,8.71275 16.18125,8.71275 C19.78575,8.71275 20.45175,11.08425 20.45175,14.169 L20.45175,20.45025 Z M5.33925,7.4325 C4.1955,7.4325 3.27375,6.50775 3.27375,5.36775 C3.27375,4.2285 4.1955,3.30375 5.33925,3.30375 C6.47775,3.30375 7.4025,4.2285 7.4025,5.36775 C7.4025,6.50775 6.47775,7.4325 5.33925,7.4325 L5.33925,7.4325 Z M7.11975,20.45025 L3.5565,20.45025 L3.5565,8.997 L7.11975,8.997 L7.11975,20.45025 Z M23.00025,0 L1.0005,0 C0.44775,0 0,0.44775 0,0.99975 L0,22.9995 C0,23.55225 0.44775,24 1.0005,24 L23.00025,24 C23.55225,24 24,23.55225 24,22.9995 L24,0.99975 C24,0.44775 23.55225,0 23.00025,0 L23.00025,0 Z"
+								></path></svg
+							></a
+						>
+					</div>
+					<p>
+						Through positions held with both equity compensation issuers and administration vendors,
+						Emily's career has equipped her with extensive knowledge in equity matters for both
+						private and public equity plans. Her unique blend of hands-on experience and exposure to
+						the intricacies of many equity plans positions her as a trusted partner in the ever
+						evolving landscape of equity compensation.
+					</p>
+					<p>
+						With specialties in plan administration, process analysis and design, system and
+						functionality implementation, as well as project management and execution, she has
+						empowered organizations to optimize their equity compensation procedures, strategies and
+						overall value.
+					</p>
+					<p>
+						Emily has obtained her Certified Equity Professional (CEP) designation, and has also
+						earned an MBA in Finance from Pepperdine University.
+					</p>
+				</div>
+				<div class="prose pt-6 pb-12 px-8 rounded-lg shadow-2xl min-w-full">
+					<div class="flex items-center gap-4">
+						<img src="/images/neil-headshot.jpg" alt="Neil Birrell" class="rounded-full w-24" />
+						<h3 class="m-0">Neil Birrell, CEP</h3>
+						<a href="https://www.linkedin.com/in/neil-birrell-cep-0985185/" target="_blank">
+							<svg
+								class="w-5 h-5 text-blue-600"
+								stroke="currentColor"
+								fill="currentColor"
+								stroke-width="0"
+								viewBox="0 0 24 24"
+								height="200px"
+								width="200px"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M20.45175,20.45025 L16.89225,20.45025 L16.89225,14.88075 C16.89225,13.5525 16.86975,11.844 15.04275,11.844 C13.191,11.844 12.90825,13.2915 12.90825,14.7855 L12.90825,20.45025 L9.3525,20.45025 L9.3525,8.997 L12.765,8.997 L12.765,10.563 L12.81375,10.563 C13.2885,9.66225 14.4495,8.71275 16.18125,8.71275 C19.78575,8.71275 20.45175,11.08425 20.45175,14.169 L20.45175,20.45025 Z M5.33925,7.4325 C4.1955,7.4325 3.27375,6.50775 3.27375,5.36775 C3.27375,4.2285 4.1955,3.30375 5.33925,3.30375 C6.47775,3.30375 7.4025,4.2285 7.4025,5.36775 C7.4025,6.50775 6.47775,7.4325 5.33925,7.4325 L5.33925,7.4325 Z M7.11975,20.45025 L3.5565,20.45025 L3.5565,8.997 L7.11975,8.997 L7.11975,20.45025 Z M23.00025,0 L1.0005,0 C0.44775,0 0,0.44775 0,0.99975 L0,22.9995 C0,23.55225 0.44775,24 1.0005,24 L23.00025,24 C23.55225,24 24,23.55225 24,22.9995 L24,0.99975 C24,0.44775 23.55225,0 23.00025,0 L23.00025,0 Z"
+								></path></svg
+							></a
+						>
+					</div>
+					<p>
+						Neil's career, shaped by roles at Deloitte and equity administration vendors, reflects
+						his deep expertise in guiding both private and public organizations through the
+						complexities of equity compensation. His consulting expertise extends across vital
+						domains, including payroll and mobility, financial reporting, HR, and the nuanced global
+						tax implications associated with equity compensation.
+					</p>
+					<p>
+						Neil specializes in establishing innovative processes for organizations seeking
+						efficiency and strategic alignment - empowering companies to seamlessly integrate and
+						automate essential functions including equity administration, payroll and HRIS system
+						integrations.
+					</p>
+					<p>
+						Neil holds his Certified Equity Professional (CEP) designation and has also obtained a
+						BS in Finance from the University of Utah.
+					</p>
+				</div>
+			</div>
+		</div>
 	</main>
 	<footer class="bg-gray-800 px-8 py-12 text-gray-100">
-		<div class="mx-auto max-w-7xl ">
+		<div class="mx-auto max-w-7xl">
 			&copy; {new Date().getFullYear()} Accelerated Equity Plans
 		</div>
 	</footer>
