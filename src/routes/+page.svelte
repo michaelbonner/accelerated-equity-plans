@@ -290,7 +290,7 @@
 			</div>
 		</div>
 
-		<div class="mx-auto max-w-7xl px-8 pt-8">
+		<div class="mx-auto max-w-7xl px-8 pt-8 pb-8">
 			<div class="grid lg:grid-cols-2 gap-8 mb-12">
 				<div class="prose pt-6 pb-12 px-8 rounded-lg shadow-2xl min-w-full">
 					<div class="flex items-center gap-4">
