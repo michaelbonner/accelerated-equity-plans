@@ -2,6 +2,8 @@
 	import '../app.css';
 
 	import Analytics from '$lib/analytics.svelte';
+	import Navbar from '$lib/navbar.svelte';
+	import Footer from '$lib/footer.svelte';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
@@ -23,5 +25,10 @@
 </svelte:head>
 
 <Analytics />
-
-<slot />
+<div class="flex flex-col min-h-screen">
+	<Navbar />
+		<div class="flex flex-col flex-grow bg-white">
+			<slot />
+		</div>
+	<Footer />
+</div>
