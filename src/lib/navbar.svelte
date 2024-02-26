@@ -3,15 +3,21 @@
     let mobileMenuOpen = false;
     let isScrolled = false;
     let navbarVisible = true;
+    let lastScrollY = 0;
 
     function toggleMobileMenu() {
         mobileMenuOpen = !mobileMenuOpen;
     }
 
     function handleScroll() {
-        const scrollCheck = window.innerHeight;
-        isScrolled = window.scrollY > 50;
-        navbarVisible = window.scrollY < scrollCheck;
+        const currentScrollY = window.scrollY;
+        const scrollCheck = window.innerHeight * 1.5;
+        
+        isScrolled = currentScrollY > 50;
+        
+        navbarVisible = currentScrollY < lastScrollY || currentScrollY < scrollCheck;
+        
+        lastScrollY = currentScrollY;
     }
 
     onMount(() => {
@@ -21,17 +27,17 @@
         };
     });
 
-    $: navbarClass = `fixed top-0 z-10 transition-all duration-300 ease-in-out w-screen px-6 py-2 ${navbarVisible ? 'opacity-100' : 'opacity-0'} ${isScrolled ? 'bg-slate-600 bg-opacity-80' : ''}`;
+    $: navbarClass = `fixed top-0 z-10 transition-all duration-500 ease-in-out w-screen px-6 py-2 ${navbarVisible ? 'opacity-100' : 'opacity-0'} ${isScrolled ? 'bg-slate-600 bg-opacity-80' : ''}`;
 </script>
 
 	<div class={navbarClass}>
 		<div>
-			<nav class="flex items-center justify-between" aria-label="Global">
+			<nav class:h-16={isScrolled} class="flex items-center justify-between h-16 transition-height duration-500 ease-in-out" aria-label="Global">
 				<div class="flex lg:min-w-0 lg:flex-1" aria-label="Global">
 					<a href="/" class="-m-1.5 p-1.5">
 						<span class="sr-only">Accelerated Equity Plans</span>
 						<img
-							class=" h-20 md:h-32"
+							class:md:h-24={isScrolled} class="h-20 md:h-32 transition-height duration-300 ease-in-out"
 							src="/images/2024-AEP-Brand_Guide-0124_Primary-Logo-Reversed.png"
 							alt="Accelerated Equity Plans Logo"
 						/>

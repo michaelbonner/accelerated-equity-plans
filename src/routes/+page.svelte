@@ -43,7 +43,7 @@
 					<div class="mt-8 flex gap-x-4">
 						<a
 							href="/contact"
-							class="inline-block rounded-lg bg-red-700 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-red-700 hover:bg-red-800 hover:ring-red-800"
+							class="inline-block rounded-lg w-40 text-center bg-red-700 bg-opacity-30 px-4 py-1.5 text-base font-semibold leading-7 backdrop-blur text-white ring-1 ring-red-700 hover:bg-red-800 hover:ring-red-800 no-underline"
 						>
 							Get in touch
 							<span class="text-red-200" aria-hidden="true">&rarr;</span>
@@ -56,9 +56,9 @@
 
 		<!-- Engaging subheading and text -->
 		<div
-			class="mx-auto sm:min-h-[40vh] px-4 sm:px-10 py-14 sm:py-32 flex flex-col justify-center bg-zinc-200"
-			id="administration-support"
-		>
+			class="mx-auto sm:min-h-[40vh] px-4 sm:px-10 py-14 sm:py-32 flex flex-col justify-center"
+			style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
+			>
 			<h2 class="mb-8 shrink-0 text-3xl font-bold tracking-tight sm:text-4xl text-center">
 				Elevate Your Equity Management with Expert Support
 			</h2>
@@ -73,7 +73,7 @@
 	<div class="relative inset-0 bg-cover"
 					 style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url('/images/redblueribbon.png');"
 		>
-	<div class="py-14 md:py-32 lg:py-32">
+	<div class="py-14 sm:py-32">
   	<div class="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
 
 			<div class="mx-auto max-w-2xl lg:mx-0">
@@ -83,7 +83,7 @@
 
 			<ul role="list" class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 sm:gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2">
 				<li class="h-full bg-slate-800 backdrop-blur rounded-2xl bg-opacity-30 flex flex-col">
-					<img class="w-auto mx-4 mt-4 rounded-2xl object-cover" src="/images/emily-headshot.jpg" alt="Emily Bone">
+					<img class="w-auto mx-4 mt-4 rounded-2xl object-cover max-w-[200px]" src="/images/emily-headshot.jpg" alt="Emily Bone">
 					<div class="px-4 py-4 flex flex-col flex-grow">
 						<h3 class="text-lg font-semibold leading-8 text-white">Emily Bone, MBA, CEP</h3>
 						<p class="hidden sm:flex mt-4 text-base leading-7 text-white flex-grow">Emily's rich journey through equity compensation roles, combined with her Certified Equity Professional designation and MBA in Finance, makes her a trusted expert in enhancing the value and efficiency of equity plans for diverse organizations.</p>
@@ -119,7 +119,7 @@
 				</li>
 
 				<li class="h-full bg-slate-800 backdrop-blur rounded-2xl bg-opacity-30 flex flex-col">
-					<img class="w-auto mx-4 mt-4 rounded-2xl object-cover" src="/images/neil-headshot.jpg" alt="Neil Birrell">
+					<img class="w-auto mx-4 mt-4 rounded-2xl object-cover max-w-[200px]" src="/images/neil-headshot.jpg" alt="Neil Birrell">
 					<div class="px-4 py-4 flex flex-col flex-grow">
 						<h3 class="text-lg font-semibold leading-8 text-white">Neil Birrell, CEP</h3>
 						<p class="hidden sm:flex mt-4 text-base leading-7 text-white flex-grow">Neil's extensive experience with Deloitte and various equity firms, coupled with his CEP designation and Finance degree, uniquely positions him as a strategic architect in streamlining equity compensation across pivotal business functions for enhanced organizational efficiency.</p>
@@ -162,8 +162,11 @@
 	
 	<!-- Start Services Section -->
 	
-	<div class="bg-zinc-200 py-14 sm:py-32">
-	  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+	<div
+		class="py-14 sm:pt-24 sm:pb-32"
+		style="background-image: linear-gradient(120deg, #CCFFFF 0%, #E0F7FA 50%, #F6FDFE 100%);"
+	>  
+		<div class="mx-auto max-w-7xl px-6 lg:px-8">
 
 			<div class="mx-auto max-w-2xl text-center">
 				<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Services</h2>
@@ -217,53 +220,54 @@
 	<!-- Start Testimonials Section -->
 
 	<section class="relative isolate overflow-hidden bg-white px-6 py-14 sm:py-32 lg:px-8">
-  <div class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20"></div>
-  <div class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"></div>
-  <div class="mx-auto max-w-2xl lg:max-w-4xl">
-    <img class="mx-auto h-12" src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" alt="">
-    <figure class="mt-10">
-      <blockquote class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
-        <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”</p>
-      </blockquote>
-      <figcaption class="mt-10">
-        <img class="mx-auto h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-        <div class="mt-4 flex items-center justify-center space-x-3 text-base">
-          <div class="font-semibold text-gray-900">Judith Black</div>
-          <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
-            <circle cx="1" cy="1" r="1" />
-          </svg>
-          <div class="text-gray-600">CEO of Workcation</div>
-        </div>
-      </figcaption>
-    </figure>
-  </div>
-</section>
+		<div class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20"></div>
+		<div class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"></div>
+		<div class="mx-auto max-w-2xl lg:max-w-4xl">
+			<img class="mx-auto h-12" src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" alt="">
+			<figure class="mt-10">
+				<blockquote class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+					<p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”</p>
+				</blockquote>
+				<figcaption class="mt-10">
+					<img class="mx-auto h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+					<div class="mt-4 flex items-center justify-center space-x-3 text-base">
+						<div class="font-semibold text-gray-900">Judith Black</div>
+						<svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
+							<circle cx="1" cy="1" r="1" />
+						</svg>
+						<div class="text-gray-600">CEO of Workcation</div>
+					</div>
+				</figcaption>
+			</figure>
+		</div>
+	</section>
 
 
 	<!-- End Testimonials Section -->
 
-		<!-- Start Project Management -->
-		<div
-			class="mx-auto min-h-[40vh] py-14 sm:py-32 px-10 pt-8 lg:grid lg:grid-cols-3 lg:gap-8 bg-zinc-200"
-			id="project-management"
-		>
-			<h2 class="mb-8 shrink-0 text-3xl font-bold tracking-tight sm:text-4xl lg:mb-0">
-				Project Management
-			</h2>
-			<div class="col-span-2 lg:text-left">
-				<ul class="ml-8 list-outside list-disc text-lg">
-					<li>Equity platform implementation</li>
-					<li>3rd party vendor integrations for payroll, HRIS, mobility, etc.</li>
-					<li>Administration system functionality adoption and vetting</li>
-					<li>Process review and documentation of best practices</li>
-					<li>Employee education and resources</li>
-					<li>Plan design</li>
-					<li>Corporate Actions</li>
-					<li>Vendor selection</li>
-				</ul>
-			</div>
+	<!-- Start Project Management -->
+	<div
+		class="mx-auto min-h-[40vh] py-14 sm:py-32 px-10 pt-8 lg:grid lg:grid-cols-3 lg:gap-8"
+		style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
+		id="project-management"
+	>
+		<h2 class="mb-8 shrink-0 text-3xl font-bold tracking-tight sm:text-4xl lg:mb-0">
+			Project Management
+		</h2>
+		<div class="col-span-2 lg:text-left">
+			<ul class="ml-8 list-outside list-disc text-lg">
+				<li>Equity platform implementation</li>
+				<li>3rd party vendor integrations for payroll, HRIS, mobility, etc.</li>
+				<li>Administration system functionality adoption and vetting</li>
+				<li>Process review and documentation of best practices</li>
+				<li>Employee education and resources</li>
+				<li>Plan design</li>
+				<li>Corporate Actions</li>
+				<li>Vendor selection</li>
+			</ul>
 		</div>
-		<!-- End Project Management -->
+	</div>
+	<!-- End Project Management -->
 
 
 	</main>
