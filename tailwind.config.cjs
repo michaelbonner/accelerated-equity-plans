@@ -9,6 +9,10 @@ module.exports = {
 			fontFamily: {
 				sans: ['Inter', ...defaultTheme.fontFamily.sans],
 				serif: ['Lora', ...defaultTheme.fontFamily.serif]
+			},
+			backgroundImage: {
+				'slc-night': 'url(/images/slcatnight.jpg)',
+				'red-blue-ribbon': 'url(/images/redblueribbon.png)'
 			}
 		}
 	},
