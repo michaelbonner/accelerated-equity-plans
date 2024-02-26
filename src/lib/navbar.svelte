@@ -1,21 +1,27 @@
 <script>
-	import { onMount } from "svelte";
-	import { page } from "$app/stores";
-	let mobileMenuOpen = false;
-	let isScrolled = false;
+    import { onMount } from "svelte";
+    let mobileMenuOpen = false;
+    let isScrolled = false;
+    let navbarVisible = true;
 
-	function toggleMobileMenu() {
-		mobileMenuOpen = !mobileMenuOpen;
-	}
+    function toggleMobileMenu() {
+        mobileMenuOpen = !mobileMenuOpen;
+    }
 
-	onMount(() => {
-		window.addEventListener('scroll', () => {
-				isScrolled = window.scrollY > 50;
-		});
-	});
+    function handleScroll() {
+        const scrollCheck = window.innerHeight;
+        isScrolled = window.scrollY > 50;
+        navbarVisible = window.scrollY < scrollCheck;
+    }
 
-  $: navbarBackgroundClass = $page.url.pathname === '/' ? (isScrolled ? 'bg-slate-600 bg-opacity-80' : '') : 'bg-slate-600';
-  $: navbarClass = `fixed top-0 z-10 transition-all duration-300 w-screen px-6 py-6 ${navbarBackgroundClass}`;
+    onMount(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    });
+
+    $: navbarClass = `fixed top-0 z-10 transition-all duration-300 ease-in-out w-screen px-6 py-2 ${navbarVisible ? 'opacity-100' : 'opacity-0'} ${isScrolled ? 'bg-slate-600 bg-opacity-80' : ''}`;
 </script>
 
 	<div class={navbarClass}>
@@ -25,7 +31,7 @@
 					<a href="/" class="-m-1.5 p-1.5">
 						<span class="sr-only">Accelerated Equity Plans</span>
 						<img
-							class="h-16 md:h-32"
+							class=" h-20 md:h-32"
 							src="/images/2024-AEP-Brand_Guide-0124_Primary-Logo-Reversed.png"
 							alt="Accelerated Equity Plans Logo"
 						/>

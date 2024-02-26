@@ -11,7 +11,8 @@ module.exports = {
 				serif: ['Lora', ...defaultTheme.fontFamily.serif]
 			},
 			backgroundImage: {
-				'slc-night': 'url(/images/slcatnight.jpg)'
+				'slc-night': 'url(/images/slcatnight.jpg)',
+				'red-blue-ribbon': 'url(/images/redblueribbon.png)'
 			}
 		}
 	},
