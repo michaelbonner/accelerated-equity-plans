@@ -27,7 +27,7 @@
         };
     });
 
-    $: navbarClass = `fixed top-0 z-10 transition-all duration-500 ease-in-out w-screen px-6 py-2 ${navbarVisible ? 'opacity-100' : 'opacity-0'} ${isScrolled ? 'bg-slate-600 bg-opacity-80' : ''}`;
+    $: navbarClass = `fixed top-0 z-10 transition-all duration-300 ease-in-out w-screen px-6 py-2 ${navbarVisible ? 'opacity-100' : 'opacity-0'} ${isScrolled ? 'bg-slate-600 bg-opacity-80' : ''}`;
 </script>
 
 	<div class={navbarClass}>
@@ -37,7 +37,7 @@
 					<a href="/" class="-m-1.5 p-1.5">
 						<span class="sr-only">Accelerated Equity Plans</span>
 						<img
-							class:md:h-24={isScrolled} class="h-20 md:h-32 transition-height duration-300 ease-in-out"
+							class:md:h-24={isScrolled} class="h-24 sm:h-32 transition-height duration-500 ease-in-out"
 							src="/images/2024-AEP-Brand_Guide-0124_Primary-Logo-Reversed.png"
 							alt="Accelerated Equity Plans Logo"
 						/>
