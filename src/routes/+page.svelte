@@ -74,7 +74,7 @@
 					 style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url('/images/redblueribbon.png');"
 		>
 	<div class="py-14 sm:py-32">
-  	<div class="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+  	<div class="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-10 sm:gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
 
 			<div class="mx-auto max-w-2xl lg:mx-0">
 				<h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Equity A-Team</h2>
@@ -219,9 +219,9 @@
 
 	<!-- Start CTA Section -->
 	<section>
-    <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-14 text-center shadow-2xl sm:px-16 flex items-center justify-around">
+    <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-14 text-center shadow-2xl sm:px-16 flex flex-col sm:flex-row items-center justify-between">
       <h2 class="text-3xl font-bold tracking-wide text-white sm:text-4xl">Take your equity management to the next level today</h2>
-      <div class="flex items-center justify-center gap-x-6">
+      <div class="flex items-center justify-center gap-x-6 mt-8 sm:mt-0">
         <a href="/" class="inline-block rounded-lg w-40 text-center bg-red-700 bg-opacity-30 px-4 py-1.5 text-base font-semibold leading-7 text-white ring-1 ring-red-700 hover:bg-red-800 hover:ring-red-800 no-underline">Learn More</a>
       </div>
       <svg viewBox="0 0 1024 1024" class="absolute left-1/2 top-1 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]" aria-hidden="true">
@@ -262,8 +262,6 @@
 			</figure>
 		</div>
 	</section>
-
-
 	<!-- End Testimonials Section -->
 
 	<!-- Start Project Management -->
