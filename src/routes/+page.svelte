@@ -24,7 +24,7 @@
 
 			<!-- Background Div -->
 			<div class="absolute inset-0 bg-cover -z-1"
-     				style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url('/images/slcatnight.jpg');"
+     				style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url('/images/financialchart.png');"
 			></div>
 
 			<!-- Should be foreground div in same container -->
