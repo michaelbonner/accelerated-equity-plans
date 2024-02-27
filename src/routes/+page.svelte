@@ -82,11 +82,11 @@
 				</div>
 
 				<ul role="list" class="grid grid-cols-1 gap-x-6 gap-y-10 sm:gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2">
-					<li class="h-full bg-slate-800 backdrop-blur rounded-2xl bg-opacity-30 flex flex-col">
-						<img class="w-auto mx-4 mt-4 rounded-2xl object-cover sm:max-w-[200px]" src="/images/emily-headshot.jpg" alt="Emily Bone">
+					<li class="h-full bg-slate-800 backdrop-blur-lg rounded-2xl bg-opacity-30 flex flex-col">
+						<img class="w-4/6 mx-4 mt-4 rounded-2xl object-cover" src="/images/emily-headshot.jpg" alt="Emily Bone">
 						<div class="px-4 py-4 flex flex-col flex-grow">
 							<h3 class="text-lg font-semibold leading-8 text-white">Emily Bone, MBA, CEP</h3>
-							<p class="hidden sm:flex mt-4 text-base leading-7 text-white flex-grow">Emily's rich journey through equity compensation roles, combined with her Certified Equity Professional designation and MBA in Finance, makes her a trusted expert in enhancing the value and efficiency of equity plans for diverse organizations.</p>
+							<p class="flex mt-4 text-base leading-7 text-white flex-grow">Emily's rich journey through equity compensation roles, combined with her Certified Equity Professional designation and MBA in Finance, makes her a trusted expert in enhancing the value and efficiency of equity plans for diverse organizations.</p>
 							<ul role="list" class="mt-6 flex gap-x-6">
 								<li>
 									<a href="https://www.linkedin.com/in/emily-bone-mba-cep/" target="_blank">
@@ -118,11 +118,11 @@
 						</div>
 					</li>
 
-					<li class="h-full bg-slate-800 backdrop-blur rounded-2xl bg-opacity-30 flex flex-col">
-						<img class="w-auto mx-4 mt-4 rounded-2xl object-cover max-w-[200px]" src="/images/neil-headshot.jpg" alt="Neil Birrell">
+					<li class="h-full bg-slate-800 backdrop-blur-lg rounded-2xl bg-opacity-30 flex flex-col">
+						<img class="w-4/6 mx-4 mt-4 rounded-2xl object-cover" src="/images/neil-headshot.jpg" alt="Neil Birrell">
 						<div class="px-4 py-4 flex flex-col flex-grow">
 							<h3 class="text-lg font-semibold leading-8 text-white">Neil Birrell, CEP</h3>
-							<p class="hidden sm:flex mt-4 text-base leading-7 text-white flex-grow">Neil's extensive experience with Deloitte and various equity firms, coupled with his CEP designation and Finance degree, uniquely positions him as a strategic architect in streamlining equity compensation across pivotal business functions for enhanced organizational efficiency.</p>
+							<p class="flex mt-4 text-base leading-7 text-white flex-grow">Neil's extensive experience with Deloitte and various equity firms, coupled with his CEP designation and Finance degree, uniquely positions him as a strategic architect in streamlining equity compensation across pivotal business functions for enhanced organizational efficiency.</p>
 							<ul role="list" class="mt-6 flex gap-x-6 items-center">
 								<li>
 										<a href="https://www.linkedin.com/in/neil-birrell-cep-0985185/" target="_blank">
