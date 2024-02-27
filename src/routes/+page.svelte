@@ -145,7 +145,7 @@
 								<li>
 									<a
 										href="/contact"
-										class="inline-block w-40 text-center rounded-lg bg-red-700 bg-opacity-30 px-4 py-1.5 text-base font-semibold leading-7 text-white ring-1 ring-red-700 hover:bg-red-800 hover:ring-red-800 no-underline"
+										class="transition ease-in-out duration-300 inline-block w-40 text-center rounded-lg bg-red-700 bg-opacity-30 px-4 py-1.5 text-base font-semibold leading-7 text-white ring-1 ring-red-700 hover:bg-red-800 hover:ring-red-800 no-underline"
 									>
 										Meet Neil
 									</a>
