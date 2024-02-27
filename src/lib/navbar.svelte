@@ -27,7 +27,7 @@
         };
     });
 
-    $: navbarClass = `fixed top-0 z-10 transition-all duration-300 ease-in-out w-screen px-6 py-2 ${navbarVisible ? 'opacity-100' : 'opacity-0'} ${isScrolled ? 'bg-slate-600 bg-opacity-80' : ''}`;
+    $: navbarClass = `fixed top-0 z-10 transition-all duration-300 ease-in-out w-screen px-6 py-2 ${navbarVisible ? 'opacity-100' : 'opacity-0'} ${isScrolled ? 'bg-slate-600 bg-opacity-70 backdrop-blur' : ''}`;
 </script>
 
 	<div class={navbarClass}>
