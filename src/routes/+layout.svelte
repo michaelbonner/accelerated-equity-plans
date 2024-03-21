@@ -2,8 +2,8 @@
 	import '../app.css';
 
 	import Analytics from '$lib/analytics.svelte';
-	import Navbar from '$lib/navbar.svelte';
-	import Footer from '$lib/footer.svelte';
+	import Navbar from '$lib/components/navbar.svelte';
+	import Footer from '$lib/components/footer.svelte';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
@@ -27,8 +27,8 @@
 <Analytics />
 <div class="flex flex-col min-h-screen">
 	<Navbar />
-		<div class="flex flex-col flex-grow bg-white">
-			<slot />
-		</div>
+	<div class="flex flex-col flex-grow bg-white">
+		<slot />
+	</div>
 	<Footer />
 </div>
