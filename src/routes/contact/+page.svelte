@@ -12,7 +12,7 @@
 			<div
 				class="relative isolate overflow-hidden bg-gray-900 px-6 py-8 text-center shadow-2xl sm:px-16 flex flex-col items-center justify-between"
 			>
-				<h1 class="text-3xl font-bold tracking-wide text-white sm:text-4xl mb-4">
+				<h1 class="text-2xl font-bold tracking-wide text-white sm:text-4xl mb-4">
 					Get peace of mind today! Our team of experts are dedicated to supporting you and ensuring
 					your success.
 				</h1>
@@ -37,14 +37,15 @@
 				</svg>
 			</div>
 		</div>
+
 		<div
-			class="min-h-[400px] bg-cover bg-center bg-no-repeat flex items-center"
+			class="sm:min-h-[400px] sm:bg-cover sm:bg-center sm:bg-no-repeat bg-none flex items-center"
 			style="background-image: url('/images/phonecall.jpg')"
 		>
 			<div
-				class="sm:w-1/3 py-6 leading-10 tracking-wide rounded-xl bg-white flex flex-col justify-center min-h-[90%] ml-10 border-black border-2 p-12"
+				class="sm:w-1/3 py-6 leading-10 tracking-wide rounded-xl bg-white flex flex-col justify-center min-h-[90%] sm:ml-10 sm:border-black sm:border-2 p-12"
 			>
-				<p class="sm:text-3xl mb-8 font-bold">Connect with us!</p>
+				<p class="text-3xl mb-8 font-bold">Connect with us!</p>
 				<a href="tel: 801-808-6238">
 					<button class="bg-red-600 mb-2 w-2/3 rounded text-white">Give Us A Call</button>
 				</a>
@@ -53,23 +54,24 @@
 						><a href="tel: 801-808-6238">801-808-6238</a></span
 					> to speak with us
 				</p>
-				<a href="mailto: info@acceleratedep.com">
+				<a href="mailto: info@acceleratedep.com" target="_blank">
 					<button class="bg-black mb-2 w-2/3 text-white rounded">Book an Appointment</button>
 				</a>
 				<p class="leading-5 text-sm">
 					Click the button above or email us at <span class="text-red-600"
-						><a href="mailto: info@acceleratedep.com">info@acceleratedep.com</a></span
+						><a href="mailto: info@acceleratedep.com" target="_blank">info@acceleratedep.com</a
+						></span
 					> to speak with us
 				</p>
 			</div>
 		</div>
 		<!-- section 2 -->
 		<div
-			class="my-6 leading-8 tracking-wide flex"
+			class="sm:my-6 leading-8 tracking-wide flex flex-col sm:flex-row"
 			style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
 		>
-			<img src="/images/guy.jpg" alt="" class="w-1/3" />
-			<div class="w-2/3">
+			<img src="/images/guy.jpg" alt="" class="sm:w-1/3" />
+			<div class="sm:w-2/3">
 				<div class="flex justify-center mt-8 mb-4 text-2xl">
 					<Icon src={AiFillStar} /><Icon src={AiFillStar} /><Icon src={AiFillStar} /><Icon
 						src={AiFillStar}
@@ -89,7 +91,7 @@
 			</div>
 		</div>
 
-		<div class="border-2 rounded-2xl px-10 py-6 bg-gray-200 mb-6">
+		<div class="border-2 rounded-2xl px-10 py-6 bg-gray-200 sm:mb-6">
 			<h3 class="text-4xl font-bold text-center mb-6">Let's Talk About Your Business</h3>
 			<!--
   This example requires some changes to your config:
@@ -273,7 +275,7 @@
 						<button
 							type="submit"
 							class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-							>Save</button
+							>Submit</button
 						>
 					</div>
 				</div>
