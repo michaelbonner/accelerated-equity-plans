@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import Icon from 'svelte-icons-pack/Icon.svelte';
 	import Swiper from 'swiper';
-	import { Navigation, Pagination } from 'swiper/modules';
+	import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 	import BsArrowLeftCircle from 'svelte-icons-pack/bs/BsArrowLeftCircle';
 	import BsArrowRightCircle from 'svelte-icons-pack/bs/BsArrowRightCircle';
 	import 'swiper/css';
@@ -17,7 +17,7 @@
 
 	onMount(() => {
 		new Swiper(swiperContainer, {
-			modules: [Navigation, Pagination],
+			modules: [Navigation, Pagination, Autoplay],
 			slidesPerView: 1,
 			spaceBetween: 20,
 			navigation: {
@@ -27,21 +27,27 @@
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true
-			}
+			},
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false
+			},
+			loop: true,
+			speed: 1000
 		});
 	});
 </script>
 
-<div class="relative" bind:this={swiperContainer}>
+<div class="relative h-full" bind:this={swiperContainer}>
 	<div class="swiper-wrapper">
 		{#each reviews as review}
 			<div class="swiper-slide">
 				<div class="carousel-item">
-					<div class="flex flex-col w-1/2 h-3/4">
+					<div class="flex flex-col w-5/6 sm:w-1/2 h-auto py-10">
 						<h3 class=" text-2xl font-semibold">{review.name}</h3>
-						<p>{review.reviewText}</p>
-						<p>{review.name}</p>
-						<p>{review.title}</p>
+						<p class="text-gray-600">{review.reviewText}</p>
+						<p class="text-gray-600">{review.name}</p>
+						<p class="text-gray-600">{review.title}</p>
 					</div>
 				</div>
 			</div>
@@ -49,12 +55,12 @@
 	</div>
 
 	<div class="swiper-button-prev">
-		<button class="carousel-arrow">
+		<button class="carousel-arrow hidden sm:block">
 			<Icon src={BsArrowLeftCircle} />
 		</button>
 	</div>
 	<div class="swiper-button-next">
-		<button class="carousel-arrow">
+		<button class="carousel-arrow hidden sm:block">
 			<Icon src={BsArrowRightCircle} />
 		</button>
 	</div>
@@ -64,7 +70,11 @@
 
 <style lang="postcss">
 	.carousel-item {
-		@apply flex items-center justify-center h-64 bg-gray-200;
+		@apply flex items-center justify-center h-64;
+	}
+
+	.swiper-wrapper {
+		@apply py-28;
 	}
 
 	.swiper-button-prev,
