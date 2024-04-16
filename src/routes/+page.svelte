@@ -1,8 +1,13 @@
-<script>
+<script lang="ts">
 	import { reviews } from '$lib/dataSets';
 	import ReviewList from '$lib/components/ReviewList.svelte';
 	import PartnerRibbon from '$lib/components/PartnerRibbon.svelte';
 	import MeetTheTeam from '$lib/components/MeetTheTeam.svelte';
+	let activeArticle = 'tempSupport';
+
+	function setActiveArticle(article: string) {
+		activeArticle = article;
+	}
 </script>
 
 <svelte:head>
@@ -58,6 +63,160 @@
 			</div>
 		</div>
 
+		<!-- Start Services Section -->
+		<div
+			class="py-14 sm:pt-24 sm:pb-32"
+			style="background-image: linear-gradient(120deg, #CCFFFF 0%, #E0F7FA 50%, #F6FDFE 100%);"
+		>
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="mx-auto text-center">
+					<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+						Your trusted partner in equity compensation
+					</h2>
+					<p class="mt-2 text-lg leading-8 text-gray-600">
+						Empowering companies to harness the full potential of equity compensation to attract,
+						retain, and motivate talent.
+					</p>
+				</div>
+
+				<div
+					class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+				>
+					<!-- Temporary Stock Administration Support -->
+					<button
+						class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
+						on:click={() => setActiveArticle('tempSupport')}
+					>
+						<img
+							src="/images/stocks.jpg"
+							alt="computer on a table"
+							class="absolute inset-0 -z-10 h-full w-full object-cover"
+						/>
+						<div
+							class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"
+						></div>
+						<div
+							class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"
+						></div>
+						<h3
+							class="mt-3 text-lg font-semibold leading-6 text-white {activeArticle ===
+							'tempSupport'
+								? 'text-yellow-500'
+								: 'text-white'}"
+						>
+							<p class="relative">Temporary Stock Administration Support</p>
+						</h3>
+					</button>
+					<button
+						class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
+						on:click={() => setActiveArticle('fullOutsourcing')}
+					>
+						<img
+							src="/images/stocks2.jpg"
+							alt="iphone with stock information"
+							class="absolute inset-0 -z-10 h-full w-full object-cover"
+						/>
+						<div
+							class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"
+						></div>
+						<div
+							class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"
+						></div>
+						<h3
+							class="mt-3 text-lg font-semibold leading-6 text-white {activeArticle ===
+							'fullOutsourcing'
+								? 'text-yellow-500'
+								: 'text-white'}"
+						>
+							<p class="relative">Full Stock Administration Outsourcing</p>
+						</h3>
+					</button>
+					<button
+						class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
+						on:click={() => setActiveArticle('specialProjects')}
+					>
+						<img
+							src="/images/projectmanagement.jpg"
+							alt="team holding hands"
+							class="absolute inset-0 -z-10 h-full w-full object-cover"
+						/>
+						<div
+							class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"
+						></div>
+						<div
+							class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"
+						></div>
+						<h3
+							class="mt-3 text-lg font-semibold leading-6 text-white {activeArticle ===
+							'specialProjects'
+								? 'text-yellow-500'
+								: 'text-white'}"
+						>
+							<p class="relative">Special Projects and Consulting Services</p>
+						</h3>
+					</button>
+				</div>
+
+				<!-- Displaying the detailed text for the selected article -->
+				<div class="mt-10 p-6 bg-gray-100 rounded-lg">
+					{#if activeArticle === 'tempSupport'}
+						<p class="leading-8 tracking-wide font-bold text-gray-800">
+							We offer temporary stock administration services to provide seamless support during
+							periods of increased workload or staff shortages. Whether you're facing a surge in
+							stock plan activities, experiencing a transition period, or simply need temporary
+							assistance, our flexible staffing solutions can help fill the gap. With our temporary
+							stock administration services, you can maintain productivity levels, meet deadlines,
+							and alleviate the strain on your internal team, allowing you to focus on other
+							critical business priorities.
+						</p>
+						<p class="mt-10 leading-8 tracking-wide font-bold text-gray-800">
+							Expand your stock administration team effortlessly with our flexible staffing
+							solutions. Our stock plan professionals assist with short and long-term staffing.
+						</p>
+					{:else if activeArticle === 'fullOutsourcing'}
+						<p class="leading-8 tracking-wide font-bold text-gray-800">
+							We offer a comprehensive solution to fully outsource your stock plan administration
+							needs, providing you with peace of mind and allowing you to focus on your core
+							business activities. With our expertise and experience in stock plan administration,
+							we handle every aspect of the process, from initial setup to ongoing management and
+							compliance. Our dedicated team ensures accurate record-keeping, timely communication
+							with participants, and adherence to regulatory requirements, eliminating the burden of
+							administration from your shoulders. By outsourcing your stock plan administration to
+							us, you can streamline operations, reduce administrative overhead, and ensure that
+							your stock compensation programs are efficiently managed and optimized for success.
+						</p>
+					{:else if activeArticle === 'specialProjects'}
+						<p class="leading-8 tracking-wide font-bold text-gray-800">
+							At Accelerated Equity Plans, we offer a comprehensive suite of services designed to
+							empower businesses across various industries. From guiding organizations through
+							complex Mergers and Acquisitions and navigating the intricacies of IPOs and SPACs to
+							facilitating seamless Corporate Actions and driving efficiency through Automation
+							Design and Resources, we are committed to delivering strategic guidance that fuels
+							growth and success.
+						</p>
+						<p class="mt-10 leading-8 tracking-wide font-bold text-gray-800">
+							With a focus on quality, integrity, and client satisfaction, we partner with
+							businesses to navigate challenges, optimize operations, and unlock opportunities for
+							long-term success.
+						</p>
+					{/if}
+				</div>
+				<div class="flex items-center justify-center mt-6">
+					<a
+						href="/services"
+						class="inline-block rounded-lg w-40 text-center bg-red-700 bg-opacity-80 px-4 py-1.5 text-base font-semibold leading-7 text-white ring-1 ring-red-700 hover:bg-red-800 hover:ring-red-800 no-underline"
+						>Learn More</a
+					>
+				</div>
+			</div>
+		</div>
+
+		<!-- End Services Section -->
+
+		<!-- Start Who We Are -->
+		<MeetTheTeam />
+		<!-- End who we are Section -->
+
 		<!-- Engaging subheading and text -->
 		<div
 			class="mx-auto sm:min-h-[40vh] px-4 sm:px-10 py-14 sm:py-32 flex flex-col justify-center"
@@ -79,96 +238,6 @@
 				</p>
 			</div>
 		</div>
-
-		<!-- Start Who We Are -->
-		<MeetTheTeam />
-		<!-- End who we are Section -->
-
-		<!-- Start Services Section -->
-
-		<div
-			class="py-14 sm:pt-24 sm:pb-32"
-			style="background-image: linear-gradient(120deg, #CCFFFF 0%, #E0F7FA 50%, #F6FDFE 100%);"
-		>
-			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<div class="mx-auto max-w-2xl text-center">
-					<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Services</h2>
-					<p class="mt-2 text-lg leading-8 text-gray-600">
-						Learn how to grow your business with our expert advice.
-					</p>
-				</div>
-
-				<div
-					class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
-				>
-					<article
-						class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
-					>
-						<img
-							src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80"
-							alt=""
-							class="absolute inset-0 -z-10 h-full w-full object-cover"
-						/>
-						<div
-							class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"
-						></div>
-						<div
-							class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"
-						></div>
-						<h3 class="mt-3 text-lg font-semibold leading-6 text-white">
-							<a href="/">
-								<span class="absolute inset-0"></span>
-								Boost your conversion rate
-							</a>
-						</h3>
-					</article>
-					<article
-						class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
-					>
-						<img
-							src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80"
-							alt=""
-							class="absolute inset-0 -z-10 h-full w-full object-cover"
-						/>
-						<div
-							class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"
-						></div>
-						<div
-							class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"
-						></div>
-						<h3 class="mt-3 text-lg font-semibold leading-6 text-white">
-							<a href="/">
-								<span class="absolute inset-0"></span>
-								Boost your conversion rate
-							</a>
-						</h3>
-					</article>
-					<article
-						class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
-					>
-						<img
-							src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80"
-							alt=""
-							class="absolute inset-0 -z-10 h-full w-full object-cover"
-						/>
-						<div
-							class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"
-						></div>
-						<div
-							class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"
-						></div>
-						<h3 class="mt-3 text-lg font-semibold leading-6 text-white">
-							<a href="/">
-								<span class="absolute inset-0"></span>
-								Boost your conversion rate
-							</a>
-						</h3>
-					</article>
-				</div>
-			</div>
-		</div>
-
-		<!-- End Services Section -->
 
 		<!-- Start CTA Section -->
 		<section>

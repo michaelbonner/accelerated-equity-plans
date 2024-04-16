@@ -17,8 +17,8 @@
 		<div class="flex flex-1 justify-end">
 			<div class="flex flex-col">
 				<a href="/" class="text-lg font-semibold leading-8">Social Media</a>
-				<a href="/" class="text-lg font-semibold leading-8">Contact</a>
-				<a href="/" class="text-lg font-semibold leading-8">Location</a>
+				<a href="/contact" class="text-lg font-semibold leading-8">Contact</a>
+				<a href="/careers" class="text-lg font-semibold leading-8">Careers</a>
 			</div>
 		</div>
 	</nav>

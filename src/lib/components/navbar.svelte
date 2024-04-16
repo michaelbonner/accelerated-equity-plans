@@ -75,17 +75,13 @@
 				</button>
 			</div>
 			<div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
-				<a href="/about" class="font-semibold text-white hover:text-yellow-300">About</a>
+				<a href="/about" class="font-semibold text-white hover:text-red-600">About</a>
 
-				<a href="/careers" class="font-semibold text-white hover:text-yellow-300">Careers</a>
+				<a href="/testimonials" class="font-semibold text-white hover:text-red-600">Testimonials</a>
 
-				<a href="/testimonials" class="font-semibold text-white hover:text-yellow-300"
-					>Testimonials</a
-				>
+				<a href="/services" class="font-semibold text-white hover:text-red-600">Services</a>
 
-				<a href="/services" class="font-semibold text-white hover:text-yellow-300">Services</a>
-
-				<a href="/contact" class="font-semibold text-white hover:text-yellow-300">Contact Us</a>
+				<a href="/contact" class="font-semibold text-white hover:text-red-600">Contact Us</a>
 			</div>
 		</nav>
 
@@ -134,14 +130,6 @@
 									on:click={toggleMobileMenu}
 								>
 									About
-								</a>
-
-								<a
-									href="/careers"
-									class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-gray-400/10"
-									on:click={toggleMobileMenu}
-								>
-									Careers
 								</a>
 
 								<a
