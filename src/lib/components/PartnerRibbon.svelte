@@ -8,14 +8,6 @@
 			path: 'insightsoftware.png',
 			url: 'https://insightsoftware.com/certent/equity-management-software/'
 		},
-		{
-			path: 'etrade.png',
-			url: 'https://www.morganstanley.com/atwork/equity-solutions-public-companies'
-		},
-		{
-			path: 'shareworks.png',
-			url: 'https://www.morganstanley.com/atwork/workplace-solutions-for-private-companies'
-		},
 		{ path: 'morganstanley.png', url: 'https://www.morganstanley.com/atwork' },
 		{ path: 'equitymethods.png', url: 'https://www.equitymethods.com' },
 		{ path: 'schwab.png', url: 'https://workplacefinancialservices.schwab.com/stock-plans' },
@@ -52,30 +44,19 @@
 	});
 </script>
 
-<div class="mx-auto py-4 sm:py-6 md:py-10 bg-gray-100">
-	<div class="container mx-auto flex flex-col md:flex-row">
-		<div class="w-screen md:w-1/3 flex items-center justify-center sm:pr-8">
-			<h2
-				class="text-4xl flex flex-row sm:flex-col md:text-5xl leading-normal font-bold text-gray-600"
-			>
-				<div class="hidden md:block">
-					<div>Our</div>
-					<div>Partners</div>
-					<div>Include</div>
-				</div>
-				<div class="md:hidden">Our Partners Include</div>
+<div class="mx-auto py-4 sm:py-6 md:py-10 bg-[#43626D] bg-opacity-60">
+	<div class="container mx-auto flex flex-col">
+		<div class="flex items-center justify-center sm:pr-8">
+			<h2 class="text-4xl mb-5 flex flex-row md:text-5xl leading-normal font-bold">
+				Our Partners Include
 			</h2>
 		</div>
-		<div class="w-screen md:w-2/3 flex justify-center items-center">
-			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 sm:px-0">
+		<div class="w-full flex justify-center items-center">
+			<div class="flex flex-wrap gap-4 px-4 justify-center">
 				{#each partnerImages as { path, url }}
 					<div class="partner-logo">
 						<a href={url} target="_blank">
-							<img
-								src={`${partnerImagesPath}${path}`}
-								alt="Partner Logo"
-								class="max-w-full h-auto"
-							/>
+							<img src={`${partnerImagesPath}${path}`} alt="Partner Logo" class="h-auto" />
 						</a>
 					</div>
 				{/each}

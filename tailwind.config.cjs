@@ -8,7 +8,8 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans: ['Inter', ...defaultTheme.fontFamily.sans],
-				serif: ['Lora', ...defaultTheme.fontFamily.serif]
+				serif: ['Lora', ...defaultTheme.fontFamily.serif],
+				jura: ['Jura', 'sans-serif']
 			},
 			backgroundImage: {
 				'slc-night': 'url(/images/slcatnight.jpg)',

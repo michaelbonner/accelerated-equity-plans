@@ -29,7 +29,7 @@
 				clickable: true
 			},
 			autoplay: {
-				delay: 3000,
+				delay: 5000,
 				disableOnInteraction: false
 			},
 			loop: true,
@@ -44,10 +44,10 @@
 			<div class="swiper-slide">
 				<div class="carousel-item">
 					<div class="flex flex-col w-5/6 sm:w-1/2 h-auto py-10">
-						<h3 class=" text-2xl font-semibold">{review.name}</h3>
-						<p class="text-gray-600">{review.reviewText}</p>
-						<p class="text-gray-600">{review.name}</p>
-						<p class="text-gray-600">{review.title}</p>
+						<h3 class="text-[#E1E4E7] sm:text-2xl text-xl font-semibold">{review.name}</h3>
+						<p class="text-[#E1E4E7] text-sm sm:text-base">{review.reviewText}</p>
+						<p class="text-[#E1E4E7] text-sm sm:text-base">{review.name}</p>
+						<p class="text-[#E1E4E7] text-sm sm:text-base">{review.title}</p>
 					</div>
 				</div>
 			</div>
@@ -74,7 +74,7 @@
 	}
 
 	.swiper-wrapper {
-		@apply py-28;
+		@apply py-10;
 	}
 
 	.swiper-button-prev,

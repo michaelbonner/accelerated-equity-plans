@@ -35,5 +35,5 @@
 	<div class="flex flex-col flex-grow bg-white">
 		<slot />
 	</div>
-	<Footer />
+	<!-- <Footer /> -->
 </div>

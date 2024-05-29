@@ -77,7 +77,7 @@
 			<div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
 				<a href="/about" class="font-semibold text-white hover:text-red-600">About</a>
 
-				<a href="/testimonials" class="font-semibold text-white hover:text-red-600">Testimonials</a>
+				<a href="/careers" class="font-semibold text-white hover:text-red-600">Careers</a>
 
 				<a href="/services" class="font-semibold text-white hover:text-red-600">Services</a>
 
@@ -133,11 +133,11 @@
 								</a>
 
 								<a
-									href="/testimonials"
+									href="/careers"
 									class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-gray-400/10"
 									on:click={toggleMobileMenu}
 								>
-									Testimonials
+									Careers
 								</a>
 								<a
 									href="/services"

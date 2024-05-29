@@ -21,5 +21,12 @@ export const reviews: Review[] = [
 		title: 'Director, Global Equity',
 		reviewText:
 			'I’ve worked with Emily over several years in different capacities. I was thrilled to learn that Emily had started Accelerated Equity Plans.  AEP is my go-to for anything equity I need assistance with. Emily has assisted with process improvements, process documentation, as well as making herself available for random questions along the way.'
+	},
+	{
+		id: 3,
+		name: 'Sara B. Director',
+		title: 'Stock Plan Administration',
+		reviewText:
+			'Our experience with Accelerated Equity Plans has been nothing short of outstanding. Emily is an incredibly hard worker who brings a wealth of knowledge to every project. She was a critical asset in our M&A work, helping us navigate complex items with confidence and success. Emily’s technical expertise is matched by her exemplary teamwork. Her great attitude and personable nature make AEP a joy to work with, fostering a positive and productive work environment. We highly recommend AEP for any equity consulting needs and look forward to working with them again in the future. '
 	}
 ];
