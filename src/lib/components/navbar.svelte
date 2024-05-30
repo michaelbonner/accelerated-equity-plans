@@ -36,7 +36,7 @@
 	<div>
 		<nav
 			class:h-16={isScrolled}
-			class="flex items-center justify-between h-16 transition-height duration-500 ease-in-out"
+			class="flex items-center justify-between h-16 transition-height duration-500 ease-in-out px-20"
 			aria-label="Global"
 		>
 			<div class="flex lg:min-w-0 lg:flex-1" aria-label="Global">

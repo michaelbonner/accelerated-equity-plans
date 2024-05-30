@@ -30,7 +30,7 @@
 <div class="isolate bg-white font-jura">
 	<main>
 		<!--  Hero Div -->
-		<div class="relative px-6 lg:px-8 text-white bg-black h-content">
+		<div class="relative px-6 lg:px-28 text-white bg-black h-content">
 			<!-- Background Div -->
 			<div
 				class="absolute inset-0 bg-cover bg-center -z-1"
