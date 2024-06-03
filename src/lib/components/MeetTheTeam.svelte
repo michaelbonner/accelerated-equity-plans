@@ -20,7 +20,7 @@
 			>
 				<li class="h-full bg-slate-800 backdrop-blur-lg rounded-2xl bg-opacity-30 flex flex-col">
 					<img
-						class="w-4/6 mx-4 mt-4 rounded-2xl object-cover"
+						class="w-4/6 mx-4 mt-4 rounded-2xl object-cover max-w-[200px]"
 						src="/images/emily-headshot.jpg"
 						alt="Emily Bone"
 					/>
@@ -64,7 +64,7 @@
 
 				<li class="h-full bg-slate-800 backdrop-blur-lg rounded-2xl bg-opacity-30 flex flex-col">
 					<img
-						class="w-4/6 mx-4 mt-4 rounded-2xl object-cover"
+						class="w-4/6 mx-4 mt-4 rounded-2xl object-cover max-w-[200px]"
 						src="/images/neil-headshot.jpg"
 						alt="Neil Birrell"
 					/>
