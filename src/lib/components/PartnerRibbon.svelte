@@ -5,10 +5,10 @@
 
 	const partnerData = [
 		{
-			path: 'insightsoftware.png',
+			path: 'insightsoftware.svg',
 			url: 'https://insightsoftware.com/certent/equity-management-software/'
 		},
-		{ path: 'morganstanley.png', url: 'https://www.morganstanley.com/atwork' },
+		{ path: 'morgan-stanley-at-work.png', url: 'https://www.morganstanley.com/atwork' },
 		{ path: 'equitymethods.png', url: 'https://www.equitymethods.com' },
 		{ path: 'schwab.png', url: 'https://workplacefinancialservices.schwab.com/stock-plans' },
 		{ path: 'fidelity.png', url: 'https://www.fidelityworkplace.com/s/equity' },
@@ -44,7 +44,7 @@
 	});
 </script>
 
-<div class="mx-auto py-4 sm:py-6 md:py-10 bg-[#43626D] bg-opacity-60">
+<div class="mx-auto py-4 sm:py-6 md:py-10 bg-slate-100 bg-opacity-60">
 	<div class="container mx-auto flex flex-col">
 		<div class="flex items-center justify-center sm:pr-8">
 			<h2 class="text-4xl mb-5 flex flex-row md:text-5xl leading-normal font-bold">
@@ -52,7 +52,7 @@
 			</h2>
 		</div>
 		<div class="w-full flex justify-center items-center">
-			<div class="flex flex-wrap gap-4 px-4 justify-center">
+			<div class="grid lg:grid-cols-6 gap-4 lg:gap-12 px-4 justify-center">
 				{#each partnerImages as { path, url }}
 					<div class="partner-logo">
 						<a href={url} target="_blank">
