@@ -33,7 +33,11 @@
 						</p>
 						<ul role="list" class="mt-6 flex gap-x-6">
 							<li>
-								<a href="https://www.linkedin.com/in/emily-bone-mba-cep/" target="_blank">
+								<a
+									aria-label="Emily Bone's LinkedIn page"
+									href="https://www.linkedin.com/in/emily-bone-mba-cep/"
+									target="_blank"
+								>
 									<svg
 										class="w-10 h-10 text-blue-600 rounded-lg bg-white"
 										stroke="currentColor"
@@ -78,7 +82,11 @@
 						</p>
 						<ul role="list" class="mt-6 flex gap-x-6 items-center">
 							<li>
-								<a href="https://www.linkedin.com/in/neil-birrell-cep-0985185/" target="_blank">
+								<a
+									aria-label="Neil Birrell's LinkedIn page"
+									href="https://www.linkedin.com/in/neil-birrell-cep-0985185/"
+									target="_blank"
+								>
 									<svg
 										class="w-10 h-10 text-blue-600 rounded-lg bg-white"
 										stroke="currentColor"
