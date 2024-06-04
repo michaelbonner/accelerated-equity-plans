@@ -12,8 +12,6 @@
 	function handleScroll() {
 		const currentScrollY = window.scrollY;
 
-		console.log('currentScrollY', currentScrollY);
-
 		isScrolled = currentScrollY > 112;
 
 		lastScrollY = currentScrollY;
