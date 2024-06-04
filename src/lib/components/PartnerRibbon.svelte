@@ -36,18 +36,12 @@
 		path: partner.path.replace('/static', ''),
 		url: partner.url
 	}));
-
-	let ribbonContainer: HTMLElement;
-
-	onMount(() => {
-		// Initialize any necessary logic or effects here
-	});
 </script>
 
 <div class="mx-auto py-4 sm:py-6 md:py-10 bg-slate-50">
 	<div class="container mx-auto flex flex-col py-12 px-8">
-		<div class="text-center">
-			<h2 class="text-4xl mb-5 md:text-5xl leading-normal font-bold">Our Partners Include</h2>
+		<div class="prose font-eurostile text-slate-800 mx-auto">
+			<h2>Our Partners</h2>
 		</div>
 		<div class="w-full flex justify-center items-center lg:max-w-5xl mx-auto mt-8">
 			<div
