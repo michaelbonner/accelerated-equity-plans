@@ -70,7 +70,7 @@
 			class="sm:my-6 leading-8 tracking-wide flex flex-col sm:flex-row"
 			style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
 		>
-			<img src="/images/guy.jpg" alt="" class="sm:w-1/3 object-cover" />
+			<img src="/images/guy.jpg.webp" alt="" class="sm:w-1/3 object-cover" />
 			<div class="sm:w-2/3">
 				<div class="flex justify-center mt-8 mb-4 text-2xl">
 					<Icon src={AiFillStar} /><Icon src={AiFillStar} /><Icon src={AiFillStar} /><Icon

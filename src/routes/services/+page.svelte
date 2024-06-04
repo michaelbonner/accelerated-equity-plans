@@ -62,7 +62,7 @@
 						</div>
 					</div>
 					<img
-						src="/images/stocks.jpg"
+						src="/images/stocks.jpg.webp"
 						alt="stocks"
 						class=" h-96 w-96 object-cover sm:rounded-r-xl"
 					/>
@@ -73,7 +73,7 @@
 					style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
 				>
 					<img
-						src="/images/stocks2.jpg"
+						src="/images/stocks2.jpg.webp"
 						alt="stocks"
 						class=" h-96 w-96 object-cover sm:rounded-l-xl"
 					/>
@@ -110,7 +110,7 @@
 							</ol>
 						</div>
 					</div>
-					<img src="/images/automation.jpg" alt="stocks" class=" h-96 w-96 md:rounded-r-xl" />
+					<img src="/images/automation.jpg.webp" alt="stocks" class=" h-96 w-96 md:rounded-r-xl" />
 				</div>
 
 				<div
@@ -118,7 +118,7 @@
 					style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
 				>
 					<img
-						src="/images/taxes.jpg"
+						src="/images/taxes.jpg.webp"
 						alt="stocks"
 						class=" h-96 w-96 object-cover sm:rounded-l-xl"
 					/>
@@ -154,7 +154,7 @@
 						</div>
 					</div>
 					<img
-						src="/images/system.jpg"
+						src="/images/system.jpg.webp"
 						alt="stocks"
 						class=" h-96 w-96 object-cover sm:rounded-r-xl"
 					/>
@@ -164,7 +164,11 @@
 					class="sm:my-6 leading-8 tracking-wide flex flex-col sm:flex-row justify-center items-center sm:rounded-xl"
 					style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
 				>
-					<img src="/images/rfp.jpg" alt="stocks" class=" h-96 w-96 object-cover sm:rounded-l-xl" />
+					<img
+						src="/images/rfp.jpg.webp"
+						alt="stocks"
+						class=" h-96 w-96 object-cover sm:rounded-l-xl"
+					/>
 					<div class="sm:w-3/4 px-12 py-5">
 						<h2 class="mt-10 text-2xl sm:text-4xl font-bold">Vendor Selection and RFP</h2>
 						<div class="flex flex-col justify-center items-center mt-8 mb-4 w-full">
@@ -194,7 +198,7 @@
 						</div>
 					</div>
 					<img
-						src="/images/stocks.jpg"
+						src="/images/stocks.jpg.webp"
 						alt="stocks"
 						class=" h-96 w-96 object-cover sm:rounded-r-xl"
 					/>
@@ -205,7 +209,7 @@
 					style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
 				>
 					<img
-						src="/images/system2.jpg"
+						src="/images/system2.jpg.webp"
 						alt="stocks"
 						class=" h-96 w-96 object-cover sm:rounded-l-xl"
 					/>
@@ -234,7 +238,7 @@
 						</div>
 					</div>
 					<img
-						src="/images/training.jpg"
+						src="/images/training.jpg.webp"
 						alt="stocks"
 						class=" h-96 w-96 object-cover sm:rounded-r-xl"
 					/>
@@ -245,7 +249,7 @@
 					style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
 				>
 					<img
-						src="/images/education.jpg"
+						src="/images/education.jpg.webp"
 						alt="stocks"
 						class=" h-96 w-96 object-cover sm:rounded-l-xl"
 					/>

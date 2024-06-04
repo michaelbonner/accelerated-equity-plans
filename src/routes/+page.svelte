@@ -73,7 +73,7 @@
 				class="relative isolate flex flex-col justify-around py-10 px-10 overflow-hidden bg-gray-900"
 			>
 				<img
-					src="/images/stocks.jpg"
+					src="/images/stocks.jpg.webp"
 					alt="computer on a table"
 					class="absolute inset-0 -z-10 h-full w-full object-cover grayscale"
 				/>
@@ -102,7 +102,7 @@
 				class="relative isolate flex flex-col justify-around py-10 px-10 overflow-hidden bg-gray-900"
 			>
 				<img
-					src="/images/stocks2.jpg"
+					src="/images/stocks2.jpg.webp"
 					alt="iphone with stock information"
 					class="absolute inset-0 -z-10 h-full w-full object-cover grayscale"
 				/>
@@ -132,7 +132,7 @@
 				class="relative isolate flex flex-col justify-around py-10 px-10 overflow-hidden bg-gray-900"
 			>
 				<img
-					src="/images/projectmanagement.jpg"
+					src="/images/projectmanagement.jpg.webp"
 					alt="team holding hands"
 					class="absolute inset-0 -z-10 h-full w-full object-cover grayscale"
 				/>

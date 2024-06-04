@@ -40,7 +40,7 @@
 				Empowering companies to harness the full potential of equity compensation to attract,
 				retain, and motivate talent
 			</div>
-			<img src="/images/meeting.jpg" alt="people in a meeting" class="sm:w-1/2" />
+			<img src="/images/meeting.jpg.webp" alt="people in a meeting" class="sm:w-1/2" />
 		</div>
 		<!-- section 2 -->
 		<div
