@@ -3,13 +3,11 @@
 </script>
 
 <footer class="bg-white">
-	<div class="grid gap-8 mx-auto max-w-7xl overflow-hidden px-8 py-20 sm:py-24">
+	<div class="grid gap-8 mx-auto max-w-7xl overflow-hidden px-8 pt-20 pb-12">
 		<nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-10" aria-label="Footer">
 			{#each navLinks as navLink}
 				<div class="pb-6">
-					<a
-						href={navLink.href}
-						class="text-sm leading-6 text-gray-600 hover:text-gray-900 hover:underline"
+					<a href={navLink.href} class="leading-6 text-gray-600 hover:text-gray-900 hover:underline"
 						>{navLink.name}</a
 					>
 				</div>
