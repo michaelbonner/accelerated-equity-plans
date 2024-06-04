@@ -33,14 +33,14 @@
 		<div class="relative px-6 lg:px-28 text-white bg-black h-content">
 			<!-- Background Div -->
 			<div
-				class="absolute inset-0 bg-cover bg-center -z-1"
-				style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url('/images/wasatch.jpg');"
+				class="absolute inset-0 bg-cover bg-top -z-1"
+				style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.95) 100%), url('/images/mountains.webp');"
 			></div>
 
 			<!-- Should be foreground div in same container -->
-			<div class="relative z-10 sm:px-8">
-				<div class="flex flex-col md:w-[40vw] pt-20 pb-32 sm:pt-48 sm:pb-20">
-					<h1 class="text-2xl mt-10 md:mt-0 font-bold tracking-tight sm:text-6xl">
+			<div class="relative z-10 sm:px-8 py-48 lg:py-72">
+				<div class="flex flex-col prose-white max-w-3xl">
+					<h1 class="text-4xl font-bold tracking-tight sm:text-6xl">
 						Maximize Your Equity's Potential
 					</h1>
 					<p class="mt-6 text-lg leading-8">
@@ -53,7 +53,7 @@
 					<div class="mt-8 flex gap-x-4">
 						<a
 							href="/contact"
-							class="transition ease-in-out duration-300 inline-block rounded-lg w-40 text-center bg-red-700 bg-opacity-30 px-4 py-1.5 text-base font-semibold leading-7 backdrop-blur text-white ring-1 ring-red-700 hover:bg-red-800 hover:ring-red-800 no-underline"
+							class="transition ease-in-out duration-300 inline-block rounded-lg text-center bg-red-700 bg-opacity-30 px-4 py-1.5 text-base font-semibold leading-7 backdrop-blur text-white ring-1 ring-red-700 hover:bg-red-800 hover:ring-red-800 no-underline"
 						>
 							Get in touch
 							<span class="text-red-200" aria-hidden="true">&rarr;</span>
@@ -65,7 +65,7 @@
 
 		<!-- Start Services Section -->
 		<div
-			class="mx-auto grid max-w-2xl auto-rows-fr grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-3 min-h-[50vh]"
+			class="mx-auto grid max-w-2xl auto-rows-fr grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-3"
 		>
 			<!-- Temporary Stock Administration Support -->
 			<div
@@ -77,7 +77,7 @@
 					class="absolute inset-0 -z-10 h-full w-full object-cover grayscale"
 				/>
 				<div class="absolute inset-0 -z-10 bg-[#1C1E1F] bg-opacity-80"></div>
-				<h3 class="mt-3 text-lg font-semibold leading-6 text-white">
+				<h3 class="mt-3 text-lg font-bold leading-6 text-white">
 					<p class="py-2">Temporary Stock Administration Support</p>
 				</h3>
 				<p class=" text-white">
@@ -107,10 +107,10 @@
 				/>
 				<div class="absolute inset-0 -z-10 bg-[#AC2228] bg-opacity-80"></div>
 				<div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
-				<h3 class="mt-3 text-lg font-semibold leading-6 text-white">
+				<h3 class="mt-3 text-lg font-bold leading-6 text-white">
 					<p class="relative">Full Stock Administration Outsourcing</p>
 				</h3>
-				<p class="text-white">
+				<p class="text-white mt-4">
 					We offer a comprehensive solution to fully outsource your stock plan administration needs,
 					providing you with peace of mind and allowing you to focus on your core business
 					activities. With our expertise and experience in stock plan administration, we handle
@@ -137,10 +137,10 @@
 				/>
 				<div class="absolute inset-0 -z-10 bg-[#43626D] bg-opacity-80"></div>
 				<div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
-				<h3 class="mt-3 text-lg font-semibold leading-6 text-white">
+				<h3 class="mt-3 text-lg font-bold leading-6 text-white">
 					<p class="relative">Special Projects and Consulting Services</p>
 				</h3>
-				<p class="text-white">
+				<p class="text-white mt-4">
 					We offer a comprehensive suite of services designed to empower businesses across various
 					industries. From guiding organizations through complex Mergers and Acquisitions and
 					navigating the intricacies of IPOs and SPACs to facilitating seamless Corporate Actions
@@ -251,9 +251,7 @@
 		<!-- End Services Section -->
 
 		<!-- Engaging subheading and text -->
-		<div
-			class="mx-auto sm:min-h-[40vh] px-8 sm:px-10 py-14 sm:py-32 flex flex-col justify-center bg-[#E1E4E7]"
-		>
+		<div class="mx-auto px-8 sm:px-10 py-14 sm:py-32 flex flex-col justify-center bg-[#E1E4E7]">
 			<div class="prose max-w-5xl mx-auto">
 				<h2 class="shrink-0 text-3xl font-bold tracking-tight sm:text-4xl text-black font-jura">
 					Elevate Your Equity Management with Expert Support
