@@ -64,9 +64,7 @@
 		</div>
 
 		<!-- Start Services Section -->
-		<div
-			class="mx-auto grid max-w-2xl auto-rows-fr grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-3"
-		>
+		<div class="mx-auto w-full grid grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 			<!-- Temporary Stock Administration Support -->
 			<div
 				class="relative isolate flex flex-col justify-around py-10 px-10 overflow-hidden bg-gray-900"
@@ -80,7 +78,7 @@
 				<h3 class="mt-3 text-lg font-bold leading-6 text-white">
 					<p class="py-2">Temporary Stock Administration Support</p>
 				</h3>
-				<p class=" text-white">
+				<p class="text-white mt-4 max-w-md">
 					We offer temporary stock administration services to provide seamless support during
 					periods of increased workload or staff shortages. Whether you're facing a surge in stock
 					plan activities, experiencing a transition period, or simply need temporary assistance,
@@ -110,7 +108,7 @@
 				<h3 class="mt-3 text-lg font-bold leading-6 text-white">
 					<p class="relative">Full Stock Administration Outsourcing</p>
 				</h3>
-				<p class="text-white mt-4">
+				<p class="text-white mt-4 max-w-md">
 					We offer a comprehensive solution to fully outsource your stock plan administration needs,
 					providing you with peace of mind and allowing you to focus on your core business
 					activities. With our expertise and experience in stock plan administration, we handle
@@ -140,7 +138,7 @@
 				<h3 class="mt-3 text-lg font-bold leading-6 text-white">
 					<p class="relative">Special Projects and Consulting Services</p>
 				</h3>
-				<p class="text-white mt-4">
+				<p class="text-white mt-4 max-w-md">
 					We offer a comprehensive suite of services designed to empower businesses across various
 					industries. From guiding organizations through complex Mergers and Acquisitions and
 					navigating the intricacies of IPOs and SPACs to facilitating seamless Corporate Actions
