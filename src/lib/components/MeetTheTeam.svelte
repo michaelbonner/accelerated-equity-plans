@@ -90,14 +90,14 @@
 			>
 				{#each team as teamMember}
 					<li
-						class="h-full bg-slate-800 backdrop-blur-lg rounded-2xl bg-opacity-30 flex flex-col justify-between p-4"
+						class="h-full bg-slate-800 backdrop-blur-lg rounded-2xl bg-opacity-30 flex flex-col justify-between px-6 pt-2 pb-6"
 					>
 						<img
-							class="aspect-square mt-4 rounded-2xl object-cover max-w-[200px]"
+							class="aspect-square mt-4 rounded-xl object-cover max-w-[200px] shadow-lg"
 							src={teamMember.image.src}
 							alt={teamMember.image.alt}
 						/>
-						<div class="px-4 py-4 flex flex-col flex-grow prose text-white">
+						<div class="flex flex-col flex-grow prose text-white">
 							<div class="grow">
 								<h3 class="text-white mb-0">{teamMember.fullName}</h3>
 								<h4 class="text-white">{teamMember.title}</h4>
