@@ -1,25 +1,32 @@
-<footer
-	class="sm:px-12 py-6 text-gray-100"
-	style="background-image: linear-gradient(to top, #94A3B8, #1e293b);"
->
-	<nav class="mx-auto flex items-center justify-start p-6 lg:px-8 max-w-7xl" aria-label="Global">
-		<div class="flex flex-1">
-			<div class="flex flex-col">
-				<a href="/" class="text-lg font-semibold leading-8">Product</a>
-				<a href="/" class="text-lg font-semibold leading-8">Features</a>
-				<a href="/" class="text-lg font-semibold leading-8">Company</a>
-			</div>
+<script>
+	export let navLinks;
+</script>
+
+<footer class="bg-white">
+	<div class="grid gap-8 mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+		<nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-10" aria-label="Footer">
+			{#each navLinks as navLink}
+				<div class="pb-6">
+					<a
+						href={navLink.href}
+						class="text-sm leading-6 text-gray-600 hover:text-gray-900 hover:underline"
+						>{navLink.name}</a
+					>
+				</div>
+			{/each}
+		</nav>
+
+		<div>
+			<a href="/">
+				<img
+					src="/images/accelerated-equity-plans.png"
+					alt="Accelerated Equity Plans"
+					class="max-w-[200px] sm:mx-auto"
+				/>
+			</a>
 		</div>
-		<a href="/" class="-m-1.5 p-1.5">
-			<span class="sr-only">Accelerated Equity</span>
-			<img class=" h-28" src="/images/2024-AEP-Brand_Guide-0124_A-Icon-Reversed.png" alt="" />
-		</a>
-		<div class="flex flex-1 justify-end">
-			<div class="flex flex-col">
-				<a href="/" class="text-lg font-semibold leading-8">Social Media</a>
-				<a href="/contact" class="text-lg font-semibold leading-8">Contact</a>
-				<a href="/careers" class="text-lg font-semibold leading-8">Careers</a>
-			</div>
-		</div>
-	</nav>
+		<p class="text-left text-xs leading-5 text-gray-500 sm:text-center">
+			&copy; {new Date().getFullYear()} Accelerated Equity Plans. All rights reserved.
+		</p>
+	</div>
 </footer>

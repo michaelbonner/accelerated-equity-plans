@@ -15,6 +15,29 @@
 			link.setAttribute('rel', 'stylesheet');
 		});
 	});
+
+	const navLinks = [
+		{
+			name: 'Home',
+			href: '/'
+		},
+		{
+			name: 'About',
+			href: '/about'
+		},
+		{
+			name: 'Careers',
+			href: '/careers'
+		},
+		{
+			name: 'Services',
+			href: '/services'
+		},
+		{
+			name: 'Contact Us',
+			href: '/contact'
+		}
+	];
 </script>
 
 <svelte:head>
@@ -31,9 +54,9 @@
 
 <Analytics />
 <div class="flex flex-col min-h-screen">
-	<Navbar {showBackground} />
+	<Navbar {navLinks} {showBackground} />
 	<div class="flex flex-col flex-grow bg-white">
 		<slot />
 	</div>
-	<!-- <Footer /> -->
+	<Footer {navLinks} />
 </div>
