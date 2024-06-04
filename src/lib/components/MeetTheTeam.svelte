@@ -86,7 +86,7 @@
 
 			<ul
 				role="list"
-				class="grid grid-cols-1 gap-x-6 gap-y-10 sm:gap-y-20 sm:grid-cols-3 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2"
+				class="grid grid-cols-1 gap-x-6 gap-y-10 sm:gap-y-20 sm:grid-cols-2 lg:grid-cols-3 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2"
 			>
 				{#each team as teamMember}
 					<li
