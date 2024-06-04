@@ -10,10 +10,6 @@ module.exports = {
 				sans: ['roboto', ...defaultTheme.fontFamily.sans],
 				serif: ['Lora', ...defaultTheme.fontFamily.serif],
 				eurostile: ['eurostile', 'sans-serif']
-			},
-			backgroundImage: {
-				'slc-night': 'url(/images/slcatnight.jpg)',
-				'red-blue-ribbon': 'url(/images/redblueribbon.png)'
 			}
 		}
 	},
