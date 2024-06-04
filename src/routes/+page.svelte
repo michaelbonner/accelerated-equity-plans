@@ -252,24 +252,24 @@
 
 		<!-- Engaging subheading and text -->
 		<div
-			class="mx-auto sm:min-h-[40vh] px-4 sm:px-10 py-14 sm:py-32 flex flex-col justify-center bg-[#E1E4E7]"
+			class="mx-auto sm:min-h-[40vh] px-8 sm:px-10 py-14 sm:py-32 flex flex-col justify-center bg-[#E1E4E7]"
 		>
-			<h2
-				class="mb-8 shrink-0 text-3xl font-bold tracking-tight sm:text-4xl text-center text-black font-jura"
-			>
-				Elevate Your Equity Management with Expert Support
-			</h2>
-			<div class="lg:text-left px-2 sm:px-9">
-				<p class="text-lg leading-8 text-gray-800 font-jura">
-					In the fast-paced world of equity compensation, a trusted expert can transform your
-					challenges into efficiency and growth. Accelerated Equity Plans isn't just a service;
-					we're your partner in boosting your team's effectiveness. We handle everything from urgent
-					plan adjustments to daily operations, ensuring no detail is missed. Our strategies not
-					only address current needs but also prepare your team for future success. Seamlessly
-					integrating with your operations, we offer unmatched expertise and proactive solutions.
-					With us, your equity plans are managed expertly, allowing you to concentrate on leading
-					your company forward.
-				</p>
+			<div class="prose max-w-5xl mx-auto">
+				<h2 class="shrink-0 text-3xl font-bold tracking-tight sm:text-4xl text-black font-jura">
+					Elevate Your Equity Management with Expert Support
+				</h2>
+				<div class="lg:text-left">
+					<p class="text-lg leading-8 text-gray-800 font-jura">
+						In the fast-paced world of equity compensation, a trusted expert can transform your
+						challenges into efficiency and growth. Accelerated Equity Plans isn't just a service;
+						we're your partner in boosting your team's effectiveness. We handle everything from
+						urgent plan adjustments to daily operations, ensuring no detail is missed. Our
+						strategies not only address current needs but also prepare your team for future success.
+						Seamlessly integrating with your operations, we offer unmatched expertise and proactive
+						solutions. With us, your equity plans are managed expertly, allowing you to concentrate
+						on leading your company forward.
+					</p>
+				</div>
 			</div>
 		</div>
 
