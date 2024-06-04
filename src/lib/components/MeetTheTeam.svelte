@@ -68,6 +68,7 @@
 </script>
 
 <div
+	id="team"
 	class="relative inset-0 bg-cover"
 	style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url('/images/redblueribbon.png.webp');"
 >
