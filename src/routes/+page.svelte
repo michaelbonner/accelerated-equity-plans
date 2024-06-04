@@ -33,9 +33,12 @@
 		<div class="relative px-6 lg:px-28 text-white bg-black h-content">
 			<!-- Background Div -->
 			<div
-				class="absolute inset-0 bg-cover bg-top -z-1"
-				style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.95) 100%), url('/images/mountains.webp');"
+				class="absolute inset-0 bg-cover bg-top -z-1 bg-opacity-100 lg:bg-opacity-30"
+				style="background-image: url('/images/home-hero.jpg.webp');"
 			></div>
+			<div
+				class="absolute inset-0 bg-opacity-70 bg-gradient-to-r from-black/90 via-black/60 to-black/40 lg:from-black/80 lg:via-black/50 lg:to-black/20"
+			/>
 
 			<!-- Should be foreground div in same container -->
 			<div class="relative z-10 sm:px-8 py-48 lg:py-72">
@@ -43,7 +46,7 @@
 					<h1 class="text-4xl font-bold tracking-tight sm:text-6xl">
 						Maximize Your Equity's Potential
 					</h1>
-					<p class="mt-6 text-lg leading-8">
+					<p class="mt-6 text-lg leading-8 max-w-[660px]">
 						Bringing industry leading expertise and support to your equity programs to deliver a
 						best-in-class experience for your team, partners and participants. Founded by <span
 							class="font-bold">industry experts</span
