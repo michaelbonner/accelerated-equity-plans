@@ -11,11 +11,10 @@
 
 	function handleScroll() {
 		const currentScrollY = window.scrollY;
-		const scrollCheck = window.innerHeight * 1.5;
 
-		isScrolled = currentScrollY > 50;
+		console.log('currentScrollY', currentScrollY);
 
-		navbarVisible = currentScrollY < lastScrollY || currentScrollY < scrollCheck;
+		isScrolled = currentScrollY > 112;
 
 		lastScrollY = currentScrollY;
 	}
@@ -29,7 +28,7 @@
 		};
 	});
 
-	$: navbarClass = `fixed top-0 z-10 transition-all duration-300 ease-in-out w-screen px-6 py-2 ${navbarVisible ? 'opacity-100' : 'opacity-0'} ${isScrolled || showBackground ? 'bg-slate-600 bg-opacity-70 backdrop-blur' : ''}`;
+	$: navbarClass = `fixed top-0 z-20 transition-all duration-300 ease-in-out w-screen px-6 py-2 ${navbarVisible ? 'opacity-100' : 'opacity-0'} ${isScrolled || showBackground ? 'bg-slate-600 bg-opacity-70 backdrop-blur' : ''}`;
 
 	export let navLinks;
 </script>
@@ -38,16 +37,16 @@
 	<div>
 		<nav
 			class:h-16={isScrolled}
-			class="flex items-center justify-between h-16 transition-height duration-500 ease-in-out px-20"
+			class:h-24={!isScrolled}
+			class="flex items-center justify-between transition-height duration-500 ease-in-out xl:px-12"
 			aria-label="Global"
 		>
 			<div class="flex lg:min-w-0 lg:flex-1" aria-label="Global">
 				<a href="/" class="-m-1.5 p-1.5">
 					<span class="sr-only">Accelerated Equity Plans</span>
 					<img
-						class:md:h-24={isScrolled}
-						class="h-24 sm:h-32 transition-height duration-500 ease-in-out"
-						src="/images/2024-AEP-Brand_Guide-0124_Primary-Logo-Reversed.png"
+						class="w-full py-2 transition-height duration-500 ease-in-out max-w-[180px]"
+						src="/images/aep-logo-white.svg"
 						alt="Accelerated Equity Plans Logo"
 					/>
 				</a>
@@ -76,7 +75,7 @@
 					</svg>
 				</button>
 			</div>
-			<div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
+			<div class="hidden lg:flex lg:min-w-0 lg:justify-center lg:items-center lg:gap-x-12">
 				{#each navLinks as navLink}
 					<a href={navLink.href} class="uppercase font-semibold text-white hover:text-red-600"
 						>{navLink.name}</a
@@ -96,8 +95,8 @@
 							<a href="/" class="-m-1.5 p-1.5">
 								<span class="sr-only">Accelerated Equity Plans</span>
 								<img
-									class="h-16"
-									src="/images/2024-AEP-Brand_Guide-0124_Primary-Logo-Reversed.png"
+									class="h-16 max-w-[180px]"
+									src="/images/aep-logo-white.svg"
 									alt="Accelerated Equity Plans Logo"
 								/>
 							</a>
