@@ -45,13 +45,11 @@
 </script>
 
 <div class="mx-auto py-4 sm:py-6 md:py-10 bg-slate-100 bg-opacity-60">
-	<div class="container mx-auto flex flex-col">
-		<div class="flex items-center justify-center sm:pr-8">
-			<h2 class="text-4xl mb-5 flex flex-row md:text-5xl leading-normal font-bold">
-				Our Partners Include
-			</h2>
+	<div class="container mx-auto flex flex-col py-12 px-8">
+		<div class="text-center">
+			<h2 class="text-4xl mb-5 md:text-5xl leading-normal font-bold">Our Partners Include</h2>
 		</div>
-		<div class="w-full flex justify-center items-center lg:max-w-5xl px-8 mx-auto">
+		<div class="w-full flex justify-center items-center lg:max-w-5xl mx-auto">
 			<div
 				class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-4 gap-x-8 lg:gap-x-12 px-4 justify-center"
 			>

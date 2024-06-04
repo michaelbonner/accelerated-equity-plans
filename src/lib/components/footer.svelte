@@ -3,7 +3,7 @@
 </script>
 
 <footer class="bg-white">
-	<div class="grid gap-8 mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+	<div class="grid gap-8 mx-auto max-w-7xl overflow-hidden px-8 py-20 sm:py-24">
 		<nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-10" aria-label="Footer">
 			{#each navLinks as navLink}
 				<div class="pb-6">
