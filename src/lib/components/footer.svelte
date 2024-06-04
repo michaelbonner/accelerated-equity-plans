@@ -19,7 +19,7 @@
 		<div>
 			<a href="/">
 				<img
-					src="/images/accelerated-equity-plans.png"
+					src="/images/aep-logo.svg"
 					alt="Accelerated Equity Plans"
 					class="max-w-[200px] sm:mx-auto"
 				/>
