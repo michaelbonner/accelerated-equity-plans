@@ -11,7 +11,7 @@
 		{ path: 'morgan-stanley-at-work.png', url: 'https://www.morganstanley.com/atwork' },
 		{ path: 'equitymethods.png', url: 'https://www.equitymethods.com' },
 		{ path: 'schwab.png', url: 'https://workplacefinancialservices.schwab.com/stock-plans' },
-		{ path: 'fidelity.png', url: 'https://www.fidelityworkplace.com/s/equity' },
+		{ path: 'fidelity.svg', url: 'https://www.fidelityworkplace.com/s/equity' },
 		{ path: 'globalshares.png', url: 'https://www.globalshares.com' },
 		{ path: 'eqvista.png', url: 'https://eqvista.com' },
 		{ path: 'carta.png', url: 'https://carta.com' },
@@ -51,12 +51,18 @@
 				Our Partners Include
 			</h2>
 		</div>
-		<div class="w-full flex justify-center items-center">
-			<div class="grid lg:grid-cols-6 gap-4 lg:gap-12 px-4 justify-center">
+		<div class="w-full flex justify-center items-center lg:max-w-5xl px-8 mx-auto">
+			<div
+				class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-4 gap-x-8 lg:gap-x-12 px-4 justify-center"
+			>
 				{#each partnerImages as { path, url }}
-					<div class="partner-logo">
+					<div class="flex items-center justify-center py-4 sm:py-6">
 						<a href={url} target="_blank">
-							<img src={`${partnerImagesPath}${path}`} alt="Partner Logo" class="h-auto" />
+							<img
+								src={`${partnerImagesPath}${path}`}
+								alt="Partner Logo"
+								class="h-auto max-h-16 w-full max-w-[120px]"
+							/>
 						</a>
 					</div>
 				{/each}
@@ -64,13 +70,3 @@
 		</div>
 	</div>
 </div>
-
-<style lang="postcss">
-	.partner-logo {
-		@apply flex items-center justify-center py-4 sm:py-6;
-	}
-
-	.partner-logo img {
-		@apply max-h-16 max-w-full;
-	}
-</style>

@@ -30,6 +30,8 @@
 	});
 
 	$: navbarClass = `fixed top-0 z-10 transition-all duration-300 ease-in-out w-screen px-6 py-2 ${navbarVisible ? 'opacity-100' : 'opacity-0'} ${isScrolled || showBackground ? 'bg-slate-600 bg-opacity-70 backdrop-blur' : ''}`;
+
+	export let navLinks;
 </script>
 
 <div class={navbarClass}>
@@ -75,20 +77,20 @@
 				</button>
 			</div>
 			<div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
-				<a href="/about" class="font-semibold text-white hover:text-red-600">About</a>
-
-				<a href="/careers" class="font-semibold text-white hover:text-red-600">Careers</a>
-
-				<a href="/services" class="font-semibold text-white hover:text-red-600">Services</a>
-
-				<a href="/contact" class="font-semibold text-white hover:text-red-600">Contact Us</a>
+				{#each navLinks as navLink}
+					<a href={navLink.href} class="uppercase font-semibold text-white hover:text-red-600"
+						>{navLink.name}</a
+					>
+				{/each}
 			</div>
 		</nav>
 
 		{#if mobileMenuOpen}
 			<!-- Mobile menu, show/hide based on menu open state. -->
 			<div role="dialog" aria-modal="true">
-				<div class="fixed inset-0 z-10 overflow-y-auto bg-slate-600 px-6 py-6 lg:hidden">
+				<div
+					class="fixed top-0 left-0 right-0 z-10 overflow-y-visible bg-slate-600 px-6 py-6 lg:hidden"
+				>
 					<div class="flex h-9 items-center justify-between">
 						<div class="flex">
 							<a href="/" class="-m-1.5 p-1.5">
@@ -124,35 +126,15 @@
 					<div class="mt-6 flow-root">
 						<div class="-my-6 divide-y divide-gray-500/10">
 							<div class="space-y-2 py-6">
-								<a
-									href="/about"
-									class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-gray-400/10"
-									on:click={toggleMobileMenu}
-								>
-									About
-								</a>
-
-								<a
-									href="/careers"
-									class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-gray-400/10"
-									on:click={toggleMobileMenu}
-								>
-									Careers
-								</a>
-								<a
-									href="/services"
-									class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-gray-400/10"
-									on:click={toggleMobileMenu}
-								>
-									Services
-								</a>
-								<a
-									href="/contact"
-									class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-gray-400/10"
-									on:click={toggleMobileMenu}
-								>
-									Contact Us
-								</a>
+								{#each navLinks as navLink}
+									<a
+										href={navLink.href}
+										class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-gray-400/10"
+										on:click={toggleMobileMenu}
+									>
+										{navLink.name}
+									</a>
+								{/each}
 							</div>
 						</div>
 					</div>
