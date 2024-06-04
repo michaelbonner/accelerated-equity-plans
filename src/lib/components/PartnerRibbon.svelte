@@ -8,27 +8,27 @@
 			path: 'insightsoftware.svg',
 			url: 'https://insightsoftware.com/certent/equity-management-software/'
 		},
-		{ path: 'morgan-stanley-at-work.png', url: 'https://www.morganstanley.com/atwork' },
-		{ path: 'equitymethods.png', url: 'https://www.equitymethods.com' },
-		{ path: 'schwab.png', url: 'https://workplacefinancialservices.schwab.com/stock-plans' },
+		{ path: 'morgan-stanley-at-work.png.webp', url: 'https://www.morganstanley.com/atwork' },
+		{ path: 'equitymethods.png.webp', url: 'https://www.equitymethods.com' },
+		{ path: 'schwab.png.webp', url: 'https://workplacefinancialservices.schwab.com/stock-plans' },
 		{ path: 'fidelity.svg', url: 'https://www.fidelityworkplace.com/s/equity' },
-		{ path: 'globalshares.png', url: 'https://www.globalshares.com' },
-		{ path: 'eqvista.png', url: 'https://eqvista.com' },
-		{ path: 'carta.png', url: 'https://carta.com' },
+		{ path: 'globalshares.png.webp', url: 'https://www.globalshares.com' },
+		{ path: 'eqvista.png.webp', url: 'https://eqvista.com' },
+		{ path: 'carta.png.webp', url: 'https://carta.com' },
 		{
-			path: 'deloitte.png',
+			path: 'deloitte.png.webp',
 			url: 'https://www.deloitte.com/global/en/services/tax/services/equity-and-incentives.html'
 		},
 		{
-			path: 'pwc.png',
+			path: 'pwc.png.webp',
 			url: 'https://www.pwc.com/us/en/industries/financial-services/private-equity.html'
 		},
 		{
-			path: 'kpmg.png',
+			path: 'kpmg.png.webp',
 			url: 'https://kpmg.com/us/en/home/industries/private-equity.html'
 		},
 		{
-			path: 'ubs.png',
+			path: 'ubs.png.webp',
 			url: 'https://www.ubs.com/us/en/wealth-management/our-solutions/companies-organizations.html'
 		}
 	];
