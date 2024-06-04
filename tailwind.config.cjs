@@ -7,9 +7,9 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Inter', ...defaultTheme.fontFamily.sans],
+				sans: ['roboto', ...defaultTheme.fontFamily.sans],
 				serif: ['Lora', ...defaultTheme.fontFamily.serif],
-				jura: ['Jura', 'sans-serif']
+				eurostile: ['eurostile', 'sans-serif']
 			},
 			backgroundImage: {
 				'slc-night': 'url(/images/slcatnight.jpg)',

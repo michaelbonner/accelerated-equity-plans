@@ -5,7 +5,7 @@
 	import ImQuotesRight from 'svelte-icons-pack/im/ImQuotesRight';
 </script>
 
-<div class="flex justify-center min-h-screen font-jura">
+<div class="flex justify-center min-h-screen font-eurostile">
 	<div class=" sm:w-5/6 mt-28 sm:mt-36">
 		<!-- hero -->
 		<div>

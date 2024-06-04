@@ -27,7 +27,7 @@
 	/>
 </svelte:head>
 
-<div class="isolate bg-white font-jura">
+<div class="isolate bg-white">
 	<main>
 		<!--  Hero Div -->
 		<div class="relative px-6 lg:px-28 text-white bg-black h-content">
@@ -43,7 +43,7 @@
 			<!-- Should be foreground div in same container -->
 			<div class="relative z-10 sm:px-8 py-48 lg:py-72">
 				<div class="flex flex-col prose-white max-w-3xl">
-					<h1 class="text-4xl font-bold tracking-tight sm:text-6xl">
+					<h1 class="text-4xl font-bold tracking-tight sm:text-6xl font-eurostile">
 						Maximize Your Equity's Potential
 					</h1>
 					<p class="mt-6 text-lg leading-8 max-w-[660px]">
@@ -78,7 +78,7 @@
 					class="absolute inset-0 -z-10 h-full w-full object-cover grayscale"
 				/>
 				<div class="absolute inset-0 -z-10 bg-[#1C1E1F] bg-opacity-80"></div>
-				<h3 class="mt-3 text-lg font-bold leading-6 text-white">
+				<h3 class="mt-3 text-2xl font-bold leading-6 text-white font-eurostile">
 					<p class="py-2">Temporary Stock Administration Support</p>
 				</h3>
 				<p class="text-white mt-4 max-w-md">
@@ -108,7 +108,7 @@
 				/>
 				<div class="absolute inset-0 -z-10 bg-[#AC2228] bg-opacity-80"></div>
 				<div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
-				<h3 class="mt-3 text-lg font-bold leading-6 text-white">
+				<h3 class="mt-3 text-2xl font-bold leading-6 text-white font-eurostile">
 					<p class="relative">Full Stock Administration Outsourcing</p>
 				</h3>
 				<p class="text-white mt-4 max-w-md">
@@ -138,7 +138,7 @@
 				/>
 				<div class="absolute inset-0 -z-10 bg-[#43626D] bg-opacity-80"></div>
 				<div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
-				<h3 class="mt-3 text-lg font-bold leading-6 text-white">
+				<h3 class="mt-3 text-2xl font-bold leading-6 text-white font-eurostile">
 					<p class="relative">Special Projects and Consulting Services</p>
 				</h3>
 				<p class="text-white mt-4 max-w-md">
@@ -164,7 +164,7 @@
 			<div
 				class="relative isolate overflow-hidden bg-gray-900 px-6 py-14 text-center shadow-2xl sm:px-16 flex items-center justify-between"
 			>
-				<h2 class="tracking-wide text-white sm:text-4xl">
+				<h2 class="tracking-wide text-white sm:text-4xl font-eurostile">
 					Take your equity management to the next level today
 				</h2>
 				<div class="flex items-center justify-center gap-x-6">
@@ -254,11 +254,13 @@
 		<!-- Engaging subheading and text -->
 		<div class="mx-auto px-8 sm:px-10 py-14 sm:py-32 flex flex-col justify-center bg-[#E1E4E7]">
 			<div class="prose max-w-5xl mx-auto">
-				<h2 class="shrink-0 text-3xl font-bold tracking-tight sm:text-4xl text-black font-jura">
+				<h2
+					class="shrink-0 text-3xl font-bold tracking-tight sm:text-4xl text-black font-eurostile"
+				>
 					Elevate Your Equity Management with Expert Support
 				</h2>
 				<div class="lg:text-left">
-					<p class="text-lg leading-8 text-gray-800 font-jura">
+					<p class="text-lg leading-8 text-gray-800 font-sans">
 						In the fast-paced world of equity compensation, a trusted expert can transform your
 						challenges into efficiency and growth. Accelerated Equity Plans isn't just a service;
 						we're your partner in boosting your team's effectiveness. We handle everything from
@@ -281,7 +283,7 @@
 			<div
 				class="relative isolate overflow-hidden bg-gray-900 px-6 py-14 text-center shadow-2xl sm:px-16 flex flex-col items-center justify-between"
 			>
-				<h2 class="text-3xl font-bold tracking-wide text-white sm:text-4xl mb-4 font-jura">
+				<h2 class="text-3xl font-bold tracking-wide text-white sm:text-4xl mb-4 font-eurostile">
 					Unlock the full potential of your equity management
 				</h2>
 				<div class="flex items-center justify-center gap-x-6 mt-8">

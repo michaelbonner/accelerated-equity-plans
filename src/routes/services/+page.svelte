@@ -4,7 +4,7 @@
 </script>
 
 <div>
-	<div class="flex flex-col justify-center min-h-screen mt-28 sm:mt-36 font-jura">
+	<div class="flex flex-col justify-center min-h-screen mt-28 sm:mt-36 font-eurostile">
 		<!-- hero -->
 		<div
 			class="relative isolate overflow-hidden bg-[#2B454E] px-6 py-8 text-center sm:px-16 flex flex-col items-center justify-between"
