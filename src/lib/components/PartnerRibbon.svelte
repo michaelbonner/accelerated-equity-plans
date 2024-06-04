@@ -24,11 +24,11 @@
 			url: 'https://www.pwc.com/us/en/industries/financial-services/private-equity.html'
 		},
 		{
-			path: 'kpmg.png.webp',
+			path: 'kpmg.png',
 			url: 'https://kpmg.com/us/en/home/industries/private-equity.html'
 		},
 		{
-			path: 'ubs.png.webp',
+			path: 'ubs.png',
 			url: 'https://www.ubs.com/us/en/wealth-management/our-solutions/companies-organizations.html'
 		}
 	];
@@ -44,22 +44,26 @@
 	});
 </script>
 
-<div class="mx-auto py-4 sm:py-6 md:py-10 bg-slate-100 bg-opacity-60">
+<div class="mx-auto py-4 sm:py-6 md:py-10 bg-slate-50">
 	<div class="container mx-auto flex flex-col py-12 px-8">
 		<div class="text-center">
 			<h2 class="text-4xl mb-5 md:text-5xl leading-normal font-bold">Our Partners Include</h2>
 		</div>
-		<div class="w-full flex justify-center items-center lg:max-w-5xl mx-auto">
+		<div class="w-full flex justify-center items-center lg:max-w-5xl mx-auto mt-8">
 			<div
-				class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-4 gap-x-8 lg:gap-x-12 px-4 justify-center"
+				class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-6 lg:gap-y-8 gap-x-4 px-4 justify-center"
 			>
 				{#each partnerImages as { path, url }}
-					<div class="flex items-center justify-center py-4 sm:py-6">
-						<a href={url} target="_blank">
+					<div class="flex items-center justify-center">
+						<a
+							href={url}
+							target="_blank"
+							class="flex items-center justify-center w-full h-full bg-slate-50 hover:bg-white rounded-xl p-4 transition-colors duration-300 group"
+						>
 							<img
 								src={`${partnerImagesPath}${path}`}
 								alt="Partner Logo"
-								class="h-auto max-h-16 w-full max-w-[120px]"
+								class="h-auto max-h-16 w-full max-w-[120px] translate-y-1 group-hover:-translate-y-0 transition-transform duration-300"
 							/>
 						</a>
 					</div>

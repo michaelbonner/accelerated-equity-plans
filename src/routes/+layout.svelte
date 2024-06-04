@@ -8,7 +8,6 @@
 	import { page } from '$app/stores';
 
 	$: showBackground = $page.url.pathname !== '/';
-	console.log('Show background', showBackground);
 
 	onMount(() => {
 		document.querySelectorAll('link[rel="preload"]').forEach((link) => {
