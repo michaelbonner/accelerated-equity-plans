@@ -5,14 +5,14 @@
 	import ImQuotesRight from 'svelte-icons-pack/im/ImQuotesRight';
 </script>
 
-<div class="flex justify-center min-h-screen font-eurostile">
+<div class="flex justify-center min-h-screen">
 	<div class=" sm:w-5/6 mt-28 sm:mt-36">
 		<!-- hero -->
 		<div>
 			<div
 				class="relative isolate overflow-hidden bg-gray-900 px-6 py-8 text-center shadow-2xl sm:px-16 flex flex-col items-center justify-between"
 			>
-				<h1 class="text-2xl font-bold tracking-wide text-white sm:text-4xl mb-4">
+				<h1 class="text-2xl font-bold tracking-wide text-white sm:text-4xl mb-4 font-eurostile">
 					Get peace of mind today! Our team of experts are dedicated to supporting you and ensuring
 					your success.
 				</h1>
@@ -70,7 +70,7 @@
 			class="sm:my-6 leading-8 tracking-wide flex flex-col sm:flex-row"
 			style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
 		>
-			<img src="/images/guy.jpg" alt="" class="sm:w-1/3" />
+			<img src="/images/guy.jpg" alt="" class="sm:w-1/3 object-cover" />
 			<div class="sm:w-2/3">
 				<div class="flex justify-center mt-8 mb-4 text-2xl">
 					<Icon src={AiFillStar} /><Icon src={AiFillStar} /><Icon src={AiFillStar} /><Icon
@@ -92,7 +92,9 @@
 		</div>
 
 		<div class="border-2 rounded-2xl px-10 py-6 bg-gray-200 sm:mb-6">
-			<h3 class="text-4xl font-bold text-center mb-6">Let's Talk About Your Business</h3>
+			<h3 class="text-4xl font-bold text-center mb-6 font-eurostile">
+				Let's Talk About Your Business
+			</h3>
 			<!--
   This example requires some changes to your config:
   
@@ -110,7 +112,9 @@
 			<form>
 				<div class="space-y-12">
 					<div class="border-b border-gray-900/10 pb-12">
-						<h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
+						<h2 class="text-base font-semibold leading-7 text-gray-900 font-eurostile">
+							Personal Information
+						</h2>
 						<p class="mt-1 text-sm leading-6 text-gray-600">
 							Use a permanent address where you can receive mail.
 						</p>

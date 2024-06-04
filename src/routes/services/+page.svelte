@@ -61,14 +61,22 @@
 							</p>
 						</div>
 					</div>
-					<img src="/images/stocks.jpg" alt="stocks" class=" h-96 w-96 sm:rounded-r-xl" />
+					<img
+						src="/images/stocks.jpg"
+						alt="stocks"
+						class=" h-96 w-96 object-cover sm:rounded-r-xl"
+					/>
 				</div>
 
 				<div
 					class="sm:my-6 leading-8 tracking-wide flex flex-col sm:flex-row justify-center items-center sm:rounded-xl"
 					style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
 				>
-					<img src="/images/stocks2.jpg" alt="stocks" class=" h-96 w-96 sm:rounded-l-xl" />
+					<img
+						src="/images/stocks2.jpg"
+						alt="stocks"
+						class=" h-96 w-96 object-cover sm:rounded-l-xl"
+					/>
 					<div class="sm:w-3/4 px-12 py-5">
 						<h2 class="mt-10 text-2xl sm:text-4xl font-bold">Corporate Actions</h2>
 						<div class="flex flex-col mt-8 mb-4 text-2xl w-full">
@@ -109,7 +117,11 @@
 					class="sm:my-6 leading-8 tracking-wide flex flex-col sm:flex-row justify-center items-center sm:rounded-xl"
 					style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
 				>
-					<img src="/images/taxes.jpg" alt="stocks" class=" h-96 w-96 sm:rounded-l-xl" />
+					<img
+						src="/images/taxes.jpg"
+						alt="stocks"
+						class=" h-96 w-96 object-cover sm:rounded-l-xl"
+					/>
 					<div class="sm:w-3/4 px-12 py-5">
 						<h2 class="mt-10 text-2xl sm:text-4xl font-bold">
 							Tax and Mobility implementation and support
@@ -141,14 +153,18 @@
 							</ol>
 						</div>
 					</div>
-					<img src="/images/system.jpg" alt="stocks" class=" h-96 w-96 sm:rounded-r-xl" />
+					<img
+						src="/images/system.jpg"
+						alt="stocks"
+						class=" h-96 w-96 object-cover sm:rounded-r-xl"
+					/>
 				</div>
 
 				<div
 					class="sm:my-6 leading-8 tracking-wide flex flex-col sm:flex-row justify-center items-center sm:rounded-xl"
 					style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
 				>
-					<img src="/images/rfp.jpg" alt="stocks" class=" h-96 w-96 sm:rounded-l-xl" />
+					<img src="/images/rfp.jpg" alt="stocks" class=" h-96 w-96 object-cover sm:rounded-l-xl" />
 					<div class="sm:w-3/4 px-12 py-5">
 						<h2 class="mt-10 text-2xl sm:text-4xl font-bold">Vendor Selection and RFP</h2>
 						<div class="flex flex-col justify-center items-center mt-8 mb-4 w-full">
@@ -177,14 +193,22 @@
 							</p>
 						</div>
 					</div>
-					<img src="/images/stocks.jpg" alt="stocks" class=" h-96 w-96 sm:rounded-r-xl" />
+					<img
+						src="/images/stocks.jpg"
+						alt="stocks"
+						class=" h-96 w-96 object-cover sm:rounded-r-xl"
+					/>
 				</div>
 
 				<div
 					class="sm:my-6 leading-8 tracking-wide flex flex-col sm:flex-row justify-center items-center sm:rounded-xl"
 					style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
 				>
-					<img src="/images/system2.jpg" alt="stocks" class=" h-96 w-96 sm:rounded-l-xl" />
+					<img
+						src="/images/system2.jpg"
+						alt="stocks"
+						class=" h-96 w-96 object-cover sm:rounded-l-xl"
+					/>
 					<div class="sm:w-3/4 px-12 py-5">
 						<h2 class="mt-10 text-2xl sm:text-4xl font-bold">Process review and documentation</h2>
 						<div class="flex flex-col justify-center items-center mt-8 mb-4 w-full">
@@ -209,14 +233,22 @@
 							</p>
 						</div>
 					</div>
-					<img src="/images/training.jpg" alt="stocks" class=" h-96 w-96 sm:rounded-r-xl" />
+					<img
+						src="/images/training.jpg"
+						alt="stocks"
+						class=" h-96 w-96 object-cover sm:rounded-r-xl"
+					/>
 				</div>
 
 				<div
 					class="sm:my-6 leading-8 tracking-wide flex flex-col sm:flex-row justify-center items-center sm:rounded-xl"
 					style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
 				>
-					<img src="/images/education.jpg" alt="stocks" class=" h-96 w-96 sm:rounded-l-xl" />
+					<img
+						src="/images/education.jpg"
+						alt="stocks"
+						class=" h-96 w-96 object-cover sm:rounded-l-xl"
+					/>
 					<div class="sm:w-3/4 px-12 py-5">
 						<h2 class="mt-10 text-2xl sm:text-4xl font-bold">Education</h2>
 						<div class="flex flex-col justify-center items-center mt-8 mb-4 w-full">
