@@ -41,7 +41,7 @@
 			/>
 
 			<!-- Should be foreground div in same container -->
-			<div class="relative z-10 sm:px-8 py-48 lg:py-72">
+			<div class="relative z-10 sm:px-8 pt-48 pb-24 lg:pt-52 lg:pb-44">
 				<div class="flex flex-col prose-white max-w-3xl">
 					<h1 class="text-4xl font-bold tracking-tight sm:text-6xl font-eurostile">
 						Maximize Your Equity's Potential
@@ -162,7 +162,7 @@
 
 		<section>
 			<div
-				class="relative isolate overflow-hidden bg-gray-900 px-6 py-14 text-center shadow-2xl sm:px-16 flex items-center justify-between"
+				class="relative isolate overflow-hidden bg-gray-900 px-6 py-14 text-center shadow-2xl sm:px-16 grid sm:flex items-center sm:justify-between gap-8"
 			>
 				<h2 class="tracking-wide text-white sm:text-4xl font-eurostile">
 					Take your equity management to the next level today
