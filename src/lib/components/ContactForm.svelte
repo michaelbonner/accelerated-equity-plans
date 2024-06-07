@@ -100,7 +100,7 @@
 				'Eqvista',
 				'Fidelity',
 				'Global Shares',
-				'Insight Software',
+				'insightsoftware',
 				'KPMG',
 				'Morgan Stanley at Work',
 				'PwC',
@@ -203,6 +203,6 @@
 		Submit
 	</button>
 </form>
-<div class={submitted ? `visible` : `hidden`}>
+<div class={!submitted ? `visible` : `hidden`}>
 	<h2>Thank you for contacting us! We'll be in touch soon</h2>
 </div>
