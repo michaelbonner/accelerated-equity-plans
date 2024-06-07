@@ -124,17 +124,13 @@
 			label: 'Any additional info?',
 			type: 'textarea',
 			required: true,
-			containerClass: ' col-span-2'
+			containerClass: ' md:col-span-2'
 		}
 	];
 </script>
 
-<form
-	class={submitted ? `hidden` : `visible`}
-	name="contact"
-	on:submit|preventDefault={handleSubmit}
->
-	<div class="grid lg:grid-cols-2 gap-x-8 gap-y-4">
+<form class:hidden={submitted} class="mt-8" name="contact" on:submit|preventDefault={handleSubmit}>
+	<div class="grid md:grid-cols-2 gap-x-8 gap-y-4">
 		{#each fields as field}
 			<div class={`mb-6${field.containerClass}`}>
 				<label
@@ -203,6 +199,12 @@
 		Submit
 	</button>
 </form>
-<div class={!submitted ? `visible` : `hidden`}>
-	<h2>Thank you for contacting us! We'll be in touch soon</h2>
+<div class:hidden={!submitted} class="flex items-center min-h-56">
+	<div class="prose">
+		<h2>Thank you for contacting us! We'll be in touch soon.</h2>
+		<p>
+			In the meantime, feel free to reach out at <a href="tel:+18018086238">801-808-6238</a> or
+			<a href="mailto:info@acceleratedep.com"> send us an email. </a>
+		</p>
+	</div>
 </div>

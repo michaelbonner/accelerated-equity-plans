@@ -92,10 +92,10 @@
 			</div>
 		</div>
 
-		<div class="border-2 rounded-2xl px-10 py-6 bg-gray-200 sm:mb-6">
-			<h3 class="text-4xl font-bold text-center mb-6 font-eurostile">
-				Let's Talk About Your Business
-			</h3>
+		<div class="border-2 rounded-2xl px-10 py-12 bg-gray-200 sm:mb-6">
+			<div class="prose font-eurostile">
+				<h2>Let's Talk About Your Business</h2>
+			</div>
 
 			<ContactForm />
 		</div>
