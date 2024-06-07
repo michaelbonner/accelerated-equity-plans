@@ -95,22 +95,19 @@
 		},
 		{
 			name: 'equity_management_platform',
-			label: 'What equity management platform do you use?',
+			label: 'What equity management vendor do you use?',
 			type: 'select',
 			required: false,
 			options: [
 				'Carta',
 				'Charles Schwab',
-				'Deloitte',
-				'Equity Methods',
 				'Eqvista',
 				'Fidelity',
 				'Global Shares',
 				'insightsoftware',
-				'KPMG',
 				'Morgan Stanley at Work',
-				'PwC',
-				'UBS'
+				'UBS',
+				'Other'
 			]
 		},
 		{
