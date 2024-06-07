@@ -42,37 +42,43 @@
 			name: 'firstName',
 			label: 'First Name',
 			type: 'text',
-			required: true
+			required: true,
+			autocomplete: 'given-name'
 		},
 		{
 			name: 'lastName',
 			label: 'Last Name',
 			type: 'text',
-			required: true
+			required: true,
+			autocomplete: 'family-name'
 		},
 		{
 			name: 'email',
 			label: 'Email',
 			type: 'email',
-			required: true
+			required: true,
+			autocomplete: 'email'
 		},
 		{
 			name: 'phone',
 			label: 'Phone Number',
 			type: 'text',
-			required: false
+			required: false,
+			autocomplete: 'tel'
 		},
 		{
 			name: 'company',
 			label: 'Company',
 			type: 'text',
-			required: false
+			required: false,
+			autocomplete: 'organization'
 		},
 		{
 			name: 'title',
 			label: 'Title',
 			type: 'text',
-			required: false
+			required: false,
+			autocomplete: 'organization-title'
 		},
 		{
 			name: 'interested_services',
@@ -174,6 +180,7 @@
 						placeholder={field.label}
 						required={field.required}
 						type={field.type}
+						autocomplete={field.autocomplete}
 					/>
 				{/if}
 
