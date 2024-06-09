@@ -126,8 +126,12 @@
 	>
 		<!-- Background Div -->
 		<div
-			class="absolute inset-0 bg-cover bg-top bg-opacity-100 lg:bg-opacity-30"
+			class="hidden md:block absolute inset-0 bg-cover bg-top bg-opacity-100 lg:bg-opacity-30"
 			style="background-image: url('/images/backgrounds/high-rise-buildings.jpg.webp');"
+		/>
+		<div
+			class="md:hidden absolute inset-0 bg-cover bg-top bg-opacity-100 lg:bg-opacity-30"
+			style="background-image: url('/images/backgrounds/high-rise-buildings-mobile.jpg.webp');"
 		/>
 		<div
 			class={clsx(
