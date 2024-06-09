@@ -285,7 +285,8 @@
 						{#each servicesSection.services as service}
 							<div
 								class={clsx(
-									'p-6 flex flex-col justify-start items-start gap-4 rounded-xl text-white',
+									'p-6 flex flex-col justify-start items-start gap-4 rounded-xl text-white transition-transform',
+									'hover:-translate-y-1',
 									servicesSection.servicesBackgroundColor
 								)}
 							>
@@ -321,7 +322,7 @@
 				</div>
 			</div>
 
-			<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mt-12">
+			<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mt-12 max-w-7xl mx-auto">
 				{#each moreServices as service}
 					<div class={styles.blueRedGradientBackground}>
 						<div class="bg-black p-8 rounded-lg gap-4 flex flex-col justify-start h-full">
