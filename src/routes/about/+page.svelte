@@ -114,9 +114,10 @@
 			)}
 		>
 			<img
-				src="/images/brand/aep-mark.svg"
 				alt="Accelerated Equity Plans"
 				class="max-w-none translate-x-[-50%] w-[50vw]"
+				loading="lazy"
+				src="/images/brand/aep-mark.svg"
 			/>
 		</div>
 	</section>
