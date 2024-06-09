@@ -136,10 +136,7 @@
 	<div class="grid md:grid-cols-2 gap-x-8 gap-y-4">
 		{#each fields as field}
 			<div class={`mb-6${field.containerClass}`}>
-				<label
-					class="mb-2 block text-sm font-bold tracking-wide text-gray-700 font-eurostile"
-					for={field.name}
-				>
+				<label class="mb-2 block text-sm font-bold tracking-wide font-eurostile" for={field.name}>
 					{field.label}
 					{#if field.required}
 						*
@@ -148,7 +145,7 @@
 
 				{#if field.type === 'textarea'}
 					<textarea
-						class="block w-full appearance-none rounded border border-gray-100 bg-gray-100 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+						class="text-black block w-full appearance-none rounded border border-gray-100 bg-gray-100 py-3 px-4 leading-tight focus:border-gray-500 focus:bg-white focus:outline-none"
 						id={field.name}
 						name={field.name}
 						placeholder={field.label}
@@ -157,7 +154,7 @@
 					/>
 				{:else if field.type === 'select'}
 					<select
-						class="block w-full appearance-none rounded border border-gray-100 bg-gray-100 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+						class="text-black block w-full appearance-none rounded border border-gray-100 bg-gray-100 py-3 px-4 leading-tight focus:border-gray-500 focus:bg-white focus:outline-none"
 						id={field.name}
 						name={field.name}
 						required={field.required}
@@ -171,7 +168,7 @@
 					</select>
 				{:else}
 					<input
-						class="block w-full appearance-none rounded border border-gray-100 bg-gray-100 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+						class="text-black block w-full appearance-none rounded border border-gray-100 bg-gray-100 py-3 px-4 leading-tight focus:border-gray-500 focus:bg-white focus:outline-none"
 						id={field.name}
 						name={field.name}
 						placeholder={field.label}
