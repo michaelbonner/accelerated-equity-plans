@@ -8,6 +8,24 @@
 	import clsx from 'clsx';
 </script>
 
+<svelte:head>
+	<title>Contact Accelerated Equity Plans</title>
+	<meta
+		name="description"
+		content="Gain peace of mind with our expert team dedicated to supporting your success. Whether you need help with equity planning, system implementation, or ongoing support, we're here to provide personalized solutions and guidance, helping you navigate with confidence."
+	/>
+	<meta property="og:title" content="Contact Accelerated Equity Plans" />
+	<meta
+		property="og:description"
+		content="Gain peace of mind with our expert team dedicated to supporting your success. Whether you need help with equity planning, system implementation, or ongoing support, we're here to provide personalized solutions and guidance, helping you navigate with confidence."
+	/>
+	<meta
+		property="og:image"
+		content="https://accelerated-equity-plans.vercel.app/images/og-image.png"
+	/>
+	<link rel="canonical" href="https://www.acceleratedep.com/contact" />
+</svelte:head>
+
 <main>
 	<section
 		class={clsx(

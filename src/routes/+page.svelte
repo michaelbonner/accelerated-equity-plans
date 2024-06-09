@@ -112,6 +112,7 @@
 		property="og:image"
 		content="https://accelerated-equity-plans.vercel.app/images/og-image.png"
 	/>
+	<link rel="canonical" href="https://www.acceleratedep.com" />
 </svelte:head>
 
 <main class="isolate bg-white">

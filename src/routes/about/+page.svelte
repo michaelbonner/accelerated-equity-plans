@@ -5,6 +5,24 @@
 	import clsx from 'clsx';
 </script>
 
+<svelte:head>
+	<title>About Accelerated Equity Plans</title>
+	<meta
+		name="description"
+		content="We empower companies to harness the full potential of equity compensation with strategic solutions to attract, retain, and motivate top talent. Our comprehensive services ensure equity plans are effectively managed and aligned with business goals, creating a competitive advantage. Leverage our expertise to maximize the impact of your equity programs and foster a motivated, loyal workforce driving your company’s success."
+	/>
+	<meta property="og:title" content="About Accelerated Equity Plans" />
+	<meta
+		property="og:description"
+		content="We empower companies to harness the full potential of equity compensation with strategic solutions to attract, retain, and motivate top talent. Our comprehensive services ensure equity plans are effectively managed and aligned with business goals, creating a competitive advantage. Leverage our expertise to maximize the impact of your equity programs and foster a motivated, loyal workforce driving your company’s success."
+	/>
+	<meta
+		property="og:image"
+		content="https://accelerated-equity-plans.vercel.app/images/og-image.png"
+	/>
+	<link rel="canonical" href="https://www.acceleratedep.com/about" />
+</svelte:head>
+
 <main>
 	<section
 		class={clsx(
