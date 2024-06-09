@@ -27,6 +27,14 @@
 			<p class="text-left text-xs leading-5 text-gray-500 sm:text-center mt-4">
 				&copy; {new Date().getFullYear()} Accelerated Equity Plans. All rights reserved.
 			</p>
+			<p class="text-left text-xs leading-5 text-gray-500 sm:text-center mt-4">
+				<a
+					href="https://www.bootpackdigital.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-gray-500 hover:text-gray-900">Web design by Bootpack Digital</a
+				>
+			</p>
 		</div>
 	</div>
 </footer>
