@@ -43,8 +43,7 @@
 	onMount(() => {
 		new Swiper('.partner-swiper', {
 			autoplay: {
-				delay: 2500,
-				disableOnInteraction: false
+				delay: 2500
 			},
 			centeredSlides: true,
 			loop: true,
@@ -67,7 +66,7 @@
 			<a href={url} target="_blank" class="swiper-slide">
 				<img
 					class={clsx(
-						'max-h-[120px] mx-auto opacity-100 transition-colors duration-300',
+						'max-h-[120px] max-w-[240px] mx-auto opacity-100 transition-colors duration-300',
 						'md:opacity-80',
 						'hover:opacity-100'
 					)}
