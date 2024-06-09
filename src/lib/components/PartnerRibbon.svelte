@@ -13,17 +13,17 @@
 		},
 		{ path: 'morgan-stanley-at-work.png.webp', url: 'https://www.morganstanley.com/atwork' },
 		{ path: 'equitymethods.png.webp', url: 'https://www.equitymethods.com' },
-		{ path: 'schwab.png.webp', url: 'https://workplacefinancialservices.schwab.com/stock-plans' },
+		{ path: 'schwab.svg', url: 'https://workplacefinancialservices.schwab.com/stock-plans' },
 		{ path: 'fidelity.svg', url: 'https://www.fidelityworkplace.com/s/equity' },
 		{ path: 'globalshares.png.webp', url: 'https://www.globalshares.com' },
 		{ path: 'eqvista.png.webp', url: 'https://eqvista.com' },
-		{ path: 'carta.png.webp', url: 'https://carta.com' },
+		{ path: 'carta.svg', url: 'https://carta.com' },
 		{
-			path: 'deloitte.png.webp',
+			path: 'deloitte.svg',
 			url: 'https://www.deloitte.com/global/en/services/tax/services/equity-and-incentives.html'
 		},
 		{
-			path: 'pwc.png.webp',
+			path: 'pwc.svg',
 			url: 'https://www.pwc.com/us/en/industries/financial-services/private-equity.html'
 		},
 		{
