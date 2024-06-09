@@ -1,11 +1,14 @@
 <script>
 	import clsx from 'clsx';
+	import { navigating } from '$app/stores';
 
 	let mobileMenuOpen = false;
 
 	function toggleMobileMenu() {
 		mobileMenuOpen = !mobileMenuOpen;
 	}
+
+	$: if ($navigating) mobileMenuOpen = false;
 
 	export let navLinks;
 </script>
@@ -64,7 +67,7 @@
 			<!-- Mobile menu, show/hide based on menu open state. -->
 			<div role="dialog" aria-modal="true">
 				<div
-					class="fixed top-0 left-0 right-0 z-10 overflow-y-visible bg-stone-600 px-6 py-6 lg:hidden"
+					class="fixed top-0 left-0 right-0 z-10 overflow-y-visible bg-stone-900 px-6 py-6 lg:hidden"
 				>
 					<div class="flex h-9 items-center justify-between">
 						<div class="flex">

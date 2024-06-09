@@ -2,10 +2,9 @@
 	import '../app.css';
 
 	import Analytics from '$lib/analytics.svelte';
-	import Navbar from '$lib/components/navbar.svelte';
 	import Footer from '$lib/components/footer.svelte';
+	import Navbar from '$lib/components/navbar.svelte';
 	import { onMount } from 'svelte';
-	import { page } from '$app/stores';
 
 	onMount(() => {
 		document.querySelectorAll('link[rel="preload"]').forEach((link) => {
