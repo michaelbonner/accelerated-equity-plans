@@ -210,16 +210,22 @@
 		</div>
 	</section>
 
-	<section
-		class={clsx('relative bg-stone-700 bg-repeat bg-center py-24 px-6 bg-cover', 'lg:py-32')}
-		style={`background-image: url('/images/backgrounds/building-blurred-bg.jpg.webp')`}
-	>
-		<div class="grid gap-4 max-w-7xl mx-auto">
+	<section class={clsx('relative bg-stone-700 py-24 px-6', 'lg:py-32')}>
+		<div
+			class="hidden md:block absolute inset-0 bg-cover bg-top bg-opacity-100 lg:bg-opacity-30"
+			style="background-image: url('/images/backgrounds/building-blurred-bg.jpg.webp');"
+		/>
+		<div
+			class="md:hidden absolute inset-0 bg-cover bg-top bg-opacity-100 lg:bg-opacity-30"
+			style="background-image: url('/images/backgrounds/building-blurred-bg-mobile.jpg.webp');"
+		/>
+		<div class="absolute inset-0 bg-white/80 lg:bg-transparent" />
+		<div class="relative grid gap-4 max-w-7xl mx-auto">
 			<RedBar />
 			<h2 class={styles.h2}>Our Comprehensive Services</h2>
 		</div>
 
-		<div class="grid sm:grid-cols-2 gap-6 max-w-7xl mx-auto mt-12">
+		<div class="relative grid sm:grid-cols-2 gap-6 max-w-7xl mx-auto mt-12">
 			{#each comprehensiveServices as comprehensiveService}
 				<div class={styles.blueRedGradientBackground}>
 					<div class="bg-black p-8 rounded-lg gap-4 flex flex-col justify-start h-full">
