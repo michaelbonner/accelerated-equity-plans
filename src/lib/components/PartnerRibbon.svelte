@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import clsx from 'clsx';
 	import { onMount } from 'svelte';
 	import Swiper from 'swiper';
