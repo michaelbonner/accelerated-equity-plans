@@ -30,7 +30,7 @@
 			icon: Money,
 			id: 'equity-plan-administration',
 			title: 'Equity Plan Administration',
-			body: '<p>We provide outsourced administration, seasonal and temporary support, complete management of equity plan tasks, partnership with internal teams, and employee education and experience.</p>',
+			body: '<p>Our specialized services in stock plan administration are crafted to address the unique needs of businesses seeking to streamline their equity management processes. Our team of dedicated professionals delivers tailored solutions that ensure regulatory compliance and seamless management of employee stock compensation programs. Trust AEP to handle the complexities of your stock plan administration, allowing you to focus on your core business objectives.</p>',
 			servicesBackgroundColor: 'bg-red-700',
 			services: [
 				{
@@ -59,7 +59,7 @@
 			icon: Buildings,
 			id: 'vendor-support',
 			title: 'Vendor Support',
-			body: '<p>We offer expedited system implementation, data conversion and audit services, 3rd party integrations, RFP guidance, and functionality incorporation and testing.</p>',
+			body: "<p>Maximize the potential of your equity system with AEP's expert vendor support. Whether you aim to optimize your current equity administration platform or seek to find and implement a new one, AEP is here to help. We specialize in all vendor platforms and will guide you through finding, implementing, and optimizing the platform that best suits your needs.</p>",
 			servicesBackgroundColor: 'bg-aep-teal',
 			services: [
 				{
@@ -88,7 +88,7 @@
 			icon: GridCheck,
 			id: 'advanced-project-support',
 			title: 'Advanced Project Support',
-			body: '<p>We provide services for Mergers & Acquisitions, IPOs & SPACs, modifications, automation design and resources, mobility adoption, and HRIS & Payroll Integrations.</p>',
+			body: '<p>AEP offers a comprehensive suite of services designed to empower businesses across various industries and lifecycles. Our focus on quality, integrity, and client satisfaction ensures that we partner effectively with businesses to navigate challenges, optimize operations, and unlock opportunities for long-term success.</p>',
 			servicesBackgroundColor: 'bg-black',
 			services: [
 				{
@@ -117,7 +117,7 @@
 			icon: Compass,
 			id: 'plan-process-design',
 			title: 'Plan & Process Design',
-			body: '<p>We offer process review, enhancement, and documentation; incorporation of best practices to mitigate risk; administrator system and process training; and industry trends and analysis for LTI Plan consideration.</p>',
+			body: '<p>AEP assists both private and public companies in their stock plan administration by providing expert guidance and comprehensive solutions. From the initial design and implementation of your equity plans to ongoing management and compliance, AEP has you covered.</p>',
 			servicesBackgroundColor: 'bg-aep-teal-dark',
 			services: [
 				{
