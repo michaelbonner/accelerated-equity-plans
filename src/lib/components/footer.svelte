@@ -6,7 +6,7 @@
 
 <footer class="bg-white">
 	<div class={clsx('grid gap-12 mx-auto max-w-7xl overflow-hidden px-8 pt-20 pb-12', 'md:gap-8')}>
-		<nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-10" aria-label="Footer">
+		<nav class="-mb-6 grid grid-cols-2 sm:flex sm:justify-center sm:space-x-10" aria-label="Footer">
 			{#each navLinks as navLink}
 				<div class="pb-6">
 					<a href={navLink.href} class="leading-6 text-gray-600 hover:text-gray-900 hover:underline"
