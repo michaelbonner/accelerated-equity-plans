@@ -30,7 +30,7 @@
 
 		<div
 			class="sm:min-h-[600px] sm:bg-cover sm:bg-center sm:bg-no-repeat bg-none flex items-center"
-			style="background-image: url('/images/joinus.jpg')"
+			style="background-image: url('/images/joinus.jpg.webp')"
 		>
 			<div
 				class="sm:w-1/3 py-6 leading-10 tracking-wide rounded-xl bg-white flex flex-col justify-center min-h-[90%] sm:ml-10 sm:border-black sm:border-2 p-12"

@@ -114,7 +114,7 @@
 			<!-- Background Div -->
 			<div
 				class="absolute inset-0 bg-cover bg-top -z-1 bg-opacity-100 lg:bg-opacity-30"
-				style="background-image: url('/images/backgrounds/high-rise-buildings.jpg');"
+				style="background-image: url('/images/backgrounds/high-rise-buildings.jpg.webp');"
 			/>
 			<div
 				class={clsx(
@@ -154,7 +154,10 @@
 
 		<section
 			class="relative bg-stone-700 text-white bg-repeat bg-center py-24 px-6"
-			style={`background-image: url('/images/brand/pattern-a-repeated-reversed.jpg')`}
+			style={`
+				background-image: url('/images/patterns/Pattern-0224_Pattern-A-Repeated-Reversed.svg');
+				background-size: 100%;
+			`}
 		>
 			<div class="absolute inset-0 bg-stone-200/20" />
 			<div class="relative text-center grid gap-4 max-w-3xl mx-auto">
@@ -192,7 +195,7 @@
 
 		<section
 			class={clsx('relative bg-stone-700 bg-repeat bg-center py-24 px-6 bg-cover', 'lg:py-32')}
-			style={`background-image: url('/images/backgrounds/building-blurred-bg.jpg')`}
+			style={`background-image: url('/images/backgrounds/building-blurred-bg.jpg.webp')`}
 		>
 			<div class="grid gap-4 max-w-7xl mx-auto">
 				<RedBar />

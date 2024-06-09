@@ -1,7 +1,7 @@
 <script>
+	import { styles } from '$lib/styles';
 	import clsx from 'clsx';
 	import RedBar from './RedBar.svelte';
-	import { styles } from '$lib/styles';
 
 	const leadershipTeam = [
 		{
