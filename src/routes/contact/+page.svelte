@@ -1,15 +1,11 @@
 <script lang="ts">
 	import ContactForm from '$lib/components/ContactForm.svelte';
+	import CustomerReviews from '$lib/components/CustomerReviews.svelte';
+	import RedBar from '$lib/components/RedBar.svelte';
 	import Appointment from '$lib/components/icons/Appointment.svelte';
 	import Call from '$lib/components/icons/Call.svelte';
 	import { styles } from '$lib/styles';
 	import clsx from 'clsx';
-	import Icon from 'svelte-icons-pack/Icon.svelte';
-	import AiFillStar from 'svelte-icons-pack/ai/AiFillStar';
-	import ImQuotesLeft from 'svelte-icons-pack/im/ImQuotesLeft';
-	import ImQuotesRight from 'svelte-icons-pack/im/ImQuotesRight';
-	import RedBar from '$lib/components/RedBar.svelte';
-	import CustomerReviews from '$lib/components/CustomerReviews.svelte';
 </script>
 
 <main>
@@ -41,7 +37,7 @@
 				</div>
 			</div>
 
-			<div class={clsx('max-w-7xl grid gap-4', 'sm:flex sm:flex-wrap')}>
+			<div class={clsx('max-w-7xl grid gap-4', 'sm:flex sm:flex-wrap sm:mx-auto')}>
 				<div class="flex-1 p-8 bg-white rounded-xl text-black text-left flex flex-col gap-4 mt-12">
 					<div>
 						<div class="p-3 bg-black rounded-2xl inline-block">
