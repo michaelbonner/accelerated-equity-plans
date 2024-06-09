@@ -9,12 +9,12 @@
 	<title>About Accelerated Equity Plans</title>
 	<meta
 		name="description"
-		content="We empower companies to harness the full potential of equity compensation with strategic solutions to attract, retain, and motivate top talent. Our comprehensive services ensure equity plans are effectively managed and aligned with business goals, creating a competitive advantage. Leverage our expertise to maximize the impact of your equity programs and foster a motivated, loyal workforce driving your company’s success."
+		content="We empower companies with strategic equity solutions to attract, retain, and motivate top talent, creating a competitive advantage through effective management of equity plans."
 	/>
 	<meta property="og:title" content="About Accelerated Equity Plans" />
 	<meta
 		property="og:description"
-		content="We empower companies to harness the full potential of equity compensation with strategic solutions to attract, retain, and motivate top talent. Our comprehensive services ensure equity plans are effectively managed and aligned with business goals, creating a competitive advantage. Leverage our expertise to maximize the impact of your equity programs and foster a motivated, loyal workforce driving your company’s success."
+		content="We empower companies with strategic equity solutions to attract, retain, and motivate top talent, creating a competitive advantage through effective management of equity plans."
 	/>
 	<meta
 		property="og:image"
