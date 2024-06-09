@@ -66,12 +66,14 @@
 		<button
 			class="absolute z-10 top-[45%] -left-16 hidden sm:block bg-white hover:bg-stone-100 transition-colors rounded-full p-3 text-black text-xl shadow-md"
 			on:click={previousSlide}
+			title="Previous review"
 		>
 			<Icon src={BsChevronLeft} />
 		</button>
 		<button
 			class="absolute z-10 top-[45%] -right-16 hidden sm:block bg-white hover:bg-stone-100 transition-colors rounded-full p-3 text-black text-xl shadow-md"
 			on:click={nextSlide}
+			title="Next review"
 		>
 			<Icon src={BsChevronRight} />
 		</button>
