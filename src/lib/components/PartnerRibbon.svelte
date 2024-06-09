@@ -38,11 +38,8 @@
 	}));
 </script>
 
-<div class="mx-auto py-4 sm:py-6 md:py-10 bg-slate-50">
+<div class="mx-auto py-4 sm:py-6 md:py-10">
 	<div class="container mx-auto flex flex-col py-12 px-8">
-		<div class="prose font-eurostile text-slate-800 mx-auto">
-			<h2>Our Partners</h2>
-		</div>
 		<div class="w-full flex justify-center items-center lg:max-w-5xl mx-auto mt-8">
 			<div
 				class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-6 lg:gap-y-8 gap-x-4 px-4 justify-center"
@@ -52,7 +49,7 @@
 						<a
 							href={url}
 							target="_blank"
-							class="flex items-center justify-center w-full h-full bg-slate-50 hover:bg-white rounded-xl p-4 transition-colors duration-300 group"
+							class="flex items-center justify-center w-full h-full rounded-xl p-4 transition-colors duration-300 group"
 						>
 							<img
 								src={`${partnerImagesPath}${path}`}

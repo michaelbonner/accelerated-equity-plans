@@ -1,50 +1,24 @@
 <script>
-	import { onMount } from 'svelte';
+	import clsx from 'clsx';
+
 	let mobileMenuOpen = false;
-	let isScrolled = false;
-	let navbarVisible = true;
-	let lastScrollY = 0;
 
 	function toggleMobileMenu() {
 		mobileMenuOpen = !mobileMenuOpen;
 	}
 
-	function handleScroll() {
-		const currentScrollY = window.scrollY;
-
-		isScrolled = currentScrollY > 112;
-
-		lastScrollY = currentScrollY;
-	}
-
-	export let showBackground = false;
-
-	onMount(() => {
-		window.addEventListener('scroll', handleScroll);
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	});
-
-	$: navbarClass = `fixed top-0 z-20 transition-all duration-300 ease-in-out w-screen px-6 py-2 ${navbarVisible ? 'opacity-100' : 'opacity-0'} ${isScrolled || showBackground ? 'bg-slate-600 bg-opacity-70 backdrop-blur' : ''}`;
-
 	export let navLinks;
 </script>
 
-<div class={navbarClass}>
+<div class={`fixed top-0 z-20 w-screen px-6 py-2 bg-opacity-100 bg-black backdrop-blur`}>
 	<div>
-		<nav
-			class:h-16={isScrolled}
-			class:h-24={!isScrolled}
-			class="flex items-center justify-between transition-height duration-500 ease-in-out xl:px-12"
-			aria-label="Global"
-		>
+		<nav class="flex items-center justify-between xl:px-12" aria-label="Global">
 			<div class="flex lg:min-w-0 lg:flex-1" aria-label="Global">
-				<a href="/" class="-m-1.5 p-1.5">
+				<a href="/" class="-m-1.5 p-2">
 					<span class="sr-only">Accelerated Equity Plans</span>
 					<img
-						class="w-full py-2 transition-height duration-500 ease-in-out max-w-[180px]"
-						src="/images/aep-logo-white.svg"
+						class="w-full py-2 max-w-[180px]"
+						src="/images/brand/aep-logo-white.svg"
 						alt="Accelerated Equity Plans Logo"
 					/>
 				</a>
@@ -73,10 +47,14 @@
 					</svg>
 				</button>
 			</div>
-			<div class="hidden lg:flex lg:min-w-0 lg:justify-center lg:items-center lg:gap-x-12">
+			<div class="hidden lg:flex lg:min-w-0 lg:justify-center lg:items-center lg:gap-x-2">
 				{#each navLinks as navLink}
-					<a href={navLink.href} class="uppercase font-semibold text-white hover:text-red-600"
-						>{navLink.name}</a
+					<a
+						href={navLink.href}
+						class={clsx(
+							'uppercase py-2.5 px-4 rounded',
+							navLink.headerClasses ?? 'text-white hover:text-red-600'
+						)}>{navLink.name}</a
 					>
 				{/each}
 			</div>
@@ -86,7 +64,7 @@
 			<!-- Mobile menu, show/hide based on menu open state. -->
 			<div role="dialog" aria-modal="true">
 				<div
-					class="fixed top-0 left-0 right-0 z-10 overflow-y-visible bg-slate-600 px-6 py-6 lg:hidden"
+					class="fixed top-0 left-0 right-0 z-10 overflow-y-visible bg-stone-600 px-6 py-6 lg:hidden"
 				>
 					<div class="flex h-9 items-center justify-between">
 						<div class="flex">
@@ -94,7 +72,7 @@
 								<span class="sr-only">Accelerated Equity Plans</span>
 								<img
 									class="h-16 max-w-[180px]"
-									src="/images/aep-logo-white.svg"
+									src="/images/brand/aep-logo-white.svg"
 									alt="Accelerated Equity Plans Logo"
 								/>
 							</a>

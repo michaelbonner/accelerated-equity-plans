@@ -7,8 +7,6 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 
-	$: showBackground = $page.url.pathname !== '/';
-
 	onMount(() => {
 		document.querySelectorAll('link[rel="preload"]').forEach((link) => {
 			link.setAttribute('rel', 'stylesheet');
@@ -34,7 +32,8 @@
 		},
 		{
 			name: 'Contact Us',
-			href: '/contact'
+			href: '/contact',
+			headerClasses: 'bg-white text-black hover:text-red-600 ml-4'
 		}
 	];
 </script>
@@ -46,7 +45,7 @@
 
 <Analytics />
 <div class="flex flex-col min-h-screen">
-	<Navbar {navLinks} {showBackground} />
+	<Navbar {navLinks} />
 	<div class="flex flex-col flex-grow bg-white">
 		<slot />
 	</div>

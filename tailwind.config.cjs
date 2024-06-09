@@ -24,7 +24,11 @@ module.exports = {
 					800: '#932126',
 					900: '#7b2125',
 					950: '#420d0f'
-				}
+				},
+				black: '#1C1E1F',
+				'aep-light-gray': '#E1E4E7',
+				'aep-teal': '#43626D',
+				'aep-teal-dark': '#2B454E'
 			}
 		}
 	},
