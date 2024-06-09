@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import clsx from 'clsx';
 	import { onMount } from 'svelte';
 	import Swiper from 'swiper';
 	import { Autoplay, Navigation } from 'swiper/modules';
@@ -65,7 +66,14 @@
 	<div class="swiper-wrapper items-center">
 		{#each partnerImages as { path, url }}
 			<a href={url} target="_blank" class="swiper-slide">
-				<img class="max-h-[120px] mx-auto" src={`${partnerImagesPath}${path}`} alt="Partner Logo" />
+				<img
+					class={clsx(
+						'max-h-[120px] mx-auto opacity-80 transition-colors duration-300',
+						'hover:opacity-100'
+					)}
+					src={`${partnerImagesPath}${path}`}
+					alt="Partner Logo"
+				/>
 			</a>
 		{/each}
 	</div>

@@ -132,7 +132,7 @@
 			<div
 				class={clsx(
 					'w-[31vw] absolute bottom-0 left-[69vw] overflow-hidden opacity-50',
-					'md:bottom-[10%] md:opacity-100'
+					'md:bottom-[5%] md:opacity-100'
 				)}
 			>
 				<img
