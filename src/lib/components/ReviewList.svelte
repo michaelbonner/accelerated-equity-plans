@@ -8,10 +8,10 @@
 	import BsChevronRight from 'svelte-icons-pack/bs/BsChevronRight';
 	import Swiper from 'swiper';
 	import { Navigation } from 'swiper/modules';
+	import Quote from './icons/Quote.svelte';
 
 	import 'swiper/css';
 	import 'swiper/css/navigation';
-	import Quote from './icons/Quote.svelte';
 
 	export let reviews: Review[] = [];
 
