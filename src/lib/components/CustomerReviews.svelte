@@ -1,8 +1,8 @@
 <script>
-	import RedBar from './RedBar.svelte';
-	import ReviewList from './ReviewList.svelte';
 	import { reviews } from '$lib/reviews';
 	import { styles } from '$lib/styles';
+	import RedBar from './RedBar.svelte';
+	import ReviewList from './ReviewList.svelte';
 </script>
 
 <section class="bg-black py-24 md:py-32">

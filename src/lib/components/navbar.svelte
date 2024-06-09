@@ -1,6 +1,6 @@
 <script>
-	import clsx from 'clsx';
 	import { navigating } from '$app/stores';
+	import clsx from 'clsx';
 
 	let mobileMenuOpen = false;
 
