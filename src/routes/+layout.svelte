@@ -2,26 +2,52 @@
 	import '../app.css';
 
 	import Analytics from '$lib/analytics.svelte';
+	import Navbar from '$lib/components/navbar.svelte';
+	import Footer from '$lib/components/footer.svelte';
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 
 	onMount(() => {
 		document.querySelectorAll('link[rel="preload"]').forEach((link) => {
 			link.setAttribute('rel', 'stylesheet');
 		});
 	});
+
+	const navLinks = [
+		{
+			name: 'Home',
+			href: '/'
+		},
+		{
+			name: 'About',
+			href: '/about'
+		},
+		{
+			name: 'Careers',
+			href: '/careers'
+		},
+		{
+			name: 'Services',
+			href: '/services'
+		},
+		{
+			name: 'Contact Us',
+			href: '/contact',
+			headerClasses: 'bg-white text-black hover:text-red-600 ml-4'
+		}
+	];
 </script>
 
 <svelte:head>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
-	<link
-		as="style"
-		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Lora:wght@400;500;700&display=swap"
-		rel="preload"
-	/>
 	<meta name="google-site-verification" content="P9yZQUWa7MG_9CkMXW0nuZ0yUkn95LNLzUQMdNJOBtU" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 </svelte:head>
 
 <Analytics />
-
-<slot />
+<div class="flex flex-col min-h-screen">
+	<Navbar {navLinks} />
+	<div class="flex flex-col flex-grow bg-white">
+		<slot />
+	</div>
+	<Footer {navLinks} />
+</div>
