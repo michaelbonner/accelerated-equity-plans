@@ -225,12 +225,12 @@
 			</div>
 			<div
 				class={clsx(
-					'max-w-7xl grid grid-cols-2 lg:grid-cols-4 items-start gap-y-8',
-					'md:divide-x-2 md:divide-stone-400/40'
+					'max-w-7xl grid grid-cols-2 lg:grid-cols-4 items-start gap-y-8 gap-4',
+					'md:divide-x-2 md:divide-stone-400/40 md:gap-0'
 				)}
 			>
 				{#each servicesSections as servicesSection}
-					<div class="px-4 h-full">
+					<div class="sm:px-4 h-full">
 						<button
 							on:click={() => {
 								const scrollToElement = document.getElementById(servicesSection.id);
@@ -240,8 +240,8 @@
 								}
 							}}
 							class={clsx(
-								'w-full h-full flex flex-col justify-center items-start gap-2 py-4 rounded-xl px-4',
-								'md:text-center md:items-center',
+								'w-full h-full flex flex-col justify-center items-start gap-2 py-4 rounded-xl',
+								'md:text-center md:items-center md:px-4',
 								'hover:bg-white/10'
 							)}
 						>
