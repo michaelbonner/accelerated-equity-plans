@@ -26,6 +26,15 @@
 						}
 					});
 				}
+
+				try {
+					gtag('event', 'form_submit', {
+						form_name: 'lead-form'
+					});
+				} catch (error) {
+					console.error('Error sending form submission event to Google Analytics');
+					console.error(error);
+				}
 			})
 			.catch((error) => {
 				console.error(error);
