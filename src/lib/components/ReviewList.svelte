@@ -22,6 +22,7 @@
 			modules: [Navigation],
 			slidesPerView: 1,
 			loop: true,
+			spaceBetween: 10,
 			breakpoints: {
 				640: {
 					slidesPerView: 2,
