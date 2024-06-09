@@ -1,271 +1,344 @@
 <script lang="ts">
-	import { reviews } from '$lib/reviews';
-	import ReviewList from '$lib/components/ReviewList.svelte';
+	import CustomerReviews from '$lib/components/CustomerReviews.svelte';
+	import FooterCallout from '$lib/components/FooterCallout.svelte';
+	import RedBar from '$lib/components/RedBar.svelte';
+	import Bank from '$lib/components/icons/Bank.svelte';
+	import Buildings from '$lib/components/icons/Buildings.svelte';
+	import Compass from '$lib/components/icons/Compass.svelte';
+	import Database from '$lib/components/icons/Database.svelte';
+	import DocumentCheck from '$lib/components/icons/DocumentCheck.svelte';
+	import Education from '$lib/components/icons/Education.svelte';
+	import Events from '$lib/components/icons/Events.svelte';
+	import FolderEdit from '$lib/components/icons/FolderEdit.svelte';
+	import Graph from '$lib/components/icons/Graph.svelte';
+	import GridBlock from '$lib/components/icons/GridBlock.svelte';
+	import GridCheck from '$lib/components/icons/GridCheck.svelte';
+	import Money from '$lib/components/icons/Money.svelte';
+	import Nodes from '$lib/components/icons/Nodes.svelte';
+	import Path from '$lib/components/icons/Path.svelte';
+	import People from '$lib/components/icons/People.svelte';
+	import Presentation from '$lib/components/icons/Presentation.svelte';
+	import Stars from '$lib/components/icons/Stars.svelte';
+	import TestTube from '$lib/components/icons/TestTube.svelte';
+	import Trailer from '$lib/components/icons/Trailer.svelte';
+	import Umbrella from '$lib/components/icons/Umbrella.svelte';
+	import { styles } from '$lib/styles';
+	import clsx from 'clsx';
+
+	const servicesSections = [
+		{
+			icon: Money,
+			id: 'equity-plan-administration',
+			title: 'Equity Plan Administration',
+			body: '<p>We provide outsourced administration, seasonal and temporary support, complete management of equity plan tasks, partnership with internal teams, and employee education and experience.</p>',
+			servicesBackgroundColor: 'bg-red-700',
+			services: [
+				{
+					icon: Bank,
+					title: 'Comprehensive Equity Management',
+					body: '<p>We handle everything from grant lifecycle administration to collaborating with internal teams (Payroll, HR, Accounting, Legal & Treasury) to ensure smooth execution.</p>'
+				},
+				{
+					icon: Education,
+					title: 'Employee Education & Onboarding',
+					body: '<p>We provide educational resources for employees and support a positive experience throughout their equity journey.</p>'
+				},
+				{
+					icon: People,
+					title: 'Outsourced Administration & Scalable Support',
+					body: '<p>We take ownership of your entire equity plan, offering ongoing administration and flexible staffing solutions to adapt to your workload.</p>'
+				},
+				{
+					icon: Graph,
+					title: 'Seasonal & Temporary Support',
+					body: '<p>Need additional support during peak times? We offer temporary staffing solutions to seamlessly manage your equity plan.</p>'
+				}
+			]
+		},
+		{
+			icon: Buildings,
+			id: 'vendor-support',
+			title: 'Vendor Support',
+			body: '<p>We offer expedited system implementation, data conversion and audit services, 3rd party integrations, RFP guidance, and functionality incorporation and testing.</p>',
+			servicesBackgroundColor: 'bg-aep-teal',
+			services: [
+				{
+					icon: Nodes,
+					title: 'Streamlined System Implementation',
+					body: '<p>We expedite system setup, ensuring a smooth transition and rapid functionality.</p>'
+				},
+				{
+					icon: Database,
+					title: 'Data Management & Integration',
+					body: '<p>We handle data conversion, audit, and integration with 3rd party systems for accurate and unified information.</p>'
+				},
+				{
+					icon: DocumentCheck,
+					title: 'RFP Guidance & System Selection',
+					body: '<p>We provide expert guidance throughout the RFP process to help you select the optimal equity management system.</p>'
+				},
+				{
+					icon: TestTube,
+					title: 'Comprehensive Functionality Testing',
+					body: '<p>We ensure your chosen system functions flawlessly through thorough incorporation and testing.</p>'
+				}
+			]
+		},
+		{
+			icon: GridCheck,
+			id: 'advanced-project-support',
+			title: 'Advanced Project Support',
+			body: '<p>We provide services for Mergers & Acquisitions, IPOs & SPACs, modifications, automation design and resources, mobility adoption, and HRIS & Payroll Integrations.</p>',
+			servicesBackgroundColor: 'bg-black',
+			services: [
+				{
+					icon: Events,
+					title: 'Strategic Transactions & Equity Events',
+					body: '<p>We guide you through Mergers & Acquisitions, IPOs, SPACs, and other equity events to ensure a smooth process.</p>'
+				},
+				{
+					icon: Path,
+					title: 'Equity Plan Modifications & Automation',
+					body: '<p>We assist with plan modifications and design automation solutions to streamline your workflow and improve efficiency.</p>'
+				},
+				{
+					icon: Trailer,
+					title: 'Global Workforce Mobility Support',
+					body: '<p>We offer comprehensive support for mobility adoption, ensuring a seamless experience for your relocating employees.</p>'
+				},
+				{
+					icon: GridBlock,
+					title: 'Seamless Integrations',
+					body: '<p>We integrate your equity systems with HRIS and Payroll for effortless data flow and centralized management.</p>'
+				}
+			]
+		},
+		{
+			icon: Compass,
+			id: 'plan-process-design',
+			title: 'Plan & Process Design',
+			body: '<p>We offer process review, enhancement, and documentation; incorporation of best practices to mitigate risk; administrator system and process training; and industry trends and analysis for LTI Plan consideration.</p>',
+			servicesBackgroundColor: 'bg-aep-teal-dark',
+			services: [
+				{
+					icon: FolderEdit,
+					title: 'Streamlined & Optimized Equity Management',
+					body: '<p>We review, enhance, and document your program for peak efficiency, incorporating best practices to minimize risk.</p>'
+				},
+				{
+					icon: Presentation,
+					title: 'Expert Administrator Training & Support',
+					body: '<p>We equip your team with the knowledge and skills they need through comprehensive administrator system and process training.</p>'
+				},
+				{
+					icon: Stars,
+					title: 'Data-Driven Decision Making',
+					body: '<p>We provide ongoing industry trend analysis to inform your Long-Term Incentive (LTI) plan decisions and keep you ahead of the curve.</p>'
+				},
+				{
+					icon: Umbrella,
+					title: 'Risk Mitigation Through Best Practices',
+					body: '<p>We incorporate industry best practices into your equity program to minimize risk and ensure compliance.</p>'
+				}
+			]
+		}
+	];
+
+	const moreServices = [
+		{
+			title: `IPOs and SPACs`,
+			body: `We provide expert support throughout the IPO process, guiding companies through the complexities and challenges of going public to ensure a successful transition. We can also be a resource as work volumes pick up and you need extra support.`
+		},
+		{
+			title: `Corporate Actions`,
+			body: `We help companies navigate strategic restructuring through mergers & acquisitions, stock splits, and spinoffs.`
+		},
+		{
+			title: `Automation Design and Resources`,
+			body: `Our Automation Design and Resources empower organizations to streamline processes and boost productivity. We integrate your equity systems with payroll and HRIS for seamless data flow and reduced risk, driving both efficiency and innovation.`
+		},
+		{
+			title: `Tax and Mobility implementation and support`,
+			body: `We ensure you're maximizing tax efficiency with a review of your withholding setup and best practice advice. Plus, we offer support throughout your mobility process, from initial setup and testing to ongoing assistance.`
+		},
+
+		{
+			title: `System implementation`,
+			body: `We streamline your equity management by supporting implementation of new systems, data conversion (spreadsheets or legacy systems), and ensuring data reconciliation for accurate financial reporting.`
+		},
+		{
+			title: `Vendor Selection and RFP`,
+			body: `We provide expert vendor selection support, guiding businesses through the process of identifying and choosing the right partners to meet their specific needs and goals`
+		},
+		{
+			title: `System functionality incorporation and testing`,
+			body: `We maximize your equity system's value by supporting implementation, testing, and automation, freeing you for strategic initiatives.`
+		},
+		{
+			title: `Process review and documentation`,
+			body: `We review and document your current processes, interview stakeholders and recommend best practices`
+		},
+
+		{
+			title: `Training`,
+			body: `AEP helps to train your employees on administering your equity plans, best practices and creating processes that will save time and reduce risk.`
+		},
+		{
+			title: `Education`,
+			body: `We specialize in educating employees on their equity awards, providing comprehensive guidance and resources to ensure they understand the value and implications of their stock compensation plans.`
+		},
+		{
+			title: `System functionality incorporation and testing`,
+			body: `We maximize your equity system's value by supporting implementation, testing, and automation, freeing you for strategic initiatives.`
+		},
+		{
+			title: `Process review and documentation`,
+			body: `We review and document your current processes, interview stakeholders and recommend best practices`
+		}
+	];
 </script>
 
-<div>
-	<div class="flex flex-col justify-center min-h-screen mt-28 sm:mt-36 font-eurostile">
-		<!-- hero -->
-		<div
-			class="relative isolate overflow-hidden bg-[#2B454E] px-6 py-8 text-center sm:px-16 flex flex-col items-center justify-between"
-		>
-			<h1 class="text-2xl font-bold tracking-wide text-white sm:text-4xl mb-4">Services</h1>
+<main>
+	<section
+		class={clsx(
+			'relative overflow-hidden mt-20 py-24 flex items-center justify-center',
+			'md:py-36'
+		)}
+	>
+		<div class="absolute inset-0 overflow-hidden">
+			<img
+				class="object-cover size-full"
+				src="/images/backgrounds/high-rise-buildings-2.jpg.webp"
+				alt="high-rise buildings"
+			/>
 		</div>
-		<!-- end hero -->
-		<!-- Start Testimonials Section -->
-		<section class="py-14 py-sm-10 bg-[#43626D] bg-opacity-60">
-			<h2
-				class="mb-10 sm:my-0 sm:top-14 font-bold text-center w-full text-[#E1E4E7] text-base sm:text-4xl"
+		<div class="bg-black/80 absolute inset-0" />
+		<div class="relative grid gap-24 px-6">
+			<div class={clsx('relative grid gap-8', 'md:text-center')}>
+				<h1 class={clsx(styles.h2, 'text-white')}>Our Services</h1>
+				<p class="prose text-white mx-auto max-w-3xl font-light">
+					From plan setup and compliance to ongoing management, we ensure your stock plans run
+					smoothly. Need temporary support? We offer flexible staffing solutions. Expanding your
+					horizons? Our expertise covers Mergers & Acquisitions, IPOs, SPACs, and Corporate Actions.
+					Let us design automation solutions to streamline your processes and fuel strategic growth.
+				</p>
+			</div>
+			<div
+				class={clsx(
+					'max-w-7xl grid grid-cols-2 lg:grid-cols-4 items-start gap-y-8',
+					'md:divide-x-2 md:divide-stone-400/40'
+				)}
 			>
-				What people are saying about us!
-			</h2>
-			<ReviewList {reviews} />
-		</section>
-		<!-- End testimonials -->
-		<div class="w-full flex flex-col justify-center items-center">
-			<div class=" sm:w-5/6">
-				<!-- todo put these in an array and iterate over that -->
-				<div
-					class="sm:my-6 leading-8 tracking-wide flex flex-col-reverse sm:flex-row justify-center items-center sm:rounded-xl"
-					style="background-image: linear-gradient(120deg, #CCFFFF 0%, #E0F7FA 50%, #F6FDFE 100%);"
-				>
-					<div class="sm:w-3/4 px-12 py-5">
-						<h2 class="mt-10 text-2xl sm:text-4xl font-bold">IPOs and SPACs</h2>
-						<div class="flex flex-col justify-center items-center mt-8 mb-4 w-full">
-							<p class="text-base sm:text-2xl">
-								We provide expert support throughout the IPO process, guiding companies through the
-								complexities and challenges of going public to ensure a successful transition. We
-								can also be a resource as work volumes pick up and you need extra support.
-							</p>
-						</div>
-					</div>
-					<img
-						src="/images/stocks.jpg.webp"
-						alt="stocks"
-						class=" h-96 w-96 object-cover sm:rounded-r-xl"
-					/>
-				</div>
+				{#each servicesSections as servicesSection}
+					<div class="px-4 h-full">
+						<button
+							on:click={() => {
+								console.log('servicesSection.id', servicesSection.id);
+								console.log(
+									'document.getElementById(servicesSection.id)',
+									document.getElementById(servicesSection.id)
+								);
+								const scrollToElement = document.getElementById(servicesSection.id);
 
-				<div
-					class="sm:my-6 leading-8 tracking-wide flex flex-col sm:flex-row justify-center items-center sm:rounded-xl"
-					style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
-				>
-					<img
-						src="/images/stocks2.jpg.webp"
-						alt="stocks"
-						class=" h-96 w-96 object-cover sm:rounded-l-xl"
-					/>
-					<div class="sm:w-3/4 px-12 py-5">
-						<h2 class="mt-10 text-2xl sm:text-4xl font-bold">Corporate Actions</h2>
-						<div class="flex flex-col mt-8 mb-4 text-2xl w-full">
-							<ol class="list-disc text-base sm:text-2xl pl-8">
-								<li class="mb-6">Mergers and Acquisitions</li>
-								<li class="mb-6">Stock Splits</li>
-								<li>Spinoffs</li>
-							</ol>
-						</div>
-					</div>
-				</div>
-
-				<div
-					class="sm:my-6 leading-8 tracking-wide flex flex-col-reverse sm:flex-row justify-center items-center sm:rounded-xl"
-					style="background-image: linear-gradient(120deg, #CCFFFF 0%, #E0F7FA 50%, #F6FDFE 100%);"
-				>
-					<div class="sm:w-3/4 px-12 py-5">
-						<h2 class="mt-10 text-2xl sm:text-4xl font-bold">Automation Design and Resources</h2>
-						<div
-							class="flex flex-col justify-center items-center mt-4 sm:mt-8 mb-4 text-2xl w-full"
+								if (scrollToElement) {
+									scrollToElement.scrollIntoView({ behavior: 'smooth' });
+								}
+							}}
+							class={clsx(
+								'w-full h-full flex flex-col justify-start items-start gap-2 py-4 rounded-xl px-4',
+								'md:text-center md:items-center',
+								'hover:bg-white/10'
+							)}
 						>
-							<ol class="list-disc pl-8 text-base sm:text-2xl">
-								<li class="mb-6">
-									Driving efficiency and innovation through Automation Design and Resources,
-									empowering organizations to streamline processes and enhance productivity.
-								</li>
-								<li>
-									Integrate you equity systems with your payroll and HRIS systems to automate data
-									and reduce risk
-								</li>
-							</ol>
-						</div>
+							<div class={clsx('inline-block p-3 rounded-2xl bg-stone-300/20', 'md:mx-auto')}>
+								<svelte:component this={servicesSection.icon} />
+							</div>
+							<h2 class={clsx(styles.h4, 'text-white')}>{servicesSection.title}</h2>
+						</button>
 					</div>
-					<img src="/images/automation.jpg.webp" alt="stocks" class=" h-96 w-96 md:rounded-r-xl" />
-				</div>
-
-				<div
-					class="sm:my-6 leading-8 tracking-wide flex flex-col sm:flex-row justify-center items-center sm:rounded-xl"
-					style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
-				>
-					<img
-						src="/images/taxes.jpg.webp"
-						alt="stocks"
-						class=" h-96 w-96 object-cover sm:rounded-l-xl"
-					/>
-					<div class="sm:w-3/4 px-12 py-5">
-						<h2 class="mt-10 text-2xl sm:text-4xl font-bold">
-							Tax and Mobility implementation and support
-						</h2>
-						<div
-							class="flex flex-col justify-center items-center mt-4 sm:mt-8 mb-4 text-2xl w-full"
-						>
-							<ol class="list-disc pl-8 text-base sm:text-2xl">
-								<li class="mb-6">Review of tax withholding set up and advise on best practices.</li>
-								<li>Help setting up a mobility process, review and testing and ongoing support</li>
-							</ol>
-						</div>
-					</div>
-				</div>
-
-				<div
-					class="sm:my-6 leading-8 tracking-wide flex flex-col-reverse sm:flex-row justify-center items-center sm:rounded-xl"
-					style="background-image: linear-gradient(120deg, #CCFFFF 0%, #E0F7FA 50%, #F6FDFE 100%);"
-				>
-					<div class="sm:w-3/4 px-12 py-5">
-						<h2 class="mt-10 text-2xl sm:text-4xl font-bold">System implementation</h2>
-						<div class="flex flex-col justify-center items-center mt-8 mb-4 text-2xl w-full">
-							<ol class="list-disc pl-8 text-base sm:text-2xl">
-								<li class="mb-6">Support implementing a new equity system</li>
-								<li>
-									Support converting data from one equity system to another or from spreadsheets to
-									an equity system. Reconcile equity data and financial reporting data
-								</li>
-							</ol>
-						</div>
-					</div>
-					<img
-						src="/images/system.jpg.webp"
-						alt="stocks"
-						class=" h-96 w-96 object-cover sm:rounded-r-xl"
-					/>
-				</div>
-
-				<div
-					class="sm:my-6 leading-8 tracking-wide flex flex-col sm:flex-row justify-center items-center sm:rounded-xl"
-					style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
-				>
-					<img
-						src="/images/rfp.jpg.webp"
-						alt="stocks"
-						class=" h-96 w-96 object-cover sm:rounded-l-xl"
-					/>
-					<div class="sm:w-3/4 px-12 py-5">
-						<h2 class="mt-10 text-2xl sm:text-4xl font-bold">Vendor Selection and RFP</h2>
-						<div class="flex flex-col justify-center items-center mt-8 mb-4 w-full">
-							<p class="text-base sm:text-2xl">
-								We provide expert vendor selection support, guiding businesses through the process
-								of identifying and choosing the right partners to meet their specific needs and
-								goals
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div
-					class="sm:my-6 leading-8 tracking-wide flex flex-col-reverse sm:flex-row justify-center items-center sm:rounded-xl"
-					style="background-image: linear-gradient(120deg, #CCFFFF 0%, #E0F7FA 50%, #F6FDFE 100%);"
-				>
-					<div class="sm:w-3/4 px-12 py-5">
-						<h2 class="mt-10 text-2xl sm:text-4xl font-bold">
-							System functionality incorporation and testing
-						</h2>
-						<div class="flex flex-col justify-center items-center mt-8 mb-4 w-full">
-							<p class="text-base sm:text-2xl">
-								We offer comprehensive support for implementing system functionality and testing to
-								ensure you are getting the most out of your equity systems and reducing manual
-								processes that take away time from more strategic initiatives.
-							</p>
-						</div>
-					</div>
-					<img
-						src="/images/stocks.jpg.webp"
-						alt="stocks"
-						class=" h-96 w-96 object-cover sm:rounded-r-xl"
-					/>
-				</div>
-
-				<div
-					class="sm:my-6 leading-8 tracking-wide flex flex-col sm:flex-row justify-center items-center sm:rounded-xl"
-					style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
-				>
-					<img
-						src="/images/system2.jpg.webp"
-						alt="stocks"
-						class=" h-96 w-96 object-cover sm:rounded-l-xl"
-					/>
-					<div class="sm:w-3/4 px-12 py-5">
-						<h2 class="mt-10 text-2xl sm:text-4xl font-bold">Process review and documentation</h2>
-						<div class="flex flex-col justify-center items-center mt-8 mb-4 w-full">
-							<p class="text-base sm:text-2xl">
-								We review and document your current processes, interview stakeholders and recommend
-								best practices
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div
-					class="sm:my-6 leading-8 tracking-wide flex flex-col-reverse sm:flex-row justify-center items-center sm:rounded-xl"
-					style="background-image: linear-gradient(120deg, #CCFFFF 0%, #E0F7FA 50%, #F6FDFE 100%);"
-				>
-					<div class="sm:w-3/4 px-12 py-5">
-						<h2 class="mt-10 text-2xl sm:text-4xl font-bold">Training</h2>
-						<div class="flex flex-col justify-center items-center mt-8 mb-4 w-full">
-							<p class="text-base sm:text-2xl">
-								AEP helps to train your employees on administering your equity plans, best practices
-								and creating processes that will save time and reduce risk.
-							</p>
-						</div>
-					</div>
-					<img
-						src="/images/training.jpg.webp"
-						alt="stocks"
-						class=" h-96 w-96 object-cover sm:rounded-r-xl"
-					/>
-				</div>
-
-				<div
-					class="sm:my-6 leading-8 tracking-wide flex flex-col sm:flex-row justify-center items-center sm:rounded-xl"
-					style="background-image: linear-gradient(120deg, #F6FDFE 0%, #E0F7FA 50%, #CCFFFF 100%);"
-				>
-					<img
-						src="/images/education.jpg.webp"
-						alt="stocks"
-						class=" h-96 w-96 object-cover sm:rounded-l-xl"
-					/>
-					<div class="sm:w-3/4 px-12 py-5">
-						<h2 class="mt-10 text-2xl sm:text-4xl font-bold">Education</h2>
-						<div class="flex flex-col justify-center items-center mt-8 mb-4 w-full">
-							<p class="text-base sm:text-2xl">
-								We specialize in educating employees on their equity awards, providing comprehensive
-								guidance and resources to ensure they understand the value and implications of their
-								stock compensation plans.
-							</p>
-						</div>
-					</div>
-				</div>
+				{/each}
 			</div>
 		</div>
+	</section>
+
+	<div
+		class="relative bg-fixed bg-no-repeat bg-opacity-10 bg-right-bottom bg-contain pt-8 pb-24"
+		style={`
+			background-image: url('/images/brand/aep-mark-left-half.svg');
+			background-size: 40%;
+		`}
+	>
+		<div class="absolute inset-0 bg-white/90" />
+		{#each servicesSections as servicesSection}
+			<section class="py-24 relative" id={servicesSection.id}>
+				<div class="max-w-7xl mx-auto px-6">
+					<div class="grid gap-4">
+						<RedBar />
+						<h2 class={clsx(styles.h2, 'text-stone-900')}>{servicesSection.title}</h2>
+					</div>
+					<div class={clsx('prose text-stone-900 max-w-3xl mt-8 font-light')}>
+						{@html servicesSection.body}
+					</div>
+					<div
+						class={clsx('max-w-7xl mx-auto grid gap-4 mt-12', 'sm:grid-cols-2', 'lg:grid-cols-4')}
+					>
+						{#each servicesSection.services as service}
+							<div
+								class={clsx(
+									'p-6 flex flex-col justify-start items-start gap-4 rounded-xl text-white',
+									servicesSection.servicesBackgroundColor
+								)}
+							>
+								<div class="inline-block p-3 rounded-2xl bg-white/10">
+									<svelte:component this={service.icon} />
+								</div>
+								<h3 class={clsx(styles.h4)}>{service.title}</h3>
+								<div class="prose text-white max-w-3xl mx-auto font-light">
+									{@html service.body}
+								</div>
+							</div>
+						{/each}
+					</div>
+				</div>
+			</section>
+		{/each}
 	</div>
 
-	<!-- Start Project Management -->
 	<section
-		class="mx-auto min-h-[40vh] py-14 sm:py-32 px-10 pt-8 lg:grid lg:grid-cols-3 lg:gap-8"
-		style="background-image: linear-gradient(120deg, #E1E4E7 0%, #43626D 50%, #AC2228 100%);"
-		id="project-management"
+		class={clsx(
+			'relative bg-stone-700 bg-repeat bg-center py-24 px-6 bg-cover text-white',
+			'lg:py-32'
+		)}
+		style={`background-image: url('/images/patterns/Pattern-0224_Pattern-A.svg')`}
 	>
-		<h2 class="mb-8 shrink-0 text-3xl font-bold tracking-tight sm:text-4xl lg:mb-0">
-			Project Management
-		</h2>
-		<div class="col-span-2 lg:text-left">
-			<ul class="ml-8 list-outside list-disc text-lg text-[#E1E4E7]">
-				<li>Equity platform implementation</li>
-				<li>3rd party vendor integrations for payroll, HRIS, mobility, etc.</li>
-				<li>Administration system functionality adoption and vetting</li>
-				<li>Process review and documentation of best practices</li>
-				<li>Employee education and resources</li>
-				<li>Plan design</li>
-				<li>Corporate Actions</li>
-				<li>Vendor selection</li>
-			</ul>
+		<div class="absolute inset-0 bg-stone-400/30" />
+
+		<div class="relative">
+			<div class="max-w-7xl mx-auto grid gap-12">
+				<div class="grid gap-4 text-center">
+					<RedBar classes="mx-auto" />
+					<h2 class={styles.h2}>More Services</h2>
+				</div>
+			</div>
+
+			<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mt-12">
+				{#each moreServices as service}
+					<div class={styles.blueRedGradientBackground}>
+						<div class="bg-black p-8 rounded-lg gap-4 flex flex-col justify-start h-full">
+							<h3
+								class={clsx('text-2xl text-white font-medium mb-0 font-eurostile', 'md:text-3xl')}
+							>
+								{service.title}
+							</h3>
+							<div class="font-light">{@html service.body}</div>
+						</div>
+					</div>
+				{/each}
+			</div>
 		</div>
 	</section>
-</div>
+
+	<CustomerReviews />
+
+	<FooterCallout />
+</main>

@@ -1,8 +1,9 @@
 <script lang="ts">
+	import CustomerReviews from '$lib/components/CustomerReviews.svelte';
+	import FooterCallout from '$lib/components/FooterCallout.svelte';
 	import MeetTheTeam from '$lib/components/MeetTheTeam.svelte';
 	import PartnerRibbon from '$lib/components/PartnerRibbon.svelte';
 	import RedBar from '$lib/components/RedBar.svelte';
-	import ReviewList from '$lib/components/ReviewList.svelte';
 	import Buildings from '$lib/components/icons/Buildings.svelte';
 	import Compass from '$lib/components/icons/Compass.svelte';
 	import Folder from '$lib/components/icons/Folder.svelte';
@@ -10,7 +11,6 @@
 	import Layers from '$lib/components/icons/Layers.svelte';
 	import Money from '$lib/components/icons/Money.svelte';
 	import Phone from '$lib/components/icons/Phone.svelte';
-	import { reviews } from '$lib/reviews';
 	import { styles } from '$lib/styles';
 	import clsx from 'clsx';
 
@@ -41,8 +41,9 @@
 		{
 			icon: Money,
 			iconBackground: 'bg-red-700',
+			id: 'equity-plan-administration',
 			title: 'Equity Plan Administration',
-			body: '<p>We provide outsourced administration, seasonal and temporary support, complete management of equity plan tasks, partnership with internal teams, and employee education and experience.</p>',
+			body: '<p>Our specialized services in stock plan administration are crafted to address the unique needs of businesses seeking to streamline their equity management processes. Our team of dedicated professionals delivers tailored solutions that ensure regulatory compliance and seamless management of employee stock compensation programs. Trust AEP to handle the complexities of your stock plan administration, allowing you to focus on your core business objectives. </p>',
 			tags: [
 				'Outsourced administration',
 				'Seasonal & temporary support',
@@ -54,8 +55,9 @@
 		{
 			icon: Buildings,
 			iconBackground: 'bg-aep-teal',
+			id: 'vendor-support',
 			title: 'Vendor Support',
-			body: '<p>We offer expedited system implementation, data conversion and audit services, 3rd party integrations, RFP guidance, and functionality incorporation and testing.</p>',
+			body: "<p>Maximize the potential of your equity system with AEP's expert vendor support. Whether you aim to optimize your current equity administration platform or seek to find and implement a new one, AEP is here to help. We specialize in all vendor platforms and will guide you through finding, implementing, and optimizing the platform that best suits your needs.</p>",
 			tags: [
 				'Expedited system implementation',
 				'Data conversion and audit',
@@ -67,8 +69,9 @@
 		{
 			icon: GridCheck,
 			iconBackground: 'bg-[#333536]',
+			id: 'advanced-project-support',
 			title: 'Advanced Project Support',
-			body: '<p>We provide services for Mergers & Acquisitions, IPOs & SPACs, modifications, automation design and resources, mobility adoption, and HRIS & Payroll Integrations.</p>',
+			body: '<p>AEP offers a comprehensive suite of services designed to empower businesses across various industries and lifecycles. Our focus on quality, integrity, and client satisfaction ensures that we partner effectively with businesses to navigate challenges, optimize operations, and unlock opportunities for long-term success.</p>',
 			tags: [
 				'Mergers & Acquisitions',
 				'IPOs & SPACs',
@@ -81,8 +84,9 @@
 		{
 			icon: Compass,
 			iconBackground: 'bg-aep-teal-dark',
+			id: 'plan-process-design',
 			title: 'Plan & Process Design',
-			body: '<p>We offer process review, enhancement, and documentation; incorporation of best practices to mitigate risk; administrator system and process training; and industry trends and analysis for LTI Plan consideration.</p>',
+			body: '<p>AEP assists both private and public companies in their stock plan administration by providing expert guidance and comprehensive solutions. From the initial design and implementation of your equity plans to ongoing management and compliance, AEP has you covered.</p>',
 			tags: [
 				'Process review, enhancement, and documentation',
 				'Incorporation of best practices to mitigate risk',
@@ -221,7 +225,7 @@
 								<div class="prose text-white font-light">
 									{@html comprehensiveService.body}
 								</div>
-								<div class="mt-4">
+								<div class="mt-6">
 									<ul class="text-white flex gap-2 flex-wrap">
 										{#each comprehensiveService.tags as tag}
 											<li
@@ -237,7 +241,9 @@
 									</ul>
 								</div>
 								<div class="mt-8 flex gap-x-4">
-									<a href="/services" class={styles.darkButton}> Learn More </a>
+									<a href={`/services#${comprehensiveService.id}`} class={styles.darkButton}>
+										Learn More
+									</a>
 								</div>
 							</div>
 						</div>
@@ -282,20 +288,7 @@
 
 		<MeetTheTeam />
 
-		<section class="bg-black py-24 md:py-32">
-			<div
-				class="relative isolate overflow-hidden px-6 text-center shadow-2xl sm:px-16 flex flex-col items-center justify-between text-white"
-			>
-				<div class="grid gap-2">
-					<RedBar classes="mx-auto" />
-					<h2 class={styles.h2}>What Our Customers are Saying</h2>
-				</div>
-
-				<div class="max-w-7xl mx-auto w-full">
-					<ReviewList {reviews} />
-				</div>
-			</div>
-		</section>
+		<CustomerReviews />
 
 		<section class="py-24 md:py-32">
 			<div class="grid gap-2 mx-auto max-w-5xl text-center">
@@ -307,20 +300,6 @@
 			</div>
 		</section>
 
-		<section
-			class="py-24 md:py-32 flex flex-col justify-center gap-8 text-center min-h-[50vh]"
-			style={`
-				background-image: url('/images/patterns/Pattern-0224_Pattern-A-Repeated.svg');
-				background-size: 85%;
-			`}
-		>
-			<div class="max-w-2xl mx-auto">
-				<h2 class={styles.h2}>Take your equity management <wbr />to the next level today</h2>
-			</div>
-
-			<div class="flex justify-center">
-				<a href="/contact" class={styles.redButton}>Contact us</a>
-			</div>
-		</section>
+		<FooterCallout />
 	</main>
 </div>
