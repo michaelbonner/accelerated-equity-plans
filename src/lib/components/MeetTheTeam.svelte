@@ -10,7 +10,7 @@
 			title: 'Partner',
 			shortName: 'Emily',
 			image: {
-				src: '/images/emily-headshot-restored.jpg.webp',
+				src: '/images/head-shots/emily-head-shot-restored.jpg.webp',
 				alt: 'Emily Bone'
 			},
 			body: `
@@ -28,7 +28,7 @@
 			title: 'Partner',
 			shortName: 'Neil',
 			image: {
-				src: '/images/neil-headshot.jpg.webp',
+				src: '/images/head-shots/neil-head-shot.jpg.webp',
 				alt: 'Neil Birrell'
 			},
 			body: `
@@ -47,7 +47,7 @@
 			title: 'Director, Business Development & Sales',
 			shortName: 'Aaron',
 			image: {
-				src: '/images/aaron-headshot.jpg.webp',
+				src: '/images/head-shots/aaron-head-shot.jpg.webp',
 				alt: 'Aaron Rosser'
 			},
 			body: `
