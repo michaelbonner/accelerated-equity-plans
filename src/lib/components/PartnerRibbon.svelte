@@ -1,4 +1,9 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+	import { onMount } from 'svelte';
+	import Swiper from 'swiper';
+	import { Autoplay, Navigation } from 'swiper/modules';
+
 	const partnerImagesPath = '/partner-images/';
 
 	const partnerData = [
@@ -34,30 +39,34 @@
 		path: partner.path.replace('/static', ''),
 		url: partner.url
 	}));
+
+	onMount(() => {
+		new Swiper('.partner-swiper', {
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false
+			},
+			centeredSlides: true,
+			loop: true,
+			modules: [Autoplay, Navigation],
+			slidesPerView: 2,
+			spaceBetween: 30,
+			breakpoints: {
+				640: {
+					slidesPerView: 4,
+					spaceBetween: 60
+				}
+			}
+		});
+	});
 </script>
 
-<div class="mx-auto py-4 sm:py-6 md:py-10">
-	<div class="container mx-auto flex flex-col py-12 px-8">
-		<div class="w-full flex justify-center items-center lg:max-w-5xl mx-auto mt-8">
-			<div
-				class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-6 lg:gap-y-8 gap-x-4 px-4 justify-center"
-			>
-				{#each partnerImages as { path, url }}
-					<div class="flex items-center justify-center">
-						<a
-							href={url}
-							target="_blank"
-							class="flex items-center justify-center w-full h-full rounded-xl p-4 transition-colors duration-300 group"
-						>
-							<img
-								src={`${partnerImagesPath}${path}`}
-								alt="Partner Logo"
-								class="h-auto max-h-16 w-full max-w-[120px] translate-y-1 group-hover:-translate-y-0 transition-transform duration-300"
-							/>
-						</a>
-					</div>
-				{/each}
-			</div>
-		</div>
+<div class="partner-swiper px-8 overflow-hidden">
+	<div class="swiper-wrapper items-center">
+		{#each partnerImages as { path, url }}
+			<a href={url} target="_blank" class="swiper-slide">
+				<img class="max-h-[120px] mx-auto" src={`${partnerImagesPath}${path}`} alt="Partner Logo" />
+			</a>
+		{/each}
 	</div>
 </div>

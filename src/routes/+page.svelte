@@ -302,7 +302,9 @@
 				<RedBar classes="mx-auto" />
 				<h2 class={styles.h2}>Seamless Collaboration with Trusted Vendors</h2>
 			</div>
-			<PartnerRibbon />
+			<div class={clsx('mt-12', 'md:mt-24')}>
+				<PartnerRibbon />
+			</div>
 		</section>
 
 		<section
