@@ -68,7 +68,8 @@
 			<a href={url} target="_blank" class="swiper-slide">
 				<img
 					class={clsx(
-						'max-h-[120px] mx-auto opacity-80 transition-colors duration-300',
+						'max-h-[120px] mx-auto opacity-100 transition-colors duration-300',
+						'md:opacity-80',
 						'hover:opacity-100'
 					)}
 					src={`${partnerImagesPath}${path}`}

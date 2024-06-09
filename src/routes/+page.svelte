@@ -295,7 +295,7 @@
 
 	<CustomerReviews />
 
-	<section class="py-24 md:py-32">
+	<section class="py-24 md:py-48">
 		<div class="grid gap-2 mx-auto max-w-5xl text-center">
 			<RedBar classes="mx-auto" />
 			<h2 class={styles.h2}>Seamless Collaboration with Trusted Vendors</h2>
