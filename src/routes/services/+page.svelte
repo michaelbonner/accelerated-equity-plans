@@ -202,7 +202,7 @@
 	<section
 		class={clsx(
 			'relative overflow-hidden mt-20 py-24 flex items-center justify-center',
-			'md:py-36'
+			'md:py-36 md:min-h-[80vh]'
 		)}
 	>
 		<div class="absolute inset-0 overflow-hidden">

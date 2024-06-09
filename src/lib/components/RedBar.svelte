@@ -1,6 +1,4 @@
 <script>
-	import clsx from 'clsx';
-
 	export let classes = '';
 </script>
 

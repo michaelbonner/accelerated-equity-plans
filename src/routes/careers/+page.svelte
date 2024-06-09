@@ -1,68 +1,114 @@
-<div class="flex justify-center min-h-screen font-eurostile">
-	<div class=" sm:w-5/6 mt-28 sm:mt-36">
-		<!-- hero -->
-		<div>
-			<div
-				class="relative isolate overflow-hidden bg-gray-900 px-6 py-8 text-center shadow-2xl sm:px-16 flex flex-col items-center justify-between"
-			>
-				<h1 class="text-2xl font-bold tracking-wide text-white sm:text-4xl mb-4">Join Our Team!</h1>
-			</div>
-		</div>
+<script>
+	import RedBar from '$lib/components/RedBar.svelte';
+	import Document from '$lib/components/icons/Document.svelte';
+	import { styles } from '$lib/styles';
+	import clsx from 'clsx';
+	import People from '$lib/components/icons/People.svelte';
+	import Key from '$lib/components/icons/Key.svelte';
+	import Growth from '$lib/components/icons/Growth.svelte';
+	import LightningBolt from '$lib/components/icons/LightningBolt.svelte';
 
+	const reasonsToWorkForUs = [
+		{
+			icon: People,
+			title: 'Community',
+			body: "<p>At AEP, we're more than just a workplace; we're a community of passionate individuals united by a shared commitment to a culture of ownership, continuous learning, and fostering an environment where growth and fun go hand in hand.</p>"
+		},
+		{
+			icon: Key,
+			title: 'Employee Ownership',
+			body: "<p>If you're someone who believes in the transformative power of employee ownership and thrives in an environment that values collaboration, innovation, and personal development, then we want to hear from you.</p>"
+		},
+		{
+			icon: Growth,
+			title: 'Growth',
+			body: "<p>We're seeking dedicated professionals to join our team. Whether you're an industry veteran or just starting your career, AEP offers exciting opportunities for growth, advancement, and making a meaningful impact.</p>"
+		},
+		{
+			icon: LightningBolt,
+			title: 'Dynamic Team',
+			body: '<p>Join our dynamic team to make a meaningful impact, grow your skills, and have fun. At AEP, we value your unique talents and offer a supportive environment for career advancement.</p>'
+		}
+	];
+</script>
+
+<main>
+	<section
+		class={clsx(
+			'flex flex-col justify-center relative py-36 px-6 text-white bg-black',
+			'md:min-h-[90vh] md:py-24',
+			'lg:px-28 lg:py-36'
+		)}
+	>
+		<!-- Background Div -->
 		<div
-			class="sm:min-h-[600px] sm:bg-cover sm:bg-center sm:bg-no-repeat bg-none flex items-center"
-			style="background-image: url('/images/joinus.jpg.webp')"
-		>
-			<div
-				class="sm:w-1/3 py-6 leading-10 tracking-wide rounded-xl bg-white flex flex-col justify-center min-h-[90%] sm:ml-10 sm:border-black sm:border-2 p-12"
-			>
-				<p class="text-3xl mb-8 font-bold">Send us your resume!</p>
-				<a
-					href="mailto:info@acceleratedep.com?subject=I'm interested in joining your team!"
-					target="_blank"
-				>
-					<button class="bg-black mb-2 w-2/3 text-white rounded">Join the AEP Team!</button>
-				</a>
-				<p class="leading-5 text-sm">
-					Click the above button to email us at <span class="text-red-600"
-						><a
-							href="mailto:info@acceleratedep.com?subject=I'm interested in joining your team!"
-							target="_blank">info@acceleratedep.com</a
-						></span
-					> and share your resume
-				</p>
-			</div>
-		</div>
-		<!-- section 2 -->
-		<div
-			class="sm:my-6 leading-8 tracking-wide flex flex-col justify-center items-center rounded-xl"
-			style="background-image: linear-gradient(120deg, #CCFFFF 0%, #E0F7FA 50%, #CCFFFF 100%);"
-		>
-			<div class="w-5/6">
-				<h2 class="mt-10 text-center text-4xl font-bold">Why work for us?</h2>
-				<div class="flex flex-col justify-center items-center mt-8 mb-4 text-2xl w-full">
-					<p class="px-12 py-5 text-center">
-						At AEP, we're more than just a workplace; we're a community of passionate individuals
-						united by a shared commitment to a culture of ownership, continuous learning, and
-						fostering an environment where growth and fun go hand in hand.
-					</p>
-					<p class="px-12 py-5 text-center">
-						If you're someone who believes in the transformative power of employee ownership and
-						thrives in an environment that values collaboration, innovation, and personal
-						development, then we want to hear from you.
-					</p>
-					<p class="px-12 py-5 text-center">
-						We're on the lookout for dedicated professionals who are eager to contribute their
-						unique talents and perspectives to our team. Whether you're an industry veteran or just
-						starting your career journey, AEP offers exciting opportunities for growth and
-						advancement.
-					</p>
-					<p class="px-12 py-5 text-center">
-						Join us and be part of a dynamic team where you'll have the chance to make a meaningful
-						impact, grow your skills, and have fun along the way.
+			class="absolute inset-0 bg-cover bg-top bg-opacity-100 lg:bg-opacity-30"
+			style="background-image: url('/images/backgrounds/office-picture.jpg.webp');"
+		/>
+		<div class={clsx('absolute inset-0 bg-black/80 bg-blend-screen')} />
+
+		<!-- Should be foreground div in same container -->
+		<div class={clsx('relative z-10 h-full', 'sm:px-8 sm:text-center')}>
+			<div class={clsx('grid gap-4 prose-white max-w-5xl', 'sm:mx-auto')}>
+				<h1 class={styles.h2}>Join Our Team</h1>
+				<div class="prose max-w-full">
+					<p class="mt-6 text-lg leading-8 max-w-3xl mx-auto font-light text-white">
+						Join our dynamic team dedicated to excellence and innovation. At AEP, you'll collaborate
+						with industry leaders, contribute your unique skills, and shape the future of equity
+						management. With exciting challenges and a supportive environment, we offer the perfect
+						platform for you to thrive and advance your career.
 					</p>
 				</div>
 			</div>
+
+			<div
+				class="max-w-3xl mx-auto p-8 bg-white rounded-xl text-black text-left flex flex-col gap-4 mt-12"
+			>
+				<div>
+					<div class="p-3 bg-black rounded-2xl inline-block">
+						<Document />
+					</div>
+				</div>
+				<h3 class={styles.h3}>Send Us Your Resume</h3>
+				<p>
+					Click the button above to email your resume to <a
+						class="underline"
+						href="mailto:info@acceleratedep.com">info@acceleratedep.com</a
+					>.
+				</p>
+				<div class="mt-2">
+					<a
+						href="mailto:info@acceleratedep.com?subject=I'm interested in joining the AEP team!"
+						target="_blank"
+						class={styles.redButton}>Join the AEP Team!</a
+					>
+				</div>
+			</div>
 		</div>
-	</div>
-</div>
+	</section>
+
+	<section class={clsx('px-6 max-w-5xl mx-auto py-24', 'md:py-36')}>
+		<div class="grid gap-2">
+			<RedBar />
+			<h2 class={styles.h2}>Why Work For Us?</h2>
+		</div>
+		<div class={clsx('max-w-7xl mx-auto grid gap-4 mt-12', 'sm:grid-cols-2', 'lg:grid-cols-4')}>
+			{#each reasonsToWorkForUs as reason}
+				<div
+					class={clsx(
+						'p-6 flex flex-col justify-start items-start gap-4 rounded-xl text-white transition-transform bg-black',
+						'hover:-translate-y-1'
+					)}
+				>
+					<div class="inline-block p-3 rounded-2xl bg-white/10">
+						<svelte:component this={reason.icon} />
+					</div>
+					<h3 class={clsx(styles.h4)}>{reason.title}</h3>
+					<div class="prose text-white max-w-3xl mx-auto font-light">
+						{@html reason.body}
+					</div>
+				</div>
+			{/each}
+		</div>
+	</section>
+</main>
