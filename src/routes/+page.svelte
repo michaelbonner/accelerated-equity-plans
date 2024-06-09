@@ -114,192 +114,196 @@
 	/>
 </svelte:head>
 
-<div class="isolate bg-white">
-	<main>
-		<!--  Hero Div -->
-		<section class="relative px-6 lg:px-28 text-white bg-black h-content">
-			<!-- Background Div -->
-			<div
-				class="absolute inset-0 bg-cover bg-top -z-1 bg-opacity-100 lg:bg-opacity-30"
-				style="background-image: url('/images/backgrounds/high-rise-buildings.jpg.webp');"
+<main class="isolate bg-white">
+	<!--  Hero Div -->
+	<section
+		class={clsx(
+			'flex flex-col justify-center relative py-36 px-6 text-white bg-black',
+			'md:min-h-[90vh] md:py-24',
+			'lg:px-28'
+		)}
+	>
+		<!-- Background Div -->
+		<div
+			class="absolute inset-0 bg-cover bg-top bg-opacity-100 lg:bg-opacity-30"
+			style="background-image: url('/images/backgrounds/high-rise-buildings.jpg.webp');"
+		/>
+		<div
+			class={clsx(
+				'absolute inset-0 bg-opacity-70 bg-gradient-to-r from-black/90 via-black/80 to-black/70',
+				'lg:from-black/80 lg:via-black/70 lg:to-black/50'
+			)}
+		/>
+		<div
+			class={clsx(
+				'w-[31vw] absolute bottom-0 left-[69vw] overflow-hidden opacity-50',
+				'md:bottom-[5%] md:opacity-100'
+			)}
+		>
+			<img
+				src="/images/brand/aep-mark-white.svg"
+				alt="Accelerated Equity Plans"
+				class="max-w-none w-[50vw]"
 			/>
-			<div
-				class={clsx(
-					'absolute inset-0 bg-opacity-70 bg-gradient-to-r from-black/90 via-black/80 to-black/70',
-					'lg:from-black/80 lg:via-black/70 lg:to-black/50'
-				)}
-			/>
-			<div
-				class={clsx(
-					'w-[31vw] absolute bottom-0 left-[69vw] overflow-hidden opacity-50',
-					'md:bottom-[5%] md:opacity-100'
-				)}
-			>
-				<img
-					src="/images/brand/aep-mark-white.svg"
-					alt="Accelerated Equity Plans"
-					class="max-w-none w-[50vw]"
-				/>
-			</div>
+		</div>
 
-			<!-- Should be foreground div in same container -->
-			<div class="relative z-10 sm:px-8 pt-48 pb-24 lg:pt-52 lg:pb-44">
-				<div class="grid gap-2 prose-white max-w-2xl">
-					<h1 class={styles.h1}>Accelerate Your <wbr />Equity's Potential</h1>
-					<p class="mt-6 text-lg leading-8 max-w-[660px]">
-						Bringing industry leading expertise and support to your equity programs to deliver a
-						best-in-class experience for your team, partners and participants. Founded by industry
-						experts with issuer and vendor experience for both Private and Public organizations, we
-						can handle all of your Equity Administration needs
-					</p>
-					<div class="mt-8 flex gap-x-4">
-						<a href="/contact" class={styles.darkButton}> Contact us today </a>
-					</div>
+		<!-- Should be foreground div in same container -->
+		<div class={clsx('relative z-10 h-full', 'sm:px-8')}>
+			<div class="grid gap-2 prose-white max-w-2xl">
+				<h1 class={styles.h1}>Accelerate Your <wbr />Equity's Potential</h1>
+				<p class="mt-6 text-lg leading-8 max-w-[660px]">
+					Bringing industry leading expertise and support to your equity programs to deliver a
+					best-in-class experience for your team, partners and participants. Founded by industry
+					experts with issuer and vendor experience for both Private and Public organizations, we
+					can handle all of your Equity Administration needs
+				</p>
+				<div class="mt-8 flex gap-x-4">
+					<a href="/contact" class={styles.darkButton}> Contact us today </a>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<section
-			class="relative bg-stone-700 text-white bg-repeat bg-center py-24 px-6"
-			style={`
+	<section
+		class="relative bg-stone-700 text-white bg-repeat bg-center py-24 px-6"
+		style={`
 				background-image: url('/images/patterns/Pattern-0224_Pattern-A-Repeated-Reversed.svg');
 				background-size: 100%;
 			`}
-		>
-			<div class="absolute inset-0 bg-stone-200/20" />
-			<div class="relative text-center grid gap-4 max-w-3xl mx-auto">
-				<RedBar classes="mx-auto" />
-				<h2 class={styles.h2}>What We Bring to the Table</h2>
-				<p class="font-light mt-4">
-					We manage all stock plan administration from setup to compliance, allowing you to focus on
-					your core business. We offer temporary support with flexible staffing solutions and
-					provide expertise in Mergers and Acquisitions, IPOs, SPACs, Corporate Actions, and
-					Automation Design for strategic growth.
-				</p>
-			</div>
+	>
+		<div class="absolute inset-0 bg-stone-200/20" />
+		<div class="relative text-center grid gap-4 max-w-3xl mx-auto">
+			<RedBar classes="mx-auto" />
+			<h2 class={styles.h2}>What We Bring to the Table</h2>
+			<p class="font-light mt-4">
+				We manage all stock plan administration from setup to compliance, allowing you to focus on
+				your core business. We offer temporary support with flexible staffing solutions and provide
+				expertise in Mergers and Acquisitions, IPOs, SPACs, Corporate Actions, and Automation Design
+				for strategic growth.
+			</p>
+		</div>
 
-			<div class="relative grid md:grid-cols-3 gap-y-8 gap-x-4 max-w-7xl mx-auto mt-12">
-				{#each servicesBoxes as servicesBox}
-					<div class={styles.blueRedGradientBackground}>
-						<div class="grid gap-4 bg-black rounded-lg p-8 h-full">
-							<div>
-								<svelte:component this={servicesBox.icon} />
+		<div class="relative grid md:grid-cols-3 gap-y-8 gap-x-4 max-w-7xl mx-auto mt-12">
+			{#each servicesBoxes as servicesBox}
+				<div class={styles.blueRedGradientBackground}>
+					<div class="grid gap-4 bg-black rounded-lg p-8 h-full">
+						<div>
+							<svelte:component this={servicesBox.icon} />
+						</div>
+						<h3 class="text-2xl font-bold leading-6 text-white font-eurostile">
+							{servicesBox.title}
+						</h3>
+						<div class="prose text-white font-light">
+							{@html servicesBox.body}
+						</div>
+						<div class="mt-8 flex gap-x-4">
+							<a href="/contact" class={styles.darkButton}> Learn More </a>
+						</div>
+					</div>
+				</div>
+			{/each}
+		</div>
+	</section>
+
+	<section
+		class={clsx('relative bg-stone-700 bg-repeat bg-center py-24 px-6 bg-cover', 'lg:py-32')}
+		style={`background-image: url('/images/backgrounds/building-blurred-bg.jpg.webp')`}
+	>
+		<div class="grid gap-4 max-w-7xl mx-auto">
+			<RedBar />
+			<h2 class={styles.h2}>Our Comprehensive Services</h2>
+		</div>
+
+		<div class="grid sm:grid-cols-2 gap-6 max-w-7xl mx-auto mt-12">
+			{#each comprehensiveServices as comprehensiveService}
+				<div class={styles.blueRedGradientBackground}>
+					<div class="bg-black p-8 rounded-lg gap-4 flex flex-col justify-start h-full">
+						<div class="flex gap-4 items-center">
+							<div class={clsx('p-3 rounded-2xl', comprehensiveService.iconBackground)}>
+								<svelte:component this={comprehensiveService.icon} />
 							</div>
 							<h3 class="text-2xl font-bold leading-6 text-white font-eurostile">
-								{servicesBox.title}
+								{comprehensiveService.title}
 							</h3>
+						</div>
+						<div>
 							<div class="prose text-white font-light">
-								{@html servicesBox.body}
+								{@html comprehensiveService.body}
+							</div>
+							<div class="mt-6">
+								<ul class="text-white flex gap-2 flex-wrap">
+									{#each comprehensiveService.tags as tag}
+										<li
+											class={clsx(
+												'px-4 py-1.5 rounded-full flex items-center gap-2 bg-stone-700 text-xs',
+												'md:gap-1.5 md:px-3 md:text-sm'
+											)}
+										>
+											<span class="inline-block size-2 rounded-full bg-red-700 shrink-0" />
+											{tag}
+										</li>
+									{/each}
+								</ul>
 							</div>
 							<div class="mt-8 flex gap-x-4">
-								<a href="/contact" class={styles.darkButton}> Learn More </a>
+								<a href={`/services#${comprehensiveService.id}`} class={styles.darkButton}>
+									Learn More
+								</a>
 							</div>
 						</div>
 					</div>
-				{/each}
-			</div>
-		</section>
+				</div>
+			{/each}
+		</div>
+	</section>
 
-		<section
-			class={clsx('relative bg-stone-700 bg-repeat bg-center py-24 px-6 bg-cover', 'lg:py-32')}
-			style={`background-image: url('/images/backgrounds/building-blurred-bg.jpg.webp')`}
-		>
-			<div class="grid gap-4 max-w-7xl mx-auto">
+	<section
+		class={clsx('py-24 relative px-6', 'md:min-h-[80vh] md:flex md:flex-col md:justify-center')}
+	>
+		<div class={clsx('max-w-2xl grid gap-8 mx-auto', 'md:pl-24')}>
+			<div class="grid gap-4">
 				<RedBar />
-				<h2 class={styles.h2}>Our Comprehensive Services</h2>
+				<h2 class={styles.h2}>Elevate Your Equity Management with Expert Support</h2>
 			</div>
-
-			<div class="grid sm:grid-cols-2 gap-6 max-w-7xl mx-auto mt-12">
-				{#each comprehensiveServices as comprehensiveService}
-					<div class={styles.blueRedGradientBackground}>
-						<div class="bg-black p-8 rounded-lg gap-4 flex flex-col justify-start h-full">
-							<div class="flex gap-4 items-center">
-								<div class={clsx('p-3 rounded-2xl', comprehensiveService.iconBackground)}>
-									<svelte:component this={comprehensiveService.icon} />
-								</div>
-								<h3 class="text-2xl font-bold leading-6 text-white font-eurostile">
-									{comprehensiveService.title}
-								</h3>
-							</div>
-							<div>
-								<div class="prose text-white font-light">
-									{@html comprehensiveService.body}
-								</div>
-								<div class="mt-6">
-									<ul class="text-white flex gap-2 flex-wrap">
-										{#each comprehensiveService.tags as tag}
-											<li
-												class={clsx(
-													'px-4 py-1.5 rounded-full flex items-center gap-2 bg-stone-700 text-xs',
-													'md:gap-1.5 md:px-3 md:text-sm'
-												)}
-											>
-												<span class="inline-block size-2 rounded-full bg-red-700 shrink-0" />
-												{tag}
-											</li>
-										{/each}
-									</ul>
-								</div>
-								<div class="mt-8 flex gap-x-4">
-									<a href={`/services#${comprehensiveService.id}`} class={styles.darkButton}>
-										Learn More
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				{/each}
+			<div class="prose font-light">
+				<p>
+					Accelerated Equity Plans partners with you to boost your team's effectiveness in equity
+					compensation. We handle plan adjustments, daily operations, and future strategy, allowing
+					you to focus on leading your company forward.
+				</p>
 			</div>
-		</section>
+			<div class="flex gap-x-4">
+				<a href="/services" class={styles.redButton}>Contact us today</a>
+			</div>
+		</div>
 
-		<section
-			class={clsx('py-24 relative px-6', 'md:min-h-[80vh] md:flex md:flex-col md:justify-center')}
+		<div
+			class={clsx(
+				'hidden w-[31vw] absolute bottom-0 right-[69vw] overflow-hidden opacity-50',
+				'md:block md:bottom-[10%] md:opacity-100'
+			)}
 		>
-			<div class={clsx('max-w-2xl grid gap-8 mx-auto', 'md:pl-24')}>
-				<div class="grid gap-4">
-					<RedBar />
-					<h2 class={styles.h2}>Elevate Your Equity Management with Expert Support</h2>
-				</div>
-				<div class="prose font-light">
-					<p>
-						Accelerated Equity Plans partners with you to boost your team's effectiveness in equity
-						compensation. We handle plan adjustments, daily operations, and future strategy,
-						allowing you to focus on leading your company forward.
-					</p>
-				</div>
-				<div class="flex gap-x-4">
-					<a href="/services" class={styles.redButton}>Contact us today</a>
-				</div>
-			</div>
+			<img
+				src="/images/brand/aep-mark.svg"
+				alt="Accelerated Equity Plans"
+				class="max-w-none translate-x-[-50%] w-[50vw]"
+			/>
+		</div>
+	</section>
 
-			<div
-				class={clsx(
-					'hidden w-[31vw] absolute bottom-0 right-[69vw] overflow-hidden opacity-50',
-					'md:block md:bottom-[10%] md:opacity-100'
-				)}
-			>
-				<img
-					src="/images/brand/aep-mark.svg"
-					alt="Accelerated Equity Plans"
-					class="max-w-none translate-x-[-50%] w-[50vw]"
-				/>
-			</div>
-		</section>
+	<MeetTheTeam />
 
-		<MeetTheTeam />
+	<CustomerReviews />
 
-		<CustomerReviews />
+	<section class="py-24 md:py-32">
+		<div class="grid gap-2 mx-auto max-w-5xl text-center">
+			<RedBar classes="mx-auto" />
+			<h2 class={styles.h2}>Seamless Collaboration with Trusted Vendors</h2>
+		</div>
+		<div class={clsx('mt-12', 'md:mt-24')}>
+			<PartnerRibbon />
+		</div>
+	</section>
 
-		<section class="py-24 md:py-32">
-			<div class="grid gap-2 mx-auto max-w-5xl text-center">
-				<RedBar classes="mx-auto" />
-				<h2 class={styles.h2}>Seamless Collaboration with Trusted Vendors</h2>
-			</div>
-			<div class={clsx('mt-12', 'md:mt-24')}>
-				<PartnerRibbon />
-			</div>
-		</section>
-
-		<FooterCallout />
-	</main>
-</div>
+	<FooterCallout />
+</main>
