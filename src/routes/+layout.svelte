@@ -40,6 +40,8 @@
 <svelte:head>
 	<meta name="google-site-verification" content="P9yZQUWa7MG_9CkMXW0nuZ0yUkn95LNLzUQMdNJOBtU" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="color-scheme" content="light only" />
+	<meta name="theme-color" content="#ac2228" />
 </svelte:head>
 
 <Analytics />
