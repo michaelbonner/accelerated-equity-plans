@@ -196,8 +196,8 @@
 						<div class="prose text-white font-light">
 							{@html servicesBox.body}
 						</div>
-						<div class="mt-8 flex gap-x-4">
-							<a href="/contact" class={styles.darkButton}> Learn More </a>
+						<div class="mt-8 flex gap-x-4 items-end">
+							<a href="/services" class={styles.darkButton}> Learn More </a>
 						</div>
 					</div>
 				</div>
