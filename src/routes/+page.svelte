@@ -273,7 +273,7 @@
 				</p>
 			</div>
 			<div class="flex gap-x-4">
-				<a href="/services" class={styles.redButton}>Contact us today</a>
+				<a href="/contact" class={styles.redButton}>Contact us today</a>
 			</div>
 		</div>
 
