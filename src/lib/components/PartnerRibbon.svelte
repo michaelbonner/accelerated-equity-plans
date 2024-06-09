@@ -4,7 +4,7 @@
 	import Swiper from 'swiper';
 	import { Autoplay, Navigation } from 'swiper/modules';
 
-	const partnerImagesPath = '/partner-images/';
+	const partnerImagesPath = '/images/partners/';
 
 	const partnerData = [
 		{
