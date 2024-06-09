@@ -27,11 +27,11 @@
 			url: 'https://www.pwc.com/us/en/industries/financial-services/private-equity.html'
 		},
 		{
-			path: 'kpmg.png',
+			path: 'kpmg.svg',
 			url: 'https://kpmg.com/us/en/home/industries/private-equity.html'
 		},
 		{
-			path: 'ubs.png',
+			path: 'ubs.png.webp',
 			url: 'https://www.ubs.com/us/en/wealth-management/our-solutions/companies-organizations.html'
 		}
 	];
