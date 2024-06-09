@@ -3,9 +3,8 @@
 	import type { Review } from '$lib/types';
 	import clsx from 'clsx';
 	import { onMount } from 'svelte';
-	import Icon from 'svelte-icons-pack/Icon.svelte';
-	import BsChevronLeft from 'svelte-icons-pack/bs/BsChevronLeft';
-	import BsChevronRight from 'svelte-icons-pack/bs/BsChevronRight';
+	import { Icon } from 'svelte-icons-pack';
+	import { BsChevronLeft, BsChevronRight } from 'svelte-icons-pack/bs';
 	import Swiper from 'swiper';
 	import { Navigation } from 'swiper/modules';
 	import Quote from './icons/Quote.svelte';
