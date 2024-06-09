@@ -233,11 +233,6 @@
 					<div class="px-4 h-full">
 						<button
 							on:click={() => {
-								console.log('servicesSection.id', servicesSection.id);
-								console.log(
-									'document.getElementById(servicesSection.id)',
-									document.getElementById(servicesSection.id)
-								);
 								const scrollToElement = document.getElementById(servicesSection.id);
 
 								if (scrollToElement) {
@@ -245,7 +240,7 @@
 								}
 							}}
 							class={clsx(
-								'w-full h-full flex flex-col justify-start items-start gap-2 py-4 rounded-xl px-4',
+								'w-full h-full flex flex-col justify-center items-start gap-2 py-4 rounded-xl px-4',
 								'md:text-center md:items-center',
 								'hover:bg-white/10'
 							)}
@@ -253,7 +248,9 @@
 							<div class={clsx('inline-block p-3 rounded-2xl bg-stone-300/20', 'md:mx-auto')}>
 								<svelte:component this={servicesSection.icon} />
 							</div>
-							<h2 class={clsx(styles.h4, 'text-white')}>{servicesSection.title}</h2>
+							<h2 class={clsx(styles.h4, 'text-white text-left', 'lg:text-center')}>
+								{servicesSection.title}
+							</h2>
 						</button>
 					</div>
 				{/each}
