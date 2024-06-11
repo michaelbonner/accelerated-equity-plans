@@ -20,9 +20,11 @@
 				<a href="/" class="-m-1.5 p-2">
 					<span class="sr-only">Accelerated Equity Plans</span>
 					<img
-						class="w-full py-2 max-w-[180px]"
-						src="/images/brand/aep-logo-white.svg"
 						alt="Accelerated Equity Plans Logo"
+						class="w-full py-2 max-w-[180px]"
+						height="50"
+						src="/images/brand/aep-logo-white.svg"
+						width="180"
 					/>
 				</a>
 			</div>
@@ -74,9 +76,11 @@
 							<a href="/" class="-m-1.5 p-1.5">
 								<span class="sr-only">Accelerated Equity Plans</span>
 								<img
-									class="h-16 max-w-[180px]"
-									src="/images/brand/aep-logo-white.svg"
 									alt="Accelerated Equity Plans Logo"
+									class="h-16 max-w-[180px]"
+									height="50"
+									src="/images/brand/aep-logo-white.svg"
+									width="180"
 								/>
 							</a>
 						</div>
