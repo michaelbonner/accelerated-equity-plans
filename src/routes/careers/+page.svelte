@@ -105,7 +105,7 @@
 		</div>
 	</section>
 
-	<section class={clsx('px-6 max-w-5xl mx-auto py-24', 'md:py-36')}>
+	<section class={clsx('px-6 max-w-7xl mx-auto py-24', 'md:py-36')}>
 		<div class="grid gap-2">
 			<RedBar />
 			<h2 class={styles.h2}>Why Work For Us?</h2>
