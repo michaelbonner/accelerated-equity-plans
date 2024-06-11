@@ -5,6 +5,10 @@
 	import Footer from '$lib/components/footer.svelte';
 	import Navbar from '$lib/components/navbar.svelte';
 	import { onMount } from 'svelte';
+	import { AiOutlineContacts } from 'svelte-icons-pack/ai';
+	import { BiCustomize, BiHomeAlt } from 'svelte-icons-pack/bi';
+	import { FaRectangleList } from 'svelte-icons-pack/fa';
+	import { IoPeople } from 'svelte-icons-pack/io';
 
 	onMount(() => {
 		document.querySelectorAll('link[rel="preload"]').forEach((link) => {
@@ -15,24 +19,29 @@
 	const navLinks = [
 		{
 			name: 'Home',
-			href: '/'
+			href: '/',
+			icon: BiHomeAlt
 		},
 		{
 			name: 'About',
-			href: '/about'
+			href: '/about',
+			icon: IoPeople
 		},
 		{
 			name: 'Careers',
-			href: '/careers'
+			href: '/careers',
+			icon: FaRectangleList
 		},
 		{
 			name: 'Services',
-			href: '/services'
+			href: '/services',
+			icon: BiCustomize
 		},
 		{
 			name: 'Contact Us',
 			href: '/contact',
-			headerClasses: 'bg-white text-black hover:text-red-600 ml-4'
+			headerClasses: 'bg-white text-black hover:text-red-600 ml-4',
+			icon: AiOutlineContacts
 		}
 	];
 </script>

@@ -1,6 +1,8 @@
 <script>
 	import { navigating } from '$app/stores';
 	import clsx from 'clsx';
+	import { Icon } from 'svelte-icons-pack';
+	import { fly } from 'svelte/transition';
 
 	let mobileMenuOpen = false;
 
@@ -69,21 +71,20 @@
 			<!-- Mobile menu, show/hide based on menu open state. -->
 			<div role="dialog" aria-modal="true">
 				<div
-					class="fixed top-0 left-0 right-0 z-10 overflow-y-visible bg-stone-900 px-6 py-6 lg:hidden"
+					class="fixed top-2 left-2 right-2 z-10 overflow-y-visible bg-aep-red-700 px-4 pb-6 shadow-md rounded-lg lg:hidden"
+					transition:fly={{ duration: 300, y: -20 }}
 				>
-					<div class="flex h-9 items-center justify-between">
-						<div class="flex">
-							<a href="/" class="-m-1.5 p-1.5">
-								<span class="sr-only">Accelerated Equity Plans</span>
-								<img
-									alt="Accelerated Equity Plans Logo"
-									class="h-16 max-w-[180px]"
-									height="50"
-									src="/images/brand/aep-logo-white.svg"
-									width="180"
-								/>
-							</a>
-						</div>
+					<div class="flex items-center justify-between">
+						<a href="/" class="flex-1 py-1">
+							<span class="sr-only">Accelerated Equity Plans</span>
+							<img
+								alt="Accelerated Equity Plans Logo"
+								class={clsx('w-full py-2 max-w-[140px]', 'lg:max-w-[180px]')}
+								height="50"
+								src="/images/brand/aep-logo-white.svg"
+								width="180"
+							/>
+						</a>
 						<div class="flex">
 							<button
 								type="button"
@@ -105,20 +106,21 @@
 							</button>
 						</div>
 					</div>
-					<div class="mt-6 flow-root">
-						<div class="-my-6 divide-y divide-gray-500/10">
-							<div class="space-y-2 py-6">
-								{#each navLinks as navLink}
-									<a
-										href={navLink.href}
-										class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-gray-400/10"
-										on:click={toggleMobileMenu}
-									>
-										{navLink.name}
-									</a>
-								{/each}
-							</div>
-						</div>
+					<div class="mt-4 flow-root px-4">
+						{#each navLinks as navLink}
+							<a
+								href={navLink.href}
+								class="flex items-center gap-6 py-3 leading-7 text-aep-red-100 text-xl font-eurostile"
+								on:click={toggleMobileMenu}
+							>
+								<span class="text-black/80">
+									<Icon size={26} src={navLink.icon} />
+								</span>
+								<span class="pb-0.5">
+									{navLink.name}
+								</span>
+							</a>
+						{/each}
 					</div>
 				</div>
 			</div>
