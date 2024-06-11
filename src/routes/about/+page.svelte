@@ -46,7 +46,7 @@
 					alt="Accelerated Equity Plans"
 					class={clsx('w-full max-w-sm hidden', 'sm:mx-auto sm:block')}
 				/>
-				<h1 class={styles.h2}>About Accelerated Equity Plans</h1>
+				<h1 class={styles.h1}>About Accelerated Equity Plans</h1>
 				<p class="mt-6 text-lg leading-8 max-w-3xl mx-auto">
 					We empower companies to harness the full potential of equity compensation with strategic
 					solutions to attract, retain, and motivate top talent. Our comprehensive services ensure

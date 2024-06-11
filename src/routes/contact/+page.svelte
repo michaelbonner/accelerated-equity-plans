@@ -44,7 +44,7 @@
 		<!-- Should be foreground div in same container -->
 		<div class={clsx('relative z-10 h-full', 'sm:px-8 sm:text-center')}>
 			<div class={clsx('grid gap-4 prose-white max-w-5xl', 'sm:mx-auto')}>
-				<h1 class={styles.h2}>Contact Us Today</h1>
+				<h1 class={styles.h1}>Contact Us Today</h1>
 				<div class="prose max-w-full">
 					<p class="mt-6 text-lg leading-8 max-w-3xl mx-auto font-light text-white">
 						Gain peace of mind with our expert team dedicated to supporting your success. Whether
@@ -117,7 +117,7 @@
 		<div class="relative z-10 h-full">
 			<div class={clsx('grid gap-4 prose-white max-w-7xl', 'sm:mx-auto')}>
 				<RedBar />
-				<h1 class={styles.h2}>Let's Talk About Your Business</h1>
+				<h2 class={styles.h2}>Let's Talk About Your Business</h2>
 				<div class={clsx(styles.blueRedGradientBackground, 'mt-12')}>
 					<div class="bg-black rounded-xl p-8 text-white">
 						<h3 class={styles.h4}>Personal Information</h3>

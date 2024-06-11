@@ -1,12 +1,17 @@
 import clsx from 'clsx';
 
 export const styles = {
-	h1: clsx(
+	h1Super: clsx(
 		'text-5xl font-bold tracking-tight font-eurostile italic text-pretty',
 		'sm:text-6xl',
 		'lg:text-8xl'
 	),
-	h2: clsx('font-eurostile text-3xl italic text-pretty font-medium', 'sm:text-5xl'),
+	h1: clsx(
+		'text-4xl font-bold tracking-tight font-eurostile italic text-pretty',
+		'sm:text-5xl',
+		'lg:text-6xl'
+	),
+	h2: clsx('font-eurostile text-4xl italic text-pretty font-medium', 'sm:text-5xl'),
 	h3: clsx('font-eurostile text-2xl italic text-pretty font-medium', 'sm:text-3xl'),
 	h4: clsx('font-eurostile text-xl text-pretty font-medium', 'sm:text-2xl'),
 	blackButton: clsx(

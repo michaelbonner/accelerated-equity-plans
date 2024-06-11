@@ -233,7 +233,7 @@
 		<div class="bg-black/80 absolute inset-0" />
 		<div class="relative grid gap-24 px-6">
 			<div class={clsx('relative grid gap-8', 'md:text-center')}>
-				<h1 class={clsx(styles.h2, 'text-white')}>Our Services</h1>
+				<h1 class={clsx(styles.h1, 'text-white')}>Our Services</h1>
 				<p class="prose text-white mx-auto max-w-3xl font-light">
 					From plan setup and compliance to ongoing management, we ensure your stock plans run
 					smoothly. Need temporary support? We offer flexible staffing solutions. Expanding your

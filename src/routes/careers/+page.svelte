@@ -68,7 +68,7 @@
 		<!-- Should be foreground div in same container -->
 		<div class={clsx('relative z-10 h-full', 'sm:px-8 sm:text-center')}>
 			<div class={clsx('grid gap-4 prose-white max-w-5xl', 'sm:mx-auto')}>
-				<h1 class={styles.h2}>Join Our Team</h1>
+				<h1 class={styles.h1}>Join Our Team</h1>
 				<div class="prose max-w-full">
 					<p class="mt-6 text-lg leading-8 max-w-3xl mx-auto font-light text-white">
 						Join our dynamic team dedicated to excellence and innovation. At AEP, you'll collaborate
