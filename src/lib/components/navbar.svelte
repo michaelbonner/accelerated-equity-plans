@@ -16,12 +16,12 @@
 <div class={`fixed top-0 z-20 w-screen px-6 py-2 bg-opacity-100 bg-black backdrop-blur`}>
 	<div>
 		<nav class="flex items-center justify-between xl:px-12" aria-label="Global">
-			<div class="flex lg:min-w-0 lg:flex-1" aria-label="Global">
-				<a href="/" class="-m-1.5 p-2">
+			<div class="flex flex-1" aria-label="Global">
+				<a href="/" class="flex-1 py-1">
 					<span class="sr-only">Accelerated Equity Plans</span>
 					<img
 						alt="Accelerated Equity Plans Logo"
-						class="w-full py-2 max-w-[180px]"
+						class={clsx('w-full py-2 max-w-[140px]', 'lg:max-w-[180px]')}
 						height="50"
 						src="/images/brand/aep-logo-white.svg"
 						width="180"
