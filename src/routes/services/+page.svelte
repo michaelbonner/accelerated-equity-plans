@@ -244,7 +244,7 @@
 			<div
 				class={clsx(
 					'max-w-7xl grid grid-cols-2 lg:grid-cols-4 items-start gap-y-8 gap-4',
-					'md:divide-x-2 md:divide-stone-400/40 md:gap-0'
+					'md:gap-0'
 				)}
 			>
 				{#each servicesSections as servicesSection}
