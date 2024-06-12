@@ -23,6 +23,11 @@
 			icon: BiHomeAlt
 		},
 		{
+			name: 'Services',
+			href: '/services',
+			icon: BiCustomize
+		},
+		{
 			name: 'About',
 			href: '/about',
 			icon: IoPeople
@@ -31,11 +36,6 @@
 			name: 'Careers',
 			href: '/careers',
 			icon: FaRectangleList
-		},
-		{
-			name: 'Services',
-			href: '/services',
-			icon: BiCustomize
 		},
 		{
 			name: 'Contact Us',
