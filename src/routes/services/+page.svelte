@@ -214,6 +214,12 @@
 		content="https://accelerated-equity-plans.vercel.app/images/og-image.png"
 	/>
 	<link rel="canonical" href="https://www.acceleratedep.com/services" />
+	<link
+		rel="preload"
+		as="image"
+		href="/images/backgrounds/high-rise-buildings-2-mobile.jpg.webp"
+		imagesrcset="/images/backgrounds/high-rise-buildings-2-mobile.jpg.webp 600w, /images/backgrounds/high-rise-buildings-2-mobile.jpg.webp 601w"
+	/>
 </svelte:head>
 
 <main>
@@ -224,22 +230,14 @@
 		)}
 	>
 		<div class="absolute inset-0 overflow-hidden">
-			<picture>
-				<source
-					media="(max-width: 600px)"
-					srcset="/images/backgrounds/high-rise-buildings-2-mobile.jpg.webp"
-				/>
-				<source
-					media="(min-width: 601px)"
-					srcset="/images/backgrounds/high-rise-buildings-2.jpg.webp"
-				/>
-				<img
-					alt="high-rise buildings"
-					class="object-cover size-full"
-					fetchpriority="high"
-					src="/images/backgrounds/high-rise-buildings-2.jpg.webp"
-				/>
-			</picture>
+			<img
+				alt="High rise buildings"
+				class="object-cover size-full"
+				fetchpriority="high"
+				sizes="(max-width: 600px) 600px,(min-width: 601px) 2000px"
+				src="/images/backgrounds/high-rise-buildings-2-mobile.jpg.webp"
+				srcset="/images/backgrounds/high-rise-buildings-2-mobile.jpg.webp 600w, /images/backgrounds/high-rise-buildings-2.jpg.webp 2000w"
+			/>
 		</div>
 		<div class="bg-black/80 absolute inset-0" />
 		<div class="relative grid gap-24 px-6">

@@ -48,6 +48,12 @@
 		content="https://accelerated-equity-plans.vercel.app/images/og-image.png"
 	/>
 	<link rel="canonical" href="https://www.acceleratedep.com/careers" />
+	<link
+		rel="preload"
+		as="image"
+		href="/images/backgrounds/office-picture-mobile.jpg.webp"
+		imagesrcset="/images/backgrounds/office-picture-mobile.jpg.webp 600w, /images/backgrounds/office-picture.jpg.webp 601w"
+	/>
 </svelte:head>
 
 <main>
@@ -60,19 +66,14 @@
 	>
 		<!-- Background Div -->
 		<div class="absolute inset-0 overflow-hidden">
-			<picture>
-				<source
-					media="(max-width: 600px)"
-					srcset="/images/backgrounds/office-picture-mobile.jpg.webp"
-				/>
-				<source media="(min-width: 601px)" srcset="/images/backgrounds/office-picture.jpg.webp" />
-				<img
-					alt="high-rise buildings"
-					class="object-cover size-full"
-					fetchpriority="high"
-					src="/images/backgrounds/office-picture.jpg.webp"
-				/>
-			</picture>
+			<img
+				alt="high-rise buildings"
+				class="object-cover size-full"
+				fetchpriority="high"
+				sizes="(max-width: 600px) 600px,(min-width: 601px) 2000px"
+				src="/images/backgrounds/office-picture-mobile.jpg.webp"
+				srcset="/images/backgrounds/office-picture-mobile.jpg.webp 600w, /images/backgrounds/office-picture.jpg.webp 601w"
+			/>
 		</div>
 		<div class={clsx('absolute inset-0 bg-black/80 bg-blend-screen')} />
 

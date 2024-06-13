@@ -117,8 +117,7 @@
 		rel="preload"
 		as="image"
 		href="/images/backgrounds/high-rise-buildings-mobile.jpg.webp"
-		imagesrcset="/images/backgrounds/high-rise-buildings-mobile.jpg.webp 600w, /images/backgrounds/high-rise-buildings-mobile.jpg.webp 601w"
-		imagesizes="50vw"
+		imagesrcset="/images/backgrounds/high-rise-buildings-mobile.jpg.webp 600w, /images/backgrounds/high-rise-buildings.jpg.webp 601w"
 	/>
 </svelte:head>
 
@@ -134,11 +133,12 @@
 		<!-- Background Div -->
 		<div class="absolute inset-0 overflow-hidden">
 			<img
-				alt="A rad wolf"
+				alt="High rise buildings"
 				class="object-cover size-full"
 				fetchpriority="high"
+				sizes="(max-width: 600px) 600px,(min-width: 601px) 2000px"
 				src="/images/backgrounds/high-rise-buildings-mobile.jpg.webp"
-				srcset="/images/backgrounds/high-rise-buildings-mobile.jpg.webp 600w, /images/backgrounds/high-rise-buildings-mobile.jpg.webp 601w"
+				srcset="/images/backgrounds/high-rise-buildings-mobile.jpg.webp 600w, /images/backgrounds/high-rise-buildings.jpg.webp 601w"
 			/>
 		</div>
 
@@ -223,22 +223,13 @@
 
 	<section class={clsx('relative bg-stone-700 py-24 px-6', 'lg:py-32')}>
 		<div class="absolute inset-0 overflow-hidden">
-			<picture>
-				<source
-					media="(max-width: 600px)"
-					srcset="/images/backgrounds/building-blurred-bg-mobile.jpg.webp"
-				/>
-				<source
-					media="(min-width: 601px)"
-					srcset="/images/backgrounds/building-blurred-bg.jpg.webp"
-				/>
-				<img
-					alt="A building with a blurred background"
-					class="object-cover size-full"
-					loading="lazy"
-					src="/images/backgrounds/building-blurred-bg.jpg.webp"
-				/>
-			</picture>
+			<img
+				alt="A building with a blurred background"
+				class="object-cover size-full"
+				sizes="(max-width: 600px) 600px,(min-width: 601px) 2000px"
+				src="/images/backgrounds/building-blurred-bg-mobile.jpg.webp"
+				srcset="/images/backgrounds/building-blurred-bg-mobile.jpg.webp 600w, /images/backgrounds/building-blurred-bg.jpg.webp 601w"
+			/>
 		</div>
 		<div class="absolute inset-0 bg-white/80 lg:bg-transparent" />
 		<div class="relative grid gap-4 max-w-7xl mx-auto">
