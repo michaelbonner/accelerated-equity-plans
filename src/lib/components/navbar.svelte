@@ -1,6 +1,6 @@
 <script>
 	import { navigating, page } from '$app/stores';
-	import clsx from 'clsx';
+	import { clsx } from 'clsx';
 	import { Icon } from 'svelte-icons-pack';
 	import { fly } from 'svelte/transition';
 

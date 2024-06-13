@@ -1,6 +1,6 @@
 <script>
 	import { styles } from '$lib/styles';
-	import clsx from 'clsx';
+	import { clsx } from 'clsx';
 	import AaronHeadShot from '../images/head-shots/aaron-head-shot.jpg?enhanced';
 	import EmHeadShot from '../images/head-shots/emily-head-shot.jpg?enhanced';
 	import NeilHeadShot from '../images/head-shots/neil-head-shot.jpg?enhanced';

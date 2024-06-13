@@ -1,5 +1,5 @@
 <script>
-	import clsx from 'clsx';
+	import { clsx } from 'clsx';
 	import { page } from '$app/stores';
 
 	export let navLinks;

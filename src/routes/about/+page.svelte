@@ -3,7 +3,7 @@
 	import RedBar from '$lib/components/RedBar.svelte';
 	import HeroBg from '$lib/images/backgrounds/high-rise-looking-up.jpg?enhanced';
 	import { styles } from '$lib/styles';
-	import clsx from 'clsx';
+	import { clsx } from 'clsx';
 </script>
 
 <svelte:head>

@@ -14,7 +14,7 @@
 	import BuildingBlurredBg from '$lib/images/backgrounds/building-blurred-bg.jpg?enhanced';
 	import HeroBg from '$lib/images/backgrounds/high-rise-buildings.jpg?enhanced';
 	import { styles } from '$lib/styles';
-	import clsx from 'clsx';
+	import { clsx } from 'clsx';
 
 	const servicesBoxes = [
 		{

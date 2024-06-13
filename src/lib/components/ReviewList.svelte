@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { styles } from '$lib/styles';
 	import type { Review } from '$lib/types';
-	import clsx from 'clsx';
+	import { clsx } from 'clsx';
 	import { onMount } from 'svelte';
 	import { Icon } from 'svelte-icons-pack';
 	import { BsChevronLeft, BsChevronRight } from 'svelte-icons-pack/bs';

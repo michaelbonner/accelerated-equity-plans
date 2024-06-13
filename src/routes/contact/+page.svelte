@@ -7,7 +7,7 @@
 	import BuildingOutsideMobile from '$lib/images/backgrounds/building-outside.jpg?enhanced';
 	import HeroBg from '$lib/images/backgrounds/office-laptop.jpg?enhanced';
 	import { styles } from '$lib/styles';
-	import clsx from 'clsx';
+	import { clsx } from 'clsx';
 </script>
 
 <svelte:head>

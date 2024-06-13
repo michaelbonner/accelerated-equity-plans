@@ -7,7 +7,7 @@
 	import People from '$lib/components/icons/People.svelte';
 	import HeroBg from '$lib/images/backgrounds/office-picture.jpg?enhanced';
 	import { styles } from '$lib/styles';
-	import clsx from 'clsx';
+	import { clsx } from 'clsx';
 
 	const reasonsToWorkForUs = [
 		{

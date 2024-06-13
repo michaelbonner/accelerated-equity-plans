@@ -1,5 +1,5 @@
 <script lang="ts">
-	import clsx from 'clsx';
+	import { clsx } from 'clsx';
 	import { onMount } from 'svelte';
 	import Swiper from 'swiper';
 	import { Autoplay, Navigation } from 'swiper/modules';

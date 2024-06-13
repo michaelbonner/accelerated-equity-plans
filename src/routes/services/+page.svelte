@@ -24,7 +24,7 @@
 	import Umbrella from '$lib/components/icons/Umbrella.svelte';
 	import HeroBg from '$lib/images/backgrounds/high-rise-buildings-2.jpg?enhanced';
 	import { styles } from '$lib/styles';
-	import clsx from 'clsx';
+	import { clsx } from 'clsx';
 
 	const servicesSections = [
 		{
