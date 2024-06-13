@@ -152,6 +152,7 @@
 				alt="Accelerated Equity Plans"
 				class="max-w-none w-[50vw] opacity-90"
 				height="150"
+				loading="lazy"
 				src="/images/brand/aep-mark-white.svg"
 				width="188"
 			/>
@@ -220,6 +221,7 @@
 			<enhanced:img
 				alt="A building with a blurred background"
 				class="object-cover size-full"
+				loading="lazy"
 				src={BuildingBlurredBg}
 			/>
 		</div>
