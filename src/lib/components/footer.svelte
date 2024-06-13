@@ -1,5 +1,6 @@
 <script>
 	import clsx from 'clsx';
+	import { page } from '$app/stores';
 
 	export let navLinks;
 </script>
@@ -9,8 +10,14 @@
 		<nav class="-mb-6 grid grid-cols-2 sm:flex sm:justify-center sm:space-x-10" aria-label="Footer">
 			{#each navLinks as navLink}
 				<div class="pb-6">
-					<a href={navLink.href} class="leading-6 text-gray-600 hover:text-gray-900 hover:underline"
-						>{navLink.name}</a
+					<a
+						href={navLink.href}
+						class={clsx(
+							'leading-6 hover:underline',
+							$page.url.pathname === navLink.href
+								? 'text-red-800 hover:text-red-900'
+								: 'text-stone-600 hover:text-stone-900'
+						)}>{navLink.name}</a
 					>
 				</div>
 			{/each}
@@ -25,15 +32,15 @@
 					src="/images/brand/aep-logo.svg"
 				/>
 			</a>
-			<p class="text-left text-xs leading-5 text-gray-500 sm:text-center mt-4">
+			<p class="text-left text-xs leading-5 text-stone-500 sm:text-center mt-4">
 				&copy; {new Date().getFullYear()} Accelerated Equity Plans. All rights reserved.
 			</p>
-			<p class="text-left text-xs leading-5 text-gray-500 sm:text-center mt-4">
+			<p class="text-left text-xs leading-5 text-stone-500 sm:text-center mt-4">
 				<a
 					href="https://www.bootpackdigital.com"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-gray-500 hover:text-gray-900">Web design by Bootpack Digital</a
+					class="text-stone-500 hover:text-stone-900">Web design by Bootpack Digital</a
 				>
 			</p>
 		</div>
