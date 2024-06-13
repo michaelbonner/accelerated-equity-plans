@@ -156,7 +156,7 @@
 		<div class={clsx('relative z-10 h-full', 'sm:px-8')}>
 			<div class="grid gap-2 prose-white max-w-2xl">
 				<h1 class={styles.h1Super}>Accelerate Your <wbr />Equity's Potential</h1>
-				<p class="mt-6 text-lg leading-8 max-w-[660px]">
+				<p class="mt-6 text-lg leading-8 max-w-[660px] font-light">
 					Bringing industry leading expertise and support to your equity programs to deliver a
 					best-in-class experience for your team, partners and participants. Founded by industry
 					experts with issuer and vendor experience for both Private and Public organizations, we

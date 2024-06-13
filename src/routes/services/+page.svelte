@@ -234,7 +234,7 @@
 		<div class="relative grid gap-24 px-6">
 			<div class={clsx('relative grid gap-8', 'md:text-center')}>
 				<h1 class={clsx(styles.h1, 'text-white')}>Our Services</h1>
-				<p class="prose text-white mx-auto max-w-3xl font-light">
+				<p class="prose text-white mx-auto max-w-3xl text-lg font-light">
 					From plan setup and compliance to ongoing management, we ensure your stock plans run
 					smoothly. Need temporary support? We offer flexible staffing solutions. Expanding your
 					horizons? Our expertise covers Mergers & Acquisitions, IPOs, SPACs, and Corporate Actions.
