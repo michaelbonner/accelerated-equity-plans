@@ -1,5 +1,5 @@
 <script>
-	import { navigating } from '$app/stores';
+	import { navigating, page } from '$app/stores';
 	import clsx from 'clsx';
 	import { Icon } from 'svelte-icons-pack';
 	import { fly } from 'svelte/transition';
@@ -59,7 +59,8 @@
 					<a
 						href={navLink.href}
 						class={clsx(
-							'uppercase py-2.5 px-4 rounded',
+							'uppercase py-2.5 px-4 rounded tracking-wide',
+							$page.url.pathname === navLink.href && 'font-medium',
 							navLink.headerClasses ?? 'text-white hover:text-red-600'
 						)}>{navLink.name}</a
 					>
@@ -106,11 +107,15 @@
 							</button>
 						</div>
 					</div>
-					<div class="mt-4 flow-root px-4">
+					<div class="mt-4 flow-root">
 						{#each navLinks as navLink}
 							<a
 								href={navLink.href}
-								class="flex items-center gap-6 py-3 leading-7 text-aep-red-100 text-xl font-eurostile"
+								class={clsx(
+									'flex items-center gap-6 py-3 leading-7 text-aep-red-100 text-xl font-eurostile px-4 rounded-xl',
+									$page.url.pathname === navLink.href && 'bg-aep-red-800',
+									'hover:bg-aep-red-600'
+								)}
 								on:click={toggleMobileMenu}
 							>
 								<span class="text-black/80">
