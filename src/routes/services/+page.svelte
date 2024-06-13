@@ -234,9 +234,10 @@
 					srcset="/images/backgrounds/high-rise-buildings-2.jpg.webp"
 				/>
 				<img
-					class="object-cover size-full"
-					src="/images/backgrounds/high-rise-buildings-2.jpg.webp"
 					alt="high-rise buildings"
+					class="object-cover size-full"
+					fetchpriority="high"
+					src="/images/backgrounds/high-rise-buildings-2.jpg.webp"
 				/>
 			</picture>
 		</div>

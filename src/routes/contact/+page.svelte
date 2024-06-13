@@ -43,9 +43,10 @@
 				/>
 				<source media="(min-width: 601px)" srcset="/images/backgrounds/office-picture.jpg.webp" />
 				<img
-					class="object-cover size-full"
-					src="/images/backgrounds/office-picture.jpg.webp"
 					alt="high-rise buildings"
+					class="object-cover size-full"
+					fetchpriority="high"
+					src="/images/backgrounds/office-picture.jpg.webp"
 				/>
 			</picture>
 		</div>

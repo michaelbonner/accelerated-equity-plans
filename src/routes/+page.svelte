@@ -123,7 +123,7 @@
 		rel="preload"
 		href="/images/backgrounds/high-rise-buildings.jpg.webp"
 		as="image"
-		media="(min-width: 600.1px)"
+		media="(min-width: 601px)"
 	/>
 </svelte:head>
 
@@ -148,9 +148,10 @@
 					srcset="/images/backgrounds/high-rise-buildings.jpg.webp"
 				/>
 				<img
-					class="object-cover size-full"
-					src="/images/backgrounds/high-rise-buildings.jpg.webp"
 					alt="high-rise buildings"
+					class="object-cover size-full"
+					fetchpriority="high"
+					src="/images/backgrounds/high-rise-buildings.jpg.webp"
 				/>
 			</picture>
 		</div>

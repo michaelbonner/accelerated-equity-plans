@@ -43,9 +43,10 @@
 					srcset="/images/backgrounds/high-rise-looking-up.jpg.webp"
 				/>
 				<img
-					class="object-cover size-full"
-					src="/images/backgrounds/high-rise-looking-up.jpg.webp"
 					alt="Looking up at high-rise buildings"
+					class="object-cover size-full"
+					fetchpriority="high"
+					src="/images/backgrounds/high-rise-looking-up.jpg.webp"
 				/>
 			</picture>
 		</div>
