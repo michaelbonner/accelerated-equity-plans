@@ -33,8 +33,18 @@
 	>
 		<!-- Background Div -->
 		<div
-			class="absolute inset-0 bg-cover bg-top bg-opacity-100 lg:bg-opacity-30"
+			class={clsx(
+				'hidden absolute inset-0 bg-cover bg-top bg-opacity-100 lg:bg-opacity-30',
+				'lg:block'
+			)}
 			style="background-image: url('/images/backgrounds/high-rise-looking-up.jpg.webp');"
+		/>
+		<div
+			class={clsx(
+				'block absolute inset-0 bg-cover bg-top bg-opacity-100 lg:bg-opacity-30',
+				'lg:hidden'
+			)}
+			style="background-image: url('/images/backgrounds/high-rise-looking-up-mobile.jpg.webp');"
 		/>
 		<div class={clsx('absolute inset-0 bg-black/80')} />
 
