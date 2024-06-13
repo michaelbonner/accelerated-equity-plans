@@ -35,10 +35,20 @@
 		)}
 	>
 		<!-- Background Div -->
-		<div
-			class="absolute inset-0 bg-cover bg-top bg-opacity-100 lg:bg-opacity-30"
-			style="background-image: url('/images/backgrounds/office-picture.jpg.webp');"
-		/>
+		<div class="absolute inset-0 overflow-hidden">
+			<picture>
+				<source
+					media="(max-width: 600px)"
+					srcset="/images/backgrounds/office-picture-mobile.jpg.webp"
+				/>
+				<source media="(min-width: 601px)" srcset="/images/backgrounds/office-picture.jpg.webp" />
+				<img
+					class="object-cover size-full"
+					src="/images/backgrounds/office-picture.jpg.webp"
+					alt="high-rise buildings"
+				/>
+			</picture>
+		</div>
 		<div class={clsx('absolute inset-0 bg-black/80 bg-blend-screen')} />
 
 		<!-- Should be foreground div in same container -->
@@ -117,10 +127,20 @@
 		)}
 	>
 		<!-- Background Div -->
-		<div
-			class="absolute inset-0 bg-cover bg-center bg-opacity-100 lg:bg-opacity-30"
-			style="background-image: url('/images/backgrounds/building-outside.jpg.webp');"
-		/>
+		<div class="absolute inset-0 overflow-hidden">
+			<picture>
+				<source
+					media="(max-width: 600px)"
+					srcset="/images/backgrounds/building-outside-mobile.jpg.webp"
+				/>
+				<source media="(min-width: 601px)" srcset="/images/backgrounds/building-outside.jpg.webp" />
+				<img
+					class="object-cover size-full"
+					src="/images/backgrounds/building-outside.jpg.webp"
+					alt="Looking at a building from the outside"
+				/>
+			</picture>
+		</div>
 		<div class={clsx('absolute inset-0 bg-black/50 bg-blend-screen')} />
 
 		<!-- Should be foreground div in same container -->

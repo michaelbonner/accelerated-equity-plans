@@ -224,11 +224,21 @@
 		)}
 	>
 		<div class="absolute inset-0 overflow-hidden">
-			<img
-				class="object-cover size-full"
-				src="/images/backgrounds/high-rise-buildings-2.jpg.webp"
-				alt="high-rise buildings"
-			/>
+			<picture>
+				<source
+					media="(max-width: 600px)"
+					srcset="/images/backgrounds/high-rise-buildings-2-mobile.jpg.webp"
+				/>
+				<source
+					media="(min-width: 601px)"
+					srcset="/images/backgrounds/high-rise-buildings-2.jpg.webp"
+				/>
+				<img
+					class="object-cover size-full"
+					src="/images/backgrounds/high-rise-buildings-2.jpg.webp"
+					alt="high-rise buildings"
+				/>
+			</picture>
 		</div>
 		<div class="bg-black/80 absolute inset-0" />
 		<div class="relative grid gap-24 px-6">

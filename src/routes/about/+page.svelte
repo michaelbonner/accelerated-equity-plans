@@ -32,20 +32,23 @@
 		)}
 	>
 		<!-- Background Div -->
-		<div
-			class={clsx(
-				'hidden absolute inset-0 bg-cover bg-top bg-opacity-100 lg:bg-opacity-30',
-				'lg:block'
-			)}
-			style="background-image: url('/images/backgrounds/high-rise-looking-up.jpg.webp');"
-		/>
-		<div
-			class={clsx(
-				'block absolute inset-0 bg-cover bg-top bg-opacity-100 lg:bg-opacity-30',
-				'lg:hidden'
-			)}
-			style="background-image: url('/images/backgrounds/high-rise-looking-up-mobile.jpg.webp');"
-		/>
+		<div class="absolute inset-0 overflow-hidden">
+			<picture>
+				<source
+					media="(max-width: 600px)"
+					srcset="/images/backgrounds/high-rise-looking-up-mobile.jpg.webp"
+				/>
+				<source
+					media="(min-width: 601px)"
+					srcset="/images/backgrounds/high-rise-looking-up.jpg.webp"
+				/>
+				<img
+					class="object-cover size-full"
+					src="/images/backgrounds/high-rise-looking-up.jpg.webp"
+					alt="Looking up at high-rise buildings"
+				/>
+			</picture>
+		</div>
 		<div class={clsx('absolute inset-0 bg-black/80')} />
 
 		<!-- Should be foreground div in same container -->

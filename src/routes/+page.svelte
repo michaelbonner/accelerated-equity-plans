@@ -125,14 +125,24 @@
 		)}
 	>
 		<!-- Background Div -->
-		<div
-			class="hidden md:block absolute inset-0 bg-cover bg-top bg-opacity-100 lg:bg-opacity-30"
-			style="background-image: url('/images/backgrounds/high-rise-buildings.jpg.webp');"
-		/>
-		<div
-			class="md:hidden absolute inset-0 bg-cover bg-top bg-opacity-100 lg:bg-opacity-30"
-			style="background-image: url('/images/backgrounds/high-rise-buildings-mobile.jpg.webp');"
-		/>
+		<div class="absolute inset-0 overflow-hidden">
+			<picture>
+				<source
+					media="(max-width: 600px)"
+					srcset="/images/backgrounds/high-rise-buildings-mobile.jpg.webp"
+				/>
+				<source
+					media="(min-width: 601px)"
+					srcset="/images/backgrounds/high-rise-buildings.jpg.webp"
+				/>
+				<img
+					class="object-cover size-full"
+					src="/images/backgrounds/high-rise-buildings.jpg.webp"
+					alt="high-rise buildings"
+				/>
+			</picture>
+		</div>
+
 		<div
 			class={clsx(
 				'absolute inset-0 bg-opacity-70 bg-gradient-to-r from-black/90 via-black/80 to-black/70',
@@ -211,14 +221,23 @@
 	</section>
 
 	<section class={clsx('relative bg-stone-700 py-24 px-6', 'lg:py-32')}>
-		<div
-			class="hidden md:block absolute inset-0 bg-cover bg-top bg-opacity-100 lg:bg-opacity-30"
-			style="background-image: url('/images/backgrounds/building-blurred-bg.jpg.webp');"
-		/>
-		<div
-			class="md:hidden absolute inset-0 bg-cover bg-top bg-opacity-100 lg:bg-opacity-30"
-			style="background-image: url('/images/backgrounds/building-blurred-bg-mobile.jpg.webp');"
-		/>
+		<div class="absolute inset-0 overflow-hidden">
+			<picture>
+				<source
+					media="(max-width: 600px)"
+					srcset="/images/backgrounds/building-blurred-bg-mobile.jpg.webp"
+				/>
+				<source
+					media="(min-width: 601px)"
+					srcset="/images/backgrounds/building-blurred-bg.jpg.webp"
+				/>
+				<img
+					alt="A building with a blurred background"
+					class="object-cover size-full"
+					src="/images/backgrounds/building-blurred-bg.jpg.webp"
+				/>
+			</picture>
+		</div>
 		<div class="absolute inset-0 bg-white/80 lg:bg-transparent" />
 		<div class="relative grid gap-4 max-w-7xl mx-auto">
 			<RedBar />
