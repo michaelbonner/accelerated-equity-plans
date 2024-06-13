@@ -28,8 +28,10 @@
 				<img
 					alt="Accelerated Equity Plans"
 					class="max-w-[200px] sm:mx-auto"
+					height="56"
 					loading="lazy"
 					src="/images/brand/aep-logo.svg"
+					width="200"
 				/>
 			</a>
 			<p class="text-left text-xs leading-5 text-stone-500 sm:text-center mt-4">

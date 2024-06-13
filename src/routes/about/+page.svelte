@@ -1,9 +1,9 @@
 <script>
 	import MeetTheTeam from '$lib/components/MeetTheTeam.svelte';
 	import RedBar from '$lib/components/RedBar.svelte';
+	import HeroBg from '$lib/images/backgrounds/high-rise-looking-up.jpg?enhanced';
 	import { styles } from '$lib/styles';
 	import clsx from 'clsx';
-	import HeroBg from '$lib/images/backgrounds/high-rise-looking-up.jpg?enhanced';
 </script>
 
 <svelte:head>
@@ -123,8 +123,10 @@
 			<img
 				alt="Accelerated Equity Plans"
 				class="max-w-none translate-x-[-50%] w-[50vw]"
+				height="440"
 				loading="lazy"
 				src="/images/brand/aep-mark.svg"
+				width="550"
 			/>
 		</div>
 	</section>
