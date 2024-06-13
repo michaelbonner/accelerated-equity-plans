@@ -154,7 +154,7 @@
 
 				{#if field.type === 'textarea'}
 					<textarea
-						class="text-black block w-full appearance-none rounded border border-gray-100 bg-gray-100 py-3 px-4 leading-tight focus:border-gray-500 focus:bg-white focus:outline-none"
+						class="text-black block w-full appearance-none rounded border border-stone-100 bg-stone-100 py-3 px-4 leading-tight focus:border-stone-500 focus:bg-white focus:outline-none"
 						id={field.name}
 						name={field.name}
 						placeholder={field.label}
@@ -163,7 +163,7 @@
 					/>
 				{:else if field.type === 'select'}
 					<select
-						class="text-black block w-full appearance-none rounded border border-gray-100 bg-gray-100 py-3 px-4 leading-tight focus:border-gray-500 focus:bg-white focus:outline-none"
+						class="text-black block w-full appearance-none rounded border border-stone-100 bg-stone-100 py-3 px-4 leading-tight focus:border-stone-500 focus:bg-white focus:outline-none"
 						id={field.name}
 						name={field.name}
 						required={field.required}
@@ -177,7 +177,7 @@
 					</select>
 				{:else}
 					<input
-						class="text-black block w-full appearance-none rounded border border-gray-100 bg-gray-100 py-3 px-4 leading-tight focus:border-gray-500 focus:bg-white focus:outline-none"
+						class="text-black block w-full appearance-none rounded border border-stone-100 bg-stone-100 py-3 px-4 leading-tight focus:border-stone-500 focus:bg-white focus:outline-none"
 						id={field.name}
 						name={field.name}
 						placeholder={field.label}
