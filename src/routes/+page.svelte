@@ -113,6 +113,18 @@
 		content="https://accelerated-equity-plans.vercel.app/images/og-image.png"
 	/>
 	<link rel="canonical" href="https://www.acceleratedep.com" />
+	<link
+		rel="preload"
+		href="/images/backgrounds/high-rise-buildings-mobile.jpg.webp"
+		as="image"
+		media="(max-width: 600px)"
+	/>
+	<link
+		rel="preload"
+		href="/images/backgrounds/high-rise-buildings.jpg.webp"
+		as="image"
+		media="(min-width: 600.1px)"
+	/>
 </svelte:head>
 
 <main class="isolate bg-white">
