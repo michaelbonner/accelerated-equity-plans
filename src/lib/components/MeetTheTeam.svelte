@@ -85,13 +85,13 @@
 
 		<div class="grid md:grid-cols-3 gap-6">
 			{#each leadershipTeam as teamMember}
-				<div class={styles.blueRedGradientBackground}>
+				<div class={clsx(styles.blueRedGradientBackground, styles.cardHover, 'group')}>
 					<div class="bg-black p-8 rounded-lg gap-4 flex flex-col justify-start h-full">
 						<img
 							alt={teamMember.image.alt}
 							class={clsx(
 								'aspect-square mt-4 rounded-full object-cover max-w-[200px] shadow-lg grayscale transition-all',
-								'hover:grayscale-0'
+								'group-hover:grayscale-0'
 							)}
 							loading="lazy"
 							src={teamMember.image.src}
