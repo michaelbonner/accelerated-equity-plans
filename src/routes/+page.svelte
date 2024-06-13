@@ -158,7 +158,9 @@
 			<img
 				alt="Accelerated Equity Plans"
 				class="max-w-none w-[50vw] opacity-90"
+				height="150"
 				src="/images/brand/aep-mark-white.svg"
+				width="188"
 			/>
 		</div>
 
@@ -318,8 +320,10 @@
 			<img
 				class="max-w-none translate-x-[-50%] w-[50vw]"
 				alt="Accelerated Equity Plans"
+				height="150"
 				loading="lazy"
 				src="/images/brand/aep-mark.svg"
+				width="188"
 			/>
 		</div>
 	</section>
