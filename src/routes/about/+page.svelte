@@ -17,10 +17,6 @@
 		property="og:description"
 		content="We empower companies with strategic equity solutions to attract, retain, and motivate top talent, creating a competitive advantage through effective management of equity plans."
 	/>
-	<meta
-		property="og:image"
-		content="https://accelerated-equity-plans.vercel.app/images/og-image.png"
-	/>
 	<link rel="canonical" href="https://www.acceleratedep.com/about" />
 </svelte:head>
 

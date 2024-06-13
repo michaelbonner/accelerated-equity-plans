@@ -50,6 +50,7 @@
 	<meta name="google-site-verification" content="P9yZQUWa7MG_9CkMXW0nuZ0yUkn95LNLzUQMdNJOBtU" />
 	<meta name="color-scheme" content="light only" />
 	<meta name="theme-color" content="#ac2228" />
+	<meta property="og:image" content="https://www.acceleratedep.com/images/og-image.jpg" />
 </svelte:head>
 
 <Analytics />

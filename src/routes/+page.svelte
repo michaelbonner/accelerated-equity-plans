@@ -110,10 +110,6 @@
 		property="og:description"
 		content="Accelerated Equity Plans helps you create, manage, and implement equity compensation plans."
 	/>
-	<meta
-		property="og:image"
-		content="https://accelerated-equity-plans.vercel.app/images/og-image.png"
-	/>
 	<link rel="canonical" href="https://www.acceleratedep.com" />
 </svelte:head>
 

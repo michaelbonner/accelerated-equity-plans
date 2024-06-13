@@ -44,10 +44,6 @@
 		property="og:description"
 		content="Gain peace of mind with our expert team dedicated to supporting your success. Whether you need help with equity planning, system implementation, or ongoing support, we're here to provide personalized solutions and guidance, helping you navigate with confidence."
 	/>
-	<meta
-		property="og:image"
-		content="https://accelerated-equity-plans.vercel.app/images/og-image.png"
-	/>
 	<link rel="canonical" href="https://www.acceleratedep.com/careers" />
 </svelte:head>
 

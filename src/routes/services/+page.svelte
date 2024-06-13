@@ -210,10 +210,6 @@
 		property="og:description"
 		content="Accelerated Equity Plans (AEP) is a specialized service provider that offers comprehensive solutions for businesses seeking to optimize their equity management processes. AEP's team of dedicated professionals delivers tailored services to ensure regulatory compliance and seamless administration of employee stock compensation programs."
 	/>
-	<meta
-		property="og:image"
-		content="https://accelerated-equity-plans.vercel.app/images/og-image.png"
-	/>
 	<link rel="canonical" href="https://www.acceleratedep.com/services" />
 </svelte:head>
 
