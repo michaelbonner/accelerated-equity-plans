@@ -4,6 +4,8 @@
 	import RedBar from '$lib/components/RedBar.svelte';
 	import Appointment from '$lib/components/icons/Appointment.svelte';
 	import Call from '$lib/components/icons/Call.svelte';
+	import BuildingOutsideMobile from '$lib/images/backgrounds/building-outside.jpg?enhanced';
+	import HeroBg from '$lib/images/backgrounds/office-laptop.jpg?enhanced';
 	import { styles } from '$lib/styles';
 	import clsx from 'clsx';
 </script>
@@ -24,12 +26,6 @@
 		content="https://accelerated-equity-plans.vercel.app/images/og-image.png"
 	/>
 	<link rel="canonical" href="https://www.acceleratedep.com/contact" />
-	<link
-		rel="preload"
-		as="image"
-		href="/images/backgrounds/office-picture-mobile.jpg.webp"
-		imagesrcset="/images/backgrounds/office-picture-mobile.jpg.webp 600w, /images/backgrounds/office-picture.jpg.webp 601w"
-	/>
 </svelte:head>
 
 <main>
@@ -42,13 +38,11 @@
 	>
 		<!-- Background Div -->
 		<div class="absolute inset-0 overflow-hidden">
-			<img
+			<enhanced:img
 				alt="Office meeting"
 				class="object-cover size-full"
 				fetchpriority="high"
-				sizes="(max-width: 600px) 600px,(min-width: 601px) 2000px"
-				src="/images/backgrounds/office-picture-mobile.jpg.webp"
-				srcset="/images/backgrounds/office-picture-mobile.jpg.webp 600w, /images/backgrounds/office-picture.jpg.webp 601w"
+				src={HeroBg}
 			/>
 		</div>
 		<div class={clsx('absolute inset-0 bg-black/80 bg-blend-screen')} />
@@ -130,13 +124,11 @@
 	>
 		<!-- Background Div -->
 		<div class="absolute inset-0 overflow-hidden">
-			<img
+			<enhanced:img
 				alt="Looking at a building from the outside"
 				class="object-cover size-full"
 				loading="lazy"
-				sizes="(max-width: 600px) 600px,(min-width: 601px) 2000px"
-				src="/images/backgrounds/building-outside-mobile.jpg.webp"
-				srcset="/images/backgrounds/building-outside-mobile.jpg.webp 600w, /images/backgrounds/building-outside.jpg.webp 601w"
+				src={BuildingOutsideMobile}
 			/>
 		</div>
 		<div class={clsx('absolute inset-0 bg-black/50 bg-blend-screen')} />

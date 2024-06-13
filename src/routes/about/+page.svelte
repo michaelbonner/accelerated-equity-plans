@@ -3,6 +3,7 @@
 	import RedBar from '$lib/components/RedBar.svelte';
 	import { styles } from '$lib/styles';
 	import clsx from 'clsx';
+	import HeroBg from '$lib/images/backgrounds/high-rise-looking-up.jpg?enhanced';
 </script>
 
 <svelte:head>
@@ -21,12 +22,6 @@
 		content="https://accelerated-equity-plans.vercel.app/images/og-image.png"
 	/>
 	<link rel="canonical" href="https://www.acceleratedep.com/about" />
-	<link
-		rel="preload"
-		as="image"
-		href="/images/backgrounds/high-rise-looking-up-mobile.jpg.webp"
-		imagesrcset="/images/backgrounds/high-rise-looking-up-mobile.jpg.webp 600w, /images/backgrounds/high-rise-looking-up.jpg.webp 601w"
-	/>
 </svelte:head>
 
 <main>
@@ -39,13 +34,11 @@
 	>
 		<!-- Background Div -->
 		<div class="absolute inset-0 overflow-hidden">
-			<img
+			<enhanced:img
 				alt="Looking up at high-rise buildings"
 				class="object-cover size-full"
 				fetchpriority="high"
-				sizes="(max-width: 600px) 600px,(min-width: 601px) 2000px"
-				src="/images/backgrounds/high-rise-looking-up.jpg.webp"
-				srcset="/images/backgrounds/high-rise-looking-up.jpg.webp 600w, /images/backgrounds/high-rise-looking-up.jpg.webp 601w"
+				src={HeroBg}
 			/>
 		</div>
 		<div class={clsx('absolute inset-0 bg-black/80')} />

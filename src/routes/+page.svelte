@@ -11,6 +11,8 @@
 	import Layers from '$lib/components/icons/Layers.svelte';
 	import Money from '$lib/components/icons/Money.svelte';
 	import Phone from '$lib/components/icons/Phone.svelte';
+	import BuildingBlurredBg from '$lib/images/backgrounds/building-blurred-bg.jpg?enhanced';
+	import HeroBg from '$lib/images/backgrounds/high-rise-buildings.jpg?enhanced';
 	import { styles } from '$lib/styles';
 	import clsx from 'clsx';
 
@@ -113,12 +115,6 @@
 		content="https://accelerated-equity-plans.vercel.app/images/og-image.png"
 	/>
 	<link rel="canonical" href="https://www.acceleratedep.com" />
-	<link
-		rel="preload"
-		as="image"
-		href="/images/backgrounds/high-rise-buildings-mobile.jpg.webp"
-		imagesrcset="/images/backgrounds/high-rise-buildings-mobile.jpg.webp 600w, /images/backgrounds/high-rise-buildings.jpg.webp 601w"
-	/>
 </svelte:head>
 
 <main class="isolate bg-white">
@@ -132,13 +128,11 @@
 	>
 		<!-- Background Div -->
 		<div class="absolute inset-0 overflow-hidden">
-			<img
+			<enhanced:img
 				alt="High rise buildings"
 				class="object-cover size-full"
 				fetchpriority="high"
-				sizes="(max-width: 600px) 600px,(min-width: 601px) 2000px"
-				src="/images/backgrounds/high-rise-buildings-mobile.jpg.webp"
-				srcset="/images/backgrounds/high-rise-buildings-mobile.jpg.webp 600w, /images/backgrounds/high-rise-buildings.jpg.webp 601w"
+				src={HeroBg}
 			/>
 		</div>
 
@@ -223,12 +217,10 @@
 
 	<section class={clsx('relative bg-stone-700 py-24 px-6', 'lg:py-32')}>
 		<div class="absolute inset-0 overflow-hidden">
-			<img
+			<enhanced:img
 				alt="A building with a blurred background"
 				class="object-cover size-full"
-				sizes="(max-width: 600px) 600px,(min-width: 601px) 2000px"
-				src="/images/backgrounds/building-blurred-bg-mobile.jpg.webp"
-				srcset="/images/backgrounds/building-blurred-bg-mobile.jpg.webp 600w, /images/backgrounds/building-blurred-bg.jpg.webp 601w"
+				src={BuildingBlurredBg}
 			/>
 		</div>
 		<div class="absolute inset-0 bg-white/80 lg:bg-transparent" />

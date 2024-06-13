@@ -1,6 +1,9 @@
 <script>
 	import { styles } from '$lib/styles';
 	import clsx from 'clsx';
+	import AaronHeadShot from '../images/head-shots/aaron-head-shot.jpg?enhanced';
+	import EmHeadShot from '../images/head-shots/emily-head-shot.jpg?enhanced';
+	import NeilHeadShot from '../images/head-shots/neil-head-shot.jpg?enhanced';
 	import RedBar from './RedBar.svelte';
 	import LinkedIn from './icons/LinkedIn.svelte';
 
@@ -9,10 +12,8 @@
 			fullName: 'Emily Bone, MBA, CEP',
 			title: 'Partner',
 			shortName: 'Emily',
-			image: {
-				src: '/images/head-shots/emily-head-shot-restored.jpg.webp',
-				alt: 'Emily Bone'
-			},
+			imageSrc: EmHeadShot,
+			imageAlt: 'Emily Bone',
 			body: `
 				<p>
 					Emily's rich journey through equity compensation roles, combined with 
@@ -27,10 +28,8 @@
 			fullName: 'Neil Birrell, CEP',
 			title: 'Partner',
 			shortName: 'Neil',
-			image: {
-				src: '/images/head-shots/neil-head-shot.jpg.webp',
-				alt: 'Neil Birrell'
-			},
+			imageSrc: NeilHeadShot,
+			imageAlt: 'Neil Birrell',
 			body: `
 				<p>
 					Neil's extensive experience with Deloitte and various equity firms, 
@@ -46,10 +45,8 @@
 			fullName: 'Aaron Rosser, CEP',
 			title: 'Director, Business Development & Sales',
 			shortName: 'Aaron',
-			image: {
-				src: '/images/head-shots/aaron-head-shot.jpg.webp',
-				alt: 'Aaron Rosser'
-			},
+			imageSrc: AaronHeadShot,
+			imageAlt: 'Aaron Rosser',
 			body: `
 				<p>
 					Aaron is a trusted expert in equity management, having led education 
@@ -87,16 +84,14 @@
 			{#each leadershipTeam as teamMember}
 				<div class={clsx(styles.blueRedGradientBackground, styles.cardHover, 'group')}>
 					<div class="bg-black p-8 rounded-lg gap-4 flex flex-col justify-start h-full">
-						<img
-							alt={teamMember.image.alt}
+						<enhanced:img
+							alt={teamMember.imageAlt}
 							class={clsx(
 								'aspect-square mt-4 rounded-full object-cover max-w-[200px] shadow-lg grayscale transition-all',
 								'group-hover:grayscale-0'
 							)}
-							height="200"
 							loading="lazy"
-							src={teamMember.image.src}
-							width="200"
+							src={teamMember.imageSrc}
 						/>
 						<div class="flex flex-col flex-grow prose text-white">
 							<div class="grow">
