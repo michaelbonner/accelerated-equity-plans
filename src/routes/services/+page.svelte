@@ -219,8 +219,8 @@
 <main>
 	<section
 		class={clsx(
-			'relative overflow-hidden mt-16 py-24 flex items-center justify-center',
-			'md:py-36 md:min-h-[80vh]'
+			'relative overflow-hidden pt-36 pb-24 flex items-center justify-center',
+			'md:py-36 md:min-h-[90vh]'
 		)}
 	>
 		<div class="absolute inset-0 overflow-hidden">
