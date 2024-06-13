@@ -234,7 +234,9 @@
 								<svelte:component this={comprehensiveService.icon} />
 							</div>
 							<h3 class="text-2xl font-bold leading-6 text-white font-eurostile">
-								{comprehensiveService.title}
+								<a href={`/services#${comprehensiveService.id}`}>
+									{comprehensiveService.title}
+								</a>
 							</h3>
 						</div>
 						<div>
