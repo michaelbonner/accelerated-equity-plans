@@ -236,8 +236,8 @@
 				<img
 					alt="A building with a blurred background"
 					class="object-cover size-full"
-					src="/images/backgrounds/building-blurred-bg.jpg.webp"
 					loading="lazy"
+					src="/images/backgrounds/building-blurred-bg.jpg.webp"
 				/>
 			</picture>
 		</div>
@@ -319,8 +319,8 @@
 			)}
 		>
 			<img
-				class="max-w-none translate-x-[-50%] w-[50vw]"
 				alt="Accelerated Equity Plans"
+				class="max-w-none translate-x-[-50%] w-[50vw]"
 				height="150"
 				loading="lazy"
 				src="/images/brand/aep-mark.svg"
