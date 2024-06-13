@@ -219,7 +219,7 @@
 <main>
 	<section
 		class={clsx(
-			'relative overflow-hidden pt-36 pb-24 flex items-center justify-center',
+			'relative overflow-hidden pt-36 pb-24 flex items-center justify-center bg-black',
 			'md:py-36 md:min-h-[90vh]'
 		)}
 	>
