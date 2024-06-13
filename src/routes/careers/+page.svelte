@@ -100,7 +100,7 @@
 						<Document />
 					</div>
 				</div>
-				<h3 class={styles.h3}>Send Us Your Resume</h3>
+				<h2 class={styles.h3}>Send Us Your Resume</h2>
 				<p>
 					Click the button above to email your resume to <a
 						class="underline"
