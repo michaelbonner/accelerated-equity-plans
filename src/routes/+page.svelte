@@ -190,7 +190,7 @@
 
 		<div class="relative grid md:grid-cols-3 gap-y-8 gap-x-4 max-w-7xl mx-auto mt-12">
 			{#each servicesBoxes as servicesBox}
-				<div class={styles.blueRedGradientBackground}>
+				<div class={clsx(styles.blueRedGradientBackground, styles.cardHover)}>
 					<div class="grid gap-4 bg-black rounded-lg p-8 h-full">
 						<div>
 							<svelte:component this={servicesBox.icon} />
@@ -227,7 +227,7 @@
 
 		<div class="relative grid sm:grid-cols-2 gap-6 max-w-7xl mx-auto mt-12">
 			{#each comprehensiveServices as comprehensiveService}
-				<div class={styles.blueRedGradientBackground}>
+				<div class={clsx(styles.blueRedGradientBackground, styles.cardHover)}>
 					<div class="bg-black p-8 rounded-lg gap-4 flex flex-col justify-start h-full">
 						<div class="flex gap-4 items-center">
 							<div class={clsx('p-3 rounded-2xl', comprehensiveService.iconBackground)}>

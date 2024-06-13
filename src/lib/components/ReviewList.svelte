@@ -46,7 +46,12 @@
 		<div class="swiper-wrapper">
 			{#each reviews as review}
 				<div class={clsx('swiper-slide', styles.blueRedGradientBackground)}>
-					<div class="rounded-lg flex flex-col text-left bg-white p-8 text-black gap-2">
+					<div
+						class={clsx(
+							'rounded-lg flex flex-col text-left bg-white p-8 text-black gap-2',
+							styles.cardHover
+						)}
+					>
 						<div>
 							<div class="inline-block bg-black p-3 rounded-xl">
 								<Quote />

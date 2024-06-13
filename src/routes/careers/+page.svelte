@@ -80,7 +80,10 @@
 			</div>
 
 			<div
-				class="max-w-3xl mx-auto p-8 bg-white rounded-xl text-black text-left flex flex-col gap-4 mt-12"
+				class={clsx(
+					'max-w-3xl mx-auto p-8 bg-white rounded-xl text-black text-left flex flex-col gap-4 mt-12',
+					styles.cardHover
+				)}
 			>
 				<div>
 					<div class="p-3 bg-black rounded-2xl inline-block">

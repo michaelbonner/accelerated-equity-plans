@@ -27,5 +27,6 @@ export const styles = {
 		'hover:bg-red-800 hover:ring-red-800'
 	),
 	blueRedGradientBackground:
-		'bg-gradient-to-b from-[#ab2329] via-[#233559] to-[#233559] p-[2px] rounded-lg'
+		'bg-gradient-to-b from-[#ab2329] via-[#233559] to-[#233559] p-[2px] rounded-lg',
+	cardHover: clsx('transition-transform', 'hover:-translate-y-1')
 };

@@ -248,7 +248,7 @@
 				)}
 			>
 				{#each servicesSections as servicesSection}
-					<div class="sm:px-4 h-full">
+					<div class={clsx('sm:px-4 h-full', styles.cardHover)}>
 						<button
 							on:click={() => {
 								const scrollToElement = document.getElementById(servicesSection.id);
@@ -339,7 +339,7 @@
 
 			<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mt-12 max-w-7xl mx-auto">
 				{#each moreServices as service}
-					<div class={styles.blueRedGradientBackground}>
+					<div class={clsx(styles.blueRedGradientBackground, styles.cardHover)}>
 						<div class="bg-black p-8 rounded-lg gap-4 flex flex-col justify-start h-full">
 							<h3
 								class={clsx('text-2xl text-white font-medium mb-0 font-eurostile', 'md:text-3xl')}

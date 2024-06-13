@@ -56,7 +56,12 @@
 			</div>
 
 			<div class={clsx('max-w-7xl grid gap-4', 'sm:flex sm:flex-wrap sm:mx-auto')}>
-				<div class="flex-1 p-8 bg-white rounded-xl text-black text-left flex flex-col gap-4 mt-12">
+				<div
+					class={clsx(
+						'flex-1 p-8 bg-white rounded-xl text-black text-left flex flex-col gap-4 mt-12',
+						styles.cardHover
+					)}
+				>
 					<div>
 						<div class="p-3 bg-black rounded-2xl inline-block">
 							<Call />
@@ -74,7 +79,12 @@
 					</div>
 				</div>
 
-				<div class="flex-1 p-8 bg-white rounded-xl text-black text-left flex flex-col gap-4 mt-12">
+				<div
+					class={clsx(
+						'flex-1 p-8 bg-white rounded-xl text-black text-left flex flex-col gap-4 mt-12',
+						styles.cardHover
+					)}
+				>
 					<div>
 						<div class="p-3 bg-black rounded-2xl inline-block">
 							<Appointment />
