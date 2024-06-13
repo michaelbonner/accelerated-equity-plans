@@ -115,15 +115,10 @@
 	<link rel="canonical" href="https://www.acceleratedep.com" />
 	<link
 		rel="preload"
+		as="image"
 		href="/images/backgrounds/high-rise-buildings-mobile.jpg.webp"
-		as="image"
-		media="(max-width: 600px)"
-	/>
-	<link
-		rel="preload"
-		href="/images/backgrounds/high-rise-buildings.jpg.webp"
-		as="image"
-		media="(min-width: 601px)"
+		imagesrcset="/images/backgrounds/high-rise-buildings-mobile.jpg.webp 600w, /images/backgrounds/high-rise-buildings-mobile.jpg.webp 601w"
+		imagesizes="50vw"
 	/>
 </svelte:head>
 
@@ -138,22 +133,13 @@
 	>
 		<!-- Background Div -->
 		<div class="absolute inset-0 overflow-hidden">
-			<picture>
-				<source
-					media="(max-width: 600px)"
-					srcset="/images/backgrounds/high-rise-buildings-mobile.jpg.webp"
-				/>
-				<source
-					media="(min-width: 601px)"
-					srcset="/images/backgrounds/high-rise-buildings.jpg.webp"
-				/>
-				<img
-					alt="high-rise buildings"
-					class="object-cover size-full"
-					fetchpriority="high"
-					src="/images/backgrounds/high-rise-buildings.jpg.webp"
-				/>
-			</picture>
+			<img
+				alt="A rad wolf"
+				class="object-cover size-full"
+				fetchpriority="high"
+				src="/images/backgrounds/high-rise-buildings-mobile.jpg.webp"
+				srcset="/images/backgrounds/high-rise-buildings-mobile.jpg.webp 600w, /images/backgrounds/high-rise-buildings-mobile.jpg.webp 601w"
+			/>
 		</div>
 
 		<div
