@@ -135,9 +135,10 @@
 				/>
 				<source media="(min-width: 601px)" srcset="/images/backgrounds/building-outside.jpg.webp" />
 				<img
-					class="object-cover size-full"
-					src="/images/backgrounds/building-outside.jpg.webp"
 					alt="Looking at a building from the outside"
+					class="object-cover size-full"
+					loading="lazy"
+					src="/images/backgrounds/building-outside.jpg.webp"
 				/>
 			</picture>
 		</div>

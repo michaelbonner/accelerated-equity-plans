@@ -237,6 +237,7 @@
 					alt="A building with a blurred background"
 					class="object-cover size-full"
 					src="/images/backgrounds/building-blurred-bg.jpg.webp"
+					loading="lazy"
 				/>
 			</picture>
 		</div>
