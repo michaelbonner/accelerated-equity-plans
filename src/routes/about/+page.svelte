@@ -55,9 +55,11 @@
 		<div class={clsx('relative z-10 h-full', 'sm:px-8 sm:text-center')}>
 			<div class={clsx('grid gap-4 prose-white max-w-5xl', 'sm:mx-auto')}>
 				<img
-					src="/images/brand/aep-stacked-white.svg"
 					alt="Accelerated Equity Plans"
 					class={clsx('w-full max-w-sm hidden', 'sm:mx-auto sm:block')}
+					height="154"
+					src="/images/brand/aep-stacked-white.svg"
+					width="384"
 				/>
 				<h1 class={styles.h1}>About Accelerated Equity Plans</h1>
 				<p class="mt-6 text-lg leading-8 max-w-3xl mx-auto font-light">
