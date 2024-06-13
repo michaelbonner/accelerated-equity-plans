@@ -93,8 +93,10 @@
 								'aspect-square mt-4 rounded-full object-cover max-w-[200px] shadow-lg grayscale transition-all',
 								'group-hover:grayscale-0'
 							)}
+							height="200"
 							loading="lazy"
 							src={teamMember.image.src}
+							width="200"
 						/>
 						<div class="flex flex-col flex-grow prose text-white">
 							<div class="grow">
