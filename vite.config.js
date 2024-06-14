@@ -1,6 +1,6 @@
-import { sveltekit } from '@sveltejs/kit/vite';
-import { enhancedImages } from '@sveltejs/enhanced-img';
 import { partytownVite } from '@builder.io/partytown/utils';
+import { enhancedImages } from '@sveltejs/enhanced-img';
+import { sveltekit } from '@sveltejs/kit/vite';
 import { join } from 'path';
 
 /** @type {import('vite').UserConfig} */
