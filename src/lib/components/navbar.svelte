@@ -18,7 +18,7 @@
 <div class={`fixed top-0 z-20 w-screen px-6 py-2 bg-opacity-100 bg-black backdrop-blur`}>
 	<div>
 		<nav class="flex items-center justify-between xl:px-12" aria-label="Global">
-			<div class="flex flex-1" aria-label="Global">
+			<div class="flex flex-1">
 				<a href="/" class="flex-1 py-1">
 					<span class="sr-only">Accelerated Equity Plans</span>
 					<img
