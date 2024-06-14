@@ -103,12 +103,12 @@
 	<title>Accelerated Equity Plans</title>
 	<meta
 		name="description"
-		content="AEP brings industry expertise and support to deliver a best-in-class equity program experience for teams, partners, and participants.""
+		content="AEP brings industry expertise and support to deliver a best-in-class equity program experience for teams, partners, and participants."
 	/>
 	<meta property="og:title" content="Accelerated Equity Plans" />
 	<meta
 		property="og:description"
-		content="AEP brings industry expertise and support to deliver a best-in-class equity program experience for teams, partners, and participants.""
+		content="AEP brings industry expertise and support to deliver a best-in-class equity program experience for teams, partners, and participants."
 	/>
 	<link rel="canonical" href="https://www.acceleratedep.com" />
 	<meta property="og:url" content="https://www.acceleratedep.com" />
