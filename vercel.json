@@ -1,0 +1,8 @@
+{
+	"rewrites": [
+		{
+			"source": "/proxytown/gtm",
+			"destination": "https://www.googletagmanager.com/gtag/js"
+		}
+	]
+}
