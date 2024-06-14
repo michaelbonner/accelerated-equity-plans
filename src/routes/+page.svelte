@@ -116,7 +116,7 @@
 
 <main class="isolate bg-white">
 	<!--  Hero Div -->
-	<section class={styles.heroSection}>
+	<section class={clsx(styles.heroSection, 'lg:px-28')}>
 		<!-- Background Div -->
 		<div class="absolute inset-0 overflow-hidden">
 			<enhanced:img

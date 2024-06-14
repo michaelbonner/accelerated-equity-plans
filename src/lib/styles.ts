@@ -31,7 +31,6 @@ export const styles = {
 	cardHover: clsx('transition-transform', 'hover:-translate-y-1'),
 	heroSection: clsx(
 		'flex flex-col justify-center relative pt-36 pb-8 px-6 text-white bg-black',
-		'md:min-h-[90vh] md:pt-24 pb-6',
-		'lg:px-28'
+		'md:min-h-[90vh] md:pt-24 pb-6'
 	)
 };

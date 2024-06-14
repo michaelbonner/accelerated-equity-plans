@@ -225,7 +225,7 @@
 			/>
 		</div>
 		<div class="bg-black/80 absolute inset-0" />
-		<div class="relative grid gap-24 px-6">
+		<div class={clsx('relative grid gap-16', 'md:gap-24')}>
 			<div class={clsx('relative grid gap-8', 'md:text-center')}>
 				<h1 class={clsx(styles.h1, 'text-white')}>Our Services</h1>
 				<p class="prose text-white mx-auto max-w-3xl text-lg font-light">
@@ -237,12 +237,12 @@
 			</div>
 			<div
 				class={clsx(
-					'max-w-7xl grid grid-cols-2 lg:grid-cols-4 items-start gap-y-8 gap-4 mx-auto',
-					'md:gap-0'
+					'max-w-7xl grid grid-cols-2 lg:grid-cols-4 items-start gap-y-8 gap-x-4 -mx-4',
+					'md:gap-0 md:mx-auto'
 				)}
 			>
 				{#each servicesSections as servicesSection}
-					<div class={clsx('sm:px-4 h-full', styles.cardHover)}>
+					<div class={clsx('h-full', styles.cardHover)}>
 						<button
 							on:click={() => {
 								const scrollToElement = document.getElementById(servicesSection.id);
@@ -252,8 +252,8 @@
 								}
 							}}
 							class={clsx(
-								'w-full h-full flex flex-col justify-center items-start gap-2 py-4 rounded-xl',
-								'md:text-center md:items-center md:px-4',
+								'w-full h-full flex flex-col justify-center items-start gap-2 py-2 px-4 rounded-xl',
+								'md:text-center md:items-center md:px-4 md:py-4',
 								'hover:bg-white/10'
 							)}
 						>
