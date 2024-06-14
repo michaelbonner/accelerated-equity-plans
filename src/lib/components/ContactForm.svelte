@@ -30,7 +30,7 @@
 				}
 
 				try {
-					gtag('event', 'form_submit', {
+					window.gtag('event', 'form_submit', {
 						form_name: 'lead-form'
 					});
 				} catch (error) {
