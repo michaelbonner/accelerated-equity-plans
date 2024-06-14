@@ -215,12 +215,7 @@
 </svelte:head>
 
 <main>
-	<section
-		class={clsx(
-			'relative overflow-hidden pt-36 pb-24 flex items-center justify-center bg-black',
-			'md:py-36 md:min-h-[90vh]'
-		)}
-	>
+	<section class={styles.heroSection}>
 		<div class="absolute inset-0 overflow-hidden">
 			<enhanced:img
 				alt="High rise buildings"
@@ -242,7 +237,7 @@
 			</div>
 			<div
 				class={clsx(
-					'max-w-7xl grid grid-cols-2 lg:grid-cols-4 items-start gap-y-8 gap-4',
+					'max-w-7xl grid grid-cols-2 lg:grid-cols-4 items-start gap-y-8 gap-4 mx-auto',
 					'md:gap-0'
 				)}
 			>

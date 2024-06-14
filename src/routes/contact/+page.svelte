@@ -26,13 +26,7 @@
 </svelte:head>
 
 <main>
-	<section
-		class={clsx(
-			'flex flex-col justify-center relative py-36 px-6 text-white bg-black',
-			'md:min-h-[90vh] md:py-24',
-			'lg:px-28 lg:py-36'
-		)}
-	>
+	<section class={styles.heroSection}>
 		<!-- Background Div -->
 		<div class="absolute inset-0 overflow-hidden">
 			<enhanced:img
