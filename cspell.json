@@ -1,5 +1,6 @@
 {
 	"words": [
+		"AEP's",
 		"Birrell",
 		"Carta",
 		"clsx",
@@ -8,15 +9,18 @@
 		"eurostile",
 		"globalshares",
 		"googletagmanager",
+		"gtag",
 		"headshot",
 		"HRIS",
 		"insightsoftware",
 		"KPMG",
 		"lifecycles",
+		"oxlint",
 		"partytown",
 		"proxytown",
 		"roboto",
 		"Rosser",
-		"sveltekit"
+		"sveltekit",
+		"swiper"
 	]
 }
