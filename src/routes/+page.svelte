@@ -111,6 +111,8 @@
 		content="Accelerated Equity Plans helps you create, manage, and implement equity compensation plans."
 	/>
 	<link rel="canonical" href="https://www.acceleratedep.com" />
+	<meta property="og:url" content="https://www.acceleratedep.com" />
+	<meta property="og:type" content="website" />
 </svelte:head>
 
 <main class="isolate bg-white">

@@ -51,6 +51,8 @@
 	<meta name="color-scheme" content="light only" />
 	<meta name="theme-color" content="#ac2228" />
 	<meta property="og:image" content="https://www.acceleratedep.com/images/og-image.jpg" />
+	<meta property="og:site_name" content="Accelerated Equity Plans" />
+	<meta name="twitter:card" content="https://www.acceleratedep.com/images/og-image.jpg" />
 </svelte:head>
 
 <Analytics />
