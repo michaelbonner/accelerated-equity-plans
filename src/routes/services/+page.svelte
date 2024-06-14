@@ -335,9 +335,7 @@
 				{#each moreServices as service}
 					<div class={clsx(styles.blueRedGradientBackground, styles.cardHover)}>
 						<div class="bg-black p-8 rounded-lg gap-4 flex flex-col justify-start h-full">
-							<h3
-								class={clsx('text-2xl text-white font-medium mb-0 font-eurostile', 'md:text-3xl')}
-							>
+							<h3 class={styles.h3}>
 								{service.title}
 							</h3>
 							<div class="font-light">{@html service.body}</div>

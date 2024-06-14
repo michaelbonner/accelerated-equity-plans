@@ -95,9 +95,7 @@
 						/>
 						<div class="flex flex-col flex-grow prose text-white">
 							<div class="grow">
-								<h3
-									class={clsx('text-2xl text-white font-medium mb-0 font-eurostile', 'md:text-3xl')}
-								>
+								<h3 class={clsx(styles.h3, 'text-white')}>
 									{teamMember.fullName}
 								</h3>
 								<div class="font-light">

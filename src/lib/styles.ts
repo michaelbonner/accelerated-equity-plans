@@ -23,7 +23,7 @@ export const styles = {
 		'hover:bg-red-800 hover:ring-red-800'
 	),
 	darkButton: clsx(
-		'bg-red-700/40 px-6 py-3 backdrop-blur text-lg text-white rounded-md ring-1 ring-red-800 transition ease-in-out duration-300 no-underline font-light',
+		'bg-red-700/40 px-6 py-3 backdrop-blur text-lg text-white rounded-md ring-1 ring-red-800 transition ease-in-out duration-300 no-underline font-light font-eurostile',
 		'hover:bg-red-800 hover:ring-red-800'
 	),
 	blueRedGradientBackground:

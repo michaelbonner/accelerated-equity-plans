@@ -192,7 +192,7 @@
 						<div>
 							<svelte:component this={servicesBox.icon} />
 						</div>
-						<h3 class="text-2xl font-bold leading-6 text-white font-eurostile">
+						<h3 class={styles.h3}>
 							{servicesBox.title}
 						</h3>
 						<div class="prose text-white font-light">
@@ -230,7 +230,7 @@
 							<div class={clsx('p-3 rounded-2xl', comprehensiveService.iconBackground)}>
 								<svelte:component this={comprehensiveService.icon} />
 							</div>
-							<h3 class="text-2xl font-bold leading-6 text-white font-eurostile">
+							<h3 class={styles.h3}>
 								<a href={`/services#${comprehensiveService.id}`}>
 									{comprehensiveService.title}
 								</a>

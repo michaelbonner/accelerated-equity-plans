@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { styles } from '$lib/styles';
+
 	let submitted = false;
 	let isSubmitting = false;
 
@@ -201,13 +203,7 @@
 			{errorMessage}
 		</p>
 	{/if}
-	<button
-		class="focus:shadow-outline w-full rounded-md border border-aep-red-500 bg-aep-red-900 px-6 py-2 text-base font-light text-white transition duration-150 ease-in-out hover:bg-aep-red-800 focus:outline-none lg:w-auto font-eurostile"
-		disabled={isSubmitting}
-		type="submit"
-	>
-		Submit
-	</button>
+	<button class={styles.darkButton} disabled={isSubmitting} type="submit"> Submit </button>
 </form>
 <div class:hidden={!submitted} class="flex items-center min-h-56">
 	<div class="prose">
