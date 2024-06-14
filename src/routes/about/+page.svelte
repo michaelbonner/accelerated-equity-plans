@@ -18,6 +18,7 @@
 		content="We empower companies with strategic equity solutions to attract, retain, and motivate top talent, creating a competitive advantage through effective management of equity plans."
 	/>
 	<link rel="canonical" href="https://www.acceleratedep.com/about" />
+	<meta property="og:url" content="https://www.acceleratedep.com/about" />
 </svelte:head>
 
 <main>

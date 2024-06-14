@@ -53,6 +53,7 @@
 	<meta property="og:image" content="https://www.acceleratedep.com/images/og-image.jpg" />
 	<meta property="og:site_name" content="Accelerated Equity Plans" />
 	<meta name="twitter:card" content="https://www.acceleratedep.com/images/og-image.jpg" />
+	<meta property="og:type" content="website" />
 </svelte:head>
 
 <Analytics />
