@@ -37,12 +37,12 @@
 	<title>Careers at Accelerated Equity Plans</title>
 	<meta
 		name="description"
-		content="Gain peace of mind with our expert team dedicated to supporting your success. Whether you need help with equity planning, system implementation, or ongoing support, we're here to provide personalized solutions and guidance, helping you navigate with confidence."
+		content="Join AEP's dynamic team, collaborate with industry leaders, and shape the future of equity management in a supportive environment."
 	/>
 	<meta property="og:title" content="Careers at Accelerated Equity Plans" />
 	<meta
 		property="og:description"
-		content="Gain peace of mind with our expert team dedicated to supporting your success. Whether you need help with equity planning, system implementation, or ongoing support, we're here to provide personalized solutions and guidance, helping you navigate with confidence."
+		content="Join AEP's dynamic team, collaborate with industry leaders, and shape the future of equity management in a supportive environment."
 	/>
 	<link rel="canonical" href="https://www.acceleratedep.com/careers" />
 	<meta property="og:url" content="https://www.acceleratedep.com/careers" />

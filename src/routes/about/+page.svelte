@@ -10,12 +10,12 @@
 	<title>About Accelerated Equity Plans</title>
 	<meta
 		name="description"
-		content="We empower companies with strategic equity solutions to attract, retain, and motivate top talent, creating a competitive advantage through effective management of equity plans."
+		content="AEP empowers companies with strategic equity solutions to attract, retain, and motivate top talent, driving competitive advantage."
 	/>
 	<meta property="og:title" content="About Accelerated Equity Plans" />
 	<meta
 		property="og:description"
-		content="We empower companies with strategic equity solutions to attract, retain, and motivate top talent, creating a competitive advantage through effective management of equity plans."
+		content="AEP empowers companies with strategic equity solutions to attract, retain, and motivate top talent, driving competitive advantage."
 	/>
 	<link rel="canonical" href="https://www.acceleratedep.com/about" />
 	<meta property="og:url" content="https://www.acceleratedep.com/about" />

@@ -14,12 +14,12 @@
 	<title>Contact Accelerated Equity Plans</title>
 	<meta
 		name="description"
-		content="Gain peace of mind with our expert team dedicated to supporting your success. Whether you need help with equity planning, system implementation, or ongoing support, we're here to provide personalized solutions and guidance, helping you navigate with confidence."
+		content="AEP's expert team provides personalized solutions and guidance for equity planning, implementation, and ongoing support."
 	/>
 	<meta property="og:title" content="Contact Accelerated Equity Plans" />
 	<meta
 		property="og:description"
-		content="Gain peace of mind with our expert team dedicated to supporting your success. Whether you need help with equity planning, system implementation, or ongoing support, we're here to provide personalized solutions and guidance, helping you navigate with confidence."
+		content="AEP's expert team provides personalized solutions and guidance for equity planning, implementation, and ongoing support."
 	/>
 	<link rel="canonical" href="https://www.acceleratedep.com/contact" />
 	<meta property="og:url" content="https://www.acceleratedep.com/contact" />
