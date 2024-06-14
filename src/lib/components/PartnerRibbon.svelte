@@ -52,7 +52,7 @@
 		{
 			altText: 'KPMG',
 			path: 'kpmg.svg',
-			url: 'https://kpmg.com/us/en/home/industries/private-equity.html'
+			url: 'https://kpmg.com/us/en/industries/private-equity.html'
 		},
 		{
 			altText: 'UBS',

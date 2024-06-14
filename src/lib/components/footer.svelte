@@ -39,7 +39,7 @@
 			</p>
 			<p class="text-left text-xs leading-5 text-stone-500 sm:text-center mt-4">
 				<a
-					href="https://www.bootpackdigital.com"
+					href="https://bootpackdigital.com"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="text-stone-500 hover:text-stone-900">Web design by Bootpack Digital</a
