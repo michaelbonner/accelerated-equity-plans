@@ -64,7 +64,7 @@
 							<Call />
 						</div>
 					</div>
-					<h3 class={styles.h3}>Give Us a Call</h3>
+					<h2 class={styles.h3}>Give Us a Call</h2>
 					<p>
 						To get in touch with us, click the link or dial <a
 							class="underline text-nowrap"
@@ -87,7 +87,7 @@
 							<Appointment />
 						</div>
 					</div>
-					<h3 class={styles.h3}>Make an Appointment</h3>
+					<h2 class={styles.h3}>Make an Appointment</h2>
 					<p>
 						To contact us, use the form below or send an email to <a
 							class="underline text-nowrap"
