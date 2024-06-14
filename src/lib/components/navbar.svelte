@@ -2,7 +2,7 @@
 	import { navigating, page } from '$app/stores';
 	import { clsx } from 'clsx';
 	import { Icon } from 'svelte-icons-pack';
-	import { fly } from 'svelte/transition';
+	import { blur } from 'svelte/transition';
 
 	let mobileMenuOpen = false;
 
@@ -72,8 +72,8 @@
 			<!-- Mobile menu, show/hide based on menu open state. -->
 			<div role="dialog" aria-modal="true">
 				<div
-					class="fixed top-2 left-2 right-2 z-10 overflow-y-visible bg-aep-red-700 px-4 pb-6 shadow-md rounded-lg lg:hidden"
-					transition:fly={{ duration: 300, y: -20 }}
+					class="fixed top-2 left-2 right-2 z-10 overflow-y-visible bg-aep-red-700 px-4 pb-4 shadow-xl rounded-xl lg:hidden"
+					transition:blur={{ duration: 300 }}
 				>
 					<div class="flex items-center justify-between">
 						<a href="/" class="flex-1 py-1">
@@ -82,7 +82,7 @@
 								alt="Accelerated Equity Plans Logo"
 								class={clsx('w-full py-2 max-w-[140px]', 'lg:max-w-[180px]')}
 								height="50"
-								src="/images/brand/aep-logo-white.svg"
+								src="/images/brand/aep-logo-white-full.svg"
 								width="180"
 							/>
 						</a>
