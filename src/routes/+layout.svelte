@@ -62,6 +62,9 @@
 	/>
 	<meta name="twitter:image" content="https://www.acceleratedep.com/images/og-image.jpg" />
 
+	<link rel="preconnect" href="p.typekit.net" />
+	<link rel="preconnect" href="use.typekit.net" />
+
 	<script>
 		// Forward the necessary functions to the web worker layer
 		partytown = {
