@@ -110,6 +110,7 @@
 									aria-label={`${teamMember.shortName}'s LinkedIn page"`}
 									href={teamMember.linkedInLink}
 									target="_blank"
+									rel="noopener noreferrer"
 								>
 									<LinkedIn /></a
 								>

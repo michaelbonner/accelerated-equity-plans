@@ -89,7 +89,7 @@
 <div class="partner-swiper px-8 overflow-hidden">
 	<div class="swiper-wrapper items-center">
 		{#each partnerImages as { altText, path, url }}
-			<a href={url} target="_blank" class="swiper-slide">
+			<a href={url} target="_blank" class="swiper-slide" rel="noopener noreferrer">
 				<img
 					alt={`${altText} Logo`}
 					class={clsx(
