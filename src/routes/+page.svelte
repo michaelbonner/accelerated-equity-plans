@@ -243,21 +243,25 @@
 							<div class="mt-6">
 								<ul class="text-white flex gap-2 flex-wrap">
 									{#each comprehensiveService.tags as tag}
-										<li
-											class={clsx(
-												'px-4 py-1.5 rounded-full flex items-center gap-2 bg-stone-700 text-xs',
-												'md:gap-1.5 md:px-3 md:text-sm'
-											)}
-										>
-											<span class="inline-block size-2 rounded-full bg-red-700 shrink-0" />
-											{tag}
+										<li>
+											<a
+												class={clsx(
+													'px-4 py-1.5 rounded-full flex items-center gap-2 bg-stone-700 text-xs',
+													'md:gap-1.5 md:px-3 md:text-sm',
+													'hover:underline'
+												)}
+												href={`/services#${comprehensiveService.id}`}
+											>
+												<span class="inline-block size-2 rounded-full bg-red-700 shrink-0" />
+												{tag}
+											</a>
 										</li>
 									{/each}
 								</ul>
 							</div>
 							<div class="mt-8 flex gap-x-4">
 								<a href={`/services#${comprehensiveService.id}`} class={styles.darkButton}>
-									Learn More
+									Learn More About AEP {comprehensiveService.title}
 								</a>
 							</div>
 						</div>
