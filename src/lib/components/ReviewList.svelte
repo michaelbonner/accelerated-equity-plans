@@ -68,16 +68,28 @@
 		</div>
 
 		<button
-			class="absolute z-10 top-[45%] -left-16 hidden sm:block bg-white hover:bg-stone-100 transition-colors rounded-full p-3 text-black text-xl shadow-md"
+			aria-label="Move to previous review"
+			class={clsx(
+				'absolute z-10 top-[45%] -left-16 hidden bg-white transition-colors rounded-full p-3 text-black text-xl shadow-md',
+				'sm:block',
+				'hover:bg-stone-100'
+			)}
 			on:click={previousSlide}
 			title="Previous review"
+			type="button"
 		>
 			<Icon src={BsChevronLeft} />
 		</button>
 		<button
-			class="absolute z-10 top-[45%] -right-16 hidden sm:block bg-white hover:bg-stone-100 transition-colors rounded-full p-3 text-black text-xl shadow-md"
+			aria-label="Move to next review"
+			class={clsx(
+				'absolute z-10 top-[45%] -right-16 hidden  bg-white transition-colors rounded-full p-3 text-black text-xl shadow-md',
+				'sm:block',
+				'hover:bg-stone-100'
+			)}
 			on:click={nextSlide}
 			title="Next review"
+			type="button"
 		>
 			<Icon src={BsChevronRight} />
 		</button>
