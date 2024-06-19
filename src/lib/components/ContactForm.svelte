@@ -143,7 +143,14 @@
 	];
 </script>
 
-<form class:hidden={submitted} class="mt-8" name="contact" on:submit|preventDefault={handleSubmit}>
+<form
+	action="https://formspree.io/f/xleqyybe"
+	method="POST"
+	class:hidden={submitted}
+	class="mt-8"
+	name="contact"
+	on:submit|preventDefault={handleSubmit}
+>
 	<div class="grid md:grid-cols-2 gap-x-8 gap-y-4">
 		{#each fields as field}
 			<div class={`mb-6${field.containerClass}`}>
