@@ -13,7 +13,8 @@
 					<a
 						href={navLink.href}
 						class={clsx(
-							'leading-6 hover:underline',
+							'leading-6 underline-offset-2',
+							'hover:underline',
 							$page.url.pathname === navLink.href
 								? 'text-red-800 hover:text-red-900'
 								: 'text-stone-600 hover:text-stone-900'
