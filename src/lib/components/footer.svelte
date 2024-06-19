@@ -42,7 +42,8 @@
 					href="https://bootpackdigital.com"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-stone-500 hover:text-stone-900">Web design by Bootpack Digital</a
+					class="text-stone-500 hover:text-stone-900"
+					>Web design and development by Bootpack Digital</a
 				>
 			</p>
 		</div>
