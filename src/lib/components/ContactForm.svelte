@@ -209,8 +209,16 @@
 	<div class="prose">
 		<h2>Thank you for contacting us! We'll be in touch soon.</h2>
 		<p>
-			In the meantime, feel free to reach out at <a href="tel:+18018086238">801-808-6238</a> or
-			<a href="mailto:info@acceleratedep.com"> send us an email. </a>
+			In the meantime, feel free to reach out at <a
+				href="tel:+&#049;&#056;&#048;&#049;&#056;&#048;&#056;&#054;&#050;&#051;&#056;"
+				>&#056;&#048;&#049;&#045;&#056;&#048;&#056;&#045;&#054;&#050;&#051;&#056;</a
+			>
+			or
+			<a
+				href="mailto:&#105;&#110;&#102;&#111;&#064;&#097;&#099;&#099;&#101;&#108;&#101;&#114;&#097;&#116;&#101;&#100;&#101;&#112;&#046;&#099;&#111;&#109;"
+			>
+				send us an email.
+			</a>
 		</p>
 	</div>
 </div>

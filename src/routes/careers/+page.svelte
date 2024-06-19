@@ -90,13 +90,13 @@
 				<p>
 					Click the button above to email your resume to <a
 						class="underline"
-						href="mailto:info@acceleratedep.com">info@acceleratedep.com</a
+						href="mailto:&#105;&#110;&#102;&#111;&#064;&#097;&#099;&#099;&#101;&#108;&#101;&#114;&#097;&#116;&#101;&#100;&#101;&#112;&#046;&#099;&#111;&#109;"
+						>&#105;&#110;&#102;&#111;&#064;&#097;&#099;&#099;&#101;&#108;&#101;&#114;&#097;&#116;&#101;&#100;&#101;&#112;&#046;&#099;&#111;&#109;</a
 					>.
 				</p>
 				<div class="mt-2">
 					<a
-						href="mailto:info@acceleratedep.com?subject=I'm interested in joining the AEP team!"
-						target="_blank"
+						href="mailto:&#105;&#110;&#102;&#111;&#064;&#097;&#099;&#099;&#101;&#108;&#101;&#114;&#097;&#116;&#101;&#100;&#101;&#112;&#046;&#099;&#111;&#109;?subject=I'm interested in joining the AEP team!"
 						class={styles.redButton}>Join the AEP Team!</a
 					>
 				</div>
