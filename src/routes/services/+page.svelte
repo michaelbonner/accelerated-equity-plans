@@ -256,6 +256,7 @@
 								'md:text-center md:items-center md:px-4 md:py-4',
 								'hover:bg-white/10'
 							)}
+							type="button"
 						>
 							<div class={clsx('inline-block p-3 rounded-2xl bg-stone-300/20', 'md:mx-auto')}>
 								<svelte:component this={servicesSection.icon} />
