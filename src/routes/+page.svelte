@@ -199,7 +199,14 @@
 							{@html servicesBox.body}
 						</div>
 						<div class="mt-8 flex gap-x-4 items-end">
-							<a href="/services" class={styles.darkButton}> Learn More </a>
+							<a
+								aria-label={`Learn More About AEP ${servicesBox.title}`}
+								title={`Learn More About AEP ${servicesBox.title}`}
+								href="/services"
+								class={styles.darkButton}
+							>
+								Learn More
+							</a>
 						</div>
 					</div>
 				</div>
