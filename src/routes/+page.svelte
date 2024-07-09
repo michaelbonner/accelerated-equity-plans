@@ -11,7 +11,6 @@
 	import Layers from '$lib/components/icons/Layers.svelte';
 	import Money from '$lib/components/icons/Money.svelte';
 	import Phone from '$lib/components/icons/Phone.svelte';
-	import BuildingBlurredBgMobile from '$lib/images/backgrounds/building-blurred-bg-mobile.jpg?enhanced';
 	import BuildingBlurredBg from '$lib/images/backgrounds/building-blurred-bg.jpg?enhanced';
 	import HeroBgMobile from '$lib/images/backgrounds/high-rise-buildings-mobile.jpg?enhanced';
 	import HeroBg from '$lib/images/backgrounds/high-rise-buildings.jpg?enhanced';
@@ -231,13 +230,6 @@
 				class="hidden lg:block object-cover size-full"
 				loading="lazy"
 				src={BuildingBlurredBg}
-				sizes="100vw"
-			/>
-			<enhanced:img
-				alt="A building with a blurred background"
-				class="block lg:hidden object-cover size-full"
-				loading="lazy"
-				src={BuildingBlurredBgMobile}
 				sizes="100vw"
 			/>
 		</div>
