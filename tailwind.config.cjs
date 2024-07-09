@@ -8,8 +8,8 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans: ['roboto', ...defaultTheme.fontFamily.sans],
-				serif: ['Lora', ...defaultTheme.fontFamily.serif],
-				eurostile: ['eurostile', 'sans-serif']
+				serif: defaultTheme.fontFamily.serif,
+				eurostile: ['eurostile', ...defaultTheme.fontFamily.serif]
 			},
 			colors: {
 				'aep-red': {
