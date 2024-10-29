@@ -1,5 +1,5 @@
 <svg
-	class="size-10 text-white rounded-lg hover:text-blue-600 transition-colors"
+	class="text-white rounded-lg transition-colors hover:text-blue-600 size-10"
 	stroke="currentColor"
 	fill="currentColor"
 	stroke-width="0"

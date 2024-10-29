@@ -151,10 +151,10 @@
 	name="contact"
 	on:submit|preventDefault={handleSubmit}
 >
-	<div class="grid md:grid-cols-2 gap-x-8 gap-y-4">
+	<div class="grid gap-y-4 gap-x-8 md:grid-cols-2">
 		{#each fields as field}
 			<div class={`mb-6${field.containerClass}`}>
-				<label class="mb-2 block text-sm font-bold tracking-wide font-eurostile" for={field.name}>
+				<label class="block mb-2 text-sm font-bold tracking-wide font-eurostile" for={field.name}>
 					{field.label}
 					{#if field.required}
 						*
@@ -163,7 +163,7 @@
 
 				{#if field.type === 'textarea'}
 					<textarea
-						class="text-black block w-full appearance-none rounded border border-stone-100 bg-stone-100 py-3 px-4 leading-tight focus:border-stone-500 focus:bg-white focus:outline-none"
+						class="block py-3 px-4 w-full leading-tight text-black rounded border appearance-none focus:bg-white focus:outline-none border-stone-100 bg-stone-100 focus:border-stone-500"
 						id={field.name}
 						name={field.name}
 						placeholder={field.label}
@@ -172,7 +172,7 @@
 					/>
 				{:else if field.type === 'select'}
 					<select
-						class="text-black block w-full appearance-none rounded border border-stone-100 bg-stone-100 py-3 px-4 leading-tight focus:border-stone-500 focus:bg-white focus:outline-none"
+						class="block py-3 px-4 w-full leading-tight text-black rounded border appearance-none focus:bg-white focus:outline-none border-stone-100 bg-stone-100 focus:border-stone-500"
 						id={field.name}
 						name={field.name}
 						required={field.required}
@@ -186,7 +186,7 @@
 					</select>
 				{:else}
 					<input
-						class="text-black block w-full appearance-none rounded border border-stone-100 bg-stone-100 py-3 px-4 leading-tight focus:border-stone-500 focus:bg-white focus:outline-none"
+						class="block py-3 px-4 w-full leading-tight text-black rounded border appearance-none focus:bg-white focus:outline-none border-stone-100 bg-stone-100 focus:border-stone-500"
 						id={field.name}
 						name={field.name}
 						placeholder={field.label}

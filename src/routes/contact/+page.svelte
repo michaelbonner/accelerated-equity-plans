@@ -28,7 +28,7 @@
 <main>
 	<section class={styles.heroSection}>
 		<!-- Background Div -->
-		<div class="absolute inset-0 overflow-hidden">
+		<div class="overflow-hidden absolute inset-0">
 			<enhanced:img
 				alt="Office meeting"
 				class="object-cover size-full"
@@ -42,8 +42,8 @@
 		<div class={clsx('relative z-10 h-full', 'sm:px-8 sm:text-center')}>
 			<div class={clsx('grid gap-4 prose-white max-w-5xl', 'sm:mx-auto')}>
 				<h1 class={styles.h1}>Contact Us Today</h1>
-				<div class="prose max-w-full">
-					<p class="mt-6 text-lg leading-8 max-w-3xl mx-auto font-light text-white">
+				<div class="max-w-full prose">
+					<p class="mx-auto mt-6 max-w-3xl text-lg font-light leading-8 text-white">
 						Gain peace of mind with our expert team dedicated to supporting your success. Whether
 						you need help with equity planning, system implementation, or ongoing support, we're
 						here to provide personalized solutions and guidance, helping you navigate with
@@ -60,7 +60,7 @@
 					)}
 				>
 					<div>
-						<div class="p-3 bg-black rounded-2xl inline-block">
+						<div class="inline-block p-3 bg-black rounded-2xl">
 							<Call />
 						</div>
 					</div>
@@ -87,7 +87,7 @@
 					)}
 				>
 					<div>
-						<div class="p-3 bg-black rounded-2xl inline-block">
+						<div class="inline-block p-3 bg-black rounded-2xl">
 							<Appointment />
 						</div>
 					</div>
@@ -118,7 +118,7 @@
 		)}
 	>
 		<!-- Background Div -->
-		<div class="absolute inset-0 overflow-hidden">
+		<div class="overflow-hidden absolute inset-0">
 			<enhanced:img
 				alt="Looking at a building from the outside"
 				class="object-cover size-full"
@@ -134,7 +134,7 @@
 				<RedBar />
 				<h2 class={styles.h2}>Let's Talk About Your Business</h2>
 				<div class={clsx(styles.blueRedGradientBackground, 'mt-12')}>
-					<div class="bg-black rounded-xl p-8 text-white">
+					<div class="p-8 text-white bg-black rounded-xl">
 						<h3 class={styles.h4}>Personal Information</h3>
 						<p class="mt-4 font-light">Use a permanent address where you can receive mail.</p>
 						<ContactForm />

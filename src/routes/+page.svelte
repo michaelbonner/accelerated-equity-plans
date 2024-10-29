@@ -115,21 +115,21 @@
 	<meta property="og:url" content="https://www.acceleratedep.com" />
 </svelte:head>
 
-<main class="isolate bg-white">
+<main class="bg-white isolate">
 	<!--  Hero Div -->
 	<section class={clsx(styles.heroSection, 'overflow-x-hidden', 'lg:px-28')}>
 		<!-- Background Div -->
-		<div class="absolute inset-0 overflow-hidden">
+		<div class="overflow-hidden absolute inset-0">
 			<enhanced:img
 				alt="High rise buildings"
-				class="hidden lg:block object-cover size-full"
+				class="hidden object-cover lg:block size-full"
 				fetchpriority="high"
 				src={HeroBg}
 				sizes="100vw"
 			/>
 			<enhanced:img
 				alt="High rise buildings"
-				class="block lg:hidden object-cover size-full"
+				class="block object-cover lg:hidden size-full"
 				fetchpriority="high"
 				src={HeroBgMobile}
 				sizes="100vw"
@@ -150,7 +150,7 @@
 		>
 			<img
 				alt="Accelerated Equity Plans"
-				class="max-w-none w-[50vw] opacity-90"
+				class="max-w-none opacity-90 w-[50vw]"
 				height="150"
 				loading="lazy"
 				src="/images/brand/aep-mark-white.svg"
@@ -160,15 +160,15 @@
 
 		<!-- Should be foreground div in same container -->
 		<div class={clsx('relative z-10 h-full', 'sm:px-8')}>
-			<div class="grid gap-2 prose-white max-w-2xl">
+			<div class="grid gap-2 max-w-2xl prose-white">
 				<h1 class={styles.h1Super}>Accelerate Your <wbr />Equity's Potential</h1>
-				<p class="mt-6 text-lg leading-8 max-w-[660px] font-light">
+				<p class="mt-6 text-lg font-light leading-8 max-w-[660px]">
 					Bringing industry leading expertise and support to your equity programs to deliver a
 					best-in-class experience for your team, partners and participants. Founded by industry
 					experts with issuer and vendor experience for both Private and Public organizations, we
 					can handle all of your Equity Administration needs
 				</p>
-				<div class="mt-8 flex gap-x-4">
+				<div class="flex gap-x-4 mt-8">
 					<a href="/contact" class={styles.darkButton}> Contact us today </a>
 				</div>
 			</div>
@@ -176,17 +176,17 @@
 	</section>
 
 	<section
-		class="relative bg-stone-700 text-white bg-repeat bg-center py-24 px-6"
+		class="relative py-24 px-6 text-white bg-center bg-repeat bg-stone-700"
 		style={`
 				background-image: url('/images/patterns/Pattern-0224_Pattern-A-Repeated-Reversed.svg');
 				background-size: 100%;
 			`}
 	>
 		<div class="absolute inset-0 bg-stone-200/20" />
-		<div class="relative text-center grid gap-4 max-w-3xl mx-auto">
+		<div class="grid relative gap-4 mx-auto max-w-3xl text-center">
 			<RedBar classes="mx-auto" />
 			<h2 class={styles.h2}>What We Bring to the Table</h2>
-			<p class="font-light mt-4">
+			<p class="mt-4 font-light">
 				We manage all stock plan administration from setup to compliance, allowing you to focus on
 				your core business. We offer temporary support with flexible staffing solutions and provide
 				expertise in Mergers and Acquisitions, IPOs, SPACs, Corporate Actions, and Automation Design
@@ -194,20 +194,20 @@
 			</p>
 		</div>
 
-		<div class="relative grid md:grid-cols-3 gap-y-8 gap-x-4 max-w-7xl mx-auto mt-12">
+		<div class="grid relative gap-x-4 gap-y-8 mx-auto mt-12 max-w-7xl md:grid-cols-3">
 			{#each servicesBoxes as servicesBox}
 				<div class={clsx(styles.blueRedGradientBackground, styles.cardHover)}>
-					<div class="grid gap-4 bg-black rounded-lg p-8 h-full">
+					<div class="grid gap-4 p-8 h-full bg-black rounded-lg">
 						<div>
 							<svelte:component this={servicesBox.icon} />
 						</div>
 						<h3 class={styles.h3}>
 							{servicesBox.title}
 						</h3>
-						<div class="prose text-white font-light">
+						<div class="font-light text-white prose">
 							{@html servicesBox.body}
 						</div>
-						<div class="mt-8 flex gap-x-4 items-end">
+						<div class="flex gap-x-4 items-end mt-8">
 							<a
 								aria-label={`Learn More About AEP ${servicesBox.title}`}
 								title={`Learn More About AEP ${servicesBox.title}`}
@@ -224,25 +224,25 @@
 	</section>
 
 	<section class={clsx('relative bg-stone-700 py-24 px-6', 'lg:py-32')}>
-		<div class="absolute inset-0 overflow-hidden">
+		<div class="overflow-hidden absolute inset-0">
 			<enhanced:img
 				alt="A building with a blurred background"
-				class="hidden lg:block object-cover size-full"
+				class="hidden object-cover lg:block size-full"
 				loading="lazy"
 				src={BuildingBlurredBg}
 				sizes="100vw"
 			/>
 		</div>
-		<div class="absolute inset-0 bg-white/80 lg:bg-transparent" />
-		<div class="relative grid gap-4 max-w-7xl mx-auto">
+		<div class="absolute inset-0 lg:bg-transparent bg-white/80" />
+		<div class="grid relative gap-4 mx-auto max-w-7xl">
 			<RedBar />
 			<h2 class={styles.h2}>Our Comprehensive Services</h2>
 		</div>
 
-		<div class="relative grid sm:grid-cols-2 gap-6 max-w-7xl mx-auto mt-12">
+		<div class="grid relative gap-6 mx-auto mt-12 max-w-7xl sm:grid-cols-2">
 			{#each comprehensiveServices as comprehensiveService}
 				<div class={clsx(styles.blueRedGradientBackground, styles.cardHover)}>
-					<div class="bg-black p-8 rounded-lg gap-4 flex flex-col justify-start h-full">
+					<div class="flex flex-col gap-4 justify-start p-8 h-full bg-black rounded-lg">
 						<div class="flex gap-4 items-center">
 							<div class={clsx('p-3 rounded-2xl', comprehensiveService.iconBackground)}>
 								<svelte:component this={comprehensiveService.icon} />
@@ -254,11 +254,11 @@
 							</h3>
 						</div>
 						<div>
-							<div class="prose text-white font-light">
+							<div class="font-light text-white prose">
 								{@html comprehensiveService.body}
 							</div>
 							<div class="mt-6">
-								<ul class="text-white flex gap-2 flex-wrap">
+								<ul class="flex flex-wrap gap-2 text-white">
 									{#each comprehensiveService.tags as tag}
 										<li>
 											<a
@@ -269,14 +269,14 @@
 												)}
 												href={`/services#${comprehensiveService.id}`}
 											>
-												<span class="inline-block size-2 rounded-full bg-red-700 shrink-0" />
+												<span class="inline-block bg-red-700 rounded-full size-2 shrink-0" />
 												{tag}
 											</a>
 										</li>
 									{/each}
 								</ul>
 							</div>
-							<div class="mt-8 flex gap-x-4">
+							<div class="flex gap-x-4 mt-8">
 								<a href={`/services#${comprehensiveService.id}`} class={styles.darkButton}>
 									Learn More About AEP {comprehensiveService.title}
 								</a>
@@ -296,7 +296,7 @@
 				<RedBar />
 				<h2 class={styles.h2}>Elevate Your Equity Management with Expert Support</h2>
 			</div>
-			<div class="prose font-light">
+			<div class="font-light prose">
 				<p>
 					Accelerated Equity Plans partners with you to boost your team's effectiveness in equity
 					compensation. We handle plan adjustments, daily operations, and future strategy, allowing

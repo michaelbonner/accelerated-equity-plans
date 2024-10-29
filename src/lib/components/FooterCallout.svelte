@@ -3,18 +3,18 @@
 </script>
 
 <section
-	class="relative py-24 md:py-32 flex flex-col justify-center gap-8 text-center min-h-[50vh] px-6"
+	class="flex relative flex-col gap-8 justify-center py-24 px-6 text-center md:py-32 min-h-[50vh]"
 	style={`
 				background-image: url('/images/patterns/Pattern-0224_Pattern-A-Repeated.svg');
 				background-size: 80%;
 			`}
 >
-	<div class="bg-white/30 absolute inset-0" />
-	<div class="relative max-w-2xl mx-auto">
+	<div class="absolute inset-0 bg-white/30" />
+	<div class="relative mx-auto max-w-2xl">
 		<h2 class={styles.h2}>Take your equity management <wbr />to the next level today</h2>
 	</div>
 
-	<div class="relative flex justify-center">
+	<div class="flex relative justify-center">
 		<a href="/contact" class={styles.redButton}>Contact us</a>
 	</div>
 </section>

@@ -216,7 +216,7 @@
 
 <main>
 	<section class={styles.heroSection}>
-		<div class="absolute inset-0 overflow-hidden">
+		<div class="overflow-hidden absolute inset-0">
 			<enhanced:img
 				alt="High rise buildings"
 				class="object-cover size-full"
@@ -224,11 +224,11 @@
 				src={HeroBg}
 			/>
 		</div>
-		<div class="bg-black/80 absolute inset-0" />
+		<div class="absolute inset-0 bg-black/80" />
 		<div class={clsx('relative grid gap-16', 'md:gap-24')}>
 			<div class={clsx('relative grid gap-8', 'md:text-center')}>
 				<h1 class={clsx(styles.h1, 'text-white')}>Our Services</h1>
-				<p class="prose text-white mx-auto max-w-3xl text-lg font-light">
+				<p class="mx-auto max-w-3xl text-lg font-light text-white prose">
 					From plan setup and compliance to ongoing management, we ensure your stock plans run
 					smoothly. Need temporary support? We offer flexible staffing solutions. Expanding your
 					horizons? Our expertise covers Mergers & Acquisitions, IPOs, SPACs, and Corporate Actions.
@@ -272,7 +272,7 @@
 	</section>
 
 	<div
-		class="relative bg-fixed bg-no-repeat bg-opacity-10 bg-right-bottom bg-contain pt-8 pb-24"
+		class="relative pt-8 pb-24 bg-fixed bg-opacity-10 bg-right-bottom bg-no-repeat bg-contain"
 		style={`
 			background-image: url('/images/brand/aep-mark-left-half.svg');
 			background-size: 40%;
@@ -280,8 +280,8 @@
 	>
 		<div class="absolute inset-0 bg-white/90" />
 		{#each servicesSections as servicesSection}
-			<section class="py-24 relative" id={servicesSection.id}>
-				<div class="max-w-7xl mx-auto px-6">
+			<section class="relative py-24" id={servicesSection.id}>
+				<div class="px-6 mx-auto max-w-7xl">
 					<div class="grid gap-4">
 						<RedBar />
 						<h2 class={clsx(styles.h2, 'text-stone-900')}>{servicesSection.title}</h2>
@@ -304,7 +304,7 @@
 									<svelte:component this={service.icon} />
 								</div>
 								<h3 class={clsx(styles.h4)}>{service.title}</h3>
-								<div class="prose text-white max-w-3xl mx-auto font-light">
+								<div class="mx-auto max-w-3xl font-light text-white prose">
 									{@html service.body}
 								</div>
 							</div>
@@ -325,17 +325,17 @@
 		<div class="absolute inset-0 bg-stone-400/30" />
 
 		<div class="relative">
-			<div class="max-w-7xl mx-auto grid gap-12">
+			<div class="grid gap-12 mx-auto max-w-7xl">
 				<div class="grid gap-4 text-center">
 					<RedBar classes="mx-auto" />
 					<h2 class={styles.h2}>More Services</h2>
 				</div>
 			</div>
 
-			<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mt-12 max-w-7xl mx-auto">
+			<div class="grid gap-6 mx-auto mt-12 max-w-7xl md:grid-cols-2 xl:grid-cols-4">
 				{#each moreServices as service}
 					<div class={clsx(styles.blueRedGradientBackground, styles.cardHover)}>
-						<div class="bg-black p-8 rounded-lg gap-4 flex flex-col justify-start h-full">
+						<div class="flex flex-col gap-4 justify-start p-8 h-full bg-black rounded-lg">
 							<h3 class={styles.h3}>
 								{service.title}
 							</h3>

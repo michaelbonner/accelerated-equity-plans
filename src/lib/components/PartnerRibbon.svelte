@@ -86,8 +86,8 @@
 	});
 </script>
 
-<div class="partner-swiper px-8 overflow-hidden">
-	<div class="swiper-wrapper items-center">
+<div class="overflow-hidden px-8 partner-swiper">
+	<div class="items-center swiper-wrapper">
 		{#each partnerImages as { altText, path, url }}
 			<a href={url} target="_blank" class="swiper-slide" rel="noopener noreferrer">
 				<img

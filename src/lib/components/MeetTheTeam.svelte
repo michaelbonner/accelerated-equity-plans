@@ -68,11 +68,11 @@
 	style={`background-image: url('/images/patterns/Pattern-0224_Pattern-Arrows.svg')`}
 >
 	<div class="absolute inset-0 bg-stone-400/30" />
-	<div class="relative max-w-7xl mx-auto grid gap-12">
+	<div class="grid relative gap-12 mx-auto max-w-7xl">
 		<div class="grid gap-4">
 			<RedBar />
 			<h2 class={styles.h2}>Meet the leadership team</h2>
-			<div class="prose font-light text-white">
+			<div class="font-light text-white prose">
 				<p>
 					As subject matter experts, we can provide your organization with a complete Stock Plan
 					Administration team to handle all equity concerns!
@@ -80,10 +80,10 @@
 			</div>
 		</div>
 
-		<div class="grid md:grid-cols-3 gap-6">
+		<div class="grid gap-6 md:grid-cols-3">
 			{#each leadershipTeam as teamMember}
 				<div class={clsx(styles.blueRedGradientBackground, styles.cardHover, 'group')}>
-					<div class="bg-black p-8 rounded-lg gap-4 flex flex-col justify-start h-full">
+					<div class="flex flex-col gap-4 justify-start p-8 h-full bg-black rounded-lg">
 						<enhanced:img
 							alt={teamMember.imageAlt}
 							class={clsx(
@@ -93,7 +93,7 @@
 							loading="lazy"
 							src={teamMember.imageSrc}
 						/>
-						<div class="flex flex-col flex-grow prose text-white">
+						<div class="flex flex-col flex-grow text-white prose">
 							<div class="grow">
 								<h3 class={clsx(styles.h3, 'text-white')}>
 									{teamMember.fullName}
@@ -102,7 +102,7 @@
 									{@html teamMember.body}
 								</div>
 							</div>
-							<div class="mt-6 flex justify-between flex-wrap gap-x-6 list-none">
+							<div class="flex flex-wrap gap-x-6 justify-between mt-6 list-none">
 								<a href="/contact" class={styles.darkButton}>
 									Meet {teamMember.shortName}
 								</a>

@@ -24,7 +24,7 @@
 <main>
 	<section class={styles.heroSection}>
 		<!-- Background Div -->
-		<div class="absolute inset-0 overflow-hidden">
+		<div class="overflow-hidden absolute inset-0">
 			<enhanced:img
 				alt="Looking up at high-rise buildings"
 				class="object-cover size-full"
@@ -45,7 +45,7 @@
 					width="384"
 				/>
 				<h1 class={styles.h1}>About Accelerated Equity Plans</h1>
-				<p class="mt-6 text-lg leading-8 max-w-3xl mx-auto font-light">
+				<p class="mx-auto mt-6 max-w-3xl text-lg font-light leading-8">
 					We empower companies to harness the full potential of equity compensation with strategic
 					solutions to attract, retain, and motivate top talent. Our comprehensive services ensure
 					equity plans are effectively managed and aligned with business goals, creating a
@@ -61,7 +61,7 @@
 			<RedBar />
 			<h2 class={styles.h2}>Our History</h2>
 		</div>
-		<div class="prose prose-lg mt-8 max-w-full font-medium">
+		<div class="mt-8 max-w-full font-medium prose prose-lg">
 			<p>
 				<span class="text-red-700">Our Founding.</span> Founded in 2021 by industry experts determined
 				to share their wealth of knowledge and provide unparalleled support to the field, Accelerated
@@ -93,7 +93,7 @@
 				<RedBar />
 				<h2 class={styles.h2}>Let Us Help You Elevate Your Stock Plan!</h2>
 			</div>
-			<div class="prose font-light">
+			<div class="font-light prose">
 				<p>
 					Send us an email or give us a call to discover how our experts can assist you. Our team is
 					ready to provide personalized solutions and support to elevate your stock plan and meet

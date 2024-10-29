@@ -17,7 +17,7 @@
 
 <div class={`fixed top-0 z-20 w-screen px-6 py-2 bg-opacity-100 bg-black backdrop-blur`}>
 	<div>
-		<nav class="flex items-center justify-between xl:px-12" aria-label="Global">
+		<nav class="flex justify-between items-center xl:px-12" aria-label="Global">
 			<div class="flex flex-1">
 				<a href="/" class="flex-1 py-1">
 					<span class="sr-only">Accelerated Equity Plans</span>
@@ -33,12 +33,12 @@
 			<div class="flex lg:hidden">
 				<button
 					type="button"
-					class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
+					class="inline-flex justify-center items-center p-2.5 -m-2.5 text-white rounded-md"
 					on:click={toggleMobileMenu}
 				>
 					<span class="sr-only">Open main menu</span>
 					<svg
-						class="h-6 w-6"
+						class="w-6 h-6"
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
 						viewBox="0 0 24 24"
@@ -54,7 +54,7 @@
 					</svg>
 				</button>
 			</div>
-			<div class="hidden lg:flex lg:min-w-0 lg:justify-center lg:items-center lg:gap-x-2">
+			<div class="hidden lg:flex lg:gap-x-2 lg:justify-center lg:items-center lg:min-w-0">
 				{#each navLinks as navLink}
 					<a
 						href={navLink.href}
@@ -72,10 +72,10 @@
 			<!-- Mobile menu, show/hide based on menu open state. -->
 			<div role="dialog" aria-modal="true">
 				<div
-					class="fixed top-2 left-2 right-2 z-10 overflow-y-visible bg-aep-red-700 px-4 pb-4 shadow-xl rounded-xl lg:hidden"
+					class="overflow-y-visible fixed top-2 right-2 left-2 z-10 px-4 pb-4 rounded-xl shadow-xl lg:hidden bg-aep-red-700"
 					transition:blur={{ duration: 300 }}
 				>
-					<div class="flex items-center justify-between">
+					<div class="flex justify-between items-center">
 						<a href="/" class="flex-1 py-1">
 							<span class="sr-only">Accelerated Equity Plans</span>
 							<img
@@ -89,12 +89,12 @@
 						<div class="flex">
 							<button
 								type="button"
-								class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
+								class="inline-flex justify-center items-center p-2.5 -m-2.5 text-white rounded-md"
 								on:click={toggleMobileMenu}
 							>
 								<span class="sr-only">Close menu</span>
 								<svg
-									class="h-6 w-6"
+									class="w-6 h-6"
 									xmlns="http://www.w3.org/2000/svg"
 									fill="none"
 									viewBox="0 0 24 24"
@@ -107,7 +107,7 @@
 							</button>
 						</div>
 					</div>
-					<div class="mt-4 flow-root">
+					<div class="flow-root mt-4">
 						{#each navLinks as navLink}
 							<a
 								href={navLink.href}

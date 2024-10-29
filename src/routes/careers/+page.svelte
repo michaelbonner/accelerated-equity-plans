@@ -51,7 +51,7 @@
 <main>
 	<section class={styles.heroSection}>
 		<!-- Background Div -->
-		<div class="absolute inset-0 overflow-hidden">
+		<div class="overflow-hidden absolute inset-0">
 			<enhanced:img
 				alt="Meeting in an office"
 				class="object-cover size-full"
@@ -65,8 +65,8 @@
 		<div class={clsx('relative z-10 h-full', 'sm:px-8 sm:text-center')}>
 			<div class={clsx('grid gap-4 prose-white max-w-5xl', 'sm:mx-auto')}>
 				<h1 class={styles.h1}>Join Our Team</h1>
-				<div class="prose max-w-full">
-					<p class="mt-6 text-lg leading-8 max-w-3xl mx-auto font-light text-white">
+				<div class="max-w-full prose">
+					<p class="mx-auto mt-6 max-w-3xl text-lg font-light leading-8 text-white">
 						Join our dynamic team dedicated to excellence and innovation. At AEP, you'll collaborate
 						with industry leaders, contribute your unique skills, and shape the future of equity
 						management. With exciting challenges and a supportive environment, we offer the perfect
@@ -82,7 +82,7 @@
 				)}
 			>
 				<div>
-					<div class="p-3 bg-black rounded-2xl inline-block">
+					<div class="inline-block p-3 bg-black rounded-2xl">
 						<Document />
 					</div>
 				</div>
@@ -121,7 +121,7 @@
 						<svelte:component this={reason.icon} />
 					</div>
 					<h3 class={clsx(styles.h4)}>{reason.title}</h3>
-					<div class="prose text-white max-w-3xl mx-auto font-light">
+					<div class="mx-auto max-w-3xl font-light text-white prose">
 						{@html reason.body}
 					</div>
 				</div>
