@@ -9,7 +9,7 @@
 				background-size: 80%;
 			`}
 >
-	<div class="absolute inset-0 bg-white/30" />
+	<div class="absolute inset-0 bg-white/30"></div>
 	<div class="relative mx-auto max-w-2xl">
 		<h2 class={styles.h2}>Take your equity management <wbr />to the next level today</h2>
 	</div>

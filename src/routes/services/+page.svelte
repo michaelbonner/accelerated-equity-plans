@@ -224,7 +224,7 @@
 				src={HeroBg}
 			/>
 		</div>
-		<div class="absolute inset-0 bg-black/80" />
+		<div class="absolute inset-0 bg-black/80"></div>
 		<div class={clsx('relative grid gap-16', 'md:gap-24')}>
 			<div class={clsx('relative grid gap-8', 'md:text-center')}>
 				<h1 class={clsx(styles.h1, 'text-white')}>Our Services</h1>
@@ -278,7 +278,7 @@
 			background-size: 40%;
 		`}
 	>
-		<div class="absolute inset-0 bg-white/90" />
+		<div class="absolute inset-0 bg-white/90"></div>
 		{#each servicesSections as servicesSection}
 			<section class="relative py-24" id={servicesSection.id}>
 				<div class="px-6 mx-auto max-w-7xl">
@@ -322,7 +322,7 @@
 		)}
 		style={`background-image: url('/images/patterns/Pattern-0224_Pattern-A.svg')`}
 	>
-		<div class="absolute inset-0 bg-stone-400/30" />
+		<div class="absolute inset-0 bg-stone-400/30"></div>
 
 		<div class="relative">
 			<div class="grid gap-12 mx-auto max-w-7xl">

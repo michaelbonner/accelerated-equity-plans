@@ -32,7 +32,7 @@
 				src={HeroBg}
 			/>
 		</div>
-		<div class={clsx('absolute inset-0 bg-black/80')} />
+		<div class="absolute inset-0 bg-black/80"></div>
 
 		<!-- Should be foreground div in same container -->
 		<div class={clsx('relative z-10 h-full', 'sm:px-8 sm:text-center')}>
