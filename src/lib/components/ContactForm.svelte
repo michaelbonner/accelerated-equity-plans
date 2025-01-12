@@ -54,42 +54,42 @@
 			label: 'First Name',
 			type: 'text',
 			required: true,
-			autocomplete: 'given-name'
+			autocomplete: 'given-name' as const
 		},
 		{
 			name: 'lastName',
 			label: 'Last Name',
 			type: 'text',
 			required: true,
-			autocomplete: 'family-name'
+			autocomplete: 'family-name' as const
 		},
 		{
 			name: 'email',
 			label: 'Email',
 			type: 'email',
 			required: true,
-			autocomplete: 'email'
+			autocomplete: 'email' as const
 		},
 		{
 			name: 'phone',
 			label: 'Phone Number',
 			type: 'text',
 			required: false,
-			autocomplete: 'tel'
+			autocomplete: 'tel' as const
 		},
 		{
 			name: 'company',
 			label: 'Company',
 			type: 'text',
 			required: false,
-			autocomplete: 'organization'
+			autocomplete: 'organization' as const
 		},
 		{
 			name: 'title',
 			label: 'Title',
 			type: 'text',
 			required: false,
-			autocomplete: 'organization-title'
+			autocomplete: 'organization-title' as const
 		},
 		{
 			name: 'interested_services',
@@ -169,7 +169,7 @@
 						placeholder={field.label}
 						required={field.required}
 						rows={5}
-					/>
+					></textarea>
 				{:else if field.type === 'select'}
 					<select
 						class="block py-3 px-4 w-full leading-tight text-black rounded border appearance-none focus:bg-white focus:outline-none border-stone-100 bg-stone-100 focus:border-stone-500"

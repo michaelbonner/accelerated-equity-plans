@@ -141,7 +141,7 @@
 				'absolute inset-0 bg-opacity-70 bg-gradient-to-r from-black/90 via-black/80 to-black/70',
 				'lg:from-black/80 lg:via-black/70 lg:to-black/50'
 			)}
-		/>
+		></div>
 		<div
 			class={clsx(
 				'w-[31vw] absolute bottom-0 left-[69vw] overflow-hidden opacity-50',
@@ -182,7 +182,7 @@
 				background-size: 100%;
 			`}
 	>
-		<div class="absolute inset-0 bg-stone-200/20" />
+		<div class="absolute inset-0 bg-stone-200/20"></div>
 		<div class="grid relative gap-4 mx-auto max-w-3xl text-center">
 			<RedBar classes="mx-auto" />
 			<h2 class={styles.h2}>What We Bring to the Table</h2>
@@ -233,7 +233,7 @@
 				sizes="100vw"
 			/>
 		</div>
-		<div class="absolute inset-0 lg:bg-transparent bg-white/80" />
+		<div class="absolute inset-0 lg:bg-transparent bg-white/80"></div>
 		<div class="grid relative gap-4 mx-auto max-w-7xl">
 			<RedBar />
 			<h2 class={styles.h2}>Our Comprehensive Services</h2>
@@ -269,7 +269,7 @@
 												)}
 												href={`/services#${comprehensiveService.id}`}
 											>
-												<span class="inline-block bg-red-700 rounded-full size-2 shrink-0" />
+												<span class="inline-block bg-red-700 rounded-full size-2 shrink-0"></span>
 												{tag}
 											</a>
 										</li>

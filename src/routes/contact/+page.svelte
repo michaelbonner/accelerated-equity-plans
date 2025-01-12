@@ -36,7 +36,7 @@
 				src={HeroBg}
 			/>
 		</div>
-		<div class={clsx('absolute inset-0 bg-black/80 bg-blend-screen')} />
+		<div class={clsx('absolute inset-0 bg-black/80 bg-blend-screen')}></div>
 
 		<!-- Should be foreground div in same container -->
 		<div class={clsx('relative z-10 h-full', 'sm:px-8 sm:text-center')}>
@@ -126,7 +126,7 @@
 				src={BuildingOutsideMobile}
 			/>
 		</div>
-		<div class={clsx('absolute inset-0 bg-black/50 bg-blend-screen')} />
+		<div class={clsx('absolute inset-0 bg-black/50 bg-blend-screen')}></div>
 
 		<!-- Should be foreground div in same container -->
 		<div class="relative z-10 h-full">
