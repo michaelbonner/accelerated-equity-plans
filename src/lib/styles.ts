@@ -23,11 +23,11 @@ export const styles = {
 		'hover:bg-red-800 hover:ring-red-800'
 	),
 	darkButton: clsx(
-		'bg-red-700/40 px-6 py-3 backdrop-blur text-lg text-white rounded-md ring-1 ring-red-800 transition ease-in-out duration-300 no-underline font-light font-eurostile',
+		'bg-red-700/40 px-6 py-3 backdrop-blur-sm text-lg text-white rounded-md ring-1 ring-red-800 transition ease-in-out duration-300 no-underline font-light font-eurostile',
 		'hover:bg-red-800 hover:ring-red-800'
 	),
 	blueRedGradientBackground:
-		'bg-gradient-to-b from-[#ab2329] via-[#233559] to-[#233559] p-[2px] rounded-lg',
+		'bg-linear-to-b from-[#ab2329] via-[#233559] to-[#233559] p-[2px] rounded-lg',
 	cardHover: clsx('transition-transform', 'hover:-translate-y-1'),
 	heroSection: clsx(
 		'flex flex-col justify-center relative pt-36 pb-8 px-6 text-white bg-black',

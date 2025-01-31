@@ -93,7 +93,7 @@
 							loading="lazy"
 							src={teamMember.imageSrc}
 						/>
-						<div class="flex flex-col flex-grow text-white prose">
+						<div class="flex flex-col grow text-white prose">
 							<div class="grow">
 								<h3 class={clsx(styles.h3, 'text-white')}>
 									{teamMember.fullName}
