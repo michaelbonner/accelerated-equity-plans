@@ -138,7 +138,7 @@
 
 		<div
 			class={clsx(
-				'absolute inset-0 bg-opacity-70 bg-gradient-to-r from-black/90 via-black/80 to-black/70',
+				'absolute inset-0 bg-opacity-70 bg-linear-to-r from-black/90 via-black/80 to-black/70',
 				'lg:from-black/80 lg:via-black/70 lg:to-black/50'
 			)}
 		></div>

@@ -101,7 +101,7 @@
 
 <div class="flex flex-col min-h-screen">
 	<Navbar {navLinks} />
-	<div class="flex flex-col flex-grow bg-white">
+	<div class="flex flex-col grow bg-white">
 		<slot />
 	</div>
 	<Footer {navLinks} />

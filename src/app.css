@@ -1,11 +1,57 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-html,
-body {
-	@apply bg-zinc-100;
-	@apply dark:bg-zinc-800;
+@plugin '@tailwindcss/typography';
+@plugin '@tailwindcss/forms';
+
+@theme {
+  --font-sans: roboto, ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-eurostile: eurostile, ui-serif, Georgia, Cambria, 'Times New Roman',
+    Times, serif;
+
+  --color-aep-red-50: #fdf3f3;
+  --color-aep-red-100: #fde3e4;
+  --color-aep-red-200: #fcccce;
+  --color-aep-red-300: #f8a9ac;
+  --color-aep-red-400: #f2777c;
+  --color-aep-red-500: #e74c53;
+  --color-aep-red-600: #d42e35;
+  --color-aep-red-700: #ac2228;
+  --color-aep-red-800: #932126;
+  --color-aep-red-900: #7b2125;
+  --color-aep-red-950: #420d0f;
+
+  --color-black: #1c1e1f;
+  --color-aep-light-gray: #e1e4e7;
+  --color-aep-teal: #43626d;
+  --color-aep-teal-dark: #2b454e;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@layer utilities {
+  html,
+  body {
+    @apply bg-zinc-100;
+    @apply dark:bg-zinc-800;
+  }
 }
 
 @layer base {

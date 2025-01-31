@@ -15,7 +15,7 @@
 	export let navLinks;
 </script>
 
-<div class={`fixed top-0 z-20 w-screen px-6 py-2 bg-opacity-100 bg-black backdrop-blur`}>
+<div class={`fixed top-0 z-20 w-screen px-6 py-2 bg-opacity-100 bg-black backdrop-blur-sm`}>
 	<div>
 		<nav class="flex justify-between items-center xl:px-12" aria-label="Global">
 			<div class="flex flex-1">
@@ -59,7 +59,7 @@
 					<a
 						href={navLink.href}
 						class={clsx(
-							'uppercase py-2.5 px-4 rounded tracking-wide',
+							'uppercase py-2.5 px-4 rounded-sm tracking-wide',
 							$page.url.pathname === navLink.href && 'font-medium',
 							navLink.headerClasses ?? 'text-white hover:text-red-600'
 						)}>{navLink.name}</a
