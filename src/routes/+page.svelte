@@ -214,7 +214,7 @@
 								href="/services"
 								class={styles.darkButton}
 							>
-								Learn More
+								Our Services
 							</a>
 						</div>
 					</div>
