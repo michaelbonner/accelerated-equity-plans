@@ -3,7 +3,7 @@
 
 	import Footer from '$lib/components/footer.svelte';
 	import Navbar from '$lib/components/navbar.svelte';
-	import { partytownSnippet } from '@builder.io/partytown/integration';
+	import { partytownSnippet } from '@qwik.dev/partytown/integration';
 	import { onMount } from 'svelte';
 	import { AiOutlineContacts } from 'svelte-icons-pack/ai';
 	import { BiCustomize, BiHomeAlt } from 'svelte-icons-pack/bi';
