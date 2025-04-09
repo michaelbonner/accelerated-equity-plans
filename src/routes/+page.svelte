@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import CustomerReviews from '$lib/components/CustomerReviews.svelte';
 	import FooterCallout from '$lib/components/FooterCallout.svelte';
 	import MeetTheTeam from '$lib/components/MeetTheTeam.svelte';
@@ -16,6 +17,16 @@
 	import HeroBg from '$lib/images/backgrounds/high-rise-buildings.jpg?enhanced';
 	import { styles } from '$lib/styles';
 	import { clsx } from 'clsx';
+
+	let isMobile = true;
+
+	const updateWindowSize = () => {
+		isMobile = window.innerWidth < 768;
+	};
+	if (browser) {
+		updateWindowSize();
+		window.onresize = updateWindowSize;
+	}
 
 	const servicesBoxes = [
 		{
@@ -120,20 +131,23 @@
 	<section class={clsx(styles.heroSection, 'overflow-x-hidden', 'lg:px-28')}>
 		<!-- Background Div -->
 		<div class="overflow-hidden absolute inset-0">
-			<enhanced:img
-				alt="High rise buildings"
-				class="hidden object-cover lg:block size-full"
-				fetchpriority="high"
-				src={HeroBg}
-				sizes="100vw"
-			/>
-			<enhanced:img
-				alt="High rise buildings"
-				class="block object-cover lg:hidden size-full"
-				fetchpriority="high"
-				src={HeroBgMobile}
-				sizes="100vw"
-			/>
+			{#if isMobile}
+				<enhanced:img
+					alt="High rise buildings"
+					class="block object-cover lg:hidden size-full"
+					fetchpriority="high"
+					src={HeroBgMobile}
+					sizes="100vw"
+				/>
+			{:else}
+				<enhanced:img
+					alt="High rise buildings"
+					class="object-cover size-full"
+					fetchpriority="high"
+					src={HeroBg}
+					sizes="100vw"
+				/>
+			{/if}
 		</div>
 
 		<div
