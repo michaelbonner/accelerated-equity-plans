@@ -36,7 +36,7 @@
 				/>
 			</a>
 			<p class="mt-4 text-xs leading-5 text-left sm:text-center text-stone-500">
-				&copy; {new Date().getFullYear()} Accelerated Equity Plans. All rights reserved.
+				&copy; 2023-{new Date().getFullYear()} Accelerated Equity Plans. All rights reserved.
 			</p>
 			<p class="mt-4 text-xs leading-5 text-left sm:text-center text-stone-500">
 				<a
