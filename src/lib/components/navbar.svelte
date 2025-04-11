@@ -33,7 +33,7 @@
 			<div class="flex lg:hidden">
 				<button
 					type="button"
-					class="inline-flex justify-center items-center p-2.5 -m-2.5 text-white rounded-md"
+					class="inline-flex justify-center items-center p-2.5 -m-2.5 text-white rounded-md cursor-pointer"
 					on:click={toggleMobileMenu}
 				>
 					<span class="sr-only">Open main menu</span>
@@ -89,7 +89,7 @@
 						<div class="flex">
 							<button
 								type="button"
-								class="inline-flex justify-center items-center p-2.5 -m-2.5 text-white rounded-md"
+								class="inline-flex justify-center items-center p-2.5 -m-2.5 text-white rounded-md cursor-pointer"
 								on:click={toggleMobileMenu}
 							>
 								<span class="sr-only">Close menu</span>

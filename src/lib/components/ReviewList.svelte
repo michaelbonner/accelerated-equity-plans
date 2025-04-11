@@ -70,7 +70,7 @@
 		<button
 			aria-label="Move to previous review"
 			class={clsx(
-				'absolute z-10 top-[45%] -left-16 hidden bg-white transition-colors rounded-full p-3 text-black text-xl shadow-md',
+				'absolute z-10 top-[45%] -left-16 hidden bg-white transition-colors rounded-full p-3 text-black text-xl shadow-md cursor-pointer',
 				'sm:block',
 				'hover:bg-stone-100'
 			)}
@@ -83,7 +83,7 @@
 		<button
 			aria-label="Move to next review"
 			class={clsx(
-				'absolute z-10 top-[45%] -right-16 hidden  bg-white transition-colors rounded-full p-3 text-black text-xl shadow-md',
+				'absolute z-10 top-[45%] -right-16 hidden  bg-white transition-colors rounded-full p-3 text-black text-xl shadow-md cursor-pointer',
 				'sm:block',
 				'hover:bg-stone-100'
 			)}

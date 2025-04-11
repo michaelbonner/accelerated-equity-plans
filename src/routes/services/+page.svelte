@@ -252,7 +252,7 @@
 								}
 							}}
 							class={clsx(
-								'w-full h-full flex flex-col justify-center items-start gap-2 py-2 px-4 rounded-xl',
+								'w-full h-full flex flex-col justify-center items-start gap-2 py-2 px-4 rounded-xl cursor-pointer',
 								'md:text-center md:items-center md:px-4 md:py-4',
 								'hover:bg-white/10'
 							)}
