@@ -137,7 +137,6 @@
 					class="block object-cover lg:hidden size-full"
 					fetchpriority="high"
 					src={HeroBgMobile}
-					sizes="100vw"
 				/>
 			{:else}
 				<enhanced:img
@@ -145,7 +144,6 @@
 					class="object-cover size-full"
 					fetchpriority="high"
 					src={HeroBg}
-					sizes="100vw"
 				/>
 			{/if}
 		</div>
