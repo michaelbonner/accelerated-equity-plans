@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { styles } from '$lib/styles';
+	import { clsx } from 'clsx';
+	import type { FullAutoFill } from 'svelte/elements';
 
 	let submitted = false;
 	let isSubmitting = false;
@@ -48,7 +50,15 @@
 	let errorMessage = '';
 	let touched: any = {};
 
-	const fields = [
+	const fields: {
+		name: string;
+		label: string;
+		type: string;
+		required: boolean;
+		autocomplete?: FullAutoFill;
+		placeholder?: string;
+		containerClass?: string;
+	}[] = [
 		{
 			name: 'firstName',
 			label: 'First Name',
@@ -78,65 +88,10 @@
 			autocomplete: 'tel' as const
 		},
 		{
-			name: 'company',
-			label: 'Company',
-			type: 'text',
-			required: false,
-			autocomplete: 'organization' as const
-		},
-		{
-			name: 'title',
-			label: 'Title',
-			type: 'text',
-			required: false,
-			autocomplete: 'organization-title' as const
-		},
-		{
-			name: 'interested_services',
-			label: 'What service are you interested in?',
-			type: 'select',
-			required: false,
-			options: [
-				'Equity Plan Administration',
-				'Vendor Support',
-				'Advanced Project Support',
-				'Plan & Process Design',
-				'Other'
-			]
-		},
-		{
-			name: 'equity_management_platform',
-			label: 'What equity management vendor do you use?',
-			type: 'select',
-			required: false,
-			options: [
-				'Carta',
-				'Charles Schwab',
-				'Eqvista',
-				'Fidelity',
-				'Global Shares',
-				'insightsoftware',
-				'Morgan Stanley at Work',
-				'UBS',
-				'Other'
-			]
-		},
-		{
-			name: 'equity_plan_participants_count',
-			label: 'How many equity plan participants do you have?',
-			type: 'number',
-			required: false
-		},
-		{
-			name: 'how_did_you_hear_about_us',
-			label: 'How did you hear about us?',
-			type: 'text',
-			required: false
-		},
-		{
 			name: 'message',
-			label: 'Any additional info?',
+			label: 'How can we support your goals?',
 			type: 'textarea',
+			placeholder: '',
 			required: true,
 			containerClass: ' md:col-span-2'
 		}
@@ -154,49 +109,43 @@
 	<div class="grid gap-y-4 gap-x-8 md:grid-cols-2">
 		{#each fields as field}
 			<div class={`mb-6${field.containerClass}`}>
-				<label class="block mb-2 text-sm font-bold tracking-wide font-eurostile" for={field.name}>
+				<label class="block mb-2 font-bold tracking-wide font-eurostile" for={field.name}>
 					{field.label}
 					{#if field.required}
-						*
+						<span class="text-red-500">*</span>
 					{/if}
 				</label>
 
 				{#if field.type === 'textarea'}
 					<textarea
-						class="block py-3 px-4 w-full leading-tight text-black rounded-sm border appearance-none focus:bg-white focus:outline-hidden border-stone-100 bg-stone-100 focus:border-stone-500"
+						class={clsx(
+							'block py-3 px-4 w-full leading-tight text-black rounded-sm border appearance-none border-stone-100 bg-stone-100',
+							'placeholder:text-stone-400',
+							'focus:border-stone-500 focus:bg-white focus:outline-hidden'
+						)}
 						id={field.name}
 						name={field.name}
-						placeholder={field.label}
+						placeholder={field.placeholder ?? field.label}
 						required={field.required}
 						rows={5}
 					></textarea>
-				{:else if field.type === 'select'}
-					<select
-						class="block py-3 px-4 w-full leading-tight text-black rounded-sm border appearance-none focus:bg-white focus:outline-hidden border-stone-100 bg-stone-100 focus:border-stone-500"
-						id={field.name}
-						name={field.name}
-						required={field.required}
-					>
-						<option value="">Select an option</option>
-						{#if field.options}
-							{#each field.options as option}
-								<option value={option}>{option}</option>
-							{/each}
-						{/if}
-					</select>
 				{:else}
 					<input
-						class="block py-3 px-4 w-full leading-tight text-black rounded-sm border appearance-none focus:bg-white focus:outline-hidden border-stone-100 bg-stone-100 focus:border-stone-500"
+						class={clsx(
+							'block py-3 px-4 w-full leading-tight text-black rounded-sm border appearance-none border-stone-100 bg-stone-100',
+							'placeholder:text-stone-400',
+							'focus:bg-white focus:outline-hidden focus:border-stone-500'
+						)}
 						id={field.name}
 						name={field.name}
 						placeholder={field.label}
 						required={field.required}
 						type={field.type}
-						autocomplete={field.autocomplete}
+						autocomplete={field.autocomplete ?? undefined}
 					/>
 				{/if}
 
-				<p class="px-2 pt-1 text-sm italic text-red-500">
+				<p class="px-2 pt-1 italic text-red-500">
 					{#if errors[field.name] && touched[field.name]}
 						{errors[field.name]}
 					{/if}
@@ -206,7 +155,7 @@
 	</div>
 
 	{#if errorMessage}
-		<p class="px-2 pt-1 text-sm italic text-red-500">
+		<p class="px-2 pt-1 italic text-red-500">
 			{errorMessage}
 		</p>
 	{/if}
