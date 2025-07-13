@@ -8,21 +8,20 @@
 	import HeroBg from '$lib/images/backgrounds/office-laptop.jpg?enhanced';
 	import { styles } from '$lib/styles';
 	import { clsx } from 'clsx';
+
+	const title = 'Contact Accelerated Equity Plans | Expert Equity Consulting & Support';
+	const description =
+		'Get in touch with Accelerated Equity Plans for personalized equity plan consulting, system support, and expert guidance. Call, email, or fill out our contact form to start your equity management journey today.';
+	const path = '/contact';
 </script>
 
 <svelte:head>
-	<title>Contact Accelerated Equity Plans</title>
-	<meta
-		name="description"
-		content="AEP's expert team provides personalized solutions and guidance for equity planning, implementation, and ongoing support."
-	/>
-	<meta property="og:title" content="Contact Accelerated Equity Plans" />
-	<meta
-		property="og:description"
-		content="AEP's expert team provides personalized solutions and guidance for equity planning, implementation, and ongoing support."
-	/>
-	<link rel="canonical" href="https://www.acceleratedep.com/contact" />
-	<meta property="og:url" content="https://www.acceleratedep.com/contact" />
+	<title>{title}</title>
+	<meta name="description" content={description} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<link rel="canonical" href={`https://www.acceleratedep.com${path}`} />
+	<meta property="og:url" content={`https://www.acceleratedep.com${path}`} />
 </svelte:head>
 
 <main>

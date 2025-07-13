@@ -4,21 +4,20 @@
 	import HeroBg from '$lib/images/backgrounds/high-rise-looking-up.jpg?enhanced';
 	import { styles } from '$lib/styles';
 	import { clsx } from 'clsx';
+
+	const title = 'About Accelerated Equity Plans | Equity Compensation Experts';
+	const description =
+		'Learn how Accelerated Equity Plans empowers companies with expert equity compensation solutions. Discover our story, principles, and leadership team dedicated to maximizing the impact of your stock plans.';
+	const path = '/about';
 </script>
 
 <svelte:head>
-	<title>About Accelerated Equity Plans</title>
-	<meta
-		name="description"
-		content="AEP empowers companies with strategic equity solutions to attract, retain, and motivate top talent, driving competitive advantage."
-	/>
-	<meta property="og:title" content="About Accelerated Equity Plans" />
-	<meta
-		property="og:description"
-		content="AEP empowers companies with strategic equity solutions to attract, retain, and motivate top talent, driving competitive advantage."
-	/>
-	<link rel="canonical" href="https://www.acceleratedep.com/about" />
-	<meta property="og:url" content="https://www.acceleratedep.com/about" />
+	<title>{title}</title>
+	<meta name="description" content={description} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<link rel="canonical" href={`https://www.acceleratedep.com${path}`} />
+	<meta property="og:url" content={`https://www.acceleratedep.com${path}`} />
 </svelte:head>
 
 <main>

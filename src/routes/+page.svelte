@@ -20,6 +20,11 @@
 
 	let isMobile = true;
 
+	const title = 'Expert Equity Plan Administration & Consulting | Accelerated Equity Plans';
+	const description =
+		'Accelerated Equity Plans offers expert equity plan administration, consulting, and support for private and public companies. Streamline your stock plans, stay compliant, and get guidance from industry professionals. Contact us to elevate your equity management.';
+	const path = '/';
+
 	const updateWindowSize = () => {
 		isMobile = window.innerWidth < 768;
 	};
@@ -112,18 +117,12 @@
 </script>
 
 <svelte:head>
-	<title>Accelerated Equity Plans</title>
-	<meta
-		name="description"
-		content="AEP brings industry expertise and support to deliver a best-in-class equity program experience for teams, partners, and participants."
-	/>
-	<meta property="og:title" content="Accelerated Equity Plans" />
-	<meta
-		property="og:description"
-		content="AEP brings industry expertise and support to deliver a best-in-class equity program experience for teams, partners, and participants."
-	/>
-	<link rel="canonical" href="https://www.acceleratedep.com" />
-	<meta property="og:url" content="https://www.acceleratedep.com" />
+	<title>{title}</title>
+	<meta name="description" content={description} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<link rel="canonical" href={`https://www.acceleratedep.com${path}`} />
+	<meta property="og:url" content={`https://www.acceleratedep.com${path}`} />
 </svelte:head>
 
 <main class="bg-white isolate">

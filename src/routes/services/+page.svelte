@@ -26,6 +26,11 @@
 	import { styles } from '$lib/styles';
 	import { clsx } from 'clsx';
 
+	const title = 'Equity Plan Administration & Consulting Services | Accelerated Equity Plans';
+	const description =
+		'Discover comprehensive equity plan administration, vendor support, project consulting, and process design services with Accelerated Equity Plans. Get expert help with stock plans, M&A, IPOs, automation, and more—tailored for private and public companies.';
+	const path = '/services';
+
 	const servicesSections = [
 		{
 			icon: Money,
@@ -200,18 +205,12 @@
 </script>
 
 <svelte:head>
-	<title>Equity Services provided by Accelerated Equity Plans</title>
-	<meta
-		name="description"
-		content="AEP offers comprehensive equity management solutions, ensuring regulatory compliance and seamless administration of employee stock compensation programs."
-	/>
-	<meta property="og:title" content="Equity Services provided by Accelerated Equity Plans" />
-	<meta
-		property="og:description"
-		content="AEP offers comprehensive equity management solutions, ensuring regulatory compliance and seamless administration of employee stock compensation programs."
-	/>
-	<link rel="canonical" href="https://www.acceleratedep.com/services" />
-	<meta property="og:url" content="https://www.acceleratedep.com/services" />
+	<title>{title}</title>
+	<meta name="description" content={description} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<link rel="canonical" href={`https://www.acceleratedep.com${path}`} />
+	<meta property="og:url" content={`https://www.acceleratedep.com${path}`} />
 </svelte:head>
 
 <main>

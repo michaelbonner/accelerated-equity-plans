@@ -9,6 +9,11 @@
 	import { styles } from '$lib/styles';
 	import { clsx } from 'clsx';
 
+	const title = 'Careers at Accelerated Equity Plans | Equity Compensation Jobs & Opportunities';
+	const description =
+		'Explore rewarding careers at Accelerated Equity Plans. Join a collaborative team, advance your skills, and help shape the future of equity management. Find your next opportunity with AEP.';
+	const path = '/careers';
+
 	const reasonsToWorkForUs = [
 		{
 			icon: People,
@@ -34,18 +39,12 @@
 </script>
 
 <svelte:head>
-	<title>Careers at Accelerated Equity Plans</title>
-	<meta
-		name="description"
-		content="Join AEP's dynamic team, collaborate with industry leaders, and shape the future of equity management in a supportive environment."
-	/>
-	<meta property="og:title" content="Careers at Accelerated Equity Plans" />
-	<meta
-		property="og:description"
-		content="Join AEP's dynamic team, collaborate with industry leaders, and shape the future of equity management in a supportive environment."
-	/>
-	<link rel="canonical" href="https://www.acceleratedep.com/careers" />
-	<meta property="og:url" content="https://www.acceleratedep.com/careers" />
+	<title>{title}</title>
+	<meta name="description" content={description} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<link rel="canonical" href={`https://www.acceleratedep.com${path}`} />
+	<meta property="og:url" content={`https://www.acceleratedep.com${path}`} />
 </svelte:head>
 
 <main>
