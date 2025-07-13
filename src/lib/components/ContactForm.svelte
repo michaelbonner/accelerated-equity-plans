@@ -138,7 +138,7 @@
 						)}
 						id={field.name}
 						name={field.name}
-						placeholder={field.label}
+						placeholder={field.placeholder ?? field.label}
 						required={field.required}
 						type={field.type}
 						autocomplete={field.autocomplete ?? undefined}
