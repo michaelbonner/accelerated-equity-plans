@@ -159,7 +159,9 @@
 			{errorMessage}
 		</p>
 	{/if}
-	<button class={styles.darkButton} disabled={isSubmitting} type="submit"> Submit </button>
+	<div class="mt-6 flex justify-end">
+		<button class={styles.darkButton} disabled={isSubmitting} type="submit"> Submit </button>
+	</div>
 </form>
 <div class:hidden={!submitted} class="flex items-center min-h-56">
 	<div class="prose">
