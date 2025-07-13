@@ -108,7 +108,7 @@
 >
 	<div class="grid gap-y-4 gap-x-8 md:grid-cols-2">
 		{#each fields as field}
-			<div class={`mb-6${field.containerClass}`}>
+			<div class={clsx('mb-6', field.containerClass)}>
 				<label class="block mb-2 font-bold tracking-wide font-eurostile" for={field.name}>
 					{field.label}
 					{#if field.required}
