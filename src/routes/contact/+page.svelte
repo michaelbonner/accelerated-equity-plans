@@ -129,13 +129,18 @@
 
 		<!-- Should be foreground div in same container -->
 		<div class="relative z-10 h-full">
-			<div class={clsx('grid gap-4 prose-white max-w-7xl', 'sm:mx-auto')}>
+			<div class={clsx('grid gap-4 prose-white max-w-4xl', 'sm:mx-auto')}>
 				<RedBar />
 				<h2 class={styles.h2}>Let's Talk About Your Business</h2>
 				<div class={clsx(styles.blueRedGradientBackground, 'mt-12')}>
 					<div class="p-8 text-white bg-black rounded-xl">
-						<h3 class={styles.h4}>Personal Information</h3>
-						<p class="mt-4 font-light">Use a permanent address where you can receive mail.</p>
+						<h3 class={styles.h4}>Contact Us</h3>
+						<p class="mt-4 font-light">
+							Ready to take the next step? Fill out the form below and let us know how we can help.
+							Whether you have questions, need expert advice, or just want to chat about your
+							business goals, our team is here to support you every step of the way. We look forward
+							to connecting!
+						</p>
 						<ContactForm />
 					</div>
 				</div>
