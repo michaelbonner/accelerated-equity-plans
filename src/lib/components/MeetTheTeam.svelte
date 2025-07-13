@@ -107,7 +107,7 @@
 									Meet {teamMember.shortName}
 								</a>
 								<a
-									aria-label={`${teamMember.shortName}'s LinkedIn page"`}
+									aria-label={`${teamMember.shortName}'s LinkedIn page`}
 									href={teamMember.linkedInLink}
 									target="_blank"
 									rel="noopener noreferrer"
