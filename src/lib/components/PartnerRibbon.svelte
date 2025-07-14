@@ -42,7 +42,7 @@
 		{
 			altText: 'Deloitte',
 			path: 'deloitte.svg',
-			url: 'https://www.deloitte.com/global/en/services/tax/services/equity-and-incentives.html'
+			url: 'https://www.deloitte.com/an/en/services/tax/services/equity-and-incentives.html'
 		},
 		{
 			altText: 'PwC',
