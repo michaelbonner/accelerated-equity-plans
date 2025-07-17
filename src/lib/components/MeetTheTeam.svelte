@@ -188,6 +188,15 @@
 			imageAlt: 'Grace Segui',
 			body: `
 			<div>
+				<h4>Specialties</h4>
+				<ul>
+					<li>Equity Plan Design and Optimization</li>
+					<li>Client Service Management</li>
+					<li>Employee Education and Training on Equity Compensation</li>
+					<li>Stock Option Exercise Guidance</li>
+					<li>Process Improvement and Documentation</li>
+					<li>Strategic Equity Program Consulting</li>
+				</ul>
 				<h4>About Me</h4>
 				<p>
 					My journey into Equity Compensation began in 2003 on the front lines of customer service, guiding individuals through stock option exercises and trade execution. That hands-on experience evolved as I joined the training team, where I helped educate others on the complexities of equity plans. By 2007, I stepped into the role of Client Service Manager, deepening my expertise and sharpening my client-focused approach. In the next chapter of my career, I transitioned to the issuer side, serving as Stock Plan Administrator at Activision Blizzard for seven years—gaining invaluable insight into the internal mechanics of plan management at a dynamic, high-growth company. Now in my third decade in Equity Compensation, I’m proud to serve as a Consulting Director at AEP, where I partner with clients to design, optimize, and elevate their equity programs with both strategic insight and practical experience.
@@ -204,9 +213,18 @@
 			imageAlt: 'Jordan Sims',
 			body: `
 			<div>
+				<h4>Specialties</h4>
+				<ul>
+					<li>Private Market Equity Compensation</li>
+					<li>RSU Releases and Administration Setup</li>
+					<li>Secondaries Transactions</li>
+					<li>Process Improvement and Automation</li>
+					<li>Employee Education on Equity Plans</li>
+					<li>Custom Reporting and Reconciliation</li>
+				</ul>
 				<h4>About Me</h4>
 				<p>
-					Jordan has worked in finance for the past 12 years. Starting at Jordan Credit Union (Yes, he was Jordan from Jordan Credit Union) to working within the equity compensation industry over the last 4 years, he has experienced a wide breadth of personal finance, specializing in Private Market equity compensation as a Client Success Manager and a Secondaries Transactions Specialist. Jordan specializes in finding ways to build and improve process enhancements and excels in finding ways to work smarter rather than harder. As a Morgan Stanley CSM, he spent his time as the primary dedicated CSM for various high profile franchise clients. He specializes in RSU Releases, Administration Setup, and many other areas within the Equity Atmosphere. Jordan is based in Saratoga Springs, Utah, and in his free time he loves spending time with his wife and two daughters. If you bring up baseball with him... just be aware you won't be able to leave the conversation at a reasonable time!
+					Jordan has worked in finance for the past 12 years. Starting at Jordan Credit Union (yes, he was Jordan from Jordan Credit Union) to working within the equity compensation industry over the last 4 years, he has experienced a wide breadth of personal finance, specializing in Private Market equity compensation as a Client Success Manager and a Secondaries Transactions Specialist. Jordan specializes in finding ways to build and improve process enhancements and excels in finding ways to work smarter rather than harder. As a Morgan Stanley CSM, he spent his time as the primary dedicated CSM for various high profile franchise clients. He specializes in RSU Releases, Administration Setup, and many other areas within the Equity Atmosphere. Jordan is based in Saratoga Springs, Utah, and in his free time he loves spending time with his wife and two daughters. If you bring up baseball with him... just be aware you won't be able to leave the conversation at a reasonable time!
 				</p>
 			</div>
 			`,
