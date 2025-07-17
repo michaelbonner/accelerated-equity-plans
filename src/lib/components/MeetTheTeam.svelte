@@ -49,9 +49,22 @@
 			imageSrc: NeilHeadShot,
 			imageAlt: 'Neil Birrell',
 			body: `
+			<div>
+				<h4>Specialties</h4>
+				<ul>
+					<li>Global compliance</li>
+					<li>Global tax and mobility</li>
+					<li>3rd party system integrations</li>
+					<li>Vendor selection</li>
+					<li>Implementation</li>
+					<li>Specialized projects</li>
+				</ul>
+
+				<h4>About Me</h4>
 				<p>
-					Neil Birrell is a Partner at Accelerated Equity Plans. He serves both private and public organizations in the administration, financial reporting, payroll, HR and tax implications of equity compensation.  He specializes in standing up new processes to help companies administer, integrate and automate these important functions. 
+					Neil Birrell is Partner at Accelerated Equity Plans. In his 20 years in equity compensation, Neil has served both private and public organizations in the administration, financial reporting, payroll, HR and tax implications of equity compensation. In his role, Neil specializes in standing up processes to help companies administer, integrate and automate these important functions. Previous to AEP, Neil worked at Deloitte in their equity and incentives practice and at E*TRADE Corporate Services. He has presented on topics ranging from employee communications, process improvement, financial reporting, global compliance and taxation, and industry trends. Neil holds a BS in Finance from the University of Utah and is a Certified Equity Professional (CEP).
 				</p>
+			</div>
 			`,
 			linkedInLink: 'https://www.linkedin.com/in/neil-birrell-cep-0985185/'
 		},
