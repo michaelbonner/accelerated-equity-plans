@@ -239,6 +239,7 @@
 		'lg:py-32'
 	)}
 	style={`background-image: url('/images/patterns/Pattern-0224_Pattern-Arrows.svg')`}
+	id="meet-the-team"
 >
 	<div class="absolute inset-0 bg-stone-400/30"></div>
 	<div class="grid relative gap-12 mx-auto max-w-7xl">
