@@ -92,7 +92,7 @@
 				<h4>Specialties</h4>
 				<ul>
 					<li>Equity plan administration RSU/RSA, performance awards, ESPP, Phantom Stock</li>
-					<li>Unique solutions to Complex equity management scenarios</li>
+					<li>Unique solutions to complex equity management scenarios</li>
 					<li>Financial Reporting and Reconciliation</li>
 					<li>Employee Education</li>
 					<li>Corporate Actions</li>
