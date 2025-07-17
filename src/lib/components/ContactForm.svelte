@@ -91,7 +91,7 @@
 			name: 'message',
 			label: 'How can we support your goals?',
 			type: 'textarea',
-			placeholder: '',
+			placeholder: 'Tell us about your goals and how we can help...',
 			required: true,
 			containerClass: ' md:col-span-2'
 		}
@@ -125,7 +125,7 @@
 						)}
 						id={field.name}
 						name={field.name}
-						placeholder={field.placeholder ?? field.label}
+						placeholder={field.placeholder ?? ''}
 						required={field.required}
 						rows={5}
 					></textarea>
@@ -138,7 +138,7 @@
 						)}
 						id={field.name}
 						name={field.name}
-						placeholder={field.placeholder ?? field.label}
+						placeholder={field.placeholder ?? ''}
 						required={field.required}
 						type={field.type}
 						autocomplete={field.autocomplete ?? undefined}
