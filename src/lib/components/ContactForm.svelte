@@ -64,28 +64,32 @@
 			label: 'First Name',
 			type: 'text',
 			required: true,
-			autocomplete: 'given-name' as const
+			autocomplete: 'given-name' as const,
+			placeholder: 'First Name'
 		},
 		{
 			name: 'lastName',
 			label: 'Last Name',
 			type: 'text',
 			required: true,
-			autocomplete: 'family-name' as const
+			autocomplete: 'family-name' as const,
+			placeholder: 'Last Name'
 		},
 		{
 			name: 'email',
 			label: 'Email',
 			type: 'email',
 			required: true,
-			autocomplete: 'email' as const
+			autocomplete: 'email' as const,
+			placeholder: 'Email'
 		},
 		{
 			name: 'phone',
 			label: 'Phone Number',
 			type: 'text',
 			required: false,
-			autocomplete: 'tel' as const
+			autocomplete: 'tel' as const,
+			placeholder: 'Phone Number'
 		},
 		{
 			name: 'message',
