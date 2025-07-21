@@ -31,13 +31,13 @@
 				
 				<h4>About Me</h4>
 				<p>
-					With over 15 years of experience in the equity compensation industry—working with both issuers and administration vendors—I’ve developed deep expertise across private and public equity plans. Throughout my career, I’ve worn many hats, which has given me a well-rounded understanding of the challenges equity professionals face, especially those navigating their roles as a team of one.
+					With over 15 years of experience in the equity compensation industry—working with both issuers and administration vendors—Emily Bone has developed deep expertise across private and public equity plans. Throughout her career, she has worn many hats, giving her a well-rounded understanding of the challenges equity professionals face, especially those navigating their roles as a team of one.
 				</p>
 				<p>
-					That growing desire to support professionals who often had nowhere to turn led to the creation of AEP. At AEP, we go beyond traditional consulting. We become a true extension of your team—a dependable partner who’s with you every step of the way.
+					Her growing desire to support professionals who often had nowhere to turn led to the creation of AEP. At AEP, Emily and her team go beyond traditional consulting, becoming a true extension of their clients’ teams—a dependable partner who is with them every step of the way.
 				</p>
 				<p>
-					Outside of work, I love spending time outdoors camping, biking, and kayaking with my spouse, family, and friends. I’m always up for a scenic drive and a new place to explore!
+					Outside of work, Emily loves spending time outdoors camping, biking, and kayaking with her spouse, family, and friends. She is always up for a scenic drive and a new place to explore.
 				</p>
 			</div>
 			`,
@@ -62,7 +62,10 @@
 
 				<h4>About Me</h4>
 				<p>
-					Neil Birrell is Partner at Accelerated Equity Plans. In his 20 years in equity compensation, Neil has served both private and public organizations in the administration, financial reporting, payroll, HR and tax implications of equity compensation. In his role, Neil specializes in standing up processes to help companies administer, integrate and automate these important functions. Previous to AEP, Neil worked at Deloitte in their equity and incentives practice and at E*TRADE Corporate Services. He has presented on topics ranging from employee communications, process improvement, financial reporting, global compliance and taxation, and industry trends. Neil holds a BS in Finance from the University of Utah and is a Certified Equity Professional (CEP).
+					Neil Birrell is Partner at Accelerated Equity Plans. In his 20 years in equity compensation, Neil has served both private and public organizations in the administration, financial reporting, payroll, HR and tax implications of equity compensation. In his role, Neil specializes in standing up processes to help companies administer, integrate and automate these important functions.
+				</p>
+				<p>
+					Previous to AEP, Neil worked at Deloitte in their equity and incentives practice and at E*TRADE Corporate Services. He has presented on topics ranging from employee communications, process improvement, financial reporting, global compliance and taxation, and industry trends. Neil holds a BS in Finance from the University of Utah and is a Certified Equity Professional (CEP).
 				</p>
 			</div>
 			`,
@@ -85,7 +88,7 @@
 
 				<h4>About Me</h4>
 				<p>
-					Aaron Rosser, CEP is the Director of Business Development and Equity Consultant for Accelerated Equity Plans (AEP), where he is responsible for growth and building strong relationships with clients. He has worked on both the broker and issuer sides of equity compensation. His issuer roles include the Sr. Stock Plan Administrator at Unity Technologies and the Head of Global Equity at Sonder Holdings Inc. prior to joining AEP. He has led many employee-focused tax and education sessions for employees around the globe.
+					Aaron Rosser is the Director of Business Development and Equity Consultant for Accelerated Equity Plans (AEP), where he is responsible for growth and building strong relationships with clients. He has worked on both the broker and issuer sides of equity compensation. His issuer roles include the Sr. Stock Plan Administrator at Unity Technologies and the Head of Global Equity at Sonder Holdings Inc. prior to joining AEP. He has led many employee-focused tax and education sessions for employees around the globe.
 				</p>
 				<p>
 					Before his issuer experience, he has worked with many multinational companies in his time as a Service Manager at E*TRADE by Morgan Stanley, Fidelity Investments, and he spent years in Stock Plan Services at legacy Morgan Stanley Smith Barney.
@@ -113,10 +116,10 @@
 
 				<h4>About Me</h4>
 				<p>
-					I'm an experienced equity compensation professional with a background that includes working with industry leaders like E*TRADE and Computershare, as well as supporting a variety of companies in both consulting and in-house roles. I’m passionate about delivering practical, impactful solutions in equity plan management and helping teams navigate complex compensation strategies. 
+					Zak Mudrow is an experienced equity compensation professional with a background that includes working with industry leaders like E*TRADE and Computershare, as well as supporting a variety of companies in both consulting and in-house roles. He is passionate about delivering practical, impactful solutions in equity plan management and helping teams navigate complex compensation strategies.
 				</p>
 				<p>
-					Outside of work, I love coaching youth sports and staying active through tennis, basketball, pickleball, and mountain biking. I’m also a big sneaker fan and enjoy spending quality time with my wife and our four kids. 
+					Outside of work, Zak enjoys coaching youth sports and staying active through tennis, basketball, pickleball, and mountain biking. He is also a big sneaker fan and values spending quality time with his wife and their four kids.
 				</p>
 			</div>
 			`,
@@ -168,13 +171,13 @@
 
 				<h4>About Me</h4>
 				<p>
-					I'm an equity compensation consultant with a background in scaling and automating stock plan administration for both high-growth startups and established private companies. After several years in the industry, I joined Accelerated Equity Plans in 2024, where I help clients implement streamlined, compliant, and people-friendly equity programs.
+					Josh Ludlow is an equity compensation consultant with a background in scaling and automating stock plan administration for both high-growth startups and established private companies. After several years in the industry, he joined Accelerated Equity Plans in 2024, where he helps clients implement streamlined, compliant, and people-friendly equity programs.	
 				</p>
 				<p>
-					Prior to consulting, I held in-house roles supporting equity and compensation functions, giving me a practical, end-to-end understanding of equity lifecycle management. I love solving complex equity puzzles and partnering with clients to make stock plans work better for everyone involved.
+					Prior to consulting, Josh held in-house roles supporting equity and compensation functions, giving him a practical, end-to-end understanding of equity lifecycle management. He enjoys solving complex equity puzzles and partnering with clients to make stock plans work better for everyone involved.
 				</p>
 				<p>
-					Outside of work, I'm a proud dad to a toddler with another baby on the way. When I'm not decoding RSUs and ESPPs, you can find me focused on family life, finding time for golf and basketball, and occasionally losing sleep over Utah Jazz scores.
+					Outside of work, Josh is a proud dad to a toddler with another baby on the way. When he’s not decoding RSUs and ESPPs, he’s focused on family life, finding time for golf and basketball, and occasionally losing sleep over Utah Jazz scores.
 				</p>
 			</div>
 			`,
@@ -199,7 +202,7 @@
 				</ul>
 				<h4>About Me</h4>
 				<p>
-					My journey into Equity Compensation began in 2003 on the front lines of customer service, guiding individuals through stock option exercises and trade execution. That hands-on experience evolved as I joined the training team, where I helped educate others on the complexities of equity plans. By 2007, I stepped into the role of Client Service Manager, deepening my expertise and sharpening my client-focused approach. In the next chapter of my career, I transitioned to the issuer side, serving as Stock Plan Administrator at Activision Blizzard for seven years—gaining invaluable insight into the internal mechanics of plan management at a dynamic, high-growth company. Now in my third decade in Equity Compensation, I’m proud to serve as a Consulting Director at AEP, where I partner with clients to design, optimize, and elevate their equity programs with both strategic insight and practical experience.
+					Grace Segui began her journey in Equity Compensation in 2003 on the front lines of customer service, guiding individuals through stock option exercises and trade execution. Her hands-on experience grew as she joined the training team, where she helped educate others on the complexities of equity plans. By 2007, she stepped into the role of Client Service Manager, deepening her expertise and sharpening her client-focused approach. In the next chapter of her career, she transitioned to the issuer side, serving as Stock Plan Administrator at Activision Blizzard for seven years—gaining invaluable insight into the internal mechanics of plan management at a dynamic, high-growth company. Now in her third decade in Equity Compensation, Grace serves as a Consulting Director at AEP, partnering with clients to design, optimize, and elevate their equity programs with both strategic insight and practical experience.
 				</p>
 			</div>
 			`,
