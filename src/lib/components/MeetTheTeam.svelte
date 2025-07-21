@@ -193,12 +193,11 @@
 			<div>
 				<h4>Specialties</h4>
 				<ul>
-					<li>Equity Plan Design and Optimization</li>
-					<li>Client Service Management</li>
-					<li>Employee Education and Training on Equity Compensation</li>
-					<li>Stock Option Exercise Guidance</li>
-					<li>Process Improvement and Documentation</li>
-					<li>Strategic Equity Program Consulting</li>
+					<li>End-to-End Stock Plan Administration</li>
+					<li>Equity Plan Strategy & Design</li>
+					<li>Employee Communication</li>
+					<li>Training</li>
+					<li>Cross-Functional & External Stakeholder Collaboration</li>
 				</ul>
 				<h4>About Me</h4>
 				<p>
