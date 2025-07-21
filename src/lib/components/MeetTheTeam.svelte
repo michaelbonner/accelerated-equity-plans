@@ -171,7 +171,7 @@
 					Prior to consulting, Josh held in-house roles supporting equity and compensation functions, giving him a practical, end-to-end understanding of equity lifecycle management. He enjoys solving complex equity puzzles and partnering with clients to make stock plans work better for everyone involved.
 				</p>
 				<p>
-					Outside of work, Josh is a proud dad to a toddler with another baby on the way. When he’s not decoding RSUs and ESPPs, he’s focused on family life, finding time for golf and basketball, and occasionally losing sleep over Utah Jazz scores.
+					Outside of work, Josh is a proud dad to a toddler and welcomed their 2nd baby in June of 2025. When he’s not decoding RSUs and ESPPs, he’s focused on family life, finding time for golf and basketball, and occasionally losing sleep over Utah Jazz scores.
 				</p>
 			</div>
 			`,
