@@ -215,12 +215,11 @@
 			<div>
 				<h4>Specialties</h4>
 				<ul>
-					<li>Private Market Equity Compensation</li>
-					<li>RSU Releases and Administration Setup</li>
-					<li>Secondaries Transactions</li>
-					<li>Process Improvement and Automation</li>
-					<li>Employee Education on Equity Plans</li>
-					<li>Custom Reporting and Reconciliation</li>
+					<li>Process Strategy and Implementation</li>
+					<li>Equity Compensation and Analysis</li>
+					<li>Shareworks Specialist</li>
+					<li>Risk Analysis and Improvements</li>
+					<li>Project Management</li>
 				</ul>
 				<h4>About Me</h4>
 				<p>
