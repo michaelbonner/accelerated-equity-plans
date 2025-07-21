@@ -29,7 +29,6 @@
 					<li>Specialized Projects</li>
 				</ul>
 				
-				<h4>About Me</h4>
 				<p>
 					With over 15 years of experience in the equity compensation industry—working with both issuers and administration vendors—Emily Bone has developed deep expertise across private and public equity plans. Throughout her career, she has worn many hats, giving her a well-rounded understanding of the challenges equity professionals face, especially those navigating their roles as a team of one.
 				</p>
@@ -60,7 +59,6 @@
 					<li>Specialized projects</li>
 				</ul>
 
-				<h4>About Me</h4>
 				<p>
 					Neil Birrell is Partner at Accelerated Equity Plans. In his 20 years in equity compensation, Neil has served both private and public organizations in the administration, financial reporting, payroll, HR and tax implications of equity compensation. In his role, Neil specializes in standing up processes to help companies administer, integrate and automate these important functions.
 				</p>
@@ -86,7 +84,6 @@
 					<li>Process Improvement and Efficiency</li>
 				</ul>
 
-				<h4>About Me</h4>
 				<p>
 					Aaron Rosser is the Director of Business Development and Equity Consultant for Accelerated Equity Plans (AEP), where he is responsible for growth and building strong relationships with clients. He has worked on both the broker and issuer sides of equity compensation. His issuer roles include the Sr. Stock Plan Administrator at Unity Technologies and the Head of Global Equity at Sonder Holdings Inc. prior to joining AEP. He has led many employee-focused tax and education sessions for employees around the globe.
 				</p>
@@ -114,7 +111,6 @@
 					<li>Corporate Actions</li>
 				</ul>
 
-				<h4>About Me</h4>
 				<p>
 					Zak Mudrow is an experienced equity compensation professional with a background that includes working with industry leaders like E*TRADE and Computershare, as well as supporting a variety of companies in both consulting and in-house roles. He is passionate about delivering practical, impactful solutions in equity plan management and helping teams navigate complex compensation strategies.
 				</p>
@@ -141,7 +137,6 @@
 					<li>IPO preparation</li>
 				</ul>
 
-				<h4>About Me</h4>
 				<p>
 					Barbara has been in equity compensation for over 13 years, with a background in payroll management prior to that. She has spent time as a consultant with E*TRADE and as an in-house stock administrator with multiple issuers. Her shining star moment was working at a private tech company and building a public company equity program from the ground up, for their IPO. 
 				</p>
@@ -169,7 +164,6 @@
 					<li>Custom Reporting and Reconciliation</li>
 				</ul>
 
-				<h4>About Me</h4>
 				<p>
 					Josh Ludlow is an equity compensation consultant with a background in scaling and automating stock plan administration for both high-growth startups and established private companies. After several years in the industry, he joined Accelerated Equity Plans in 2024, where he helps clients implement streamlined, compliant, and people-friendly equity programs.	
 				</p>
@@ -199,7 +193,6 @@
 					<li>Training</li>
 					<li>Cross-Functional & External Stakeholder Collaboration</li>
 				</ul>
-				<h4>About Me</h4>
 				<p>
 					Grace Segui began her journey in Equity Compensation in 2003 on the front lines of customer service, guiding individuals through stock option exercises and trade execution. Her hands-on experience grew as she joined the training team, where she helped educate others on the complexities of equity plans. By 2007, she stepped into the role of Client Service Manager, deepening her expertise and sharpening her client-focused approach.
 				</p>
@@ -226,7 +219,6 @@
 					<li>Risk Analysis and Improvements</li>
 					<li>Project Management</li>
 				</ul>
-				<h4>About Me</h4>
 				<p>
 					Jordan has worked in finance for the past 12 years. Starting at Jordan Credit Union (yes, he was Jordan from Jordan Credit Union) to working within the equity compensation industry over the last 4 years, he has experienced a wide breadth of personal finance, specializing in Private Market equity compensation as a Client Success Manager and a Secondaries Transactions Specialist.
 				</p>
@@ -264,7 +256,7 @@
 		<div class="grid gap-6 md:grid-cols-3">
 			{#each leadershipTeam as teamMember}
 				<div class={clsx(styles.blueRedGradientBackground, styles.cardHover, 'group')}>
-					<div class="flex flex-col gap-4 justify-start p-8 h-full bg-black rounded-lg">
+					<div class="flex flex-col gap-4 justify-start p-8 h-full bg-black rounded-lg [&_ul]:mb-8">
 						<enhanced:img
 							alt={teamMember.imageAlt}
 							class={clsx(
