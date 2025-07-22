@@ -400,7 +400,7 @@
 				author: {
 					'@type': 'Person',
 					name: review.name,
-					title: review.title
+					jobTitle: review.title
 				},
 				reviewRating: {
 					'@type': 'Rating',
