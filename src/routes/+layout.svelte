@@ -394,6 +394,7 @@
 
 			// reviews
 			...reviews.map((review) => ({
+				'@context': 'https://schema.org',
 				'@type': 'Review',
 				reviewBody: review.reviewText,
 				author: {
