@@ -104,7 +104,7 @@
 			<div>
 				<h4>Specialties</h4>
 				<ul>
-					<li>Equity plan administration RSU/RSA, performance awards, ESPP, Phantom Stock</li>
+					<li>Equity plan administration: RSU/RSA, performance awards, ESPP, Phantom Stock</li>
 					<li>Unique solutions to complex equity management scenarios</li>
 					<li>Financial Reporting and Reconciliation</li>
 					<li>Employee Education</li>
@@ -266,7 +266,14 @@
 							loading="lazy"
 							src={teamMember.imageSrc}
 						/>
-						<div class="flex flex-col grow prose prose-invert">
+						<div
+							class={clsx(
+								'flex flex-col grow prose prose-invert',
+								'[&_ul]:mb-8 [&_ul]:flex [&_ul]:flex-wrap [&_ul]:gap-x-1.5 [&_ul]:pl-0 [&_ul]:list-none',
+								'[&_li]:py-1.5 [&_li]:px-3 [&_li]:rounded-2xl [&_li]:bg-stone-700 [&_li]:text-xs',
+								'[&_li]:md:gap-1.5 [&_li]:md:px-3 [&_li]:md:text-sm'
+							)}
+						>
 							<div class="grow">
 								<h3 class={styles.h3}>
 									{teamMember.fullName}
