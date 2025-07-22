@@ -18,6 +18,7 @@
 		"HRIS",
 		"insightsoftware",
 		"KPMG",
+		"lastmod",
 		"lifecycles",
 		"Mudrow",
 		"NASPP",
@@ -35,6 +36,7 @@
 		"sveltekit",
 		"swiper",
 		"transformative",
-		"Typekit"
+		"Typekit",
+		"urlset"
 	]
 }
