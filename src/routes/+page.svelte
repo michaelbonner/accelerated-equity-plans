@@ -174,10 +174,10 @@
 			<div class="grid gap-2 max-w-2xl prose-white">
 				<h1 class={styles.h1Super}>Accelerate Your <wbr />Equity's Potential</h1>
 				<p class="mt-6 text-lg font-light leading-8 max-w-[660px]">
-					Bringing industry leading expertise and support to your equity programs to deliver a
-					best-in-class experience for your team, partners and participants. Founded by industry
+					Bringing industry-leading expertise and support to your equity programs to deliver a
+					best-in-class experience for your team, partners, and participants. Founded by industry
 					experts with issuer and vendor experience for both Private and Public organizations, we
-					can handle all of your Equity Administration needs
+					can handle all of your equity administration needs
 				</p>
 				<div class="flex gap-x-4 mt-8">
 					<a href="/contact" class={styles.darkButton}> Contact us today </a>
