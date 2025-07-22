@@ -10,6 +10,7 @@
 	import { FaRectangleList } from 'svelte-icons-pack/fa';
 	import { IoPeople } from 'svelte-icons-pack/io';
 	import { leadershipTeam } from '$lib/data/leadershipTeam';
+	import { reviews } from '$lib/reviews';
 
 	onMount(() => {
 		document.querySelectorAll('link[rel="preload"]').forEach((link) => {
@@ -50,32 +51,19 @@
 		return html.replace(/<[^>]*>?/gm, '');
 	}
 
-	const services = [
-		{
-			name: 'Stock Plan Administration',
-			description:
-				'We provide comprehensive stock plan administration services to help you manage your equity compensation programs efficiently and compliantly.'
-		},
-		{
-			name: 'Equity Plan Strategy & Design',
-			description:
-				'We help you design and implement equity compensation programs that align with your business goals and employee needs.'
-		},
-		{
-			name: 'Employee Communication',
-			description:
-				'We help you communicate equity compensation programs to your employees in a way that is clear and effective.'
-		}
-	];
-
 	const jsonLD = () => {
 		return [
 			{
 				'@context': 'https://schema.org',
 				'@type': 'Organization',
 				name: 'Accelerated Equity Plans',
-				url: 'https://www.acceleratedequityplans.com',
-				logo: 'https://www.acceleratedep.com/images/brand/aep-logo.svg'
+				url: 'https://www.acceleratedep.com',
+				description:
+					'Accelerated Equity Plans provides expert equity plan administration, consulting, and outsourcing services for private and public companies.',
+				logo: 'https://www.acceleratedep.com/images/brand/aep-logo.svg',
+				email: 'info@acceleratedep.com',
+				telephone: '+1-801-808-6238',
+				sameAs: ['https://www.linkedin.com/company/accelerated-equity-plans/']
 			},
 
 			...leadershipTeam.map((member) => ({
@@ -83,7 +71,8 @@
 				'@context': 'https://schema.org',
 				name: member.fullName,
 				image: member.imageSrc.img.src,
-				description: stripHtmlTags(member.body)
+				description: stripHtmlTags(member.body),
+				sameAs: [member.linkedInLink]
 			})),
 
 			// equity plan administration
@@ -98,7 +87,7 @@
 				description:
 					'Specialized services in stock plan administration, including grant lifecycle management, employee education, outsourced administration, and temporary support for equity plans.',
 				serviceType: 'Equity Plan Administration',
-				areaServed: 'Global',
+				areaServed: 'United States',
 				hasOfferCatalog: {
 					'@type': 'OfferCatalog',
 					name: 'Equity Plan Administration Services',
@@ -153,7 +142,7 @@
 				description:
 					'Expert support for equity system vendors, including system implementation, data management, RFP guidance, and functionality testing.',
 				serviceType: 'Vendor Support',
-				areaServed: 'Global',
+				areaServed: 'United States',
 				hasOfferCatalog: {
 					'@type': 'OfferCatalog',
 					name: 'Vendor Support Services',
@@ -205,7 +194,7 @@
 				description:
 					'Comprehensive support for strategic transactions, equity events, plan modifications, automation, global mobility, and system integrations.',
 				serviceType: 'Advanced Project Support',
-				areaServed: 'Global',
+				areaServed: 'United States',
 				hasOfferCatalog: {
 					'@type': 'OfferCatalog',
 					name: 'Advanced Project Support Services',
@@ -258,7 +247,7 @@
 				description:
 					'Expert guidance and solutions for stock plan design, implementation, management, and compliance for private and public companies.',
 				serviceType: 'Plan & Process Design',
-				areaServed: 'Global',
+				areaServed: 'United States',
 				hasOfferCatalog: {
 					'@type': 'OfferCatalog',
 					name: 'Plan & Process Design Services',
@@ -313,7 +302,7 @@
 				description:
 					'A range of additional services including IPO and SPAC support, corporate actions, automation, tax and mobility, system implementation, vendor selection, process review, training, and education.',
 				serviceType: 'Equity Consulting',
-				areaServed: 'Global',
+				areaServed: 'United States',
 				hasOfferCatalog: {
 					'@type': 'OfferCatalog',
 					name: 'Additional Services',
@@ -401,7 +390,23 @@
 						}
 					]
 				}
-			}
+			},
+
+			// reviews
+			...reviews.map((review) => ({
+				'@type': 'Review',
+				reviewBody: review.reviewText,
+				author: {
+					'@type': 'Person',
+					name: review.name,
+					title: review.title
+				},
+				reviewRating: {
+					'@type': 'Rating',
+					ratingValue: 5,
+					bestRating: '5'
+				}
+			}))
 		];
 	};
 </script>
