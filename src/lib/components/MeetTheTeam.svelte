@@ -253,7 +253,7 @@
 			</div>
 		</div>
 
-		<div class="grid gap-6 md:grid-cols-3">
+		<div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
 			{#each leadershipTeam as teamMember}
 				<div class={clsx(styles.blueRedGradientBackground, styles.cardHover, 'group')}>
 					<div class="flex flex-col gap-4 justify-start p-8 h-full bg-black rounded-lg [&_ul]:mb-8">

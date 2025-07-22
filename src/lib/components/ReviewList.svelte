@@ -41,7 +41,7 @@
 	};
 </script>
 
-<div class="mt-12 mx-18">
+<div class="mt-12 lg:mx-18">
 	<div class="relative" bind:this={swiperContainer}>
 		<div class="swiper-wrapper">
 			{#each reviews as review}
