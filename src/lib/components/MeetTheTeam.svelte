@@ -1,235 +1,9 @@
-<script>
+<script lang="ts">
+	import { leadershipTeam } from '$lib/data/leadershipTeam';
 	import { styles } from '$lib/styles';
 	import { clsx } from 'clsx';
-	import AaronHeadShot from '../images/head-shots/aaron-head-shot.jpg?enhanced';
-	import BarbaraHeadShot from '../images/head-shots/barbara-head-shot.jpg?enhanced';
-	import EmHeadShot from '../images/head-shots/emily-head-shot.jpg?enhanced';
-	import GraceHeadShot from '../images/head-shots/grace-head-shot.jpg?enhanced';
-	import JoshHeadShot from '../images/head-shots/josh-head-shot.jpg?enhanced';
-	import JordanHeadShot from '../images/head-shots/jordan-head-shot.jpg?enhanced';
-	import NeilHeadShot from '../images/head-shots/neil-head-shot.jpg?enhanced';
-	import ZakHeadShot from '../images/head-shots/zak-head-shot.jpg?enhanced';
 	import RedBar from './RedBar.svelte';
 	import LinkedIn from './icons/LinkedIn.svelte';
-
-	const leadershipTeam = [
-		{
-			fullName: 'Emily Bone, MBA, CEP',
-			shortName: 'Emily',
-			imageSrc: EmHeadShot,
-			imageAlt: 'Emily Bone',
-			body: `
-			<div>
-				<h4>Specialties</h4>
-				<ul>
-					<li>Private & Public Equity Plans</li>
-					<li>IPOs Readiness</li>
-					<li>Equity Administration & Process Design</li>
-					<li>M&A Execution</li>
-					<li>Specialized Projects</li>
-				</ul>
-				
-				<p>
-					With over 15 years of experience in the equity compensation industry—working with both issuers and administration vendors—Emily Bone has developed deep expertise across private and public equity plans. Throughout her career, she has worn many hats, giving her a well-rounded understanding of the challenges equity professionals face, especially those navigating their roles as a team of one.
-				</p>
-				<p>
-					Her growing desire to support professionals who often had nowhere to turn led to the creation of AEP. At AEP, Emily and her team go beyond traditional consulting, becoming a true extension of their clients’ teams—a dependable partner who is with them every step of the way.
-				</p>
-				<p>
-					Outside of work, Emily loves spending time outdoors camping, biking, and kayaking with her spouse, family, and friends. She is always up for a scenic drive and a new place to explore.
-				</p>
-			</div>
-			`,
-			linkedInLink: 'https://www.linkedin.com/in/emily-bone-mba-cep/'
-		},
-		{
-			fullName: 'Neil Birrell, CEP',
-			shortName: 'Neil',
-			imageSrc: NeilHeadShot,
-			imageAlt: 'Neil Birrell',
-			body: `
-			<div>
-				<h4>Specialties</h4>
-				<ul>
-					<li>Global compliance</li>
-					<li>Global tax and mobility</li>
-					<li>3rd party system integrations</li>
-					<li>Vendor selection</li>
-					<li>Implementation</li>
-					<li>Specialized projects</li>
-				</ul>
-
-				<p>
-					Neil Birrell is Partner at Accelerated Equity Plans. In his 20 years in equity compensation, Neil has served both private and public organizations in the administration, financial reporting, payroll, HR and tax implications of equity compensation. In his role, Neil specializes in standing up processes to help companies administer, integrate and automate these important functions.
-				</p>
-				<p>
-					Previous to AEP, Neil worked at Deloitte in their equity and incentives practice and at E*TRADE Corporate Services. He has presented on topics ranging from employee communications, process improvement, financial reporting, global compliance and taxation, and industry trends. Neil holds a BS in Finance from the University of Utah and is a Certified Equity Professional (CEP).
-				</p>
-			</div>
-			`,
-			linkedInLink: 'https://www.linkedin.com/in/neil-birrell-cep-0985185/'
-		},
-		{
-			fullName: 'Aaron Rosser, CEP',
-			shortName: 'Aaron',
-			imageSrc: AaronHeadShot,
-			imageAlt: 'Aaron Rosser',
-			body: `
-			<div>
-				<h4>Specialties</h4>
-				<ul>
-					<li>Business Development</li>
-					<li>Employee Education</li>
-					<li>Equity Plan Execution</li>
-					<li>Process Improvement and Efficiency</li>
-				</ul>
-
-				<p>
-					Aaron Rosser is the Director of Business Development and Equity Consultant for Accelerated Equity Plans (AEP), where he is responsible for growth and building strong relationships with clients. He has worked on both the broker and issuer sides of equity compensation. His issuer roles include the Sr. Stock Plan Administrator at Unity Technologies and the Head of Global Equity at Sonder Holdings Inc. prior to joining AEP. He has led many employee-focused tax and education sessions for employees around the globe.
-				</p>
-				<p>
-					Before his issuer experience, he has worked with many multinational companies in his time as a Service Manager at E*TRADE by Morgan Stanley, Fidelity Investments, and he spent years in Stock Plan Services at legacy Morgan Stanley Smith Barney.
-				</p>
-			</div>
-			`,
-			linkedInLink: 'https://www.linkedin.com/in/aaron-rosser-cep-1604924a/'
-		},
-		{
-			fullName: 'Zak Mudrow, MBA, CEP',
-			title: '',
-			shortName: 'Zak',
-			imageSrc: ZakHeadShot,
-			imageAlt: 'Zak Mudrow',
-			body: `
-			<div>
-				<h4>Specialties</h4>
-				<ul>
-					<li>Equity plan administration: RSU/RSA, performance awards, ESPP, Phantom Stock</li>
-					<li>Unique solutions to complex equity management scenarios</li>
-					<li>Financial Reporting and Reconciliation</li>
-					<li>Employee Education</li>
-					<li>Corporate Actions</li>
-				</ul>
-
-				<p>
-					Zak Mudrow is an experienced equity compensation professional with a background that includes working with industry leaders like E*TRADE and Computershare, as well as supporting a variety of companies in both consulting and in-house roles. He is passionate about delivering practical, impactful solutions in equity plan management and helping teams navigate complex compensation strategies.
-				</p>
-				<p>
-					Outside of work, Zak enjoys coaching youth sports and staying active through tennis, basketball, pickleball, and mountain biking. He is also a big sneaker fan and values spending quality time with his wife and their four kids.
-				</p>
-			</div>
-			`,
-			linkedInLink: 'https://www.linkedin.com/in/zak-mudrow-mba-cep-359aba31/'
-		},
-		{
-			fullName: 'Barbara Gunnufson',
-			title: '',
-			shortName: 'Barbara',
-			imageSrc: BarbaraHeadShot,
-			imageAlt: 'Barbara Gunnufson',
-			body: `
-			<div>
-				<h4>Specialties</h4>
-				<ul>
-					<li>Equity Edge Online</li>
-					<li>Process optimization</li>
-					<li>System integrations</li>
-					<li>IPO preparation</li>
-				</ul>
-
-				<p>
-					Barbara has been in equity compensation for over 13 years, with a background in payroll management prior to that. She has spent time as a consultant with E*TRADE and as an in-house stock administrator with multiple issuers. Her shining star moment was working at a private tech company and building a public company equity program from the ground up, for their IPO. 
-				</p>
-				<p>
-					Barbara has been serving on the NASPP Denver chapter board for nearly ten years. Additionally, she has spoken at many conferences including NASPP, Directions/Thrive, American Payroll Association and Equilar. Barbara is a social butterfly. Don’t be surprised to see her dancing the night away at various industry events. In her spare time, Barbara loves to travel and listen to live music.
-				</p>
-			</div>
-			`,
-			linkedInLink: 'https://www.linkedin.com/in/barbara-g-42088515/'
-		},
-		{
-			fullName: 'Josh Ludlow, CEP',
-			title: '',
-			shortName: 'Josh',
-			imageSrc: JoshHeadShot,
-			imageAlt: 'Josh Ludlow',
-			body: `
-			<div>
-				<h4>Specialties</h4>
-				<ul>
-					<li>Equity Plan Administration</li>
-					<li>Process Improvement and Automation</li>
-					<li>IPO Readiness</li>
-					<li>Private and Public Equity Programs</li>
-					<li>Custom Reporting and Reconciliation</li>
-				</ul>
-
-				<p>
-					Josh Ludlow is an equity compensation consultant with a background in scaling and automating stock plan administration for both high-growth startups and established private companies. After several years in the industry, he joined Accelerated Equity Plans in 2024, where he helps clients implement streamlined, compliant, and people-friendly equity programs.	
-				</p>
-				<p>
-					Prior to consulting, Josh held in-house roles supporting equity and compensation functions, giving him a practical, end-to-end understanding of equity lifecycle management. He enjoys solving complex equity puzzles and partnering with clients to make stock plans work better for everyone involved.
-				</p>
-				<p>
-					Outside of work, Josh is a proud dad to a toddler and welcomed their 2nd baby in June of 2025. When he’s not decoding RSUs and ESPPs, he’s focused on family life, finding time for golf and basketball, and occasionally losing sleep over Utah Jazz scores.
-				</p>
-			</div>
-			`,
-			linkedInLink: 'https://www.linkedin.com/in/joshludlowcep/'
-		},
-		{
-			fullName: 'Grace Segui, CEP',
-			title: '',
-			shortName: 'Grace',
-			imageSrc: GraceHeadShot,
-			imageAlt: 'Grace Segui',
-			body: `
-			<div>
-				<h4>Specialties</h4>
-				<ul>
-					<li>End-to-End Stock Plan Administration</li>
-					<li>Equity Plan Strategy & Design</li>
-					<li>Employee Communication</li>
-					<li>Training</li>
-					<li>Cross-Functional & External Stakeholder Collaboration</li>
-				</ul>
-				<p>
-					Grace Segui began her journey in Equity Compensation in 2003 on the front lines of customer service, guiding individuals through stock option exercises and trade execution. Her hands-on experience grew as she joined the training team, where she helped educate others on the complexities of equity plans. By 2007, she stepped into the role of Client Service Manager, deepening her expertise and sharpening her client-focused approach.
-				</p>
-				<p>
-					In the next chapter of her career, she transitioned to the issuer side, serving as Stock Plan Administrator at Activision Blizzard for seven years—gaining invaluable insight into the internal mechanics of plan management at a dynamic, high-growth company. Now in her third decade in Equity Compensation, Grace serves as a Consulting Director at AEP, partnering with clients to design, optimize, and elevate their equity programs with both strategic insight and practical experience.
-				</p>
-			</div>
-			`,
-			linkedInLink: 'https://www.linkedin.com/in/gsegui/'
-		},
-		{
-			fullName: 'Jordan Sims, CEP',
-			title: '',
-			shortName: 'Jordan',
-			imageSrc: JordanHeadShot,
-			imageAlt: 'Jordan Sims',
-			body: `
-			<div>
-				<h4>Specialties</h4>
-				<ul>
-					<li>Process Strategy and Implementation</li>
-					<li>Equity Compensation and Analysis</li>
-					<li>Shareworks Specialist</li>
-					<li>Risk Analysis and Improvements</li>
-					<li>Project Management</li>
-				</ul>
-				<p>
-					Jordan has worked in finance for the past 12 years. Starting at Jordan Credit Union (yes, he was Jordan from Jordan Credit Union) to working within the equity compensation industry over the last 4 years, he has experienced a wide breadth of personal finance, specializing in Private Market equity compensation as a Client Success Manager and a Secondaries Transactions Specialist.
-				</p>
-				<p>
-					Jordan specializes in finding ways to build and improve process enhancements and excels in finding ways to work smarter rather than harder. As a Morgan Stanley CSM, he spent his time as the primary dedicated CSM for various high profile franchise clients. He specializes in RSU Releases, Administration Setup, and many other areas within the Equity Atmosphere. Jordan is based in Saratoga Springs, Utah, and in his free time he loves spending time with his wife and two daughters. If you bring up baseball with him... just be aware you won't be able to leave the conversation at a reasonable time!
-				</p>
-			</div>
-			`,
-			linkedInLink: 'https://www.linkedin.com/in/jordan-sims-financial-services/'
-		}
-	];
 </script>
 
 <section
@@ -266,18 +40,26 @@
 							loading="lazy"
 							src={teamMember.imageSrc}
 						/>
-						<div
-							class={clsx(
-								'flex flex-col grow prose prose-invert',
-								'[&_ul]:mb-8 [&_ul]:flex [&_ul]:flex-wrap [&_ul]:gap-x-1.5 [&_ul]:pl-0 [&_ul]:list-none',
-								'[&_li]:py-1.5 [&_li]:px-3 [&_li]:rounded-2xl [&_li]:bg-stone-700 [&_li]:text-xs',
-								'[&_li]:md:gap-1.5 [&_li]:md:px-3 [&_li]:md:text-sm'
-							)}
-						>
+						<div class={clsx('flex flex-col grow prose prose-invert')}>
 							<div class="grow">
 								<h3 class={styles.h3}>
 									{teamMember.fullName}
 								</h3>
+								<div class="font-light">
+									<h4>Specialties</h4>
+									<ul class="mb-8 flex flex-wrap gap-x-1.5 pl-0 list-none">
+										{#each teamMember.specialties as specialty}
+											<li
+												class={clsx(
+													'py-1.5 px-3 rounded-2xl bg-stone-700 text-xs',
+													'md:gap-1.5 md:px-3 md:text-sm'
+												)}
+											>
+												{specialty}
+											</li>
+										{/each}
+									</ul>
+								</div>
 								<div class="font-light">
 									{@html teamMember.body}
 								</div>
