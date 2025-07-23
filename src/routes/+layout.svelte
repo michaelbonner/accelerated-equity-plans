@@ -67,6 +67,8 @@
 				addressCountry: 'US'
 			},
 			logo: 'https://www.acceleratedep.com/images/brand/aep-logo.svg',
+			image: 'https://www.acceleratedep.com/images/og-image.jpg',
+			priceRange: '$$$',
 			email: 'info@acceleratedep.com',
 			telephone: '+1-801-808-6238',
 			sameAs: ['https://www.linkedin.com/company/accelerated-equity-plans/'],
