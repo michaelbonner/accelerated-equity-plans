@@ -397,6 +397,12 @@
 				'@context': 'https://schema.org',
 				'@type': 'Review',
 				reviewBody: review.reviewText,
+				itemReviewed: {
+					'@context': 'https://schema.org',
+					'@type': 'Organization',
+					name: 'Accelerated Equity Plans',
+					sameAs: 'https://www.acceleratedep.com'
+				},
 				author: {
 					'@type': 'Person',
 					name: review.name,
