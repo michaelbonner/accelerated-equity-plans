@@ -54,11 +54,18 @@
 	const jsonLD = () => {
 		return {
 			'@context': 'https://schema.org',
-			'@type': 'Organization',
+			'@type': ['Organization', 'LocalBusiness'],
 			name: 'Accelerated Equity Plans',
 			url: 'https://www.acceleratedep.com',
 			description:
 				'Accelerated Equity Plans provides expert equity plan administration, consulting, and outsourcing services for private and public companies.',
+			address: {
+				'@type': 'PostalAddress',
+				addressLocality: 'Salt Lake City',
+				addressRegion: 'UT',
+				postalCode: '84101',
+				addressCountry: 'US'
+			},
 			logo: 'https://www.acceleratedep.com/images/brand/aep-logo.svg',
 			email: 'info@acceleratedep.com',
 			telephone: '+1-801-808-6238',
