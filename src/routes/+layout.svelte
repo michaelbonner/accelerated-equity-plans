@@ -54,7 +54,7 @@
 	const jsonLD = () => {
 		return {
 			'@context': 'https://schema.org',
-			'@type': ['Organization', 'LocalBusiness'],
+			'@type': 'Organization',
 			name: 'Accelerated Equity Plans',
 			url: 'https://www.acceleratedep.com',
 			description:
