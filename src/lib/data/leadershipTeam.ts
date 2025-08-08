@@ -108,7 +108,7 @@ export const leadershipTeam = [
 		linkedInLink: 'https://www.linkedin.com/in/zak-mudrow-mba-cep-359aba31/'
 	},
 	{
-		fullName: 'Barbara Gunnufson',
+		fullName: 'Barbara Gunnufson, CEP',
 		shortName: 'Barbara',
 		imageSrc: BarbaraHeadShot,
 		imageAlt: 'Barbara Gunnufson',
