@@ -8,7 +8,7 @@
 		roboto, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
 		'Segoe UI Symbol', 'Noto Color Emoji';
 	--font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
-	--font-eurostile: eurostile, ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+	--font-eurostile: 'eurostile', 'fallback for eurostile', ui-serif;
 
 	--color-aep-red-50: #fdf3f3;
 	--color-aep-red-100: #fde3e4;
@@ -282,6 +282,13 @@
 		font-family: 'roboto', sans-serif;
 	}
 	.tk-eurostile {
-		font-family: 'eurostile', sans-serif;
+		font-family: 'eurostile', 'fallback for eurostile', sans-serif;
+	}
+
+	@font-face {
+		font-family: 'fallback for eurostile';
+		src: local('Tahoma');
+		ascent-override: 80%;
+		size-adjust: 94%;
 	}
 }
