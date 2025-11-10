@@ -1,4 +1,7 @@
 <script lang="ts">
+	import '@fontsource-variable/roboto';
+	import '@fontsource-variable/archivo';
+
 	import '../app.css';
 
 	import Footer from '$lib/components/footer.svelte';

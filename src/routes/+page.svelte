@@ -171,7 +171,7 @@
 
 		<!-- Should be foreground div in same container -->
 		<div class={clsx('relative z-10 h-full', 'sm:px-8')}>
-			<div class="grid gap-2 max-w-2xl prose-white">
+			<div class="grid gap-2 max-w-[48rem] prose-white">
 				<h1 class={styles.h1Super}>Accelerate Your <wbr />Equity's Potential</h1>
 				<p class="mt-6 text-lg font-light leading-8 max-w-[660px]">
 					Bringing industry-leading expertise and support to your equity programs to deliver a

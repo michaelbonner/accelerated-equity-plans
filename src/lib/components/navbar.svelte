@@ -112,7 +112,7 @@
 							<a
 								href={navLink.href}
 								class={clsx(
-									'flex items-center gap-6 py-3 leading-7 text-aep-red-100 text-xl font-eurostile px-4 rounded-xl',
+									'flex items-center gap-6 py-3 leading-7 text-aep-red-100 text-xl font-headings px-4 rounded-xl',
 									$page.url.pathname === navLink.href && 'bg-aep-red-800',
 									'hover:bg-aep-red-600'
 								)}
