@@ -1,8 +1,12 @@
 import { partytownVite } from '@qwik.dev/partytown/utils';
 import { enhancedImages } from '@sveltejs/enhanced-img';
 import { sveltekit } from '@sveltejs/kit/vite';
-import { join } from 'path';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
 import tailwindcss from '@tailwindcss/vite';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 /** @type {import('vite').UserConfig} */
 const config = {
