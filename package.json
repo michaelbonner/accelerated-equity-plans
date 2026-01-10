@@ -13,19 +13,19 @@
 		"out": "bun outdated"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-vercel": "^6.2.0",
+		"@sveltejs/adapter-vercel": "^6.3.0",
 		"@sveltejs/enhanced-img": "^0.9.2",
-		"@sveltejs/kit": "^2.49.2",
-		"@sveltejs/vite-plugin-svelte": "^6.2.1",
+		"@sveltejs/kit": "^2.49.4",
+		"@sveltejs/vite-plugin-svelte": "^6.2.4",
 		"@tailwindcss/postcss": "^4.1.18",
 		"@tailwindcss/typography": "^0.5.19",
 		"@types/gtag.js": "^0.0.20",
-		"@types/node": "^25.0.3",
-		"@typescript-eslint/eslint-plugin": "^8.50.1",
-		"@typescript-eslint/parser": "^8.50.1",
+		"@types/node": "^25.0.5",
+		"@typescript-eslint/eslint-plugin": "^8.52.0",
+		"@typescript-eslint/parser": "^8.52.0",
 		"eslint": "^9.39.2",
 		"eslint-config-prettier": "^10.1.8",
-		"eslint-plugin-svelte": "^3.13.1",
+		"eslint-plugin-svelte": "^3.14.0",
 		"postcss": "^8.5.6",
 		"prettier": "^3.7.4",
 		"prettier-plugin-svelte": "^3.4.1",
@@ -36,7 +36,7 @@
 		"tailwindcss": "^4.1.18",
 		"tslib": "^2.8.1",
 		"typescript": "^5.9.3",
-		"vite": "^7.3.0"
+		"vite": "^7.3.1"
 	},
 	"type": "module",
 	"dependencies": {
