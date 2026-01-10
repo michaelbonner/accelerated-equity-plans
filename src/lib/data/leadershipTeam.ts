@@ -6,7 +6,6 @@ import GraceHeadShot from '../images/head-shots/grace-head-shot.jpg?enhanced';
 import JoshHeadShot from '../images/head-shots/josh-head-shot.jpg?enhanced';
 import JordanHeadShot from '../images/head-shots/jordan-head-shot.jpg?enhanced';
 import NeilHeadShot from '../images/head-shots/neil-head-shot.jpg?enhanced';
-import ZakHeadShot from '../images/head-shots/zak-head-shot.jpg?enhanced';
 
 export const leadershipTeam = [
 	{
@@ -84,30 +83,7 @@ export const leadershipTeam = [
         `,
 		linkedInLink: 'https://www.linkedin.com/in/aaron-rosser-cep-1604924a/'
 	},
-	{
-		fullName: 'Zak Mudrow, MBA, CEP',
-		shortName: 'Zak',
-		imageSrc: ZakHeadShot,
-		imageAlt: 'Zak Mudrow',
-		specialties: [
-			'Equity plan administration: RSU/RSA, performance awards, ESPP, Phantom Stock',
-			'Unique solutions to complex equity management scenarios',
-			'Financial Reporting and Reconciliation',
-			'Employee Education',
-			'Corporate Actions'
-		],
-		body: `
-        <div>
-            <p>
-                Zak Mudrow is an experienced equity compensation professional with a background that includes working with industry leaders like E*TRADE and Computershare, as well as supporting a variety of companies in both consulting and in-house roles. He is passionate about delivering practical, impactful solutions in equity plan management and helping teams navigate complex compensation strategies.
-            </p>
-            <p>
-                Outside of work, Zak enjoys coaching youth sports and staying active through tennis, basketball, pickleball, and mountain biking. He is also a big sneaker fan and values spending quality time with his wife and their four kids.
-            </p>
-        </div>
-        `,
-		linkedInLink: 'https://www.linkedin.com/in/zak-mudrow-mba-cep-359aba31/'
-	},
+
 	{
 		fullName: 'Barbara Gunnufson, CEP',
 		shortName: 'Barbara',
