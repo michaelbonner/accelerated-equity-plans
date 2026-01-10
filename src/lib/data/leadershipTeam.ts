@@ -1,5 +1,6 @@
 import AaronHeadShot from '../images/head-shots/aaron-head-shot.jpg?enhanced';
 import BarbaraHeadShot from '../images/head-shots/barbara-head-shot.jpg?enhanced';
+import KaelynnHeadShot from '../images/head-shots/kaelynn-head-shot.jpg?enhanced';
 import EmHeadShot from '../images/head-shots/emily-head-shot.jpg?enhanced';
 import GraceHeadShot from '../images/head-shots/grace-head-shot.jpg?enhanced';
 import JoshHeadShot from '../images/head-shots/josh-head-shot.jpg?enhanced';
@@ -180,5 +181,32 @@ export const leadershipTeam = [
         </div>
         `,
 		linkedInLink: 'https://www.linkedin.com/in/jordan-sims-financial-services/'
+	},
+
+	{
+		fullName: 'Kaelynn Jones, CEP',
+		shortName: 'Kaelynn',
+		imageSrc: KaelynnHeadShot,
+		imageAlt: 'Kaelynn Jones',
+		specialties: [
+			'Equity Plan Administration',
+			'Payroll Reporting',
+			'International Tax Filing',
+			'Custom Workflow Development'
+		],
+		body: `
+        <div>
+            <p>
+                Kaelynn went to school at the University of Utah for Chemical Engineering but found she was more passionate about Finance. She has 7 years of experience in the finance industry, 6 of which have been dedicated to equity compensation. Her career began at E*Trade in Customer Service before transitioning into an Equity Compensation Customer Success Manager role.
+			</p>
+			<p>
+				Most recently, she spent over 3 years as the Senior Stock Administrator at Veeva Systems. Her specialties at Veeva included grant issuances, international tax filings, Form 4 filings, and payroll reporting. She was also heavily involved with RSU releases and daily transaction processing. Kaelynn consistently prioritizes organization and accuracy. At her time with Veeva, she created and managed workflows to streamline and enhance operational efficiency.
+			</p>
+			<p>
+				Originally from Indiana, Kaelynn has called Utah home since 2011 and is currently based in Saratoga Springs. Her passions include gardening, watching sports, and most of all, traveling. Every country she travels to becomes a new favorite, but Belgium and Japan will forever remain the closest to her heart.
+            </p>
+        </div>
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/kaelynn-jones-228660219/'
 	}
 ];
