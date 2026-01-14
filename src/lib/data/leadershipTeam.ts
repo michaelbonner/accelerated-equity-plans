@@ -1,5 +1,6 @@
 import AaronHeadShot from '../images/head-shots/aaron-head-shot.jpg?enhanced';
 import BarbaraHeadShot from '../images/head-shots/barbara-head-shot.jpg?enhanced';
+import CamHeadShot from '../images/head-shots/cam-head-shot.jpg?enhanced';
 import KaelynnHeadShot from '../images/head-shots/kaelynn-head-shot.jpg?enhanced';
 import EmHeadShot from '../images/head-shots/emily-head-shot.jpg?enhanced';
 import GraceHeadShot from '../images/head-shots/grace-head-shot.jpg?enhanced';
@@ -208,5 +209,32 @@ export const leadershipTeam = [
         </div>
         `,
 		linkedInLink: 'https://www.linkedin.com/in/kaelynn-jones-228660219/'
+	},
+
+	{
+		fullName: 'Cam Cazier, CEP',
+		shortName: 'Cam',
+		imageSrc: CamHeadShot,
+		imageAlt: 'Cam Cazier',
+		specialties: [
+			'Customer Service',
+			'Project Management',
+			'Employee Education',
+			'Attention to Detail'
+		],
+		body: `
+        <div>
+            <p>
+                With over 12 years of experience in legal/litigation services industry, Cam has worked in various roles supporting clients, managing production teams, and ensuring exceptional service delivery and throughout his career, he has developed a passion for process improvement, client relationships, and bridging the gap between operational efficiency and client satisfaction. 
+			</p>
+			<p>
+				Now, as a Client Consultant, he is looking forward to bringing the same level of dedication, precision, and client-centered mindset to AEP!
+			</p>
+			<p>
+				When free time allows, you can find Cam at a concert, cheering for his favorite sports teams, or spending time with his wife and dog - music, sports, and family time keep him grounded and inspired.
+            </p>
+        </div>
+        `,
+		linkedInLink: 'https://www.linkedin.com/'
 	}
 ];
