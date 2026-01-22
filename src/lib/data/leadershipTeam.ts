@@ -235,6 +235,6 @@ export const leadershipTeam = [
             </p>
         </div>
         `,
-		linkedInLink: 'https://www.linkedin.com/'
+		linkedInLink: 'http://www.linkedin.com/in/cameron-cazier-1008523a7'
 	}
 ];
