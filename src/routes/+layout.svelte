@@ -486,17 +486,6 @@
 		gtag('config', 'G-252472179V');
 	</script>
 
-	<script type="text/partytown">
-		window.$zoho = window.$zoho || {};
-		$zoho.salesiq = $zoho.salesiq || { ready: function () {} };
-	</script>
-	<script
-		id="zsiqscript"
-		type="text/partytown"
-		src="https://salesiq.zohopublic.com/widget?wc=siq85f2cc5e85be63b478f1633c4f4974813067c184e55515eed358f959308147f20e7787ecd4be340b53eddbac96375ed7"
-		defer
-	></script>
-
 	{@html `<script type="application/ld+json">${JSON.stringify(jsonLD())}</script>`}
 </svelte:head>
 
