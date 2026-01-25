@@ -56,4 +56,8 @@
 	.font-headings {
 		font-family: var(--font-headings);
 	}
+
+	button {
+		@apply cursor-pointer;
+	}
 }
