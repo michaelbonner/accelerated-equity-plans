@@ -177,7 +177,7 @@
 		<div class={clsx('relative grid gap-8', 'md:text-center')}>
 			<div class="grid gap-4">
 				<RedBar classes="md:mx-auto" />
-				<h1 class={clsx(styles.h1, 'text-white')}>Vendor Support</h1>
+				<h1 class={clsx(styles.h1, 'text-white')}>Equity Management Vendor Support Services</h1>
 			</div>
 			<p class="mx-auto max-w-3xl text-lg font-light text-white">
 				Maximize the value of your equity management platform. From vendor selection and

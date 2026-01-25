@@ -197,7 +197,7 @@
 		<div class={clsx('relative grid gap-8', 'md:text-center')}>
 			<div class="grid gap-4">
 				<RedBar classes="md:mx-auto" />
-				<h1 class={clsx(styles.h1, 'text-white')}>Advanced Project Support</h1>
+				<h1 class={clsx(styles.h1, 'text-white')}>Advanced Equity Project Support Services</h1>
 			</div>
 			<p class="mx-auto max-w-3xl text-lg font-light text-white">
 				Navigate complex equity projects with confidence. From IPOs and M&A to automation and global
