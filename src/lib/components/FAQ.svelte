@@ -64,14 +64,18 @@
 						<h3 class={clsx(styles.h4, 'text-stone-900 pr-4')}>{faq.question}</h3>
 						<svg
 							class={clsx(
-								'w-6 h-6 flex-shrink-0 transition-transform text-red-700',
+								'w-6 h-6 shrink-0 transition-transform text-red-700',
 								openIndex === index ? 'rotate-180' : ''
 							)}
 							fill="none"
 							stroke="currentColor"
 							viewBox="0 0 24 24"
 						>
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M19 9l-7 7-7-7"
 							></path>
 						</svg>
 					</button>

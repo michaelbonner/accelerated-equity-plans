@@ -58,6 +58,12 @@
 		if ($navigating) {
 			mobileMenuOpen = false;
 			mobileServicesOpen = false;
+			openDesktopDropdown = null;
+			// Clear any pending close timeout
+			if (closeTimeout) {
+				clearTimeout(closeTimeout);
+				closeTimeout = null;
+			}
 		}
 	});
 </script>
