@@ -57,7 +57,11 @@
 		font-family: var(--font-headings);
 	}
 
-	button {
+	button:not(:disabled):not([aria-disabled='true']) {
 		@apply cursor-pointer;
+	}
+	button:disabled,
+	button[aria-disabled='true'] {
+		@apply cursor-not-allowed;
 	}
 }
