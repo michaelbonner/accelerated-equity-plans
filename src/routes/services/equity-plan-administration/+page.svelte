@@ -164,7 +164,7 @@
 		<div class={clsx('relative grid gap-8', 'md:text-center')}>
 			<div class="grid gap-4">
 				<RedBar classes="md:mx-auto" />
-				<h1 class={clsx(styles.h1, 'text-white')}>Equity Plan Administration</h1>
+				<h1 class={clsx(styles.h1, 'text-white')}>Expert Equity Plan Administration Services</h1>
 			</div>
 			<p class="mx-auto max-w-3xl text-lg font-light text-white">
 				Expert administration services that simplify your equity compensation program. From grant

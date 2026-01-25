@@ -198,7 +198,7 @@
 		<div class={clsx('relative grid gap-8', 'md:text-center')}>
 			<div class="grid gap-4">
 				<RedBar classes="md:mx-auto" />
-				<h1 class={clsx(styles.h1, 'text-white')}>Plan & Process Design</h1>
+				<h1 class={clsx(styles.h1, 'text-white')}>Equity Plan & Process Design Services</h1>
 			</div>
 			<p class="mx-auto max-w-3xl text-lg font-light text-white">
 				Design and optimize your equity compensation program for maximum effectiveness. Strategic
