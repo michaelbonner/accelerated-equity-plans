@@ -442,7 +442,7 @@
 	<meta property="og:site_name" content="Accelerated Equity Plans" />
 	<meta property="og:type" content="website" />
 
-	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Accelerated Equity Plans" />
 	<meta
 		name="twitter:description"
