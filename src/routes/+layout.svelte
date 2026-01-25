@@ -30,7 +30,29 @@
 		{
 			name: 'Services',
 			href: '/services',
-			icon: BiCustomize
+			icon: BiCustomize,
+			subNav: [
+				{
+					name: 'Equity Plan Administration',
+					href: '/services/equity-plan-administration',
+					description: 'Comprehensive equity management and administration services'
+				},
+				{
+					name: 'Vendor Support',
+					href: '/services/vendor-support',
+					description: 'Expert support for equity management platforms'
+				},
+				{
+					name: 'Advanced Project Support',
+					href: '/services/advanced-project-support',
+					description: 'IPO, M&A, and complex equity project expertise'
+				},
+				{
+					name: 'Plan & Process Design',
+					href: '/services/plan-process-design',
+					description: 'Strategic design and optimization consulting'
+				}
+			]
 		},
 		{
 			name: 'About',

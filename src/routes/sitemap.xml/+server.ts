@@ -5,6 +5,10 @@ export async function GET() {
 	const pages = [
 		{ path: '/', priority: '1.0', changefreq: 'weekly' },
 		{ path: '/services', priority: '0.9', changefreq: 'monthly' },
+		{ path: '/services/equity-plan-administration', priority: '0.9', changefreq: 'monthly' },
+		{ path: '/services/vendor-support', priority: '0.9', changefreq: 'monthly' },
+		{ path: '/services/advanced-project-support', priority: '0.9', changefreq: 'monthly' },
+		{ path: '/services/plan-process-design', priority: '0.9', changefreq: 'monthly' },
 		{ path: '/about', priority: '0.8', changefreq: 'monthly' },
 		{ path: '/careers', priority: '0.7', changefreq: 'monthly' },
 		{ path: '/contact', priority: '0.7', changefreq: 'monthly' }

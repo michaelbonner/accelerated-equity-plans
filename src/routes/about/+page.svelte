@@ -16,6 +16,7 @@
 	<meta name="description" content={description} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
+	<meta property="og:image" content="https://www.acceleratedep.com/images/og-about-us.jpg" />
 	<link rel="canonical" href={`https://www.acceleratedep.com${path}`} />
 	<meta property="og:url" content={`https://www.acceleratedep.com${path}`} />
 </svelte:head>

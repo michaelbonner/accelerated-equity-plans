@@ -60,6 +60,7 @@
 			iconBackground: 'bg-red-700',
 			id: 'equity-plan-administration',
 			title: 'Equity Plan Administration',
+			detailsLink: '/services/equity-plan-administration',
 			body: '<p>Our specialized services in stock plan administration are crafted to address the unique needs of businesses seeking to streamline their equity management processes. Our team of dedicated professionals delivers tailored solutions that ensure regulatory compliance and seamless management of employee stock compensation programs. Trust AEP to handle the complexities of your stock plan administration, allowing you to focus on your core business objectives. </p>',
 			tags: [
 				'Outsourced administration',
@@ -74,6 +75,7 @@
 			iconBackground: 'bg-aep-teal',
 			id: 'vendor-support',
 			title: 'Vendor Support',
+			detailsLink: '/services/vendor-support',
 			body: "<p>Maximize the potential of your equity system with AEP's expert vendor support. Whether you aim to optimize your current equity administration platform or seek to find and implement a new one, AEP is here to help. We specialize in all vendor platforms and will guide you through finding, implementing, and optimizing the platform that best suits your needs.</p>",
 			tags: [
 				'Expedited system implementation',
@@ -88,6 +90,7 @@
 			iconBackground: 'bg-[#333536]',
 			id: 'advanced-project-support',
 			title: 'Advanced Project Support',
+			detailsLink: '/services/advanced-project-support',
 			body: '<p>AEP offers a comprehensive suite of services designed to empower businesses across various industries and lifecycles. Our focus on quality, integrity, and client satisfaction ensures that we partner effectively with businesses to navigate challenges, optimize operations, and unlock opportunities for long-term success.</p>',
 			tags: [
 				'Mergers & Acquisitions',
@@ -103,6 +106,7 @@
 			iconBackground: 'bg-aep-teal-dark',
 			id: 'plan-process-design',
 			title: 'Plan & Process Design',
+			detailsLink: '/services/plan-process-design',
 			body: '<p>AEP assists both private and public companies in their stock plan administration by providing expert guidance and comprehensive solutions. From the initial design and implementation of your equity plans to ongoing management and compliance, AEP has you covered.</p>',
 			tags: [
 				'Process review, enhancement, and documentation',
@@ -254,7 +258,7 @@
 								<svelte:component this={comprehensiveService.icon} class="size-6 text-white" />
 							</div>
 							<h3 class={clsx(styles.h3, 'text-white')}>
-								<a href={`/services#${comprehensiveService.id}`}>
+								<a href={comprehensiveService.detailsLink}>
 									{comprehensiveService.title}
 								</a>
 							</h3>
@@ -273,7 +277,7 @@
 													'md:gap-1.5 md:px-3 md:text-sm',
 													'hover:underline'
 												)}
-												href={`/services#${comprehensiveService.id}`}
+												href={comprehensiveService.detailsLink}
 											>
 												<span class="inline-block bg-red-700 rounded-full size-2 shrink-0"></span>
 												{tag}
@@ -283,7 +287,7 @@
 								</ul>
 							</div>
 							<div class="flex gap-x-4 mt-8">
-								<a href={`/services#${comprehensiveService.id}`} class={styles.darkButton}>
+								<a href={comprehensiveService.detailsLink} class={styles.darkButton}>
 									Learn More About AEP {comprehensiveService.title}
 								</a>
 							</div>
@@ -291,6 +295,12 @@
 					</div>
 				</div>
 			{/each}
+		</div>
+
+		<div class="relative flex justify-center mt-12">
+			<a href="/services" class={clsx(styles.redButton, 'inline-flex items-center gap-2')}>
+				View All Services
+			</a>
 		</div>
 	</section>
 

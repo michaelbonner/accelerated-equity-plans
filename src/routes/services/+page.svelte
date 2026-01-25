@@ -38,6 +38,7 @@
 			title: 'Equity Plan Administration',
 			body: '<p>Our specialized services in stock plan administration are crafted to address the unique needs of businesses seeking to streamline their equity management processes. Our team of dedicated professionals delivers tailored solutions that ensure regulatory compliance and seamless management of employee stock compensation programs. Trust AEP to handle the complexities of your stock plan administration, allowing you to focus on your core business objectives.</p>',
 			servicesBackgroundColor: 'bg-red-700',
+			detailsLink: '/services/equity-plan-administration',
 			services: [
 				{
 					icon: Bank,
@@ -67,6 +68,7 @@
 			title: 'Vendor Support',
 			body: "<p>Maximize the potential of your equity system with AEP's expert vendor support. Whether you aim to optimize your current equity administration platform or seek to find and implement a new one, AEP is here to help. We specialize in all vendor platforms and will guide you through finding, implementing, and optimizing the platform that best suits your needs.</p>",
 			servicesBackgroundColor: 'bg-aep-teal',
+			detailsLink: '/services/vendor-support',
 			services: [
 				{
 					icon: Nodes,
@@ -96,6 +98,7 @@
 			title: 'Advanced Project Support',
 			body: '<p>AEP offers a comprehensive suite of services designed to empower businesses across various industries and lifecycles. Our focus on quality, integrity, and client satisfaction ensures that we partner effectively with businesses to navigate challenges, optimize operations, and unlock opportunities for long-term success.</p>',
 			servicesBackgroundColor: 'bg-black',
+			detailsLink: '/services/advanced-project-support',
 			services: [
 				{
 					icon: Events,
@@ -125,6 +128,7 @@
 			title: 'Plan & Process Design',
 			body: '<p>AEP assists both private and public companies in their stock plan administration by providing expert guidance and comprehensive solutions. From the initial design and implementation of your equity plans to ongoing management and compliance, AEP has you covered.</p>',
 			servicesBackgroundColor: 'bg-aep-teal-dark',
+			detailsLink: '/services/plan-process-design',
 			services: [
 				{
 					icon: FolderEdit,
@@ -209,6 +213,7 @@
 	<meta name="description" content={description} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
+	<meta property="og:image" content="https://www.acceleratedep.com/images/og-our-services.jpg" />
 	<link rel="canonical" href={`https://www.acceleratedep.com${path}`} />
 	<meta property="og:url" content={`https://www.acceleratedep.com${path}`} />
 </svelte:head>
@@ -309,6 +314,16 @@
 							</div>
 						{/each}
 					</div>
+					{#if servicesSection.detailsLink}
+						<div class="mt-8 flex justify-center">
+							<a
+								href={servicesSection.detailsLink}
+								class={clsx(styles.redButton, 'inline-flex items-center gap-2')}
+							>
+								Learn More About {servicesSection.title}
+							</a>
+						</div>
+					{/if}
 				</div>
 			</section>
 		{/each}
