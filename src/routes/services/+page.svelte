@@ -276,7 +276,7 @@
 	</section>
 
 	<div
-		class="relative pt-8 pb-24 bg-fixed bg-opacity-10 bg-right-bottom bg-no-repeat bg-contain"
+		class="relative pt-8 pb-24 bg-fixed bg-opacity-10 bg-bottom-right bg-no-repeat bg-contain"
 		style={`
 			background-image: url('/images/brand/aep-mark-left-half.svg');
 			background-size: 40%;

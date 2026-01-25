@@ -1,8 +1,22 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import { clsx } from 'clsx';
 
-	export let navLinks;
+	export let navLinks: NavLink[];
+
+	interface NavLink {
+		name: string;
+		href: string;
+		icon: any;
+		headerClasses?: string;
+		subNav?: SubNavLink[];
+	}
+
+	interface SubNavLink {
+		name: string;
+		href: string;
+		description?: string;
+	}
 
 	// Separate navLinks into different groups
 	$: homeLink = navLinks.find((link) => link.name === 'Home');
