@@ -20,7 +20,8 @@
 
 	let isMobile = true;
 
-	const title = 'Expert Equity Plan Administration & Consulting | Accelerated Equity Plans';
+	const title =
+		'Equity Compensation Consulting Services for Your Business | Accelerated Equity Plans';
 	const description =
 		'Unlock the full potential of your equity programs with expert equity compensation consulting and tailored administration solutions.';
 	const path = '/';
