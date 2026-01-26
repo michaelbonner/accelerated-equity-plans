@@ -19,8 +19,8 @@ export const styles = {
 		'hover:bg-stone-800 hover:ring-stone-800'
 	),
 	redButton: clsx(
-		'bg-red-700 px-6 py-3 text-lg text-white rounded-md transition ease-in-out duration-300 cursor-pointer',
-		'hover:bg-red-800 hover:ring-red-800'
+		'bg-red-800 px-6 py-3 text-lg text-white rounded-md transition ease-in-out duration-300 cursor-pointer',
+		'hover:bg-red-700 hover:ring-red-800'
 	),
 	darkButton: clsx(
 		'bg-red-700/40 px-6 py-3 backdrop-blur-sm text-lg text-white rounded-md ring-1 ring-red-800 transition ease-in-out duration-300 no-underline font-light font-headings cursor-pointer',
