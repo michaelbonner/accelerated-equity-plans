@@ -44,16 +44,14 @@
 	];
 
 	const platforms = [
-		'E*TRADE Equity Edge',
-		'Fidelity Stock Plan Services',
+		'E*TRADE Equity Edge (Morgan Stanley)',
 		'Morgan Stanley Shareworks',
-		'Certent Equity Management',
+		'Fidelity Stock Plan Services (PSW)',
+		'Schwab Equiview',
 		'Carta',
-		'Computershare',
-		'Schwab Equity Awards',
-		'Global Shares',
-		'Solium (now Shareworks)',
-		'Equatex'
+		'Computershare (EquatePlus)',
+		'Certent Equity Management',
+		'Global Shares'
 	];
 
 	const benefits = [
