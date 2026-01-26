@@ -22,7 +22,7 @@
 
 	const title = 'Expert Equity Plan Administration & Consulting | Accelerated Equity Plans';
 	const description =
-		'Accelerated Equity Plans offers expert equity plan administration, consulting, and support for private and public companies. Streamline your stock plans, stay compliant, and get guidance from industry professionals. Contact us to elevate your equity management.';
+		'Unlock the full potential of your equity programs with expert equity compensation consulting and tailored administration solutions.';
 	const path = '/';
 
 	const updateWindowSize = () => {
@@ -171,7 +171,7 @@
 
 		<!-- Should be foreground div in same container -->
 		<div class={clsx('relative z-10 h-full', 'sm:px-8')}>
-			<div class="grid gap-2 max-w-[48rem] prose-white">
+			<div class="grid gap-2 max-w-3xl prose-white">
 				<h1 class={styles.h1Super}>Accelerate Your <wbr />Equity's Potential</h1>
 				<p class="mt-6 text-lg font-light leading-8 max-w-[660px]">
 					Bringing industry-leading expertise and support to your equity programs to deliver a
