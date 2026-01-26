@@ -16,7 +16,7 @@
 		FileChartPie,
 		Grid2x2Check,
 		HandCoins,
-		Phone
+		SquareChartGantt
 	} from '@lucide/svelte';
 	import { clsx } from 'clsx';
 
@@ -38,7 +38,7 @@
 
 	const servicesBoxes = [
 		{
-			icon: Phone,
+			icon: SquareChartGantt,
 			title: 'Why Equity Compensation Consulting Matters',
 			body: `<p>Navigating the world of equity compensation is complex. Companies face evolving regulations, the challenge of motivating and retaining key talent, and the need to balance shareholder and employee interests. Market volatility and rapid company growth only add to the complexity. At AEP, we understand these challenges and partner with you to build, manage, and optimize equity programs that drive engagement and business outcomes—while ensuring compliance every step of the way.</p>`
 		},
