@@ -5,17 +5,19 @@
 	import MeetTheTeam from '$lib/components/MeetTheTeam.svelte';
 	import PartnerRibbon from '$lib/components/PartnerRibbon.svelte';
 	import RedBar from '$lib/components/RedBar.svelte';
-	import Buildings from '$lib/components/icons/Buildings.svelte';
-	import Compass from '$lib/components/icons/Compass.svelte';
-	import Folder from '$lib/components/icons/Folder.svelte';
-	import GridCheck from '$lib/components/icons/GridCheck.svelte';
-	import Layers from '$lib/components/icons/Layers.svelte';
-	import Money from '$lib/components/icons/Money.svelte';
-	import Phone from '$lib/components/icons/Phone.svelte';
 	import BuildingBlurredBg from '$lib/images/backgrounds/building-blurred-bg.jpg?enhanced';
 	import HeroBgMobile from '$lib/images/backgrounds/high-rise-buildings-mobile.jpg?enhanced';
 	import HeroBg from '$lib/images/backgrounds/high-rise-buildings.jpg?enhanced';
 	import { styles } from '$lib/styles';
+	import {
+		Building2,
+		DraftingCompass,
+		EarthIcon,
+		FileChartPie,
+		Grid2x2Check,
+		HandCoins,
+		Phone
+	} from '@lucide/svelte';
 	import { clsx } from 'clsx';
 
 	let isMobile = true;
@@ -37,29 +39,24 @@
 	const servicesBoxes = [
 		{
 			icon: Phone,
-			title: 'Temporary Stock Administration Support',
-			body: `<p>
-				We provide temporary stock administration services to support 
-				you during increased workloads or staff shortages, offering flexible 
-				staffing solutions for surges in stock plan activities, transitions, 
-				or temporary assistance needs.
-			</p>`
+			title: 'Why Equity Compensation Consulting Matters',
+			body: `<p>Navigating the world of equity compensation is complex. Companies face evolving regulations, the challenge of motivating and retaining key talent, and the need to balance shareholder and employee interests. Market volatility and rapid company growth only add to the complexity. At AEP, we understand these challenges and partner with you to build, manage, and optimize equity programs that drive engagement and business outcomes—while ensuring compliance every step of the way.</p>`
 		},
 		{
-			icon: Layers,
-			title: 'Full Stock Administration Outsourcing',
-			body: '<p>We offer a comprehensive solution to fully outsource your stock plan administration, allowing you to focus on your core business while we handle everything from initial setup to ongoing management and compliance.</p>'
+			icon: FileChartPie,
+			title: 'Our Approach: Data-Driven, People-Focused',
+			body: '<p>We combine deep industry knowledge with technology and data analytics to deliver actionable insights for your equity programs. Our team leverages benchmarking, real-time reporting, and best-in-class platforms to give you clarity and confidence in your decision-making. Whether you’re evaluating plan effectiveness, preparing for an audit, or seeking to improve employee participation, we provide the tools and expertise to help you succeed.</p>'
 		},
 		{
-			icon: Folder,
-			title: 'Special Projects and Consulting Services',
-			body: '<p>We provide a comprehensive suite of services that empower businesses through Mergers and Acquisitions, IPOs, SPACs, Corporate Actions, and Automation Design, delivering strategic guidance for growth and success.</p>'
+			icon: EarthIcon,
+			title: 'Who We Serve',
+			body: '<p>AEP supports organizations at every stage—from high-growth startups and pre-IPO companies to established public enterprises. We have deep experience across technology, biotech, financial services, and more. If you’re building, scaling, or optimizing an equity program, we’re ready to help.</p>'
 		}
 	];
 
 	const comprehensiveServices = [
 		{
-			icon: Money,
+			icon: HandCoins,
 			iconBackground: 'bg-red-700',
 			id: 'equity-plan-administration',
 			title: 'Equity Plan Administration',
@@ -73,7 +70,7 @@
 			]
 		},
 		{
-			icon: Buildings,
+			icon: Building2,
 			iconBackground: 'bg-aep-teal',
 			id: 'vendor-support',
 			title: 'Vendor Support',
@@ -87,7 +84,7 @@
 			]
 		},
 		{
-			icon: GridCheck,
+			icon: Grid2x2Check,
 			iconBackground: 'bg-[#333536]',
 			id: 'advanced-project-support',
 			title: 'Advanced Project Support',
@@ -102,7 +99,7 @@
 			]
 		},
 		{
-			icon: Compass,
+			icon: DraftingCompass,
 			iconBackground: 'bg-aep-teal-dark',
 			id: 'plan-process-design',
 			title: 'Plan & Process Design',
@@ -176,9 +173,11 @@
 				<h1 class={styles.h1Super}>Accelerate Your <wbr />Equity's Potential</h1>
 				<p class="mt-6 text-lg font-light leading-8 max-w-[660px]">
 					Bringing industry-leading expertise and support to your equity programs to deliver a
-					best-in-class experience for your team, partners, and participants. Founded by industry
-					experts with issuer and vendor experience for both Private and Public organizations, we
-					can handle all of your equity administration needs
+					best-in-class experience for your team, partners, and participants.
+				</p>
+				<p class="mt-2 text-lg font-light leading-8 max-w-[660px]">
+					Founded by industry experts with issuer and vendor experience for both private and public
+					organizations, we can handle all of your equity administration needs.
 				</p>
 				<div class="flex gap-x-4 mt-8">
 					<a href="/contact" class={styles.darkButton}> Contact us today </a>
@@ -209,9 +208,9 @@
 		<div class="grid relative gap-x-4 gap-y-8 mx-auto mt-12 max-w-7xl md:grid-cols-3">
 			{#each servicesBoxes as servicesBox}
 				<div class={clsx(styles.blueRedGradientBackground, styles.cardHover)}>
-					<div class="grid gap-4 p-8 h-full bg-black rounded-lg">
+					<div class="flex flex-col justify-start gap-4 p-8 h-full bg-black rounded-lg items-start">
 						<div>
-							<svelte:component this={servicesBox.icon} />
+							<svelte:component this={servicesBox.icon} class="size-8" />
 						</div>
 						<h3 class={styles.h3}>
 							{servicesBox.title}
@@ -219,19 +218,14 @@
 						<div class="font-light text-white prose">
 							{@html servicesBox.body}
 						</div>
-						<div class="flex gap-x-4 items-end mt-8">
-							<a
-								aria-label={`Learn More About AEP ${servicesBox.title}`}
-								title={`Learn More About AEP ${servicesBox.title}`}
-								href="/services"
-								class={styles.darkButton}
-							>
-								Our Services
-							</a>
-						</div>
 					</div>
 				</div>
 			{/each}
+		</div>
+		<div class="relative flex mt-8 mx-auto max-w-7xl justify-center">
+			<a title="Learn More About AEP Services" href="/services" class={styles.redButton}>
+				Learn More About Our Services
+			</a>
 		</div>
 	</section>
 
@@ -257,7 +251,7 @@
 					<div class="flex flex-col gap-4 justify-start p-8 h-full bg-black rounded-lg">
 						<div class="flex gap-4 items-center">
 							<div class={clsx('p-3 rounded-2xl', comprehensiveService.iconBackground)}>
-								<svelte:component this={comprehensiveService.icon} />
+								<svelte:component this={comprehensiveService.icon} class="size-6 text-white" />
 							</div>
 							<h3 class={clsx(styles.h3, 'text-white')}>
 								<a href={`/services#${comprehensiveService.id}`}>
