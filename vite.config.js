@@ -1,3 +1,4 @@
+import devtoolsJson from 'vite-plugin-devtools-json';
 import { partytownVite } from '@qwik.dev/partytown/utils';
 import { enhancedImages } from '@sveltejs/enhanced-img';
 import { sveltekit } from '@sveltejs/kit/vite';
@@ -14,9 +15,8 @@ const config = {
 		tailwindcss(),
 		enhancedImages(),
 		sveltekit(),
-		partytownVite({
-			dest: join(__dirname, 'static', '~partytown')
-		})
+		partytownVite({ dest: join(__dirname, 'static', '~partytown') }),
+		devtoolsJson()
 	]
 };
 
