@@ -78,10 +78,7 @@ export const POST: RequestHandler = async ({ request }) => {
 				success: false,
 				errors: [
 					{
-						message:
-							error instanceof Error
-								? error.message
-								: 'An unexpected error occurred. Please try again.'
+						message: 'An unexpected error occurred. Please try again later.'
 					}
 				]
 			},
