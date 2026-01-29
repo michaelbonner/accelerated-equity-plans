@@ -21,21 +21,21 @@
 
 			if (response.ok && data.success) {
 				submitted = true;
+
+				try {
+					window.gtag('event', 'form_submit', {
+						form_name: 'lead-form'
+					});
+				} catch (error) {
+					console.error('Error sending form submission event to Google Analytics');
+					console.error(error);
+				}
 			} else {
 				if (data.errors && Array.isArray(data.errors)) {
 					errorMessage = data.errors.map((error: any) => error.message).join(', ');
 				} else {
 					errorMessage = 'Oops! There was a problem submitting your form';
 				}
-			}
-
-			try {
-				window.gtag('event', 'form_submit', {
-					form_name: 'lead-form'
-				});
-			} catch (error) {
-				console.error('Error sending form submission event to Google Analytics');
-				console.error(error);
 			}
 		} catch (error) {
 			console.error(error);
@@ -101,12 +101,7 @@
 	];
 </script>
 
-<form
-	class:hidden={submitted}
-	class="mt-8"
-	name="contact"
-	on:submit|preventDefault={handleSubmit}
->
+<form class:hidden={submitted} class="mt-8" name="contact" on:submit|preventDefault={handleSubmit}>
 	<div class="grid gap-y-4 gap-x-8 md:grid-cols-2">
 		{#each fields as field}
 			<div class={clsx('mb-6', field.containerClass)}>
@@ -165,7 +160,7 @@
 	</div>
 </form>
 <div class:hidden={!submitted} class="flex items-center min-h-56">
-	<div class="prose">
+	<div class="prose prose-invert">
 		<h2>Thank you for contacting us! We'll be in touch soon.</h2>
 		<p>
 			In the meantime, feel free to reach out at <a
