@@ -1,13 +1,12 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { ZOHO_WEBFORM_ID, ZOHO_WEBFORM_KEY, ZOHO_WEBFORM_URL } from '$env/static/private';
 
 interface ContactFormData {
-	firstName: string;
-	lastName: string;
-	email: string;
-	phone?: string;
-	message: string;
+	Name_First: string;
+	Name_Last: string;
+	Email: string;
+	PhoneNumber_countrycode?: string;
+	MultiLine: string;
 }
 
 export const POST: RequestHandler = async ({ request }) => {
@@ -15,15 +14,22 @@ export const POST: RequestHandler = async ({ request }) => {
 		const formData = await request.formData();
 
 		const data: ContactFormData = {
-			firstName: formData.get('firstName') as string,
-			lastName: formData.get('lastName') as string,
-			email: formData.get('email') as string,
-			phone: (formData.get('phone') as string) || '',
-			message: formData.get('message') as string
+			Name_First: formData.get('firstName') as string,
+			Name_Last: formData.get('lastName') as string,
+			Email: formData.get('email') as string,
+			PhoneNumber_countrycode: (formData.get('phone') as string) || '',
+			MultiLine: formData.get('message') as string
 		};
 
+		const submitFormData = new FormData();
+		submitFormData.append('Name_First', data.Name_First);
+		submitFormData.append('Name_Last', data.Name_Last);
+		submitFormData.append('Email', data.Email);
+		submitFormData.append('PhoneNumber_countrycode', data.PhoneNumber_countrycode || '');
+		submitFormData.append('MultiLine', data.MultiLine);
+
 		// Validate required fields
-		if (!data.firstName || !data.lastName || !data.email || !data.message) {
+		if (!data.Name_First || !data.Name_Last || !data.Email || !data.MultiLine) {
 			return json(
 				{
 					success: false,
@@ -35,7 +41,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 		// Validate email format
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-		if (!emailRegex.test(data.email)) {
+		if (!emailRegex.test(data.Email)) {
 			return json(
 				{
 					success: false,
@@ -45,24 +51,12 @@ export const POST: RequestHandler = async ({ request }) => {
 			);
 		}
 
-		// Submit to Zoho Web Form
-		const zohoFormData = new URLSearchParams({
-			xnQsjsdp: ZOHO_WEBFORM_ID,
-			xmIwtLD: ZOHO_WEBFORM_KEY,
-			actionType: 'TGVhZHM=', // Base64 encoded "Leads"
-			'First Name': data.firstName,
-			'Last Name': data.lastName,
-			Email: data.email,
-			Phone: data.phone,
-			Description: data.message
-		});
+		// zoho url
+		const zohoUrl = `https://forms.zohopublic.com/acceleratedequityplans1/form/WebsiteForm/formperma/cbGYfx0LiEyF_TZuphyJKiA7wNhUenbYdp1GpiRavJ4/htmlRecords/submit`;
 
-		const response = await fetch(ZOHO_WEBFORM_URL, {
+		const response = await fetch(zohoUrl, {
 			method: 'POST',
-			headers: {
-				'Content-Type': 'application/x-www-form-urlencoded'
-			},
-			body: zohoFormData.toString()
+			body: submitFormData
 		});
 
 		// Zoho web forms typically return a redirect or HTML response on success
