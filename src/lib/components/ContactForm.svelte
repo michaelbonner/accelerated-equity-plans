@@ -7,43 +7,42 @@
 	let isSubmitting = false;
 
 	const handleSubmit = async (event: SubmitEvent) => {
+		isSubmitting = true;
+		errorMessage = '';
 		const formData = new FormData(event.target as HTMLFormElement);
 
-		fetch('https://formspree.io/f/xleqyybe', {
-			method: 'POST',
-			body: formData,
-			headers: {
-				Accept: 'application/json'
-			}
-		})
-			.then((response) => {
-				if (response.ok) {
-					submitted = true;
-					// form.reset();
-				} else {
-					response.json().then((data) => {
-						console.error(data);
-						if (Object.hasOwn(data, 'errors')) {
-							errorMessage = data['errors'].map((error: any) => error['message']).join(', ');
-						} else {
-							errorMessage = 'Oops! There was a problem submitting your form';
-						}
-					});
-				}
-
-				try {
-					window.gtag('event', 'form_submit', {
-						form_name: 'lead-form'
-					});
-				} catch (error) {
-					console.error('Error sending form submission event to Google Analytics');
-					console.error(error);
-				}
-			})
-			.catch((error) => {
-				console.error(error);
-				errorMessage = 'Oops! There was a problem submitting your form';
+		try {
+			const response = await fetch('/api/contact', {
+				method: 'POST',
+				body: formData
 			});
+
+			const data = await response.json();
+
+			if (response.ok && data.success) {
+				submitted = true;
+			} else {
+				if (data.errors && Array.isArray(data.errors)) {
+					errorMessage = data.errors.map((error: any) => error.message).join(', ');
+				} else {
+					errorMessage = 'Oops! There was a problem submitting your form';
+				}
+			}
+
+			try {
+				window.gtag('event', 'form_submit', {
+					form_name: 'lead-form'
+				});
+			} catch (error) {
+				console.error('Error sending form submission event to Google Analytics');
+				console.error(error);
+			}
+		} catch (error) {
+			console.error(error);
+			errorMessage = 'Oops! There was a problem submitting your form';
+		} finally {
+			isSubmitting = false;
+		}
 	};
 
 	let errors: any = {};
@@ -103,8 +102,6 @@
 </script>
 
 <form
-	action="https://formspree.io/f/xleqyybe"
-	method="POST"
 	class:hidden={submitted}
 	class="mt-8"
 	name="contact"
