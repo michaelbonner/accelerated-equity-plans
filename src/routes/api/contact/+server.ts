@@ -27,7 +27,6 @@ export const POST: RequestHandler = async ({ request }) => {
 		submitFormData.append('Email', data.Email);
 		submitFormData.append('PhoneNumber_countrycode', data.PhoneNumber_countrycode || '');
 		submitFormData.append('MultiLine', data.MultiLine);
-		submitFormData.append('zf_referrer_name', 'Website Form');
 
 		// Validate required fields
 		if (!data.Name_First || !data.Name_Last || !data.Email || !data.MultiLine) {
