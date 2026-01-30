@@ -89,7 +89,13 @@
 <div class="overflow-hidden px-8 partner-swiper">
 	<div class="items-center swiper-wrapper">
 		{#each partnerImages as { altText, path, url }}
-			<a href={url} target="_blank" class="swiper-slide" rel="noopener noreferrer">
+			<a
+				href={url}
+				target="_blank"
+				class="swiper-slide"
+				rel="noopener noreferrer"
+				aria-label={`Visit ${altText} website`}
+			>
 				<img
 					alt={`${altText} Logo`}
 					class={clsx(
