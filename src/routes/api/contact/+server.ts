@@ -1,5 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
+import { ZOHO_CONTACT_FORM_URL } from '$env/static/private';
 
 interface ContactFormData {
 	Name_First: string;
@@ -51,10 +52,7 @@ export const POST: RequestHandler = async ({ request }) => {
 			);
 		}
 
-		// zoho url
-		const zohoUrl = `https://forms.zohopublic.com/acceleratedequityplans1/form/WebsiteForm/formperma/cbGYfx0LiEyF_TZuphyJKiA7wNhUenbYdp1GpiRavJ4/htmlRecords/submit`;
-
-		const response = await fetch(zohoUrl, {
+		const response = await fetch(ZOHO_CONTACT_FORM_URL, {
 			method: 'POST',
 			body: submitFormData
 		});
