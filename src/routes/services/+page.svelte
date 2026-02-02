@@ -28,7 +28,7 @@
 
 	const title = 'Equity Plan Administration & Consulting Services | Accelerated Equity Plans';
 	const description =
-		'Discover comprehensive equity plan administration, vendor support, project consulting, and process design services with Accelerated Equity Plans. Get expert help with stock plans, M&A, IPOs, automation, and more—tailored for private and public companies.';
+		'Discover comprehensive equity plan administration, vendor support, project consulting, and process design services with Accelerated Equity Plans. Get expert help with stock plans, M&A, IPOs, automation, and more; tailored for private and public companies.';
 	const path = '/services';
 
 	const servicesSections = [

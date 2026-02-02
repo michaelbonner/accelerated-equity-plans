@@ -76,9 +76,9 @@
 			<p>
 				<span class="text-red-700">Our Track Record.</span> Our success is evident: from guiding private
 				and pre-IPO ventures to supporting some of the world's largest multinational corporations, our
-				commitment to excellence knows no bounds. At AEP, we are dedicated to empowering our clients
-				with the tools and understanding necessary to navigate the complexities of equity planning with
-				confidence and clarity.
+				commitment to excellence knows no bounds. At AEP, we are dedicated to empowering our clients with
+				the tools and understanding necessary to navigate the complexities of equity planning with confidence
+				and clarity.
 			</p>
 		</div>
 	</section>

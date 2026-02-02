@@ -24,10 +24,10 @@ export const leadershipTeam = [
 		body: `
         <div>
             <p>
-                With over 15 years of experience in the equity compensation industry—working with both issuers and administration vendors—Emily Bone has developed deep expertise across private and public equity plans. Throughout her career, she has worn many hats, giving her a well-rounded understanding of the challenges equity professionals face, especially those navigating their roles as a team of one.
+                With over 15 years of experience in the equity compensation industry; working with both issuers and administration vendors, Emily Bone has developed deep expertise across private and public equity plans. Throughout her career, she has worn many hats, giving her a well-rounded understanding of the challenges equity professionals face, especially those navigating their roles as a team of one.
             </p>
             <p>
-                Her growing desire to support professionals who often had nowhere to turn led to the creation of AEP. At AEP, Emily and her team go beyond traditional consulting, becoming a true extension of their clients’ teams—a dependable partner who is with them every step of the way.
+                Her growing desire to support professionals who often had nowhere to turn led to the creation of AEP. At AEP, Emily and her team go beyond traditional consulting, becoming a true extension of their clients’ teams; a dependable partner who is with them every step of the way.
             </p>
             <p>
                 Outside of work, Emily loves spending time outdoors camping, biking, and kayaking with her spouse, family, and friends. She is always up for a scenic drive and a new place to explore.
@@ -153,7 +153,7 @@ export const leadershipTeam = [
                 Grace Segui began her journey in Equity Compensation in 2003 on the front lines of customer service, guiding individuals through stock option exercises and trade execution. Her hands-on experience grew as she joined the training team, where she helped educate others on the complexities of equity plans. By 2007, she stepped into the role of Client Service Manager, deepening her expertise and sharpening her client-focused approach.
             </p>
             <p>
-                In the next chapter of her career, she transitioned to the issuer side, serving as Stock Plan Administrator at Activision Blizzard for seven years—gaining invaluable insight into the internal mechanics of plan management at a dynamic, high-growth company. Now in her third decade in Equity Compensation, Grace serves as a Consulting Director at AEP, partnering with clients to design, optimize, and elevate their equity programs with both strategic insight and practical experience.
+                In the next chapter of her career, she transitioned to the issuer side, serving as Stock Plan Administrator at Activision Blizzard for seven years, gaining invaluable insight into the internal mechanics of plan management at a dynamic, high-growth company. Now in her third decade in Equity Compensation, Grace serves as a Consulting Director at AEP, partnering with clients to design, optimize, and elevate their equity programs with both strategic insight and practical experience.
             </p>
         </div>
         `,
