@@ -46,27 +46,27 @@
 	const careerOpportunities = [
 		{
 			icon: Bank,
-			title: 'Equity Plan Administrator',
+			title: 'Equity Consultant',
 			description:
 				'Manage day-to-day equity plan operations including grant processing, vesting schedules, exercises, and settlements. Work with RSUs, stock options, ESPPs, and other equity vehicles across major platforms like E*TRADE, Fidelity, and Shareworks.'
 		},
 		{
-			icon: DocumentCheck,
-			title: 'Senior Equity Analyst',
+			icon: Education,
+			title: 'Senior Equity Consultant',
 			description:
-				'Handle complex equity compensation scenarios, support SEC reporting for public companies, assist with ASC 718 calculations, and provide expertise on equity plan design and compliance matters.'
+				'Manage more complex day-to-day equity plan operations, multiple system expertise, ability to handle multiple competing priorities, employee education, and build a foundational relationship to meet and exceed all clients\' needs.'
 		},
 		{
 			icon: Graph,
-			title: 'Equity Compensation Consultant',
+			title: 'Consulting Manager',
 			description:
 				'Partner with clients to optimize their equity programs, implement new platforms, design efficient processes, and provide strategic guidance on equity compensation best practices.'
 		},
 		{
-			icon: Education,
-			title: 'Participant Support Specialist',
+			icon: DocumentCheck,
+			title: 'Consulting Director',
 			description:
-				'Educate employees about their equity awards, answer questions about vesting, taxes, and transactions, and provide exceptional support to plan participants.'
+				'Build in-depth relationships, handle complex equity compensation scenarios, support SEC reporting for public companies, assist with ASC 718 calculations, and provide expertise on equity plan design and compliance matters.'
 		}
 	];
 
