@@ -25,17 +25,20 @@ This is a SvelteKit application for Accelerated Equity Plans, built with TypeScr
 ## Code Style and Conventions
 
 ### Formatting (Prettier)
+
 - Use **tabs** for indentation (not spaces)
 - Use **single quotes** for strings
 - **No trailing commas**
 - Maximum line width: **100 characters**
 
 ### TypeScript
+
 - Strict mode is enabled - always maintain type safety
 - Avoid using `any` type whenever possible
 - Enable `checkJs` for JavaScript files
 
 ### File Organization
+
 - Components and utilities go in `src/lib/`
 - Routes and pages go in `src/routes/`
 - Static assets go in `static/`
@@ -43,6 +46,7 @@ This is a SvelteKit application for Accelerated Equity Plans, built with TypeScr
 ## Testing and Validation
 
 Before finalizing any changes:
+
 1. Run `bun run check` to validate TypeScript types
 2. Run `bun run lint` to check code style
 3. Run `bun run format` to auto-format code

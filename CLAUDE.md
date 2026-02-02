@@ -40,13 +40,16 @@ Before committing, run: `bun run check && bun run lint && bun run build`
 ## Architecture
 
 ### Routes (`src/routes/`)
+
 File-based routing with SvelteKit conventions:
+
 - `+page.svelte` - Page component
 - `+layout.svelte` - Layout wrapper (root layout has navbar/footer)
 - `+server.ts` - API endpoints (e.g., `/api/contact`)
 - `+error.svelte` - Error page
 
 ### Library (`src/lib/`)
+
 - `components/` - Reusable Svelte components (navbar, footer, ContactForm, etc.)
 - `data/` - Static data files (leadershipTeam.ts contains team member info)
 - `images/` - Image imports for enhanced-img optimization
@@ -55,11 +58,13 @@ File-based routing with SvelteKit conventions:
 - `reviews.ts` - Customer testimonials
 
 ### Key Integrations
+
 - **Zoho CRM** - Contact form submission via `/api/contact` endpoint
 - **Google Analytics 4** - Via Partytown (non-blocking, runs in web worker)
 - **Zoho SalesIQ** - Customer chat widget
 
 ### Environment Variables
+
 - `ZOHO_CONTACT_FORM_URL` - Required for contact form (private, server-side only)
 
 ## Performance Optimizations
@@ -71,6 +76,7 @@ File-based routing with SvelteKit conventions:
 ## SEO
 
 The site uses extensive Schema.org JSON-LD markup for:
+
 - Organization with services catalog
 - Team member profiles
 - Customer reviews
