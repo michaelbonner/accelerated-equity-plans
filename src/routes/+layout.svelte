@@ -9,7 +9,7 @@
 	import { partytownSnippet } from '@qwik.dev/partytown/integration';
 	import { onMount } from 'svelte';
 	import { AiOutlineContacts } from 'svelte-icons-pack/ai';
-	import { BiCustomize, BiHomeAlt } from 'svelte-icons-pack/bi';
+	import { BiCustomize, BiHomeAlt, BiNews } from 'svelte-icons-pack/bi';
 	import { FaRectangleList } from 'svelte-icons-pack/fa';
 	import { IoPeople } from 'svelte-icons-pack/io';
 	import { leadershipTeam } from '$lib/data/leadershipTeam';
@@ -63,6 +63,11 @@
 			name: 'Careers',
 			href: '/careers',
 			icon: FaRectangleList
+		},
+		{
+			name: 'Blog',
+			href: '/blog',
+			icon: BiNews
 		},
 		{
 			name: 'Contact Us',
