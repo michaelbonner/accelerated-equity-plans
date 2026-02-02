@@ -3,8 +3,8 @@ import type { BlogPost } from '$lib/types';
 export const blogPosts: BlogPost[] = [
 	{
 		slug: 'do-i-need-equity-plan-administration-service',
-		title: 'Do I Need an Equity Plan Administration Service?',
-		metaTitle: 'Do I Need an Equity Plan Administration Service? | Accelerated Equity Plans',
+		title: 'Do I Need Assistance With My Equity Plan?',
+		metaTitle: 'Do I Need Assistance With My Equity Plan? | Accelerated Equity Plans',
 		metaDescription:
 			'Discover the signs that indicate your company might benefit from professional equity plan administration services. Learn what these services provide and when to consider outsourcing.',
 		excerpt:
@@ -65,7 +65,7 @@ export const blogPosts: BlogPost[] = [
 				Mistakes in equity compensation; whether it's incorrect tax withholding, missed vesting dates, or grant documentation errors, can be expensive to fix and damaging to employee trust. If errors are becoming more frequent, that's a clear signal that your current approach isn't sustainable.
 			</p>
 
-			<h2>What an Administration Service Provides</h2>
+			<h2>What We Can Do For You</h2>
 			<p>
 				Professional equity plan administration services can take many forms, from full outsourcing to targeted project support. Here's what a comprehensive service typically offers:
 			</p>
