@@ -44,7 +44,7 @@
 		},
 		keywords: post.tags.join(', '),
 		articleSection: post.category,
-		wordCount: post.content.split(/\s+/).length,
+		wordCount: post.content.replace(/<[^>]*>/g, '').split(/\s+/).filter(Boolean).length,
 		timeRequired: `PT${post.readingTime}M`
 	});
 </script>
