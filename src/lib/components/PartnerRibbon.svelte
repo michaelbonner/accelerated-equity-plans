@@ -25,7 +25,7 @@
 		{
 			altText: 'Charles Schwab',
 			path: 'schwab.svg',
-			url: 'https://workplacefinancialservices.schwab.com/stock-plans'
+			url: 'https://www.schwabworkplaceservices.com/stock-plans'
 		},
 		{
 			altText: 'Fidelity',
