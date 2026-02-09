@@ -229,8 +229,8 @@
 			{/each}
 		</div>
 		<div class="relative flex mt-8 mx-auto max-w-7xl justify-center">
-			<a title="Learn More About AEP Services" href="/services" class={styles.redButton}>
-				Learn More About Our Services
+			<a href="/services" class={styles.redButton}>
+				Explore All Equity Plan Services
 			</a>
 		</div>
 	</section>
@@ -290,7 +290,7 @@
 							</div>
 							<div class="flex gap-x-4 mt-8">
 								<a href={comprehensiveService.detailsLink} class={styles.darkButton}>
-									Learn More About AEP {comprehensiveService.title}
+									Explore {comprehensiveService.title} Services
 								</a>
 							</div>
 						</div>
