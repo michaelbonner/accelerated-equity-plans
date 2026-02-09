@@ -54,6 +54,7 @@
 	<meta name="description" content={post.metaDescription} />
 	<meta property="og:title" content={post.metaTitle} />
 	<meta property="og:description" content={post.metaDescription} />
+	<meta property="og:image" content="https://www.acceleratedep.com/images/og-image.jpg" />
 	<meta property="og:type" content="article" />
 	<meta property="article:published_time" content={post.publishedDate} />
 	{#if post.updatedDate}

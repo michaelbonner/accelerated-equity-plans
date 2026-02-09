@@ -465,17 +465,10 @@
 	<meta name="google-site-verification" content="P9yZQUWa7MG_9CkMXW0nuZ0yUkn95LNLzUQMdNJOBtU" />
 	<meta name="color-scheme" content="light only" />
 	<meta name="theme-color" content="#ac2228" />
-	<meta property="og:image" content="https://www.acceleratedep.com/images/og-image.jpg" />
 	<meta property="og:site_name" content="Accelerated Equity Plans" />
 	<meta property="og:type" content="website" />
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Accelerated Equity Plans" />
-	<meta
-		name="twitter:description"
-		content="AEP brings industry expertise and support to deliver a best-in-class equity program experience for teams, partners, and participants."
-	/>
-	<meta name="twitter:image" content="https://www.acceleratedep.com/images/og-image.jpg" />
 
 	<script>
 		// Forward the necessary functions to the web worker layer
