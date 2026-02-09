@@ -152,7 +152,7 @@
 
 	<Breadcrumbs items={[{ name: 'Contact', href: '/contact' }]} />
 
-	<section class="py-24 px-6 bg-white">
+	<section class={clsx('py-24 px-6 bg-white', 'md:py-36')}>
 		<div class="mx-auto max-w-7xl">
 			<div class="grid gap-2 mb-16">
 				<RedBar />
@@ -204,7 +204,7 @@
 		</div>
 	</section>
 
-	<section class="py-24 px-6 bg-stone-50">
+	<section class={clsx('py-24 px-6 bg-stone-50', 'md:py-36')}>
 		<div class="mx-auto max-w-7xl">
 			<div class="grid gap-2 mb-16">
 				<RedBar />
