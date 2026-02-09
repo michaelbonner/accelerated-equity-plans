@@ -154,7 +154,7 @@
 
 	<section class="py-24 px-6 bg-white">
 		<div class="mx-auto max-w-7xl">
-			<div class="grid gap-2 text-center mb-16">
+			<div class="grid gap-2 text-center justify-items-center mb-16">
 				<RedBar />
 				<h2 class={styles.h2}>What to Expect</h2>
 				<p class="mt-4 text-lg text-stone-600 max-w-3xl mx-auto">
@@ -206,7 +206,7 @@
 
 	<section class="py-24 px-6 bg-stone-50">
 		<div class="mx-auto max-w-7xl">
-			<div class="grid gap-2 text-center mb-16">
+			<div class="grid gap-2 text-center justify-items-center mb-16">
 				<RedBar />
 				<h2 class={styles.h2}>Why Companies Trust AEP</h2>
 			</div>
