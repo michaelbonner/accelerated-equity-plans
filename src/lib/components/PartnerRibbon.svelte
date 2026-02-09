@@ -14,12 +14,12 @@
 		},
 		{
 			altText: 'Morgan Stanley at Work',
-			path: 'morgan-stanley-at-work.png.webp',
+			path: 'morgan-stanley-at-work.webp',
 			url: 'https://www.morganstanley.com/atwork'
 		},
 		{
 			altText: 'Equity Methods',
-			path: 'equitymethods.png.webp',
+			path: 'equitymethods.webp',
 			url: 'https://www.equitymethods.com'
 		},
 		{
@@ -34,10 +34,10 @@
 		},
 		{
 			altText: 'Global Shares',
-			path: 'globalshares.png.webp',
+			path: 'globalshares.webp',
 			url: 'https://www.globalshares.com'
 		},
-		{ altText: 'Eqvista', path: 'eqvista.png.webp', url: 'https://eqvista.com' },
+		{ altText: 'Eqvista', path: 'eqvista.webp', url: 'https://eqvista.com' },
 		{ altText: 'Carta', path: 'carta.svg', url: 'https://carta.com' },
 		{
 			altText: 'Deloitte',
@@ -56,7 +56,7 @@
 		},
 		{
 			altText: 'UBS',
-			path: 'ubs.png.webp',
+			path: 'ubs.webp',
 			url: 'https://www.ubs.com/us/en/wealth-management/our-solutions/companies-organizations.html'
 		}
 	];
