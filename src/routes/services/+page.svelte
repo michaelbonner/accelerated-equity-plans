@@ -323,7 +323,7 @@
 								href={servicesSection.detailsLink}
 								class={clsx(styles.redButton, 'inline-flex items-center gap-2')}
 							>
-								Learn More About {servicesSection.title}
+								Explore {servicesSection.title} Services
 							</a>
 						</div>
 					{/if}
