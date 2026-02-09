@@ -19,6 +19,22 @@
 		document.querySelectorAll('link[rel="preload"]').forEach((link) => {
 			link.setAttribute('rel', 'stylesheet');
 		});
+
+		// Lazy-load Zoho SalesIQ chat widget after page is interactive
+		const loadZohoChat = () => {
+			window.$zoho = window.$zoho || {};
+			window.$zoho.salesiq = window.$zoho.salesiq || { ready() {} };
+
+			const script = document.createElement('script');
+			script.id = 'zsiqscript';
+			script.src =
+				'https://salesiq.zohopublic.com/widget?wc=siq85f2cc5e85be63b478f1633c4f4974813067c184e55515eed358f959308147f20e7787ecd4be340b53eddbac96375ed7';
+			script.defer = true;
+			document.head.appendChild(script);
+		};
+
+		// Delay loading by 3 seconds to keep it off the critical path
+		setTimeout(loadZohoChat, 3000);
 	});
 
 	const navLinks = [
