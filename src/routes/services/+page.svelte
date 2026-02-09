@@ -287,8 +287,8 @@
 	>
 		<div class="absolute inset-0 bg-white/90"></div>
 		{#each servicesSections as servicesSection}
-			<section class="relative py-24" id={servicesSection.id}>
-				<div class="px-6 mx-auto max-w-7xl">
+			<section class="relative py-24 px-6" id={servicesSection.id}>
+				<div class="mx-auto max-w-7xl">
 					<div class="grid gap-4">
 						<RedBar />
 						<h2 class={clsx(styles.h2, 'text-stone-900')}>{servicesSection.title}</h2>

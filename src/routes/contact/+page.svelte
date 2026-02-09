@@ -111,8 +111,6 @@
 		</div>
 	</section>
 
-	<Breadcrumbs items={[{ name: 'Contact', href: '/contact' }]} />
-
 	<section
 		class={clsx(
 			'flex flex-col justify-center relative py-36 px-6 text-white bg-black',
