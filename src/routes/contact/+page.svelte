@@ -150,5 +150,102 @@
 		</div>
 	</section>
 
+	<Breadcrumbs items={[{ name: 'Contact', href: '/contact' }]} />
+
+	<section class="py-24 px-6 bg-white">
+		<div class="mx-auto max-w-7xl">
+			<div class="grid gap-2 text-center mb-16">
+				<RedBar />
+				<h2 class={styles.h2}>What to Expect</h2>
+				<p class="mt-4 text-lg text-stone-600 max-w-3xl mx-auto">
+					When you reach out to Accelerated Equity Plans, here's how we get started.
+				</p>
+			</div>
+
+			<div class="grid gap-8 md:grid-cols-3">
+				<div class="text-center">
+					<div
+						class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 text-red-700 text-2xl font-bold font-headings mb-4"
+					>
+						1
+					</div>
+					<h3 class={styles.h4}>Initial Consultation</h3>
+					<p class="mt-2 text-stone-600">
+						We'll schedule a call to understand your current equity plan setup, pain points, and
+						goals. No pressure, just a conversation about where you are and where you want to be.
+					</p>
+				</div>
+				<div class="text-center">
+					<div
+						class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 text-red-700 text-2xl font-bold font-headings mb-4"
+					>
+						2
+					</div>
+					<h3 class={styles.h4}>Tailored Proposal</h3>
+					<p class="mt-2 text-stone-600">
+						Based on our conversation, we'll put together a customized plan that addresses your
+						specific needs, whether that's full administration, vendor support, or project-based
+						help.
+					</p>
+				</div>
+				<div class="text-center">
+					<div
+						class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 text-red-700 text-2xl font-bold font-headings mb-4"
+					>
+						3
+					</div>
+					<h3 class={styles.h4}>Seamless Onboarding</h3>
+					<p class="mt-2 text-stone-600">
+						Our team integrates with yours quickly. We handle the heavy lifting of transition and
+						setup so your operations continue without interruption.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-24 px-6 bg-stone-50">
+		<div class="mx-auto max-w-7xl">
+			<div class="grid gap-2 text-center mb-16">
+				<RedBar />
+				<h2 class={styles.h2}>Why Companies Trust AEP</h2>
+			</div>
+
+			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+				<div class={clsx('bg-white rounded-lg p-6 border border-stone-200', styles.cardHover)}>
+					<p class="text-3xl font-bold font-headings text-red-700">50+</p>
+					<p class="mt-2 text-stone-700 font-medium">Years of Combined Experience</p>
+					<p class="mt-1 text-sm text-stone-500">
+						Our team brings decades of equity compensation expertise across industries and company
+						sizes.
+					</p>
+				</div>
+				<div class={clsx('bg-white rounded-lg p-6 border border-stone-200', styles.cardHover)}>
+					<p class="text-3xl font-bold font-headings text-red-700">CEP</p>
+					<p class="mt-2 text-stone-700 font-medium">Certified Equity Professionals</p>
+					<p class="mt-1 text-sm text-stone-500">
+						Our administrators hold Certified Equity Professional designations from the CEPI.
+					</p>
+				</div>
+				<div class={clsx('bg-white rounded-lg p-6 border border-stone-200', styles.cardHover)}>
+					<p class="text-3xl font-bold font-headings text-red-700">12+</p>
+					<p class="mt-2 text-stone-700 font-medium">Platform Partners</p>
+					<p class="mt-1 text-sm text-stone-500">
+						We work with all major equity management platforms including Fidelity, Schwab, Morgan
+						Stanley, and more.
+					</p>
+				</div>
+				<div class={clsx('bg-white rounded-lg p-6 border border-stone-200', styles.cardHover)}>
+					<p class="text-3xl font-bold font-headings text-red-700">100%</p>
+					<p class="mt-2 text-stone-700 font-medium">U.S.-Based Team</p>
+					<p class="mt-1 text-sm text-stone-500">
+						Every team member is based in the United States, ensuring seamless communication and
+						compliance expertise.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<CustomerReviews />
 </main>
