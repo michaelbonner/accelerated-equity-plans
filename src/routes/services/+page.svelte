@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import CustomerReviews from '$lib/components/CustomerReviews.svelte';
 	import FooterCallout from '$lib/components/FooterCallout.svelte';
 	import RedBar from '$lib/components/RedBar.svelte';
@@ -274,6 +275,8 @@
 			</div>
 		</div>
 	</section>
+
+	<Breadcrumbs items={[{ name: 'Services', href: '/services' }]} />
 
 	<div
 		class="relative pt-8 pb-24 bg-fixed bg-opacity-10 bg-bottom-right bg-no-repeat bg-contain"

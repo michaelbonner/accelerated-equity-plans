@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import FooterCallout from '$lib/components/FooterCallout.svelte';
 	import RedBar from '$lib/components/RedBar.svelte';
 	import EmilyHeadShot from '$lib/images/head-shots/emily-head-shot.jpg?enhanced';
@@ -121,6 +122,13 @@
 			</div>
 		</div>
 	</section>
+
+	<Breadcrumbs
+		items={[
+			{ name: 'Blog', href: '/blog' },
+			{ name: post.title, href: `/blog/${post.slug}` }
+		]}
+	/>
 
 	<article class={clsx('px-6 max-w-4xl mx-auto py-16', 'md:py-24')}>
 		<div

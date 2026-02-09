@@ -1,4 +1,5 @@
 <script>
+	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import MeetTheTeam from '$lib/components/MeetTheTeam.svelte';
 	import RedBar from '$lib/components/RedBar.svelte';
 	import HeroBg from '$lib/images/backgrounds/high-rise-looking-up.jpg?enhanced';
@@ -55,6 +56,8 @@
 			</div>
 		</div>
 	</section>
+
+	<Breadcrumbs items={[{ name: 'About', href: '/about' }]} />
 
 	<section class={clsx('px-6 max-w-5xl mx-auto py-24', 'md:py-36')}>
 		<div class="grid gap-2">

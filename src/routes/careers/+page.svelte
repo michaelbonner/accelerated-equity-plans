@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import FAQ from '$lib/components/FAQ.svelte';
 	import FooterCallout from '$lib/components/FooterCallout.svelte';
 	import RedBar from '$lib/components/RedBar.svelte';
@@ -226,6 +227,8 @@
 			</div>
 		</div>
 	</section>
+
+	<Breadcrumbs items={[{ name: 'Careers', href: '/careers' }]} />
 
 	<section class={clsx('px-6 max-w-7xl mx-auto py-24', 'md:py-36')}>
 		<div class="grid gap-2">

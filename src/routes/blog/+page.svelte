@@ -1,5 +1,6 @@
 <script lang="ts">
 	import BlogPostCard from '$lib/components/BlogPostCard.svelte';
+	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import FooterCallout from '$lib/components/FooterCallout.svelte';
 	import RedBar from '$lib/components/RedBar.svelte';
 	import { getPublishedBlogPosts } from '$lib/data/blogPosts';
@@ -80,6 +81,8 @@
 			</div>
 		</div>
 	</section>
+
+	<Breadcrumbs items={[{ name: 'Blog', href: '/blog' }]} />
 
 	<section class={clsx('px-6 max-w-7xl mx-auto py-24', 'md:py-36')}>
 		<div class="grid gap-2 mb-12">

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import ContactForm from '$lib/components/ContactForm.svelte';
 	import CustomerReviews from '$lib/components/CustomerReviews.svelte';
 	import RedBar from '$lib/components/RedBar.svelte';
@@ -109,6 +110,8 @@
 			</div>
 		</div>
 	</section>
+
+	<Breadcrumbs items={[{ name: 'Contact', href: '/contact' }]} />
 
 	<section
 		class={clsx(
