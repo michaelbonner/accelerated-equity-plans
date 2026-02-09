@@ -45,7 +45,10 @@
 		},
 		keywords: post.tags.join(', '),
 		articleSection: post.category,
-		wordCount: post.content.replace(/<[^>]*>/g, '').split(/\s+/).filter(Boolean).length,
+		wordCount: post.content
+			.replace(/<[^>]*>/g, '')
+			.split(/\s+/)
+			.filter(Boolean).length,
 		timeRequired: `PT${post.readingTime}M`
 	});
 </script>
@@ -123,12 +126,14 @@
 		</div>
 	</section>
 
-	<Breadcrumbs
-		items={[
-			{ name: 'Blog', href: '/blog' },
-			{ name: post.title, href: `/blog/${post.slug}` }
-		]}
-	/>
+	<div class="max-w-4xl mx-auto">
+		<Breadcrumbs
+			items={[
+				{ name: 'Blog', href: '/blog' },
+				{ name: post.title, href: `/blog/${post.slug}` }
+			]}
+		/>
+	</div>
 
 	<article class={clsx('px-6 max-w-4xl mx-auto py-16', 'md:py-24')}>
 		<div

@@ -84,24 +84,26 @@
 
 	<Breadcrumbs items={[{ name: 'Blog', href: '/blog' }]} />
 
-	<section class={clsx('px-6 max-w-7xl mx-auto py-24', 'md:py-36')}>
-		<div class="grid gap-2 mb-12">
-			<RedBar />
-			<h2 class={styles.h2}>Latest Articles</h2>
-		</div>
-
-		{#if posts.length === 0}
-			<p class="text-stone-600 text-lg">
-				Check back soon for new articles on equity compensation and administration.
-			</p>
-		{:else}
-			<div class={clsx('grid gap-8', 'md:grid-cols-2', 'lg:grid-cols-3')}>
-				{#each posts as post}
-					<BlogPostCard {post} />
-				{/each}
+	<div class="px-6">
+		<section class={clsx('max-w-7xl mx-auto py-24', 'md:py-36')}>
+			<div class="grid gap-2 mb-12">
+				<RedBar />
+				<h2 class={styles.h2}>Latest Articles</h2>
 			</div>
-		{/if}
-	</section>
+
+			{#if posts.length === 0}
+				<p class="text-stone-600 text-lg">
+					Check back soon for new articles on equity compensation and administration.
+				</p>
+			{:else}
+				<div class={clsx('grid gap-8', 'md:grid-cols-2', 'lg:grid-cols-3')}>
+					{#each posts as post}
+						<BlogPostCard {post} />
+					{/each}
+				</div>
+			{/if}
+		</section>
+	</div>
 
 	<FooterCallout />
 </main>
