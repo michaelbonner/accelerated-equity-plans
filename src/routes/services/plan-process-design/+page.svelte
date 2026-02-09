@@ -1,5 +1,6 @@
 <script lang="ts">
 	import BlackBar from '$lib/components/BlackBar.svelte';
+	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import CustomerReviews from '$lib/components/CustomerReviews.svelte';
 	import FAQ from '$lib/components/FAQ.svelte';
 	import FooterCallout from '$lib/components/FooterCallout.svelte';
@@ -206,6 +207,13 @@
 			</p>
 		</div>
 	</section>
+
+	<Breadcrumbs
+		items={[
+			{ name: 'Services', href: '/services' },
+			{ name: 'Plan & Process Design', href: '/services/plan-process-design' }
+		]}
+	/>
 
 	<section class="py-24 px-6 bg-white">
 		<div class="mx-auto max-w-7xl">
