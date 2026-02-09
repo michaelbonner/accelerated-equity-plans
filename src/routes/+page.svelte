@@ -163,7 +163,8 @@
 			)}
 		>
 			<img
-				alt="Accelerated Equity Plans"
+				alt=""
+				aria-hidden="true"
 				class="max-w-none opacity-90 w-[50vw]"
 				height="150"
 				loading="lazy"
@@ -332,7 +333,8 @@
 			)}
 		>
 			<img
-				alt="Accelerated Equity Plans"
+				alt=""
+				aria-hidden="true"
 				class="max-w-none translate-x-[-50%] w-[50vw]"
 				height="150"
 				loading="lazy"
