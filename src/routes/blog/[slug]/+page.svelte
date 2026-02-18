@@ -4,6 +4,7 @@
 	import RedBar from '$lib/components/RedBar.svelte';
 	import EmilyHeadShot from '$lib/images/head-shots/emily-head-shot.jpg?enhanced';
 	import { styles } from '$lib/styles';
+	import { toISODateTime } from '$lib/utils/date';
 	import { clsx } from 'clsx';
 
 	let { data } = $props();
@@ -23,8 +24,8 @@
 		'@type': 'BlogPosting',
 		headline: post.title,
 		description: post.metaDescription,
-		datePublished: post.publishedDate,
-		dateModified: post.updatedDate || post.publishedDate,
+		datePublished: toISODateTime(post.publishedDate),
+		dateModified: toISODateTime(post.updatedDate || post.publishedDate),
 		author: {
 			'@type': 'Person',
 			name: post.author.name,
@@ -60,9 +61,9 @@
 	<meta property="og:description" content={post.metaDescription} />
 	<meta property="og:image" content="https://www.acceleratedep.com/images/og-image.jpg" />
 	<meta property="og:type" content="article" />
-	<meta property="article:published_time" content={post.publishedDate} />
+	<meta property="article:published_time" content={toISODateTime(post.publishedDate)} />
 	{#if post.updatedDate}
-		<meta property="article:modified_time" content={post.updatedDate} />
+		<meta property="article:modified_time" content={toISODateTime(post.updatedDate)} />
 	{/if}
 	<meta property="article:author" content={post.author.name} />
 	<meta property="article:section" content={post.category} />

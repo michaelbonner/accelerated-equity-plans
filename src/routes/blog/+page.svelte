@@ -6,6 +6,7 @@
 	import { getPublishedBlogPosts } from '$lib/data/blogPosts';
 	import HeroBg from '$lib/images/backgrounds/high-rise-looking-up.jpg?enhanced';
 	import { styles } from '$lib/styles';
+	import { toISODateTime } from '$lib/utils/date';
 	import { clsx } from 'clsx';
 
 	const title = 'Insights & Resources | Accelerated Equity Plans Blog';
@@ -31,8 +32,8 @@
 			'@type': 'BlogPosting',
 			headline: post.title,
 			description: post.excerpt,
-			datePublished: post.publishedDate,
-			dateModified: post.updatedDate || post.publishedDate,
+			datePublished: toISODateTime(post.publishedDate),
+			dateModified: toISODateTime(post.updatedDate || post.publishedDate),
 			author: {
 				'@type': 'Person',
 				name: post.author.name
