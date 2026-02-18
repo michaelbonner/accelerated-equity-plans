@@ -6,9 +6,9 @@
 
 	let { items }: { items: BreadcrumbItem[] } = $props();
 
-	const fullItems = [{ name: 'Home', href: '/' }, ...items];
+	const fullItems = $derived([{ name: 'Home', href: '/' }, ...items]);
 
-	const jsonLD = {
+	const jsonLD = $derived({
 		'@context': 'https://schema.org',
 		'@type': 'BreadcrumbList',
 		itemListElement: fullItems.map((item, index) => ({
@@ -17,7 +17,7 @@
 			name: item.name,
 			item: `https://www.acceleratedep.com${item.href}`
 		}))
-	};
+	});
 </script>
 
 <svelte:head>
