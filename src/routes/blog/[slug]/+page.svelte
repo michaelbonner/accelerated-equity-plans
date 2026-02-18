@@ -111,6 +111,7 @@
 						src={EmilyHeadShot}
 						alt={post.author.name}
 						class="w-12 h-12 rounded-full object-cover ring-2 ring-white/20"
+						sizes="48px"
 					/>
 					<div>
 						<p class="font-medium text-white">{post.author.name}</p>

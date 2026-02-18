@@ -52,6 +52,7 @@
 					src={EmilyHeadShot}
 					alt={post.author.name}
 					class="w-10 h-10 rounded-full object-cover"
+					sizes="40px"
 				/>
 				<div class="text-sm">
 					<p class="font-medium text-stone-900">{post.author.name}</p>
