@@ -61,6 +61,8 @@
 			errorMessage = err;
 			input.value = '';
 			coverLetterFileName = '';
+		} else {
+			errorMessage = '';
 		}
 	}
 
