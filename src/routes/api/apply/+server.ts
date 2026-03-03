@@ -22,6 +22,7 @@ const ALLOWED_MIME_TYPES = [
 	'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
 ];
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
+const MAX_FILENAME_LENGTH = 120;
 
 function makeS3Client() {
 	return new S3Client({
@@ -38,8 +39,35 @@ function makeDynamo() {
 	return DynamoDBDocumentClient.from(client);
 }
 
+function sanitizeFilename(rawName: string): string {
+	const fallback = 'file';
+	const normalized = rawName.normalize('NFKC').trim();
+	const noPathSeparators = normalized.replace(/[\\/]+/g, '-');
+	const noControlChars = noPathSeparators.replace(/[\u0000-\u001f\u007f]/g, '');
+	const noQuotes = noControlChars.replace(/"/g, '');
+	const safeCharsOnly = noQuotes
+		.replace(/[^A-Za-z0-9._-]+/g, '-')
+		.replace(/-+/g, '-')
+		.replace(/^[._-]+|[._-]+$/g, '');
+
+	if (!safeCharsOnly) {
+		return fallback;
+	}
+
+	const lastDot = safeCharsOnly.lastIndexOf('.');
+	if (lastDot > 0 && lastDot < safeCharsOnly.length - 1) {
+		const base = safeCharsOnly.slice(0, lastDot);
+		const ext = safeCharsOnly.slice(lastDot);
+		const maxBaseLength = Math.max(1, MAX_FILENAME_LENGTH - ext.length);
+		return `${base.slice(0, maxBaseLength)}${ext}`;
+	}
+
+	return safeCharsOnly.slice(0, MAX_FILENAME_LENGTH);
+}
+
 async function uploadToS3(s3: S3Client, folder: string, id: string, file: File): Promise<string> {
-	const key = `${folder}/${Date.now()}-${id}-${file.name}`;
+	const safeFilename = sanitizeFilename(file.name);
+	const key = `${folder}/${Date.now()}-${id}-${safeFilename}`;
 	const body = Buffer.from(await file.arrayBuffer());
 	await s3.send(
 		new PutObjectCommand({
@@ -47,7 +75,7 @@ async function uploadToS3(s3: S3Client, folder: string, id: string, file: File):
 			Key: key,
 			Body: body,
 			ContentType: file.type,
-			ContentDisposition: `attachment; filename="${file.name}"`
+			ContentDisposition: `attachment; filename="${safeFilename}"`
 		})
 	);
 	return key;
