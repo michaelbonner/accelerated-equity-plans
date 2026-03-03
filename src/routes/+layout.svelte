@@ -22,8 +22,15 @@
 
 		// Lazy-load Zoho SalesIQ chat widget after page is interactive
 		const loadZohoChat = () => {
-			window.$zoho = window.$zoho || {};
-			window.$zoho.salesiq = window.$zoho.salesiq || { ready() {} };
+			const zohoGlobal =
+				typeof window.$zoho === 'object' && window.$zoho !== null
+					? (window.$zoho as Record<string, unknown>)
+					: {};
+			zohoGlobal.salesiq =
+				typeof zohoGlobal.salesiq === 'object' && zohoGlobal.salesiq !== null
+					? zohoGlobal.salesiq
+					: { ready() {} };
+			window.$zoho = zohoGlobal;
 
 			const script = document.createElement('script');
 			script.id = 'zsiqscript';

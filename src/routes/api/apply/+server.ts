@@ -55,7 +55,7 @@ function sanitizeFilename(rawName: string): string {
 	const fallback = 'file';
 	const normalized = rawName.normalize('NFKC').trim();
 	const noPathSeparators = normalized.replace(/[\\/]+/g, '-');
-	const noControlChars = noPathSeparators.replace(/[\u0000-\u001f\u007f]/g, '');
+	const noControlChars = noPathSeparators.replace(/\p{Cc}/gu, '');
 	const noQuotes = noControlChars.replace(/"/g, '');
 	const safeCharsOnly = noQuotes
 		.replace(/[^A-Za-z0-9._-]+/g, '-')
