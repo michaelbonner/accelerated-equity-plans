@@ -244,7 +244,7 @@
 						)}
 					>
 						<div class="inline-block p-3 rounded-2xl bg-white/10">
-							<svelte:component this={reason.icon} />
+							<reason.icon />
 						</div>
 						<h3 class={clsx(styles.h4)}>{reason.title}</h3>
 						<div class="mx-auto max-w-3xl font-light text-white prose">
@@ -290,7 +290,7 @@
 								)}
 							>
 								<div class="inline-block p-3 rounded-2xl bg-white/10 w-fit">
-									<svelte:component this={opportunity.icon} />
+									<opportunity.icon />
 								</div>
 								<h3 class={styles.h3}>{opportunity.title}</h3>
 								<p class="font-light leading-relaxed">{opportunity.description}</p>

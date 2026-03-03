@@ -48,6 +48,7 @@
 		role="dialog"
 		aria-modal="true"
 		aria-label={title}
+		tabindex="-1"
 		class="fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4"
 		onclick={handleBackdropClick}
 		transition:fly={{ y: 48, duration: 320, opacity: 1 }}
