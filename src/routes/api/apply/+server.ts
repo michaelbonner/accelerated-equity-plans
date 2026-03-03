@@ -424,10 +424,15 @@ export const POST: RequestHandler = async ({ request }) => {
 
 		// Send notification email (non-fatal to applicant submission)
 		try {
+			const port = Number(SMTP_PORT);
+			if (!Number.isInteger(port) || port <= 0) {
+				throw new Error(`Invalid SMTP_PORT value: "${SMTP_PORT}"`);
+			}
+			const secure = port === 465;
 			const transporter = nodemailer.createTransport({
 				host: SMTP_HOST,
-				port: parseInt(SMTP_PORT),
-				secure: false
+				port,
+				secure
 			});
 
 			const submittedAt = new Date(createdAt).toLocaleString('en-US', {
