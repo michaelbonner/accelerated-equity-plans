@@ -65,6 +65,15 @@ function sanitizeFilename(rawName: string): string {
 	return safeCharsOnly.slice(0, MAX_FILENAME_LENGTH);
 }
 
+function htmlEscape(value: string): string {
+	return value
+		.replace(/&/g, '&amp;')
+		.replace(/</g, '&lt;')
+		.replace(/>/g, '&gt;')
+		.replace(/"/g, '&quot;')
+		.replace(/'/g, '&#39;');
+}
+
 async function uploadToS3(s3: S3Client, folder: string, id: string, file: File): Promise<string> {
 	const safeFilename = sanitizeFilename(file.name);
 	const key = `${folder}/${Date.now()}-${id}-${safeFilename}`;
@@ -89,19 +98,23 @@ async function presignUrl(s3: S3Client, key: string): Promise<string> {
 }
 
 function field(label: string, value: string) {
+	const safeLabel = htmlEscape(label);
+	const safeValue = htmlEscape(value);
 	return `
 		<tr>
 			<td style="padding:12px 0;border-bottom:1px solid #e7e5e4;vertical-align:top">
-				<span style="display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:#78716c;margin-bottom:3px">${label}</span>
-				<span style="font-size:15px;color:#1c1917">${value}</span>
+				<span style="display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:#78716c;margin-bottom:3px">${safeLabel}</span>
+				<span style="font-size:15px;color:#1c1917">${safeValue}</span>
 			</td>
 		</tr>`;
 }
 
 function downloadButton(label: string, href: string) {
+	const safeLabel = htmlEscape(label);
+	const safeHref = htmlEscape(href);
 	return `
-		<a href="${href}" style="display:inline-block;margin-top:6px;padding:8px 18px;background:#ab2329;color:#ffffff;font-size:13px;font-weight:600;text-decoration:none;border-radius:6px;font-family:Arial,Helvetica,sans-serif">
-			${label} &darr;
+		<a href="${safeHref}" style="display:inline-block;margin-top:6px;padding:8px 18px;background:#ab2329;color:#ffffff;font-size:13px;font-weight:600;text-decoration:none;border-radius:6px;font-family:Arial,Helvetica,sans-serif">
+			${safeLabel} &darr;
 		</a>`;
 }
 
@@ -119,6 +132,17 @@ interface EmailData {
 }
 
 function buildEmail(d: EmailData): string {
+	const safe = {
+		email: htmlEscape(d.email),
+		phone: d.phone,
+		comments: htmlEscape(d.comments),
+		resumeName: htmlEscape(d.resumeName),
+		coverLetterName: d.coverLetterName ? htmlEscape(d.coverLetterName) : null,
+		coverLetterUrl: d.coverLetterUrl,
+		submittedAt: htmlEscape(d.submittedAt)
+	};
+	const safeMailtoHref = htmlEscape(`mailto:${d.email}`);
+
 	return `<!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
@@ -149,14 +173,19 @@ function buildEmail(d: EmailData): string {
 				New Job Application
 			</h1>
 			<p style="margin:0 0 28px;font-size:13px;color:#78716c;font-family:Arial,Helvetica,sans-serif">
-				Submitted ${d.submittedAt} MT
+				Submitted ${safe.submittedAt} MT
 			</p>
 
 			<!-- Contact info -->
 			<table width="100%" cellpadding="0" cellspacing="0" role="presentation">
 				${field('Applicant', `${d.firstName} ${d.lastName}`)}
-				${field('Email', `<a href="mailto:${d.email}" style="color:#ab2329;text-decoration:none">${d.email}</a>`)}
-				${field('Phone', d.phone || '—')}
+				<tr>
+					<td style="padding:12px 0;border-bottom:1px solid #e7e5e4;vertical-align:top">
+						<span style="display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:#78716c;margin-bottom:3px">${htmlEscape('Email')}</span>
+						<a href="${safeMailtoHref}" style="font-size:15px;color:#ab2329;text-decoration:none">${safe.email}</a>
+					</td>
+				</tr>
+				${field('Phone', safe.phone || '—')}
 			</table>
 
 			<!-- Resume -->
@@ -164,18 +193,18 @@ function buildEmail(d: EmailData): string {
 				<tr>
 					<td style="padding:12px 0;border-bottom:1px solid #e7e5e4">
 						<span style="display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:#78716c;margin-bottom:3px">Resume</span>
-						<span style="font-size:15px;color:#1c1917">${d.resumeName}</span>
+						<span style="font-size:15px;color:#1c1917">${safe.resumeName}</span>
 						${downloadButton('Download Resume', d.resumeUrl)}
 					</td>
 				</tr>
 				${
-					d.coverLetterUrl && d.coverLetterName
+					safe.coverLetterUrl && safe.coverLetterName
 						? `
 				<tr>
 					<td style="padding:12px 0;border-bottom:1px solid #e7e5e4">
 						<span style="display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:#78716c;margin-bottom:3px">Cover Letter</span>
-						<span style="font-size:15px;color:#1c1917">${d.coverLetterName}</span>
-						${downloadButton('Download Cover Letter', d.coverLetterUrl)}
+						<span style="font-size:15px;color:#1c1917">${safe.coverLetterName}</span>
+						${downloadButton('Download Cover Letter', safe.coverLetterUrl)}
 					</td>
 				</tr>`
 						: ''
@@ -183,14 +212,14 @@ function buildEmail(d: EmailData): string {
 			</table>
 
 			${
-				d.comments
+				safe.comments
 					? `
 			<!-- Additional details -->
 			<table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="margin-top:4px">
 				<tr>
 					<td style="padding:16px 0 0">
 						<span style="display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:#78716c;margin-bottom:8px">Additional Details</span>
-						<p style="margin:0;font-size:15px;color:#1c1917;white-space:pre-wrap;background:#f5f5f4;padding:16px;border-radius:8px;border-left:3px solid #ab2329;line-height:1.6">${d.comments}</p>
+						<p style="margin:0;font-size:15px;color:#1c1917;white-space:pre-wrap;background:#f5f5f4;padding:16px;border-radius:8px;border-left:3px solid #ab2329;line-height:1.6">${safe.comments}</p>
 					</td>
 				</tr>
 			</table>`
