@@ -3,8 +3,8 @@
 	import FAQ from '$lib/components/FAQ.svelte';
 	import FooterCallout from '$lib/components/FooterCallout.svelte';
 	import JobApplicationForm from '$lib/components/JobApplicationForm.svelte';
-	import Modal from '$lib/components/Modal.svelte';
 	import RedBar from '$lib/components/RedBar.svelte';
+	import * as Dialog from '$lib/components/ui/dialog';
 
 	let applyModalOpen = $state(false);
 	import Bank from '$lib/components/icons/Bank.svelte';
@@ -409,6 +409,38 @@
 	<FooterCallout />
 </main>
 
-<Modal bind:open={applyModalOpen} title="Apply Now">
-	<JobApplicationForm />
-</Modal>
+<Dialog.Root bind:open={applyModalOpen}>
+	<Dialog.Content
+		showCloseButton={false}
+		class="w-full p-0 gap-0 max-h-[min(90dvh,90vh)] sm:max-w-2xl overflow-hidden border-0"
+	>
+		<Dialog.Header
+			class="shrink-0 bg-black px-6 py-4 rounded-t-xl flex-row items-center justify-between"
+		>
+			<Dialog.Title class="font-headings text-xl font-medium italic text-white"
+				>Apply Now</Dialog.Title
+			>
+			<Dialog.Close
+				aria-label="Close"
+				class="cursor-pointer text-white/60 transition-colors hover:text-white"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-6 w-6"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					stroke-width="2"
+				>
+					<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+				</svg>
+			</Dialog.Close>
+		</Dialog.Header>
+
+		<div class="h-1 shrink-0 bg-red-800"></div>
+
+		<div class="overflow-y-auto px-6 pb-8 bg-white">
+			<JobApplicationForm />
+		</div>
+	</Dialog.Content>
+</Dialog.Root>
