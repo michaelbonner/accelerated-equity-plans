@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { JOB_LISTING_API_KEY, TURNSTILE_SECRET_KEY } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 
 const JOB_LISTING_SUBMISSIONS_URL = 'https://joblisting.app/api/submissions';
 const JOB_LISTING_ID = '9f7eefc1-915d-4600-b9d9-48f85fa99af1';
@@ -30,10 +30,19 @@ interface TurnstileVerifyResponse {
 	'error-codes'?: string[];
 }
 
+function headersToObject(headers: Headers): Record<string, string> {
+	const result: Record<string, string> = {};
+	for (const [key, value] of headers.entries()) {
+		result[key] = value;
+	}
+	return result;
+}
+
 async function verifyTurnstileToken(token: string, remoteIp?: string): Promise<boolean> {
 	try {
+		const turnstileSecretKey = env.TURNSTILE_SECRET_KEY?.trim() ?? '';
 		const payload = new URLSearchParams({
-			secret: TURNSTILE_SECRET_KEY,
+			secret: turnstileSecretKey,
 			response: token
 		});
 		if (remoteIp) {
@@ -80,6 +89,9 @@ function validateFile(
 
 export const POST: RequestHandler = async ({ request }) => {
 	try {
+		const turnstileSecretKey = env.TURNSTILE_SECRET_KEY?.trim() ?? '';
+		const jobListingApiKey = env.JOB_LISTING_API_KEY?.trim() ?? '';
+
 		const formData = await request.formData();
 
 		const firstNameField = formData.get('firstName');
@@ -100,14 +112,14 @@ export const POST: RequestHandler = async ({ request }) => {
 		const coverLetter = coverLetterField instanceof File ? coverLetterField : null;
 		const turnstileToken = typeof turnstileField === 'string' ? turnstileField.trim() : '';
 
-		if (!TURNSTILE_SECRET_KEY) {
+		if (!turnstileSecretKey) {
 			console.error('TURNSTILE_SECRET_KEY is not configured.');
 			return json(
 				{ success: false, error: 'Form is temporarily unavailable. Please try again later.' },
 				{ status: 500 }
 			);
 		}
-		if (!JOB_LISTING_API_KEY) {
+		if (!jobListingApiKey) {
 			console.error('JOB_LISTING_API_KEY is not configured.');
 			return json(
 				{ success: false, error: 'Form is temporarily unavailable. Please try again later.' },
@@ -203,22 +215,57 @@ export const POST: RequestHandler = async ({ request }) => {
 			outboundFormData.set('comments', comments);
 		}
 
+		console.info('Job listing submission request:', {
+			timestamp: new Date().toISOString(),
+			url: JOB_LISTING_SUBMISSIONS_URL,
+			jobListingId: JOB_LISTING_ID,
+			authHeaderPresent: Boolean(jobListingApiKey),
+			authTokenLength: jobListingApiKey.length,
+			fieldDefinitions: fields,
+			payloadSummary: {
+				fullNamePresent: Boolean(`${firstName} ${lastName}`.trim()),
+				emailPresent: Boolean(email),
+				phonePresent: Boolean(phone),
+				commentsPresent: Boolean(comments),
+				resume: {
+					name: resume.name,
+					type: resume.type,
+					size: resume.size
+				},
+				coverLetter: coverLetter
+					? {
+							name: coverLetter.name,
+							type: coverLetter.type,
+							size: coverLetter.size
+						}
+					: null
+			}
+		});
+
 		const submissionResponse = await fetch(JOB_LISTING_SUBMISSIONS_URL, {
 			method: 'POST',
 			headers: {
-				Authorization: `Bearer ${JOB_LISTING_API_KEY}`
+				Authorization: `Bearer ${jobListingApiKey}`
 			},
 			body: outboundFormData
 		});
 
-		if (!submissionResponse.ok) {
-			let upstreamDetails = '';
-			try {
-				upstreamDetails = await submissionResponse.text();
-			} catch {
-				upstreamDetails = '';
-			}
+		let upstreamDetails = '';
+		try {
+			upstreamDetails = await submissionResponse.text();
+		} catch {
+			upstreamDetails = '';
+		}
 
+		console.info('Job listing submission response:', {
+			timestamp: new Date().toISOString(),
+			status: submissionResponse.status,
+			ok: submissionResponse.ok,
+			headers: headersToObject(submissionResponse.headers),
+			detailsPreview: upstreamDetails.slice(0, 2000)
+		});
+
+		if (!submissionResponse.ok) {
 			console.error('Job listing submission failed:', {
 				status: submissionResponse.status,
 				details: upstreamDetails
