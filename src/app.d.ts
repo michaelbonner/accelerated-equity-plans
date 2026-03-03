@@ -18,7 +18,7 @@ declare global {
 	}
 
 	interface Window {
-		$zoho: any;
+		$zoho: unknown;
 		turnstile?: Turnstile;
 	}
 }
