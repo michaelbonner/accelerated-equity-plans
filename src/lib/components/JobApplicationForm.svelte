@@ -1,12 +1,18 @@
 <script lang="ts">
 	import { clsx } from 'clsx';
+	import { onMount } from 'svelte';
 	import { styles } from '$lib/styles';
+
+	let { siteKey = '' }: { siteKey?: string } = $props();
 
 	let isSubmitting = $state(false);
 	let submitted = $state(false);
 	let errorMessage = $state('');
 	let resumeFileName = $state('');
 	let coverLetterFileName = $state('');
+	let turnstileToken = $state('');
+	let turnstileWidgetId = $state<string | null>(null);
+	let turnstileContainer: HTMLDivElement | null = null;
 
 	const inputClass = clsx(
 		'block py-3 px-4 w-full leading-tight text-black rounded-sm border appearance-none border-stone-200 bg-stone-100',
@@ -21,6 +27,73 @@
 	const COVER_LETTER_ACCEPTED =
 		'.pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document';
 	const MAX_MB = 10;
+	const TURNSTILE_SCRIPT_ID = 'cf-turnstile-script';
+	const TURNSTILE_SCRIPT_SRC = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+
+	function loadTurnstileScript(): Promise<void> {
+		return new Promise((resolve, reject) => {
+			const existingScript = document.getElementById(TURNSTILE_SCRIPT_ID) as HTMLScriptElement | null;
+			if (window.turnstile) {
+				resolve();
+				return;
+			}
+			if (existingScript) {
+				existingScript.addEventListener('load', () => resolve(), { once: true });
+				existingScript.addEventListener('error', () => reject(new Error('Turnstile failed to load')), {
+					once: true
+				});
+				return;
+			}
+
+			const script = document.createElement('script');
+			script.id = TURNSTILE_SCRIPT_ID;
+			script.src = TURNSTILE_SCRIPT_SRC;
+			script.async = true;
+			script.defer = true;
+			script.onload = () => resolve();
+			script.onerror = () => reject(new Error('Turnstile failed to load'));
+			document.head.appendChild(script);
+		});
+	}
+
+	onMount(() => {
+		if (!siteKey) {
+			return;
+		}
+
+		let cancelled = false;
+		void (async () => {
+			try {
+				await loadTurnstileScript();
+				if (cancelled || !turnstileContainer || !window.turnstile) {
+					return;
+				}
+
+				turnstileWidgetId = window.turnstile.render(turnstileContainer, {
+					sitekey: siteKey,
+					callback: (token: string) => {
+						turnstileToken = token;
+					},
+					'expired-callback': () => {
+						turnstileToken = '';
+					},
+					'error-callback': () => {
+						turnstileToken = '';
+						errorMessage = 'Captcha verification failed. Please try again.';
+					}
+				});
+			} catch {
+				errorMessage = 'Captcha could not be loaded. Please refresh and try again.';
+			}
+		})();
+
+		return () => {
+			cancelled = true;
+			if (window.turnstile && turnstileWidgetId) {
+				window.turnstile.remove(turnstileWidgetId);
+			}
+		};
+	});
 
 	function validateFile(
 		file: File | null | undefined,
@@ -93,6 +166,13 @@
 
 		const form = event.target as HTMLFormElement;
 		const formData = new FormData(form);
+		formData.set('turnstileToken', turnstileToken);
+
+		if (!turnstileToken) {
+			errorMessage = 'Please complete the captcha before submitting.';
+			isSubmitting = false;
+			return;
+		}
 
 		try {
 			const response = await fetch('/api/apply', {
@@ -111,6 +191,10 @@
 				}
 			} else {
 				errorMessage = data.error ?? 'Oops! There was a problem submitting your application.';
+				if (window.turnstile && turnstileWidgetId) {
+					window.turnstile.reset(turnstileWidgetId);
+					turnstileToken = '';
+				}
 			}
 		} catch {
 			errorMessage = 'Oops! There was a problem submitting your application.';
@@ -255,6 +339,11 @@
 					placeholder="Tell us about your experience, the type of role you're interested in, availability, etc."
 					rows={5}
 				></textarea>
+			</div>
+
+			<div class="md:col-span-2">
+				<div bind:this={turnstileContainer}></div>
+				<input type="hidden" name="turnstileToken" value={turnstileToken} />
 			</div>
 		</div>
 
