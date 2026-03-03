@@ -16,21 +16,23 @@
 
 	const labelClass = 'block mb-2 font-bold tracking-wide font-headings text-sm';
 
-	const ACCEPTED =
+	const RESUME_ACCEPTED =
+		'.pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+	const COVER_LETTER_ACCEPTED =
 		'.pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document';
 	const MAX_MB = 10;
 
-	function validateFile(file: File | null | undefined, required: boolean): string | null {
+	function validateFile(
+		file: File | null | undefined,
+		required: boolean,
+		allowedMimeTypes: string[],
+		allowedTypesMessage: string
+	): string | null {
 		if (!file || file.size === 0) {
 			return required ? 'This file is required.' : null;
 		}
-		const allowed = [
-			'application/pdf',
-			'application/msword',
-			'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
-		];
-		if (!allowed.includes(file.type)) {
-			return 'Only PDF or Word documents (.pdf, .doc, .docx) are accepted.';
+		if (!allowedMimeTypes.includes(file.type)) {
+			return allowedTypesMessage;
 		}
 		if (file.size > MAX_MB * 1024 * 1024) {
 			return `File must be smaller than ${MAX_MB} MB.`;
@@ -42,7 +44,16 @@
 		const input = event.target as HTMLInputElement;
 		const file = input.files?.[0];
 		resumeFileName = file?.name ?? '';
-		const err = validateFile(file, true);
+		const err = validateFile(
+			file,
+			true,
+			[
+				'application/pdf',
+				'application/msword',
+				'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+			],
+			'Only PDF or Word documents (.pdf, .doc, .docx) are accepted.'
+		);
 		if (err) {
 			errorMessage = err;
 			input.value = '';
@@ -56,7 +67,16 @@
 		const input = event.target as HTMLInputElement;
 		const file = input.files?.[0];
 		coverLetterFileName = file?.name ?? '';
-		const err = validateFile(file, false);
+		const err = validateFile(
+			file,
+			false,
+			[
+				'application/pdf',
+				'application/msword',
+				'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+			],
+			'Only PDF or Word documents (.pdf, .doc, .docx) are accepted.'
+		);
 		if (err) {
 			errorMessage = err;
 			input.value = '';
@@ -190,7 +210,7 @@
 					id="resume"
 					name="resume"
 					type="file"
-					accept={ACCEPTED}
+					accept={RESUME_ACCEPTED}
 					required
 					onchange={handleResumeChange}
 				/>
@@ -220,7 +240,7 @@
 					id="coverLetter"
 					name="coverLetter"
 					type="file"
-					accept={ACCEPTED}
+					accept={COVER_LETTER_ACCEPTED}
 					onchange={handleCoverLetterChange}
 				/>
 			</div>

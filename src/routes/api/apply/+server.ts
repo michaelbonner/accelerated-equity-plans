@@ -16,7 +16,12 @@ import {
 
 const BUCKET = 'aep-uploads';
 const TABLE = 'aep-job-applications';
-const ALLOWED_MIME_TYPES = [
+const RESUME_ALLOWED_MIME_TYPES = [
+	'application/pdf',
+	'application/msword',
+	'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+];
+const COVER_LETTER_ALLOWED_MIME_TYPES = [
 	'application/pdf',
 	'application/msword',
 	'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
@@ -289,7 +294,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		if (!resume || resume.size === 0) {
 			return json({ success: false, error: 'A resume is required.' }, { status: 400 });
 		}
-		if (!ALLOWED_MIME_TYPES.includes(resume.type)) {
+		if (!RESUME_ALLOWED_MIME_TYPES.includes(resume.type)) {
 			return json(
 				{ success: false, error: 'Resume must be a PDF or Word document (.pdf, .doc, .docx).' },
 				{ status: 400 }
@@ -301,7 +306,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 		// Validate optional cover letter
 		if (coverLetter && coverLetter.size > 0) {
-			if (!ALLOWED_MIME_TYPES.includes(coverLetter.type)) {
+			if (!COVER_LETTER_ALLOWED_MIME_TYPES.includes(coverLetter.type)) {
 				return json(
 					{
 						success: false,
