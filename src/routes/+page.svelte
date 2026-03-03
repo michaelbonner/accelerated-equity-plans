@@ -229,9 +229,7 @@
 			{/each}
 		</div>
 		<div class="relative flex mt-8 mx-auto max-w-7xl justify-center">
-			<a href="/services" class={styles.redButton}>
-				Explore All Equity Plan Services
-			</a>
+			<a href="/services" class={styles.redButton}> Explore All Equity Plan Services </a>
 		</div>
 	</section>
 
