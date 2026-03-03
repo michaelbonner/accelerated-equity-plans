@@ -253,13 +253,21 @@ export const POST: RequestHandler = async ({ request }) => {
 	try {
 		const formData = await request.formData();
 
-		const firstName = (formData.get('firstName') as string)?.trim();
-		const lastName = (formData.get('lastName') as string)?.trim();
-		const email = (formData.get('email') as string)?.trim();
-		const phone = ((formData.get('phone') as string) ?? '').trim();
-		const comments = ((formData.get('comments') as string) ?? '').trim();
-		const resume = formData.get('resume') as File | null;
-		const coverLetter = formData.get('coverLetter') as File | null;
+		const firstNameField = formData.get('firstName');
+		const lastNameField = formData.get('lastName');
+		const emailField = formData.get('email');
+		const phoneField = formData.get('phone');
+		const commentsField = formData.get('comments');
+		const resumeField = formData.get('resume');
+		const coverLetterField = formData.get('coverLetter');
+
+		const firstName = typeof firstNameField === 'string' ? firstNameField.trim() : '';
+		const lastName = typeof lastNameField === 'string' ? lastNameField.trim() : '';
+		const email = typeof emailField === 'string' ? emailField.trim() : '';
+		const phone = typeof phoneField === 'string' ? phoneField.trim() : '';
+		const comments = typeof commentsField === 'string' ? commentsField.trim() : '';
+		const resume = resumeField instanceof File ? resumeField : null;
+		const coverLetter = coverLetterField instanceof File ? coverLetterField : null;
 
 		// Validate required text fields
 		if (!firstName || !lastName || !email) {
@@ -348,36 +356,40 @@ export const POST: RequestHandler = async ({ request }) => {
 			})
 		);
 
-		// Send notification email
-		const transporter = nodemailer.createTransport({
-			host: SMTP_HOST,
-			port: parseInt(SMTP_PORT),
-			secure: false
-		});
+		// Send notification email (non-fatal to applicant submission)
+		try {
+			const transporter = nodemailer.createTransport({
+				host: SMTP_HOST,
+				port: parseInt(SMTP_PORT),
+				secure: false
+			});
 
-		const submittedAt = new Date(createdAt).toLocaleString('en-US', {
-			timeZone: 'America/Denver',
-			dateStyle: 'long',
-			timeStyle: 'short'
-		});
+			const submittedAt = new Date(createdAt).toLocaleString('en-US', {
+				timeZone: 'America/Denver',
+				dateStyle: 'long',
+				timeStyle: 'short'
+			});
 
-		await transporter.sendMail({
-			from: '"AEP Careers" <noreply@acceleratedep.com>',
-			to: NOTIFICATION_EMAIL,
-			subject: `New Job Application — ${firstName} ${lastName}`,
-			html: buildEmail({
-				firstName,
-				lastName,
-				email,
-				phone,
-				comments,
-				resumeName: resume.name,
-				resumeUrl,
-				coverLetterName: coverLetter?.name ?? null,
-				coverLetterUrl,
-				submittedAt
-			})
-		});
+			await transporter.sendMail({
+				from: '"AEP Careers" <noreply@acceleratedep.com>',
+				to: NOTIFICATION_EMAIL,
+				subject: `New Job Application — ${firstName} ${lastName}`,
+				html: buildEmail({
+					firstName,
+					lastName,
+					email,
+					phone,
+					comments,
+					resumeName: resume.name,
+					resumeUrl,
+					coverLetterName: coverLetter?.name ?? null,
+					coverLetterUrl,
+					submittedAt
+				})
+			});
+		} catch (emailError) {
+			console.error('Job application email notification error:', emailError);
+		}
 
 		return json({ success: true });
 	} catch (error) {
