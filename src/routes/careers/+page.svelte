@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { PageData } from './$types';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import FAQ from '$lib/components/FAQ.svelte';
 	import FooterCallout from '$lib/components/FooterCallout.svelte';
@@ -20,6 +21,7 @@
 	import { styles } from '$lib/styles';
 	import { clsx } from 'clsx';
 
+	let { data }: { data: PageData } = $props();
 	const title = 'Equity Plan Administration Jobs & Careers | Accelerated Equity Plans';
 	const description =
 		'Explore equity plan administration jobs and stock compensation careers at Accelerated Equity Plans. Join our team of equity compensation professionals and build your career in equity administration.';
@@ -440,7 +442,7 @@
 		<div class="h-1 shrink-0 bg-red-800"></div>
 
 		<div class="overflow-y-auto px-6 pb-8 bg-white">
-			<JobApplicationForm />
+			<JobApplicationForm siteKey={data.turnstileSiteKey} />
 		</div>
 	</Dialog.Content>
 </Dialog.Root>

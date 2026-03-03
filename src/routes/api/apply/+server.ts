@@ -11,7 +11,8 @@ import {
 	AWS_REGION,
 	SMTP_HOST,
 	SMTP_PORT,
-	NOTIFICATION_EMAIL
+	NOTIFICATION_EMAIL,
+	TURNSTILE_SECRET_KEY
 } from '$env/static/private';
 
 const BUCKET = 'aep-uploads';
@@ -28,6 +29,12 @@ const COVER_LETTER_ALLOWED_MIME_TYPES = [
 ];
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
 const MAX_FILENAME_LENGTH = 120;
+const TURNSTILE_VERIFY_URL = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
+
+interface TurnstileVerifyResponse {
+	success: boolean;
+	'error-codes'?: string[];
+}
 
 function makeS3Client() {
 	return new S3Client({
@@ -77,6 +84,34 @@ function htmlEscape(value: string): string {
 		.replace(/>/g, '&gt;')
 		.replace(/"/g, '&quot;')
 		.replace(/'/g, '&#39;');
+}
+
+async function verifyTurnstileToken(token: string, remoteIp?: string): Promise<boolean> {
+	try {
+		const payload = new URLSearchParams({
+			secret: TURNSTILE_SECRET_KEY,
+			response: token
+		});
+		if (remoteIp) {
+			payload.set('remoteip', remoteIp);
+		}
+
+		const response = await fetch(TURNSTILE_VERIFY_URL, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded'
+			},
+			body: payload
+		});
+		if (!response.ok) {
+			return false;
+		}
+
+		const data = (await response.json()) as TurnstileVerifyResponse;
+		return data.success === true;
+	} catch {
+		return false;
+	}
 }
 
 async function uploadToS3(s3: S3Client, folder: string, id: string, file: File): Promise<string> {
@@ -265,6 +300,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		const commentsField = formData.get('comments');
 		const resumeField = formData.get('resume');
 		const coverLetterField = formData.get('coverLetter');
+		const turnstileField = formData.get('turnstileToken') ?? formData.get('cf-turnstile-response');
 
 		const firstName = typeof firstNameField === 'string' ? firstNameField.trim() : '';
 		const lastName = typeof lastNameField === 'string' ? lastNameField.trim() : '';
@@ -273,6 +309,31 @@ export const POST: RequestHandler = async ({ request }) => {
 		const comments = typeof commentsField === 'string' ? commentsField.trim() : '';
 		const resume = resumeField instanceof File ? resumeField : null;
 		const coverLetter = coverLetterField instanceof File ? coverLetterField : null;
+		const turnstileToken = typeof turnstileField === 'string' ? turnstileField.trim() : '';
+
+		if (!TURNSTILE_SECRET_KEY) {
+			console.error('TURNSTILE_SECRET_KEY is not configured.');
+			return json(
+				{ success: false, error: 'Form is temporarily unavailable. Please try again later.' },
+				{ status: 500 }
+			);
+		}
+		if (!turnstileToken) {
+			return json(
+				{ success: false, error: 'Please complete the captcha before submitting.' },
+				{ status: 400 }
+			);
+		}
+
+		const forwardedFor = request.headers.get('x-forwarded-for');
+		const remoteIp = forwardedFor?.split(',')[0]?.trim();
+		const isCaptchaValid = await verifyTurnstileToken(turnstileToken, remoteIp);
+		if (!isCaptchaValid) {
+			return json(
+				{ success: false, error: 'Captcha verification failed. Please try again.' },
+				{ status: 400 }
+			);
+		}
 
 		// Validate required text fields
 		if (!firstName || !lastName || !email) {
