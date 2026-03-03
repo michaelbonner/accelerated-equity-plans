@@ -91,6 +91,20 @@ export const POST: RequestHandler = async ({ request }) => {
 	try {
 		const turnstileSecretKey = env.TURNSTILE_SECRET_KEY?.trim() ?? '';
 		const jobListingApiKey = env.JOB_LISTING_API_KEY?.trim() ?? '';
+		const vercelEnv = env.VERCEL_ENV?.trim() ?? 'unknown';
+		const vercelRegion = env.VERCEL_REGION?.trim() ?? 'unknown';
+		const nodeEnv = env.NODE_ENV?.trim() ?? 'unknown';
+
+		console.info('Job listing runtime env check:', {
+			timestamp: new Date().toISOString(),
+			vercelEnv,
+			vercelRegion,
+			nodeEnv,
+			jobListingApiKeyPresent: Boolean(jobListingApiKey),
+			jobListingApiKeyLength: jobListingApiKey.length,
+			turnstileSecretPresent: Boolean(turnstileSecretKey),
+			turnstileSecretLength: turnstileSecretKey.length
+		});
 
 		const formData = await request.formData();
 
