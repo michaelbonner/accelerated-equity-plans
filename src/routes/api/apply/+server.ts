@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { TURNSTILE_SECRET_KEY } from '$env/static/private';
+import { JOB_LISTING_API_KEY, TURNSTILE_SECRET_KEY } from '$env/static/private';
 
 const JOB_LISTING_SUBMISSIONS_URL = 'https://joblisting.app/api/submissions';
 const JOB_LISTING_ID = '9f7eefc1-915d-4600-b9d9-48f85fa99af1';
@@ -107,6 +107,13 @@ export const POST: RequestHandler = async ({ request }) => {
 				{ status: 500 }
 			);
 		}
+		if (!JOB_LISTING_API_KEY) {
+			console.error('JOB_LISTING_API_KEY is not configured.');
+			return json(
+				{ success: false, error: 'Form is temporarily unavailable. Please try again later.' },
+				{ status: 500 }
+			);
+		}
 
 		if (!turnstileToken) {
 			return json(
@@ -198,6 +205,9 @@ export const POST: RequestHandler = async ({ request }) => {
 
 		const submissionResponse = await fetch(JOB_LISTING_SUBMISSIONS_URL, {
 			method: 'POST',
+			headers: {
+				Authorization: `Bearer ${JOB_LISTING_API_KEY}`
+			},
 			body: outboundFormData
 		});
 
