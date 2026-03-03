@@ -2,7 +2,11 @@
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import FAQ from '$lib/components/FAQ.svelte';
 	import FooterCallout from '$lib/components/FooterCallout.svelte';
+	import JobApplicationForm from '$lib/components/JobApplicationForm.svelte';
+	import Modal from '$lib/components/Modal.svelte';
 	import RedBar from '$lib/components/RedBar.svelte';
+
+	let applyModalOpen = $state(false);
 	import Bank from '$lib/components/icons/Bank.svelte';
 	import Document from '$lib/components/icons/Document.svelte';
 	import DocumentCheck from '$lib/components/icons/DocumentCheck.svelte';
@@ -123,7 +127,7 @@
 		{
 			question: 'How do I apply for a position at Accelerated Equity Plans?',
 			answer:
-				'<p>To apply, simply send your resume to <a href="mailto:info@acceleratedep.com" class="text-red-700 hover:text-red-800 underline">info@acceleratedep.com</a> with a brief introduction about yourself and the type of role you\'re interested in. We review all applications and will reach out if there\'s a potential fit. Even if we don\'t have an immediate opening that matches your background, we keep qualified candidates in mind for future opportunities.</p>'
+				"<p>To apply, simply use the form above to submit your resume with a brief introduction about yourself and the type of role you're interested in. We review all applications and will reach out if there's a potential fit. Even if we don't have an immediate opening that matches your background, we keep qualified candidates in mind for future opportunities.</p>"
 		},
 		{
 			question: 'What is the typical career path for an equity administrator?',
@@ -212,16 +216,11 @@
 				<h2 class={styles.h3}>Send Us Your Resume</h2>
 				<p>
 					Interested in an equity plan administration career? We're always looking for talented
-					professionals to join our team. Send your resume to <a
-						class="underline text-red-700 hover:text-red-800"
-						href="mailto:&#105;&#110;&#102;&#111;&#064;&#097;&#099;&#099;&#101;&#108;&#101;&#114;&#097;&#116;&#101;&#100;&#101;&#112;&#046;&#099;&#111;&#109;"
-						>&#105;&#110;&#102;&#111;&#064;&#097;&#099;&#099;&#101;&#108;&#101;&#114;&#097;&#116;&#101;&#100;&#101;&#112;&#046;&#099;&#111;&#109;</a
-					>.
+					professionals to join our team.
 				</p>
 				<div class="mt-2">
-					<a
-						href="mailto:&#105;&#110;&#102;&#111;&#064;&#097;&#099;&#099;&#101;&#108;&#101;&#114;&#097;&#116;&#101;&#100;&#101;&#112;&#046;&#099;&#111;&#109;?subject=I'm interested in joining the AEP team!"
-						class={styles.redButton}>Join the AEP Team!</a
+					<button onclick={() => (applyModalOpen = true)} class={styles.redButton}
+						>Join the AEP Team!</button
 					>
 				</div>
 			</div>
@@ -409,3 +408,7 @@
 
 	<FooterCallout />
 </main>
+
+<Modal bind:open={applyModalOpen} title="Apply Now">
+	<JobApplicationForm />
+</Modal>
