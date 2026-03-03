@@ -1,12 +1,15 @@
 {
 	"words": [
+		"acceleratedep",
 		"AEP's",
 		"Birrell",
 		"Carta",
 		"Cazier",
+		"cellspacing",
 		"Certent",
 		"clsx",
 		"Computershare",
+		"darr",
 		"Equilar",
 		"equitymethods",
 		"Equiview",
@@ -25,12 +28,17 @@
 		"KPMG",
 		"lastmod",
 		"lifecycles",
+		"middot",
+		"msword",
 		"Mudrow",
 		"NASPP",
+		"officedocument",
+		"openxmlformats",
 		"oxlint",
 		"partytown",
 		"PhoneNumber_countrycode",
 		"pickleball",
+		"presign",
 		"proxytown",
 		"qwik",
 		"reputationally",
@@ -44,6 +52,7 @@
 		"swiper",
 		"transformative",
 		"urlset",
-		"Veeva"
+		"Veeva",
+		"wordprocessingml"
 	]
 }
