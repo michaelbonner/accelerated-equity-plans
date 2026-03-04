@@ -26,7 +26,7 @@
 		'.pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document';
 	const COVER_LETTER_ACCEPTED =
 		'.pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document';
-	const MAX_MB = 10;
+	const MAX_MB = 5;
 	const TURNSTILE_SCRIPT_ID = 'cf-turnstile-script';
 	const TURNSTILE_SCRIPT_SRC = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
 
@@ -286,7 +286,7 @@
 						Choose File
 					</span>
 					<span class="truncate text-sm text-stone-500">
-						{resumeFileName || 'PDF, DOC, or DOCX — max 10 MB'}
+						{resumeFileName || 'PDF, DOC, or DOCX — max 5 MB'}
 					</span>
 				</label>
 				<input
