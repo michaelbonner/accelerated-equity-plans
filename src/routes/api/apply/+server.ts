@@ -238,7 +238,10 @@ export const POST: RequestHandler = async ({ request }) => {
 			return json(
 				{
 					success: false,
-					error: 'Application could not be submitted right now. Please try again shortly.'
+					error:
+						upstreamDetails ||
+						'Application could not be submitted right now. Please try again shortly.',
+					details: upstreamDetails
 				},
 				{ status: 502 }
 			);
