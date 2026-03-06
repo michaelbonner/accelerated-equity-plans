@@ -62,7 +62,12 @@ async function verifyTurnstileToken(token: string, remoteIp?: string): Promise<b
 
 function validateFile(
 	file: File | null,
-	options: { required: boolean; allowedMimeTypes: string[]; requiredError: string; typeError: string }
+	options: {
+		required: boolean;
+		allowedMimeTypes: string[];
+		requiredError: string;
+		typeError: string;
+	}
 ): string | null {
 	if (!file || file.size === 0) {
 		return options.required ? options.requiredError : null;
@@ -177,7 +182,8 @@ export const POST: RequestHandler = async ({ request }) => {
 		}
 
 		const fields: SubmissionField[] = [
-			{ name: 'full_name', label: 'Full Name', type: 'text' },
+			{ name: 'first_name', label: 'First Name', type: 'text' },
+			{ name: 'last_name', label: 'Last Name', type: 'text' },
 			{ name: 'email', label: 'Email', type: 'email' },
 			{ name: 'phone', label: 'Phone', type: 'phone' },
 			{ name: 'resume', label: 'Resume', type: 'file' }
@@ -194,7 +200,8 @@ export const POST: RequestHandler = async ({ request }) => {
 		const outboundFormData = new FormData();
 		outboundFormData.set('job_listing_id', JOB_LISTING_ID);
 		outboundFormData.set('fields', JSON.stringify(fields));
-		outboundFormData.set('full_name', `${firstName} ${lastName}`.trim());
+		outboundFormData.set('first_name', firstName);
+		outboundFormData.set('last_name', lastName);
 		outboundFormData.set('email', email);
 		outboundFormData.set('phone', phone);
 		outboundFormData.set('resume', resume, resume.name);
