@@ -8,6 +8,7 @@
 	let isSubmitting = $state(false);
 	let submitted = $state(false);
 	let errorMessage = $state('');
+	let showSubmissionFallback = $state(false);
 	let resumeFileName = $state('');
 	let coverLetterFileName = $state('');
 	let turnstileToken = $state('');
@@ -163,6 +164,7 @@
 		event.preventDefault();
 		isSubmitting = true;
 		errorMessage = '';
+		showSubmissionFallback = false;
 
 		const form = event.target as HTMLFormElement;
 		const formData = new FormData(form);
@@ -191,6 +193,7 @@
 				}
 			} else {
 				errorMessage = data.error ?? 'Oops! There was a problem submitting your application.';
+				showSubmissionFallback = true;
 				if (window.turnstile && turnstileWidgetId) {
 					window.turnstile.reset(turnstileWidgetId);
 					turnstileToken = '';
@@ -198,6 +201,7 @@
 			}
 		} catch {
 			errorMessage = 'Oops! There was a problem submitting your application.';
+			showSubmissionFallback = true;
 		} finally {
 			isSubmitting = false;
 		}
@@ -349,6 +353,20 @@
 
 		{#if errorMessage}
 			<p class="mt-4 text-sm italic text-red-500">{errorMessage}</p>
+		{/if}
+
+		{#if showSubmissionFallback}
+			<p class="mt-2 text-sm italic text-red-500">
+				I'm having trouble. You can submit your application here:
+				<a
+					class="underline underline-offset-2"
+					href="https://joblisting.app/jobs/9f7eefc1-915d-4600-b9d9-48f85fa99af1/apply"
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+					joblisting.app/jobs/9f7eefc1-915d-4600-b9d9-48f85fa99af1/apply
+				</a>
+			</p>
 		{/if}
 
 		<div class="mt-6 flex justify-end">
