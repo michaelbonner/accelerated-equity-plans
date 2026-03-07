@@ -440,6 +440,7 @@
 		<div class="h-1 shrink-0 bg-red-800"></div>
 
 		<div class="overflow-y-auto px-6 py-6 bg-white">
+			<p class="mb-4 text-stone-600">Select a position below to learn more and apply.</p>
 			<div data-joblisting-widget="bd38efd6-f022-484f-afe8-0226533213fe"></div>
 		</div>
 	</Dialog.Content>
