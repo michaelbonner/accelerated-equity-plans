@@ -1,9 +1,7 @@
 <script lang="ts">
-	import type { PageData } from './$types';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import FAQ from '$lib/components/FAQ.svelte';
 	import FooterCallout from '$lib/components/FooterCallout.svelte';
-	import JobApplicationForm from '$lib/components/JobApplicationForm.svelte';
 	import RedBar from '$lib/components/RedBar.svelte';
 	import * as Dialog from '$lib/components/ui/dialog';
 
@@ -21,7 +19,6 @@
 	import { styles } from '$lib/styles';
 	import { clsx } from 'clsx';
 
-	let { data }: { data: PageData } = $props();
 	const title = 'Equity Plan Administration Jobs & Careers | Accelerated Equity Plans';
 	const description =
 		'Explore equity plan administration jobs and stock compensation careers at Accelerated Equity Plans. Join our team of equity compensation professionals and build your career in equity administration.';
@@ -175,6 +172,7 @@
 	<link rel="canonical" href={`https://www.acceleratedep.com${path}`} />
 	<meta property="og:url" content={`https://www.acceleratedep.com${path}`} />
 	{@html `<script type="application/ld+json">${JSON.stringify(generateJobPostingSchema())}</script>`}
+	<script src="https://joblisting.app/widget.js" defer async></script>
 </svelte:head>
 
 <main>
@@ -414,13 +412,13 @@
 <Dialog.Root bind:open={applyModalOpen}>
 	<Dialog.Content
 		showCloseButton={false}
-		class="w-full p-0 gap-0 max-h-[min(90dvh,90vh)] sm:max-w-2xl overflow-hidden border-0"
+		class="w-full p-0 gap-0 max-h-[min(90dvh,90vh)] sm:max-w-3xl overflow-hidden border-0"
 	>
 		<Dialog.Header
 			class="shrink-0 bg-black px-6 py-4 rounded-t-xl flex-row items-center justify-between"
 		>
 			<Dialog.Title class="font-headings text-xl font-medium italic text-white"
-				>Apply Now</Dialog.Title
+				>Open Positions</Dialog.Title
 			>
 			<Dialog.Close
 				aria-label="Close"
@@ -441,8 +439,8 @@
 
 		<div class="h-1 shrink-0 bg-red-800"></div>
 
-		<div class="overflow-y-auto px-6 pb-8 bg-white">
-			<JobApplicationForm siteKey={data.turnstileSiteKey} />
+		<div class="overflow-y-auto px-6 py-6 bg-white">
+			<div data-joblisting-widget="bd38efd6-f022-484f-afe8-0226533213fe"></div>
 		</div>
 	</Dialog.Content>
 </Dialog.Root>
