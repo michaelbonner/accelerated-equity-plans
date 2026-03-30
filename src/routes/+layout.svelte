@@ -529,6 +529,10 @@
 		gtag('config', 'G-252472179V');
 	</script>
 
+	<script
+		src="https://cdn.pagesense.io/js/acceleratedequityplans/774d2e9d272a4335862b262760e6decf.js"
+	></script>
+
 	{@html `<script type="application/ld+json">${JSON.stringify(jsonLD())}</script>`}
 </svelte:head>
 
