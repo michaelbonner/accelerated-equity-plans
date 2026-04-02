@@ -42,6 +42,21 @@
 
 		// Delay loading by 3 seconds to keep it off the critical path
 		setTimeout(loadZohoChat, 3000);
+
+		// Load PageSense after the page is idle to avoid render-blocking
+		const loadPageSense = () => {
+			const script = document.createElement('script');
+			script.src =
+				'https://cdn.pagesense.io/js/acceleratedequityplans/774d2e9d272a4335862b262760e6decf.js';
+			script.async = true;
+			document.head.appendChild(script);
+		};
+
+		if ('requestIdleCallback' in window) {
+			requestIdleCallback(loadPageSense);
+		} else {
+			setTimeout(loadPageSense, 3000);
+		}
 	});
 
 	const navLinks = [
@@ -528,10 +543,6 @@
 		gtag('js', new Date());
 		gtag('config', 'G-252472179V');
 	</script>
-
-	<script
-		src="https://cdn.pagesense.io/js/acceleratedequityplans/774d2e9d272a4335862b262760e6decf.js"
-	></script>
 
 	{@html `<script type="application/ld+json">${JSON.stringify(jsonLD())}</script>`}
 </svelte:head>
