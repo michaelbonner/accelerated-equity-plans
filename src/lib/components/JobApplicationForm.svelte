@@ -29,20 +29,27 @@
 		'.pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document';
 	const MAX_MB = 5;
 	const TURNSTILE_SCRIPT_ID = 'cf-turnstile-script';
-	const TURNSTILE_SCRIPT_SRC = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+	const TURNSTILE_SCRIPT_SRC =
+		'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
 
 	function loadTurnstileScript(): Promise<void> {
 		return new Promise((resolve, reject) => {
-			const existingScript = document.getElementById(TURNSTILE_SCRIPT_ID) as HTMLScriptElement | null;
+			const existingScript = document.getElementById(
+				TURNSTILE_SCRIPT_ID
+			) as HTMLScriptElement | null;
 			if (window.turnstile) {
 				resolve();
 				return;
 			}
 			if (existingScript) {
 				existingScript.addEventListener('load', () => resolve(), { once: true });
-				existingScript.addEventListener('error', () => reject(new Error('Turnstile failed to load')), {
-					once: true
-				});
+				existingScript.addEventListener(
+					'error',
+					() => reject(new Error('Turnstile failed to load')),
+					{
+						once: true
+					}
+				);
 				return;
 			}
 
