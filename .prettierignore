@@ -16,3 +16,5 @@ yarn.lock
 static/googledad25a243e7c4704.html
 
 static/~partytown/*
+
+src/app.d.ts
