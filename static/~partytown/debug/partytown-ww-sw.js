@@ -1,4 +1,4 @@
-/* Partytown 0.11.2 - MIT QwikDev */
+/* Partytown 0.13.2 - MIT QwikDev */
 (self => {
     var WorkerMessageType;
     !function(WorkerMessageType) {
@@ -855,7 +855,7 @@
         }
         return {};
     };
-    const getPartytownScript = () => `<script src="${partytownLibUrl("partytown.js?v=0.11.2")}"><\/script>`;
+    const getPartytownScript = () => `<script src="${partytownLibUrl("partytown.js?v=0.13.2")}"><\/script>`;
     const createImageConstructor = env => class HTMLImageElement {
         constructor() {
             this.s = "";
@@ -1546,7 +1546,7 @@
                         (() => {
                             if (!webWorkerCtx.$initWindowMedia$) {
                                 self.$bridgeToMedia$ = [ getter, setter, callMethod, constructGlobal, definePrototypePropertyDescriptor, randomId, WinIdKey, InstanceIdKey, ApplyPathKey ];
-                                webWorkerCtx.$importScripts$(partytownLibUrl("partytown-media.js?v=0.11.2"));
+                                webWorkerCtx.$importScripts$(partytownLibUrl("partytown-media.js?v=0.13.2"));
                                 webWorkerCtx.$initWindowMedia$ = self.$bridgeFromMedia$;
                                 delete self.$bridgeFromMedia$;
                             }
@@ -1691,7 +1691,7 @@
                                 return frame ? frame.$window$ : void 0;
                             }
                         },
-                        has: () => true
+                        has: (target, prop) => !webWorkerCtx.$config$.strictProxyHas || Reflect.has(target, prop)
                     }),
                     $document$: $createNode$(NodeName.Document, $winId$ + "." + WinDocId.document),
                     $documentElement$: $createNode$(NodeName.DocumentElement, $winId$ + "." + WinDocId.documentElement),
