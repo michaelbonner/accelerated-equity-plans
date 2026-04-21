@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { BlogPost } from '$lib/types';
+	import { resolve } from '$app/paths';
 	import { styles } from '$lib/styles';
 	import { clsx } from 'clsx';
 	import EmilyHeadShot from '$lib/images/head-shots/emily-head-shot.jpg?enhanced';
@@ -21,7 +22,7 @@
 
 <article class={clsx(styles.cardHover, 'h-full')}>
 	<a
-		href={`/blog/${post.slug}`}
+		href={resolve('/blog/[slug]', { slug: post.slug })}
 		class="flex flex-col h-full bg-white rounded-lg border border-stone-200 overflow-hidden no-underline group"
 	>
 		<div class="p-6 flex flex-col gap-4 grow">

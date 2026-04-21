@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/state';
+	import { resolve } from '$app/paths';
 	import { styles } from '$lib/styles';
 	import { clsx } from 'clsx';
 </script>
@@ -34,8 +35,8 @@
 					{/if}
 				</p>
 				<div class="flex flex-wrap gap-4 justify-center mt-4">
-					<a href="/" class={styles.redButton}>Go to Homepage</a>
-					<a href="/contact" class={styles.darkButton}>Contact Us</a>
+					<a href={resolve('/')} class={styles.redButton}>Go to Homepage</a>
+					<a href={resolve('/contact')} class={styles.darkButton}>Contact Us</a>
 				</div>
 			</div>
 		</div>

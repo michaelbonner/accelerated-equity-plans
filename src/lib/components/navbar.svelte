@@ -1,19 +1,22 @@
 <script lang="ts">
 	import { navigating, page } from '$app/stores';
 	import { clsx } from 'clsx';
+	import { resolve } from '$app/paths';
+	import type { Pathname } from '$app/types';
 	import { Icon } from 'svelte-icons-pack';
+	import type { IconType } from 'svelte-icons-pack';
 	import { blur } from 'svelte/transition';
 
 	interface SubNavLink {
 		name: string;
-		href: string;
+		href: Pathname;
 		description?: string;
 	}
 
 	interface NavLink {
 		name: string;
-		href: string;
-		icon: any;
+		href: Pathname;
+		icon: IconType;
 		headerClasses?: string;
 		subNav?: SubNavLink[];
 	}
@@ -68,11 +71,11 @@
 	});
 </script>
 
-<div class={`fixed top-0 z-20 w-screen px-6 py-2 bg-opacity-100 bg-black backdrop-blur-sm`}>
+<div class="fixed top-0 z-20 w-screen px-6 py-2 bg-opacity-100 bg-black backdrop-blur-sm">
 	<div>
 		<nav class="flex justify-between items-center xl:px-12" aria-label="Global">
 			<div class="flex flex-1">
-				<a href="/" class="flex-1 py-1">
+				<a href={resolve('/')} class="flex-1 py-1">
 					<span class="sr-only">Accelerated Equity Plans</span>
 					<img
 						alt="Accelerated Equity Plans Logo"
@@ -108,7 +111,7 @@
 				</button>
 			</div>
 			<div class="hidden lg:flex lg:gap-x-2 lg:justify-center lg:items-center lg:min-w-0">
-				{#each navLinks as navLink}
+				{#each navLinks as navLink (navLink.href)}
 					{#if navLink.subNav && navLink.subNav.length > 0}
 						<!-- Services dropdown -->
 						<div
@@ -118,7 +121,7 @@
 							onmouseleave={handleDesktopMouseLeave}
 						>
 							<a
-								href={navLink.href}
+								href={resolve(navLink.href)}
 								class={clsx(
 									'uppercase py-2.5 px-4 rounded-sm tracking-wide inline-flex items-center gap-1',
 									$page.url.pathname.startsWith(navLink.href) && 'font-medium',
@@ -150,9 +153,9 @@
 										class="bg-white rounded-lg shadow-2xl overflow-hidden border border-stone-200"
 									>
 										<div class="py-2">
-											{#each navLink.subNav as subLink}
+											{#each navLink.subNav as subLink (subLink.href)}
 												<a
-													href={subLink.href}
+													href={resolve(subLink.href)}
 													class={clsx(
 														'block px-6 py-3 hover:bg-stone-50 transition-colors',
 														$page.url.pathname === subLink.href && 'bg-red-50'
@@ -172,7 +175,7 @@
 					{:else}
 						<!-- Regular nav link -->
 						<a
-							href={navLink.href}
+							href={resolve(navLink.href)}
 							class={clsx(
 								'uppercase py-2.5 px-4 rounded-sm tracking-wide',
 								$page.url.pathname === navLink.href && 'font-medium',
@@ -192,7 +195,7 @@
 					transition:blur={{ duration: 300 }}
 				>
 					<div class="flex justify-between items-center">
-						<a href="/" class="flex-1 py-1">
+						<a href={resolve('/')} class="flex-1 py-1">
 							<span class="sr-only">Accelerated Equity Plans</span>
 							<img
 								alt="Accelerated Equity Plans Logo"
@@ -224,7 +227,7 @@
 						</div>
 					</div>
 					<div class="flow-root mt-4">
-						{#each navLinks as navLink}
+						{#each navLinks as navLink (navLink.href)}
 							{#if navLink.subNav && navLink.subNav.length > 0}
 								<!-- Services with submenu -->
 								<div class="mb-2">
@@ -267,7 +270,7 @@
 										<div class="ml-4 mt-2 space-y-1" transition:blur={{ duration: 200 }}>
 											<!-- All Services link -->
 											<a
-												href={navLink.href}
+												href={resolve(navLink.href)}
 												class={clsx(
 													'block py-2 px-4 text-base text-aep-red-100 rounded-lg font-medium',
 													$page.url.pathname === navLink.href && 'bg-aep-red-800',
@@ -278,9 +281,9 @@
 												All Services
 											</a>
 											<!-- Individual service pages -->
-											{#each navLink.subNav as subLink}
+											{#each navLink.subNav as subLink (subLink.href)}
 												<a
-													href={subLink.href}
+													href={resolve(subLink.href)}
 													class={clsx(
 														'block py-2 px-4 text-base text-aep-red-100 rounded-lg',
 														$page.url.pathname === subLink.href && 'bg-aep-red-800',
@@ -297,7 +300,7 @@
 							{:else}
 								<!-- Regular mobile nav link -->
 								<a
-									href={navLink.href}
+									href={resolve(navLink.href)}
 									class={clsx(
 										'flex items-center gap-6 py-3 leading-7 text-aep-red-100 text-xl font-headings px-4 rounded-xl',
 										$page.url.pathname === navLink.href && 'bg-aep-red-800',

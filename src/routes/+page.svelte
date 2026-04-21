@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { resolve } from '$app/paths';
+	import type { Pathname } from '$app/types';
 	import CustomerReviews from '$lib/components/CustomerReviews.svelte';
 	import FooterCallout from '$lib/components/FooterCallout.svelte';
 	import MeetTheTeam from '$lib/components/MeetTheTeam.svelte';
@@ -54,7 +56,15 @@
 		}
 	];
 
-	const comprehensiveServices = [
+	const comprehensiveServices: {
+		icon: typeof HandCoins;
+		iconBackground: string;
+		id: string;
+		title: string;
+		detailsLink: Pathname;
+		body: string;
+		tags: string[];
+	}[] = [
 		{
 			icon: HandCoins,
 			iconBackground: 'bg-red-700',
@@ -186,7 +196,7 @@
 					organizations, we can handle all of your equity administration needs.
 				</p>
 				<div class="flex gap-x-4 mt-8">
-					<a href="/contact" class={styles.darkButton}> Contact us today </a>
+					<a href={resolve('/contact')} class={styles.darkButton}> Contact us today </a>
 				</div>
 			</div>
 		</div>
@@ -212,7 +222,7 @@
 		</div>
 
 		<div class="grid relative gap-x-4 gap-y-8 mx-auto mt-12 max-w-7xl md:grid-cols-3">
-			{#each servicesBoxes as servicesBox}
+			{#each servicesBoxes as servicesBox (servicesBox.title)}
 				<div class={clsx(styles.blueRedGradientBackground, styles.cardHover)}>
 					<div class="flex flex-col justify-start gap-4 p-8 h-full bg-black rounded-lg items-start">
 						<div>
@@ -229,7 +239,7 @@
 			{/each}
 		</div>
 		<div class="relative flex mt-8 mx-auto max-w-7xl justify-center">
-			<a href="/services" class={styles.redButton}> Explore All Equity Plan Services </a>
+			<a href={resolve('/services')} class={styles.redButton}> Explore All Equity Plan Services </a>
 		</div>
 	</section>
 
@@ -250,7 +260,7 @@
 		</div>
 
 		<div class="grid relative gap-6 mx-auto mt-12 max-w-7xl sm:grid-cols-2">
-			{#each comprehensiveServices as comprehensiveService}
+			{#each comprehensiveServices as comprehensiveService (comprehensiveService.title)}
 				<div class={clsx(styles.blueRedGradientBackground, styles.cardHover)}>
 					<div class="flex flex-col gap-4 justify-start p-8 h-full bg-black rounded-lg">
 						<div class="flex gap-4 items-center">
@@ -258,7 +268,7 @@
 								<svelte:component this={comprehensiveService.icon} class="size-6 text-white" />
 							</div>
 							<h3 class={clsx(styles.h3, 'text-white')}>
-								<a href={comprehensiveService.detailsLink}>
+								<a href={resolve(comprehensiveService.detailsLink)}>
 									{comprehensiveService.title}
 								</a>
 							</h3>
@@ -269,7 +279,7 @@
 							</div>
 							<div class="mt-6">
 								<ul class="flex flex-wrap gap-2 text-white">
-									{#each comprehensiveService.tags as tag}
+									{#each comprehensiveService.tags as tag (tag)}
 										<li>
 											<a
 												class={clsx(
@@ -277,7 +287,7 @@
 													'md:gap-1.5 md:px-3 md:text-sm',
 													'hover:underline'
 												)}
-												href={comprehensiveService.detailsLink}
+												href={resolve(comprehensiveService.detailsLink)}
 											>
 												<span class="inline-block bg-red-700 rounded-full size-2 shrink-0"></span>
 												{tag}
@@ -287,7 +297,7 @@
 								</ul>
 							</div>
 							<div class="flex gap-x-4 mt-8">
-								<a href={comprehensiveService.detailsLink} class={styles.darkButton}>
+								<a href={resolve(comprehensiveService.detailsLink)} class={styles.darkButton}>
 									Explore {comprehensiveService.title} Services
 								</a>
 							</div>
@@ -298,7 +308,10 @@
 		</div>
 
 		<div class="relative flex justify-center mt-12">
-			<a href="/services" class={clsx(styles.redButton, 'inline-flex items-center gap-2')}>
+			<a
+				href={resolve('/services')}
+				class={clsx(styles.redButton, 'inline-flex items-center gap-2')}
+			>
 				View All Services
 			</a>
 		</div>
@@ -320,7 +333,7 @@
 				</p>
 			</div>
 			<div class="flex gap-x-4">
-				<a href="/contact" class={styles.redButton}>Contact us today</a>
+				<a href={resolve('/contact')} class={styles.redButton}>Contact us today</a>
 			</div>
 		</div>
 

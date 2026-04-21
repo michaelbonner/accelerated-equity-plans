@@ -32,7 +32,7 @@
 				}
 			} else {
 				if (data.errors && Array.isArray(data.errors)) {
-					errorMessage = data.errors.map((error: any) => error.message).join(', ');
+					errorMessage = data.errors.map((error: { message: string }) => error.message).join(', ');
 				} else {
 					errorMessage = 'Oops! There was a problem submitting your form';
 				}
@@ -45,9 +45,9 @@
 		}
 	};
 
-	let errors: any = {};
+	let errors: Record<string, string> = {};
 	let errorMessage = '';
-	let touched: any = {};
+	let touched: Record<string, boolean> = {};
 
 	const fields: {
 		name: string;
@@ -103,7 +103,7 @@
 
 <form class:hidden={submitted} class="mt-8" name="contact" on:submit|preventDefault={handleSubmit}>
 	<div class="grid gap-y-4 gap-x-8 md:grid-cols-2">
-		{#each fields as field}
+		{#each fields as field (field.name)}
 			<div class={clsx('mb-6', field.containerClass)}>
 				<label class="block mb-2 font-bold tracking-wide font-headings" for={field.name}>
 					{field.label}

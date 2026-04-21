@@ -32,11 +32,11 @@
 	});
 
 	const nextSlide = () => {
-		// @ts-ignore
+		// @ts-expect-error swiper custom element is attached at runtime
 		swiperContainer.swiper.slideNext();
 	};
 	const previousSlide = () => {
-		// @ts-ignore
+		// @ts-expect-error swiper custom element is attached at runtime
 		swiperContainer.swiper.slidePrev();
 	};
 </script>
@@ -44,7 +44,7 @@
 <div class="mt-12 lg:mx-18">
 	<div class="relative" bind:this={swiperContainer}>
 		<div class="swiper-wrapper">
-			{#each reviews as review}
+			{#each reviews as review (review.name)}
 				<div class={clsx('swiper-slide', styles.blueRedGradientBackground)}>
 					<div
 						class={clsx(

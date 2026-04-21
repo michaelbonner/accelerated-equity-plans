@@ -88,7 +88,7 @@
 
 <div class="overflow-hidden px-8 partner-swiper">
 	<div class="items-center swiper-wrapper">
-		{#each partnerImages as { altText, path, url }}
+		{#each partnerImages as { altText, path, url } (path)}
 			<a
 				href={url}
 				target="_blank"
