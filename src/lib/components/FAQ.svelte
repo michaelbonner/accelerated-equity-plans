@@ -33,12 +33,14 @@
 			}))
 		};
 	}
+
+	function jsonLDScript() {
+		return `<script type="application/ld+json">${JSON.stringify(generateFAQSchema())}</${'script'}>`;
+	}
 </script>
 
 <svelte:head>
-	<svelte:element this={'script'} type="application/ld+json">
-		{JSON.stringify(generateFAQSchema())}
-	</svelte:element>
+	{@html jsonLDScript()}
 </svelte:head>
 
 <section class="py-24 px-6 bg-white">

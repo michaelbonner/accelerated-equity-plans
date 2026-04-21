@@ -505,6 +505,12 @@
 			}))
 		};
 	};
+
+	const partytownScript = `<script>${partytownSnippet()}</${'script'}>`;
+
+	function jsonLDScript() {
+		return `<script type="application/ld+json">${JSON.stringify(jsonLD())}</${'script'}>`;
+	}
 </script>
 
 <svelte:head>
@@ -537,7 +543,7 @@
 		};
 	</script>
 
-	<svelte:element this={'script'}>{@html partytownSnippet()}</svelte:element>
+	{@html partytownScript}
 
 	<script
 		type="text/partytown"
@@ -552,9 +558,7 @@
 		gtag('config', 'G-252472179V');
 	</script>
 
-	<svelte:element this={'script'} type="application/ld+json">
-		{JSON.stringify(jsonLD())}
-	</svelte:element>
+	{@html jsonLDScript()}
 </svelte:head>
 
 <div class="flex flex-col min-h-screen">

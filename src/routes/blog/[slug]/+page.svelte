@@ -53,6 +53,10 @@
 			.filter(Boolean).length,
 		timeRequired: `PT${post.readingTime}M`
 	});
+
+	const jsonLDScript = $derived(
+		`<script type="application/ld+json">${JSON.stringify(jsonLD)}</${'script'}>`
+	);
 </script>
 
 <svelte:head>
@@ -74,9 +78,7 @@
 	<link rel="canonical" href={`https://www.acceleratedep.com/blog/${post.slug}`} />
 	<meta property="og:url" content={`https://www.acceleratedep.com/blog/${post.slug}`} />
 
-	<svelte:element this={'script'} type="application/ld+json">
-		{JSON.stringify(jsonLD)}
-	</svelte:element>
+	{@html jsonLDScript}
 </svelte:head>
 
 <main>

@@ -140,6 +140,10 @@
 		}
 	];
 
+	function jsonLDScript() {
+		return `<script type="application/ld+json">${JSON.stringify(generateJobPostingSchema())}</${'script'}>`;
+	}
+
 	function generateJobPostingSchema() {
 		return {
 			'@context': 'https://schema.org',
@@ -171,9 +175,7 @@
 	<meta property="og:image" content="https://www.acceleratedep.com/images/og-careers.jpg" />
 	<link rel="canonical" href={`https://www.acceleratedep.com${path}`} />
 	<meta property="og:url" content={`https://www.acceleratedep.com${path}`} />
-	<svelte:element this={'script'} type="application/ld+json">
-		{JSON.stringify(generateJobPostingSchema())}
-	</svelte:element>
+	{@html jsonLDScript()}
 	<script src="https://joblisting.app/widget.js" defer async></script>
 </svelte:head>
 
