@@ -52,7 +52,9 @@
 	<link rel="canonical" href={`https://www.acceleratedep.com${path}`} />
 	<meta property="og:url" content={`https://www.acceleratedep.com${path}`} />
 
-	{@html `<script type="application/ld+json">${JSON.stringify(jsonLD)}</script>`}
+	<svelte:element this={'script'} type="application/ld+json">
+		{JSON.stringify(jsonLD)}
+	</svelte:element>
 </svelte:head>
 
 <main>
@@ -98,7 +100,7 @@
 				</p>
 			{:else}
 				<div class={clsx('grid gap-8', 'md:grid-cols-2', 'lg:grid-cols-3')}>
-					{#each posts as post}
+					{#each posts as post (post.slug)}
 						<BlogPostCard {post} />
 					{/each}
 				</div>

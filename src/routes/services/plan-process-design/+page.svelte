@@ -182,7 +182,9 @@
 	<meta property="og:image" content="https://www.acceleratedep.com/images/og-plan-design.jpg" />
 	<link rel="canonical" href={`https://www.acceleratedep.com${path}`} />
 	<meta property="og:url" content={`https://www.acceleratedep.com${path}`} />
-	{@html `<script type="application/ld+json">${JSON.stringify(generateServiceSchema())}</script>`}
+	<svelte:element this={'script'} type="application/ld+json">
+		{JSON.stringify(generateServiceSchema())}
+	</svelte:element>
 </svelte:head>
 
 <main>
@@ -249,7 +251,7 @@
 				<RedBar />
 				<h2 class={styles.h2}>Our Plan & Process Design Services</h2>
 				<div class={clsx('grid gap-6 mt-8', 'md:grid-cols-2')}>
-					{#each features as feature}
+					{#each features as feature (feature.title)}
 						<div
 							class={clsx(
 								'p-8 flex flex-col gap-4 rounded-xl bg-aep-teal-dark text-white transition-transform',
@@ -280,7 +282,7 @@
 			</div>
 
 			<div class={clsx('grid gap-6', 'md:grid-cols-2', 'lg:grid-cols-3')}>
-				{#each designServices as service}
+				{#each designServices as service (service.title)}
 					<div class="p-8 bg-white rounded-lg border border-stone-200">
 						<h3 class={clsx(styles.h3, 'mb-4 text-stone-900')}>{service.title}</h3>
 						<p class="text-stone-700 font-light leading-relaxed">{service.description}</p>
@@ -298,7 +300,7 @@
 			</div>
 
 			<div class={clsx('grid gap-6', 'md:grid-cols-2')}>
-				{#each benefits as benefit}
+				{#each benefits as benefit (benefit.title)}
 					<div class="p-8 bg-stone-50 rounded-lg">
 						<h3 class={clsx(styles.h3, 'mb-4 text-stone-900')}>{benefit.title}</h3>
 						<p class="text-stone-700 font-light leading-relaxed">{benefit.description}</p>

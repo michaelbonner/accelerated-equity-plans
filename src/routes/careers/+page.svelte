@@ -171,7 +171,9 @@
 	<meta property="og:image" content="https://www.acceleratedep.com/images/og-careers.jpg" />
 	<link rel="canonical" href={`https://www.acceleratedep.com${path}`} />
 	<meta property="og:url" content={`https://www.acceleratedep.com${path}`} />
-	{@html `<script type="application/ld+json">${JSON.stringify(generateJobPostingSchema())}</script>`}
+	<svelte:element this={'script'} type="application/ld+json">
+		{JSON.stringify(generateJobPostingSchema())}
+	</svelte:element>
 	<script src="https://joblisting.app/widget.js" defer async></script>
 </svelte:head>
 
@@ -236,7 +238,7 @@
 				<h2 class={styles.h2}>Why Work For Us?</h2>
 			</div>
 			<div class={clsx('max-w-7xl mx-auto grid gap-4 mt-12', 'sm:grid-cols-2', 'lg:grid-cols-4')}>
-				{#each reasonsToWorkForUs as reason}
+				{#each reasonsToWorkForUs as reason (reason.title)}
 					<div
 						class={clsx(
 							'p-6 flex flex-col justify-start items-start gap-4 rounded-xl text-white transition-transform bg-black',
@@ -282,7 +284,7 @@
 					<RedBar />
 					<h2 class={styles.h2}>Types of Equity Administration Roles</h2>
 					<div class={clsx('grid gap-6 mt-4', 'md:grid-cols-2')}>
-						{#each careerOpportunities as opportunity}
+						{#each careerOpportunities as opportunity (opportunity.title)}
 							<div
 								class={clsx(
 									'p-8 flex flex-col gap-4 rounded-xl bg-red-700 text-white transition-transform',
@@ -314,7 +316,7 @@
 				</div>
 
 				<div class={clsx('grid gap-6', 'md:grid-cols-2')}>
-					{#each qualifications as qualification}
+					{#each qualifications as qualification (qualification.title)}
 						<div class="p-8 bg-stone-100 rounded-lg">
 							<h3 class={clsx(styles.h3, 'mb-4 text-stone-900')}>{qualification.title}</h3>
 							<p class="text-stone-700 font-light leading-relaxed">{qualification.description}</p>

@@ -36,7 +36,9 @@
 </script>
 
 <svelte:head>
-	{@html `<script type="application/ld+json">${JSON.stringify(generateFAQSchema())}</script>`}
+	<svelte:element this={'script'} type="application/ld+json">
+		{JSON.stringify(generateFAQSchema())}
+	</svelte:element>
 </svelte:head>
 
 <section class="py-24 px-6 bg-white">
@@ -49,7 +51,7 @@
 		</div>
 
 		<div class="grid gap-4">
-			{#each faqs as faq, index}
+			{#each faqs as faq, index (faq.question)}
 				<div class="border border-stone-200 rounded-lg overflow-hidden">
 					<button
 						onclick={() => toggleFAQ(index)}
