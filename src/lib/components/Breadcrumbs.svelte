@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
+	import type { Pathname } from '$app/types';
+
 	type BreadcrumbItem = {
 		name: string;
 		href: string;
@@ -21,13 +24,15 @@
 </script>
 
 <svelte:head>
-	{@html `<script type="application/ld+json">${JSON.stringify(jsonLD)}</script>`}
+	<svelte:element this={'script'} type="application/ld+json">
+		{JSON.stringify(jsonLD)}
+	</svelte:element>
 </svelte:head>
 
 <div class="px-6">
 	<nav aria-label="Breadcrumb" class="mx-auto w-full max-w-7xl pt-4 pb-2">
 		<ol class="flex flex-wrap items-center gap-1 text-sm text-stone-500">
-			{#each fullItems as item, index}
+			{#each fullItems as item, index (item.href)}
 				{#if index > 0}
 					<li class="flex items-center gap-1" aria-hidden="true">
 						<svg
@@ -46,7 +51,10 @@
 				{/if}
 				<li>
 					{#if index < fullItems.length - 1}
-						<a href={item.href} class="transition-colors hover:text-red-700 hover:underline">
+						<a
+							href={resolve(item.href as Pathname)}
+							class="transition-colors hover:text-red-700 hover:underline"
+						>
 							{item.name}
 						</a>
 					{:else}

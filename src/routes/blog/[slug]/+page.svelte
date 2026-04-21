@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import FooterCallout from '$lib/components/FooterCallout.svelte';
 	import RedBar from '$lib/components/RedBar.svelte';
@@ -67,13 +68,15 @@
 	{/if}
 	<meta property="article:author" content={post.author.name} />
 	<meta property="article:section" content={post.category} />
-	{#each post.tags as tag}
+	{#each post.tags as tag (tag)}
 		<meta property="article:tag" content={tag} />
 	{/each}
 	<link rel="canonical" href={`https://www.acceleratedep.com/blog/${post.slug}`} />
 	<meta property="og:url" content={`https://www.acceleratedep.com/blog/${post.slug}`} />
 
-	{@html `<script type="application/ld+json">${JSON.stringify(jsonLD)}</script>`}
+	<svelte:element this={'script'} type="application/ld+json">
+		{JSON.stringify(jsonLD)}
+	</svelte:element>
 </svelte:head>
 
 <main>
@@ -88,7 +91,7 @@
 		<div class={clsx('relative z-10 max-w-4xl mx-auto w-full')}>
 			<div class="grid gap-6">
 				<a
-					href="/blog"
+					href={resolve('/blog')}
 					class="text-stone-400 hover:text-white transition-colors inline-flex items-center gap-2 text-sm"
 				>
 					<span>&larr;</span>
@@ -156,7 +159,7 @@
 
 		<div class="mt-16 pt-8 border-t border-stone-200">
 			<div class="flex flex-wrap gap-2">
-				{#each post.tags as tag}
+				{#each post.tags as tag (tag)}
 					<span class="px-3 py-1 bg-stone-100 text-stone-600 rounded-full text-sm">
 						{tag}
 					</span>
@@ -177,7 +180,7 @@
 				to help.
 			</p>
 			<div class="mt-6">
-				<a href="/contact" class={styles.redButton}>Get in touch</a>
+				<a href={resolve('/contact')} class={styles.redButton}>Get in touch</a>
 			</div>
 		</div>
 	</section>

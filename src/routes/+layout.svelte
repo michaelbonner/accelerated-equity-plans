@@ -527,7 +527,7 @@
 					const proxyUrl = new URL(`${siteUrl}/gtm`);
 
 					const gtmId = new URL(url).searchParams.get('id');
-					gtmId && proxyUrl.searchParams.append('id', gtmId);
+					if (gtmId) proxyUrl.searchParams.append('id', gtmId);
 
 					return proxyUrl;
 				}
@@ -537,7 +537,7 @@
 		};
 	</script>
 
-	{@html '<script>' + partytownSnippet() + '</script>'}
+	<svelte:element this={'script'}>{@html partytownSnippet()}</svelte:element>
 
 	<script
 		type="text/partytown"
@@ -552,7 +552,9 @@
 		gtag('config', 'G-252472179V');
 	</script>
 
-	{@html `<script type="application/ld+json">${JSON.stringify(jsonLD())}</script>`}
+	<svelte:element this={'script'} type="application/ld+json">
+		{JSON.stringify(jsonLD())}
+	</svelte:element>
 </svelte:head>
 
 <div class="flex flex-col min-h-screen">
