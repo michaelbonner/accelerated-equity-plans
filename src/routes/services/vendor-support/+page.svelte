@@ -121,6 +121,11 @@
 		}
 	];
 
+	function jsonLDScript() {
+		const json = JSON.stringify(generateServiceSchema());
+		return `<script type="application/ld+json">${json}</${'script'}>`;
+	}
+
 	function generateServiceSchema() {
 		return {
 			'@context': 'https://schema.org',
@@ -159,9 +164,7 @@
 	<meta property="og:image" content="https://www.acceleratedep.com/images/og-vendor-support.jpg" />
 	<link rel="canonical" href={`https://www.acceleratedep.com${path}`} />
 	<meta property="og:url" content={`https://www.acceleratedep.com${path}`} />
-	<svelte:element this={'script'} type="application/ld+json">
-		{JSON.stringify(generateServiceSchema())}
-	</svelte:element>
+	{@html jsonLDScript()}
 </svelte:head>
 
 <main>

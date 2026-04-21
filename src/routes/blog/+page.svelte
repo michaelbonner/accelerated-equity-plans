@@ -41,6 +41,8 @@
 			url: `https://www.acceleratedep.com/blog/${post.slug}`
 		}))
 	};
+
+	const jsonLDScript = `<script type="application/ld+json">${JSON.stringify(jsonLD)}</${'script'}>`;
 </script>
 
 <svelte:head>
@@ -52,9 +54,7 @@
 	<link rel="canonical" href={`https://www.acceleratedep.com${path}`} />
 	<meta property="og:url" content={`https://www.acceleratedep.com${path}`} />
 
-	<svelte:element this={'script'} type="application/ld+json">
-		{JSON.stringify(jsonLD)}
-	</svelte:element>
+	{@html jsonLDScript}
 </svelte:head>
 
 <main>

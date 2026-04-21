@@ -21,12 +21,14 @@
 			item: `https://www.acceleratedep.com${item.href}`
 		}))
 	});
+
+	const jsonLDScript = $derived(
+		`<script type="application/ld+json">${JSON.stringify(jsonLD)}</${'script'}>`
+	);
 </script>
 
 <svelte:head>
-	<svelte:element this={'script'} type="application/ld+json">
-		{JSON.stringify(jsonLD)}
-	</svelte:element>
+	{@html jsonLDScript}
 </svelte:head>
 
 <div class="px-6">
