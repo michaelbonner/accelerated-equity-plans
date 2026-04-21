@@ -8,10 +8,12 @@
 	import Navbar from '$lib/components/navbar.svelte';
 	import { partytownSnippet } from '@qwik.dev/partytown/integration';
 	import { onMount } from 'svelte';
+	import type { Pathname } from '$app/types';
 	import { AiOutlineContacts } from 'svelte-icons-pack/ai';
 	import { BiCustomize, BiHomeAlt, BiNews } from 'svelte-icons-pack/bi';
 	import { FaRectangleList } from 'svelte-icons-pack/fa';
 	import { IoPeople } from 'svelte-icons-pack/io';
+	import type { IconType } from 'svelte-icons-pack';
 	import { leadershipTeam } from '$lib/data/leadershipTeam';
 	import { reviews } from '$lib/reviews';
 
@@ -59,7 +61,13 @@
 		}
 	});
 
-	const navLinks = [
+	const navLinks: {
+		name: string;
+		href: Pathname;
+		icon: IconType;
+		headerClasses?: string;
+		subNav?: { name: string; href: Pathname; description: string }[];
+	}[] = [
 		{
 			name: 'Home',
 			href: '/',

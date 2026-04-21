@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import { leadershipTeam } from '$lib/data/leadershipTeam';
 	import { styles } from '$lib/styles';
 	import { clsx } from 'clsx';
@@ -11,7 +12,7 @@
 		'relative bg-stone-700 bg-repeat bg-center py-24 px-6 bg-cover text-white',
 		'lg:py-32'
 	)}
-	style={`background-image: url('/images/patterns/Pattern-0224_Pattern-Arrows.svg')`}
+	style="background-image: url('/images/patterns/Pattern-0224_Pattern-Arrows.svg')"
 	id="meet-the-team"
 >
 	<div class="absolute inset-0 bg-stone-400/30"></div>
@@ -28,7 +29,7 @@
 		</div>
 
 		<div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-			{#each leadershipTeam as teamMember}
+			{#each leadershipTeam as teamMember (teamMember.fullName)}
 				<div class={clsx(styles.blueRedGradientBackground, styles.cardHover, 'group')}>
 					<div class="flex flex-col gap-4 justify-start p-8 h-full bg-black rounded-lg [&_ul]:mb-8">
 						<enhanced:img
@@ -48,7 +49,7 @@
 								<div class="font-light">
 									<h4>Specialties</h4>
 									<ul class="mb-8 flex flex-wrap gap-x-1.5 pl-0 list-none">
-										{#each teamMember.specialties as specialty}
+										{#each teamMember.specialties as specialty (specialty)}
 											<li
 												class={clsx(
 													'py-1.5 px-3 rounded-2xl bg-stone-700 text-xs',
@@ -65,7 +66,7 @@
 								</div>
 							</div>
 							<div class="flex flex-wrap gap-x-6 justify-between mt-6 list-none">
-								<a href="/contact" class={styles.darkButton}>
+								<a href={resolve('/contact')} class={styles.darkButton}>
 									Meet {teamMember.shortName}
 								</a>
 								{#if teamMember.linkedInLink}

@@ -1,4 +1,5 @@
 <script>
+	import { resolve } from '$app/paths';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import MeetTheTeam from '$lib/components/MeetTheTeam.svelte';
 	import RedBar from '$lib/components/RedBar.svelte';
@@ -105,7 +106,7 @@
 				</p>
 			</div>
 			<div class="flex gap-x-4">
-				<a href="/contact" class={styles.redButton}>Contact us today</a>
+				<a href={resolve('/contact')} class={styles.redButton}>Contact us today</a>
 			</div>
 		</div>
 

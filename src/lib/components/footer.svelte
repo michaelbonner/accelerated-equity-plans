@@ -1,20 +1,23 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { resolve } from '$app/paths';
+	import type { Pathname } from '$app/types';
 	import { clsx } from 'clsx';
+	import type { IconType } from 'svelte-icons-pack';
 
 	export let navLinks: NavLink[];
 
 	interface NavLink {
 		name: string;
-		href: string;
-		icon: any;
+		href: Pathname;
+		icon: IconType;
 		headerClasses?: string;
 		subNav?: SubNavLink[];
 	}
 
 	interface SubNavLink {
 		name: string;
-		href: string;
+		href: Pathname;
 		description?: string;
 	}
 
@@ -35,7 +38,7 @@
 	>
 		<!-- Logo and Copyright (left on desktop) -->
 		<div class={clsx('lg:max-w-lg')}>
-			<a href="/">
+			<a href={resolve('/')}>
 				<img
 					alt="Accelerated Equity Plans"
 					class="max-w-[200px]"
@@ -68,7 +71,7 @@
 			{#if homeLink}
 				<div class="flex flex-col gap-3">
 					<a
-						href={homeLink.href}
+						href={resolve(homeLink.href)}
 						class={clsx(
 							'font-medium leading-6 underline-offset-2',
 							'hover:underline',
@@ -84,7 +87,7 @@
 			{#if servicesLink}
 				<div class="flex flex-col gap-3">
 					<a
-						href={servicesLink.href}
+						href={resolve(servicesLink.href)}
 						class={clsx(
 							'font-medium leading-6 underline-offset-2',
 							'hover:underline',
@@ -95,9 +98,9 @@
 					>
 					{#if servicesLink.subNav && servicesLink.subNav.length > 0}
 						<div class="flex flex-col gap-2 ml-3">
-							{#each servicesLink.subNav as subLink}
+							{#each servicesLink.subNav as subLink (subLink.href)}
 								<a
-									href={subLink.href}
+									href={resolve(subLink.href)}
 									class={clsx(
 										'text-sm leading-6 underline-offset-2',
 										'hover:underline',
@@ -115,9 +118,9 @@
 			<!-- Company links grouped in one column -->
 			{#if companyLinks.length > 0}
 				<div class="flex flex-col gap-3">
-					{#each companyLinks as link}
+					{#each companyLinks as link (link.href)}
 						<a
-							href={link.href}
+							href={resolve(link.href)}
 							class={clsx(
 								'font-medium leading-6 underline-offset-2',
 								'hover:underline',

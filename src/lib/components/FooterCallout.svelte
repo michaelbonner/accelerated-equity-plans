@@ -1,4 +1,5 @@
 <script>
+	import { resolve } from '$app/paths';
 	import { styles } from '$lib/styles';
 </script>
 
@@ -15,6 +16,6 @@
 	</div>
 
 	<div class="flex relative justify-center">
-		<a href="/contact" class={styles.redButton}>Contact us</a>
+		<a href={resolve('/contact')} class={styles.redButton}>Contact us</a>
 	</div>
 </section>

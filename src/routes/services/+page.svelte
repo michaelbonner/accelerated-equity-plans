@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
+	import type { Pathname } from '$app/types';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import CustomerReviews from '$lib/components/CustomerReviews.svelte';
 	import FooterCallout from '$lib/components/FooterCallout.svelte';
@@ -246,7 +248,7 @@
 					'md:gap-0 md:mx-auto'
 				)}
 			>
-				{#each servicesSections as servicesSection}
+				{#each servicesSections as servicesSection (servicesSection.id)}
 					<div class={clsx('h-full', styles.cardHover)}>
 						<button
 							on:click={() => {
@@ -286,7 +288,7 @@
 		`}
 	>
 		<div class="absolute inset-0 bg-white/90"></div>
-		{#each servicesSections as servicesSection}
+		{#each servicesSections as servicesSection (servicesSection.id)}
 			<section class="relative py-24 px-6" id={servicesSection.id}>
 				<div class="mx-auto max-w-7xl">
 					<div class="grid gap-4">
@@ -299,7 +301,7 @@
 					<div
 						class={clsx('max-w-7xl mx-auto grid gap-4 mt-12', 'sm:grid-cols-2', 'lg:grid-cols-4')}
 					>
-						{#each servicesSection.services as service}
+						{#each servicesSection.services as service (service.title)}
 							<div
 								class={clsx(
 									'p-6 flex flex-col justify-start items-start gap-4 rounded-xl text-white transition-transform',
@@ -320,7 +322,7 @@
 					{#if servicesSection.detailsLink}
 						<div class="mt-8 flex justify-center">
 							<a
-								href={servicesSection.detailsLink}
+								href={resolve(servicesSection.detailsLink as Pathname)}
 								class={clsx(styles.redButton, 'inline-flex items-center gap-2')}
 							>
 								Explore {servicesSection.title} Services
@@ -337,7 +339,7 @@
 			'relative bg-stone-700 bg-repeat bg-center py-24 px-6 bg-cover text-white',
 			'lg:py-32'
 		)}
-		style={`background-image: url('/images/patterns/Pattern-0224_Pattern-A.svg')`}
+		style="background-image: url('/images/patterns/Pattern-0224_Pattern-A.svg')"
 	>
 		<div class="absolute inset-0 bg-stone-400/30"></div>
 
@@ -350,7 +352,7 @@
 			</div>
 
 			<div class="grid gap-6 mx-auto mt-12 max-w-7xl md:grid-cols-2 xl:grid-cols-4">
-				{#each moreServices as service}
+				{#each moreServices as service (service.title)}
 					<div class={clsx(styles.blueRedGradientBackground, styles.cardHover)}>
 						<div class="flex flex-col gap-4 justify-start p-8 h-full bg-black rounded-lg">
 							<h3 class={styles.h3}>
