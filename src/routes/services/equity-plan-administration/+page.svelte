@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import CustomerReviews from '$lib/components/CustomerReviews.svelte';
 	import FAQ from '$lib/components/FAQ.svelte';
@@ -302,10 +303,13 @@
 				<div>
 					<h3 class={clsx(styles.h3, 'text-stone-900')}>Companies Undergoing Transitions</h3>
 					<p class="font-light">
-						Whether you're preparing for an IPO, navigating an M&A transaction, implementing a new
-						equity platform, or experiencing rapid growth, transitions create unique challenges. Our
-						team has extensive experience supporting companies through these critical periods,
-						providing the expertise and bandwidth you need exactly when you need it most.
+						Whether you're <a href={resolve('/services/advanced-project-support')}
+							>preparing for an IPO or navigating an M&A transaction</a
+						>,
+						<a href={resolve('/services/vendor-support')}>implementing a new equity platform</a>, or
+						experiencing rapid growth, transitions create unique challenges. Our team has extensive
+						experience supporting companies through these critical periods, providing the expertise
+						and bandwidth you need exactly when you need it most.
 					</p>
 				</div>
 			</div>

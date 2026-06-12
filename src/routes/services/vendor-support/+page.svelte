@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import CustomerReviews from '$lib/components/CustomerReviews.svelte';
 	import FAQ from '$lib/components/FAQ.svelte';
@@ -236,9 +237,10 @@
 					<p>
 						Whether you're selecting a new vendor, implementing a platform, migrating from a legacy
 						system, or looking to optimize your current setup, AEP provides the specialized
-						knowledge and hands-on support you need. Our team has implemented and administered
-						equity systems across all major platforms, giving us unique insight into what works,
-						what doesn't, and how to avoid common pitfalls.
+						knowledge and hands-on support you need. Our team has implemented and provides ongoing
+						<a href={resolve('/services/equity-plan-administration')}>stock plan administration</a> across
+						all major platforms, giving us unique insight into what works, what doesn't, and how to avoid
+						common pitfalls.
 					</p>
 					<p>
 						We take a vendor-agnostic approach, focused solely on your success rather than platform

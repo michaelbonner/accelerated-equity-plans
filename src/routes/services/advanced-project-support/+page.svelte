@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import CustomerReviews from '$lib/components/CustomerReviews.svelte';
 	import FAQ from '$lib/components/FAQ.svelte';
@@ -230,10 +231,11 @@
 				<h2 class={styles.h2}>Expert Support for Complex Equity Initiatives</h2>
 				<div class="prose max-w-4xl text-lg text-stone-700 font-light">
 					<p>
-						Major equity projects—whether an IPO, M&A transaction, global expansion, or technology
-						transformation—represent critical moments for your organization. Success requires
-						specialized expertise, careful planning, and flawless execution. Mistakes can be costly,
-						both financially and reputationally.
+						Major equity projects—whether an IPO, M&A transaction, global expansion, or a
+						<a href={resolve('/services/vendor-support')}>technology platform transformation</a
+						>—represent critical moments for your organization. Success requires specialized
+						expertise, careful planning, and flawless execution. Mistakes can be costly, both
+						financially and reputationally.
 					</p>
 					<p>
 						AEP brings deep, specialized knowledge gained from managing hundreds of complex equity
