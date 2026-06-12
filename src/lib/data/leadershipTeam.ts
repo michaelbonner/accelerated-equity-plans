@@ -5,7 +5,6 @@ import KaelynnHeadShot from '../images/head-shots/kaelynn-head-shot.jpg?enhanced
 import EmHeadShot from '../images/head-shots/emily-head-shot.jpg?enhanced';
 import GraceHeadShot from '../images/head-shots/grace-head-shot.jpg?enhanced';
 import JoshHeadShot from '../images/head-shots/josh-head-shot.jpg?enhanced';
-import JordanHeadShot from '../images/head-shots/jordan-head-shot.jpg?enhanced';
 import NeilHeadShot from '../images/head-shots/neil-head-shot.jpg?enhanced';
 
 export const leadershipTeam = [
@@ -83,8 +82,10 @@ export const leadershipTeam = [
         </div>
         `,
 		linkedInLink: 'https://www.linkedin.com/in/aaron-rosser-cep-1604924a/'
-	},
+	}
+];
 
+export const aepTeam = [
 	{
 		fullName: 'Barbara Gunnufson, CEP',
 		shortName: 'Barbara',
@@ -160,31 +161,6 @@ export const leadershipTeam = [
 		linkedInLink: 'https://www.linkedin.com/in/gsegui/'
 	},
 	{
-		fullName: 'Jordan Sims, CEP',
-		shortName: 'Jordan',
-		imageSrc: JordanHeadShot,
-		imageAlt: 'Jordan Sims',
-		specialties: [
-			'Process Strategy and Implementation',
-			'Equity Compensation and Analysis',
-			'Shareworks Specialist',
-			'Risk Analysis and Improvements',
-			'Project Management'
-		],
-		body: `
-        <div>
-            <p>
-                Jordan has worked in finance for the past 12 years. Starting at Jordan Credit Union (yes, he was Jordan from Jordan Credit Union) to working within the equity compensation industry over the last 4 years, he has experienced a wide breadth of personal finance, specializing in Private Market equity compensation as a Client Success Manager and a Secondaries Transactions Specialist.
-            </p>
-            <p>
-                Jordan specializes in finding ways to build and improve process enhancements and excels in finding ways to work smarter rather than harder. As a Morgan Stanley CSM, he spent his time as the primary dedicated CSM for various high profile franchise clients. He specializes in RSU Releases, Administration Setup, and many other areas within the Equity Atmosphere. Jordan is based in Saratoga Springs, Utah, and in his free time he loves spending time with his wife and two daughters. If you bring up baseball with him... just be aware you won't be able to leave the conversation at a reasonable time!
-            </p>
-        </div>
-        `,
-		linkedInLink: 'https://www.linkedin.com/in/jordan-sims-financial-services/'
-	},
-
-	{
 		fullName: 'Kaelynn Jones, CEP',
 		shortName: 'Kaelynn',
 		imageSrc: KaelynnHeadShot,
@@ -238,3 +214,5 @@ export const leadershipTeam = [
 		linkedInLink: 'http://www.linkedin.com/in/cameron-cazier-1008523a7'
 	}
 ];
+
+export const allTeamMembers = [...leadershipTeam, ...aepTeam];
