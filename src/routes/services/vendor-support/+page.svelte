@@ -45,7 +45,7 @@
 	];
 
 	const platforms = [
-		'E*TRADE Equity Edge (Morgan Stanley)',
+		'E*TRADE Equity Edge Online (Morgan Stanley at Work)',
 		'Morgan Stanley Shareworks',
 		'Fidelity Stock Plan Services (PSW)',
 		'Schwab Equiview',
@@ -53,6 +53,29 @@
 		'Computershare (EquatePlus)',
 		'Certent Equity Management',
 		'Global Shares'
+	];
+
+	const platformSupport = [
+		{
+			title: 'Carta Administration Support',
+			description:
+				'From initial implementation to day-to-day Carta equity administration, our team helps you configure your cap table, automate grant and vesting workflows, run 409A and ASC 718 reporting, and resolve the issues that slow your team down. Whether you are moving onto Carta or optimizing an existing instance, we bring hands-on expertise.'
+		},
+		{
+			title: 'Shareworks Administration Support',
+			description:
+				'We provide expert Shareworks (Morgan Stanley at Work) administration support, including implementation, data migration, participant management, reporting, and ongoing optimization. Our team helps you unlock the platform’s advanced capabilities and keep your equity program running smoothly.'
+		},
+		{
+			title: 'Fidelity Stock Plan Services Support',
+			description:
+				'Get specialized support for Fidelity Stock Plan Services (PSW), from onboarding and data conversion to grant processing, reconciliation, and reporting. We help you streamline operations and make the most of your Fidelity platform.'
+		},
+		{
+			title: 'Equity Edge Online Support',
+			description:
+				'Our team offers deep Equity Edge Online (EEO) support and administration, covering implementation, configuration, transaction processing, tax reporting, and integrations. We help E*TRADE / Morgan Stanley at Work clients optimize EEO and reduce manual work.'
+		}
 	];
 
 	const benefits = [
@@ -271,6 +294,29 @@
 			<p class="text-center mt-8 text-stone-400 font-light">
 				...and many other equity management platforms
 			</p>
+		</div>
+	</section>
+
+	<section class="py-24 px-6 bg-white">
+		<div class="mx-auto max-w-7xl">
+			<div class="grid gap-8 mb-12">
+				<RedBar />
+				<h2 class={styles.h2}>Platform-Specific Support</h2>
+				<p class="prose max-w-4xl text-lg text-stone-700 font-light">
+					Need help with a specific equity platform? Our administrators work in these systems every
+					day. Below are a few of the platforms we support most often—each engagement is tailored to
+					your configuration, data, and team.
+				</p>
+			</div>
+
+			<div class={clsx('grid gap-6', 'md:grid-cols-2')}>
+				{#each platformSupport as platform (platform.title)}
+					<div class="p-8 bg-stone-50 rounded-lg border border-stone-200">
+						<h3 class={clsx(styles.h3, 'mb-4 text-stone-900')}>{platform.title}</h3>
+						<p class="text-stone-700 font-light leading-relaxed">{platform.description}</p>
+					</div>
+				{/each}
+			</div>
 		</div>
 	</section>
 
