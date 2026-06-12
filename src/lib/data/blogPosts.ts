@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
 				At its simplest, equity management is everything a company does to operate its stock and equity compensation programs. It spans strategy and design (what to grant and to whom), day-to-day operations (processing grants, vesting, exercises, and releases), compliance and reporting (tax, securities, and accounting obligations), and the participant experience (helping employees understand and act on their awards).
 			</p>
 			<p>
-				People sometimes use "equity management," "stock plan administration," and "equity compensation" interchangeably, but they aren't quite the same thing. Equity compensation refers to the awards themselves; the options, units, and shares a company grants. <a href="/services/equity-plan-administration">Stock plan administration</a> is the operational work of running those programs. Equity management is the broader umbrella that includes both the strategic and the operational sides of the discipline.
+				People sometimes use "equity management," "stock plan administration," and "equity compensation" interchangeably, but they aren't quite the same thing. Equity compensation refers to the awards themselves: the options, units, and shares a company grants. <a href="/services/equity-plan-administration">Stock plan administration</a> is the operational work of running those programs. Equity management is the broader umbrella that includes both the strategic and the operational sides of the discipline.
 			</p>
 
 			<h2>The Main Types of Equity-Based Compensation</h2>
@@ -77,12 +77,12 @@ export const blogPosts: BlogPost[] = [
 
 			<h3>Compliance and Reporting</h3>
 			<p>
-				Equity compensation is heavily regulated. Companies must navigate Section 16 reporting for insiders, ASC 718 expense calculations, Section 6039 information returns for ISOs and ESPPs, 409A valuations for private companies, and a range of securities and international tax requirements. Missing a filing or miscalculating an expense can carry real consequences.
+				Equity compensation is heavily regulated. Companies must navigate Section 16 reporting for insiders, ASC 718 expense calculations, Section 6039 information returns for ISOs and ESPPs, 409A valuations for private companies, and a range of securities and international tax requirements. Missing a filing or miscalculating an expense can mean IRS penalties, restated financials, or eroded employee trust.
 			</p>
 
 			<h3>System and Vendor Management</h3>
 			<p>
-				Most companies run their programs on a dedicated equity platform such as Carta, Shareworks, Fidelity, or Equity Edge Online. Selecting, implementing, and optimizing these systems, and integrating them with HRIS and payroll, is a discipline in itself. <a href="/services/vendor-support">Vendor support and implementation</a> ensures your technology actually delivers on its promise.
+				Most companies run their programs on a dedicated equity platform such as Carta, Shareworks, Fidelity, or Equity Edge Online. Selecting, implementing, and optimizing these systems, and integrating them with HRIS and payroll, is a discipline in itself. <a href="/services/vendor-support">Vendor support and implementation</a> ensures your technology delivers on its promise.
 			</p>
 
 			<h3>Strategic Transactions</h3>
@@ -92,7 +92,7 @@ export const blogPosts: BlogPost[] = [
 
 			<h2>In-House vs. an Equity Management Company</h2>
 			<p>
-				As programs grow, most companies reach a point where managing equity internally becomes a strain. The person responsible often wears several hats; juggling HR, payroll, or finance alongside equity, and the "team of one" model starts to crack under increasing volume and complexity.
+				As programs grow, most companies reach a point where managing equity internally becomes a strain. The person responsible often wears several hats, juggling HR, payroll, or finance alongside equity. As volume and complexity climb, the "team of one" model starts to crack.
 			</p>
 			<p>
 				That's where an equity management company comes in. Rather than building and maintaining a full in-house team, you partner with specialists who live and breathe equity compensation. A good partner can take complete ownership of your program, augment your existing team, or step in for specific projects and peak periods.
