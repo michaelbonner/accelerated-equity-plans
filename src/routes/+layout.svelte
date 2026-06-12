@@ -14,7 +14,7 @@
 	import { FaRectangleList } from 'svelte-icons-pack/fa';
 	import { IoPeople } from 'svelte-icons-pack/io';
 	import type { IconType } from 'svelte-icons-pack';
-	import { leadershipTeam } from '$lib/data/leadershipTeam';
+	import { allTeamMembers } from '$lib/data/leadershipTeam';
 	import { reviews } from '$lib/reviews';
 
 	onMount(() => {
@@ -148,7 +148,7 @@
 			email: 'info@acceleratedep.com',
 			telephone: '+1-801-808-6238',
 			sameAs: ['https://www.linkedin.com/company/accelerated-equity-plans/'],
-			member: leadershipTeam.map((member) => ({
+			member: allTeamMembers.map((member) => ({
 				'@type': 'Person',
 				'@context': 'https://schema.org',
 				name: member.fullName,
