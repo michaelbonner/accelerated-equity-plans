@@ -9,19 +9,19 @@
 
 <section
 	class={clsx(
-		'relative bg-stone-700 bg-repeat bg-center py-24 px-6 bg-cover text-white',
+		'relative bg-stone-700 bg-center bg-cover bg-repeat px-6 py-24 text-white',
 		'lg:py-32'
 	)}
 	style="background-image: url('/images/patterns/Pattern-0224_Pattern-Arrows.svg')"
 	id="meet-the-team"
 >
 	<div class="absolute inset-0 bg-stone-400/30"></div>
-	<div class="grid relative gap-16 mx-auto max-w-7xl">
-		<div class="grid gap-12">
+	<div class="relative mx-auto grid max-w-7xl gap-20">
+		<div class="grid gap-10">
 			<div class="grid gap-4">
 				<RedBar />
-				<h2 class={styles.h2}>Meet the leadership team</h2>
-				<div class="font-light prose prose-invert">
+				<h2 class={clsx(styles.h2, 'max-w-[24ch] text-balance')}>Meet the leadership team</h2>
+				<div class="prose prose-invert max-w-[64ch] font-light">
 					<p>
 						As subject matter experts, we can provide your organization with a complete Stock Plan
 						Administration team to handle all equity concerns!
@@ -29,54 +29,70 @@
 				</div>
 			</div>
 
-			<div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+			<ul role="list" class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
 				{#each leadershipTeam as teamMember (teamMember.fullName)}
-					{@render teamCard(teamMember)}
+					{@render teamCard(teamMember, true)}
 				{/each}
-			</div>
+			</ul>
 		</div>
 
-		<div class="grid gap-12">
+		<div class="grid gap-10">
 			<div class="grid gap-4">
 				<RedBar />
-				<h2 class={styles.h2}>Meet the AEP team</h2>
+				<h3 class={clsx(styles.h3, 'max-w-[24ch] text-balance')}>Meet the AEP team</h3>
+				<div class="prose prose-invert max-w-[64ch] font-light">
+					<p>The consultants and specialists who deliver on your equity programs every day.</p>
+				</div>
 			</div>
 
-			<div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+			<ul role="list" class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
 				{#each aepTeam as teamMember (teamMember.fullName)}
-					{@render teamCard(teamMember)}
+					{@render teamCard(teamMember, false)}
 				{/each}
-			</div>
+			</ul>
 		</div>
 	</div>
 </section>
 
-{#snippet teamCard(teamMember: (typeof leadershipTeam)[number])}
-	<div class={clsx(styles.blueRedGradientBackground, styles.cardHover, 'group')}>
-		<div class="flex flex-col gap-4 justify-start p-8 h-full bg-black rounded-lg [&_ul]:mb-8">
+{#snippet teamCard(teamMember: (typeof leadershipTeam)[number], featured: boolean)}
+	<li
+		class={clsx(
+			'group',
+			styles.cardHover,
+			featured ? styles.blueRedGradientBackground : 'rounded-lg'
+		)}
+	>
+		<div
+			class={clsx(
+				'flex h-full flex-col rounded-lg bg-black [&_ul]:mb-8',
+				featured ? 'gap-4 p-8' : 'gap-4 p-6 ring-1 ring-white/10'
+			)}
+		>
 			<enhanced:img
-				alt={teamMember.imageAlt}
+				alt=""
 				class={clsx(
-					'aspect-square mt-4 rounded-full object-cover max-w-[200px] shadow-lg grayscale transition-all',
-					'group-hover:grayscale-0'
+					'aspect-square rounded-full object-cover outline-1 -outline-offset-1 outline-white/10 grayscale transition-all',
+					'group-hover:grayscale-0',
+					featured ? 'mt-4 max-w-[200px] shadow-lg' : 'max-w-[144px]'
 				)}
 				loading="lazy"
 				src={teamMember.imageSrc}
 			/>
-			<div class={clsx('flex flex-col grow prose prose-invert')}>
+			<div class="flex grow flex-col prose prose-invert">
 				<div class="grow">
-					<h3 class={styles.h3}>
+					<h3
+						class={featured
+							? styles.h3
+							: 'mt-0 font-headings text-xl font-medium tracking-tight text-pretty italic sm:text-2xl'}
+					>
 						{teamMember.fullName}
 					</h3>
 					<div class="font-light">
 						<h4>Specialties</h4>
-						<ul class="mb-8 flex flex-wrap gap-x-1.5 pl-0 list-none">
+						<ul class="flex list-none flex-wrap gap-x-1.5 pl-0">
 							{#each teamMember.specialties as specialty (specialty)}
 								<li
-									class={clsx(
-										'py-1.5 px-3 rounded-2xl bg-stone-700 text-xs',
-										'md:gap-1.5 md:px-3 md:text-sm'
-									)}
+									class={clsx('rounded-2xl bg-stone-700 px-3 py-1.5 text-xs', 'md:px-3 md:text-sm')}
 								>
 									{specialty}
 								</li>
@@ -87,7 +103,7 @@
 						{@html teamMember.body}
 					</div>
 				</div>
-				<div class="flex flex-wrap gap-x-6 justify-between mt-6 list-none">
+				<div class="mt-6 flex flex-wrap justify-between gap-x-6 list-none">
 					<a href={resolve('/contact')} class={styles.darkButton}>
 						Meet {teamMember.shortName}
 					</a>
@@ -98,11 +114,11 @@
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<LinkedIn /></a
-						>
+							<LinkedIn />
+						</a>
 					{/if}
 				</div>
 			</div>
 		</div>
-	</div>
+	</li>
 {/snippet}
