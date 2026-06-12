@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
 		readingTime: 11,
 		content: `
 			<p class="lead">
-				Equity management is the discipline of administering a company's equity-based compensation across its entire lifecycle, from designing a plan and issuing grants to tracking vesting, ensuring compliance, and supporting employees. Done well, it turns equity into a powerful tool for attracting and retaining talent. Done poorly, it creates compliance risk, accounting headaches, and frustrated employees. This guide explains what equity management involves, the main types of equity-based compensation, and how to decide whether to manage it in-house or partner with an equity management company.
+				Equity management is the discipline of administering a company’s equity-based compensation across its entire lifecycle, from designing a plan and issuing grants to tracking vesting, ensuring compliance, and supporting employees. Done well, it turns equity into a powerful tool for attracting and retaining talent. Done poorly, it creates compliance risk, accounting headaches, and frustrated employees. This guide explains what equity management involves, the main types of equity-based compensation, and how to decide whether to manage it in-house or partner with an equity management company.
 			</p>
 
 			<h2>What Is Equity Management?</h2>
@@ -27,12 +27,12 @@ export const blogPosts: BlogPost[] = [
 				At its simplest, equity management is everything a company does to operate its stock and equity compensation programs. It spans strategy and design (what to grant and to whom), day-to-day operations (processing grants, vesting, exercises, and releases), compliance and reporting (tax, securities, and accounting obligations), and the participant experience (helping employees understand and act on their awards).
 			</p>
 			<p>
-				People sometimes use "equity management," "stock plan administration," and "equity compensation" interchangeably, but they aren't quite the same thing. Equity compensation refers to the awards themselves: the options, units, and shares a company grants. <a href="/services/equity-plan-administration">Stock plan administration</a> is the operational work of running those programs. Equity management is the broader umbrella that includes both the strategic and the operational sides of the discipline.
+				People sometimes use "equity management," "stock plan administration," and "equity compensation" interchangeably, but they aren’t quite the same thing. Equity compensation refers to the awards themselves: the options, units, and shares a company grants. <a href="/services/equity-plan-administration">Stock plan administration</a> is the operational work of running those programs. Equity management is the broader umbrella that includes both the strategic and the operational sides of the discipline.
 			</p>
 
 			<h2>The Main Types of Equity-Based Compensation</h2>
 			<p>
-				Effective equity management starts with understanding the instruments you're working with. Equity-based compensation comes in several forms, each with its own mechanics, tax treatment, and administrative requirements:
+				Effective equity management starts with understanding the instruments you’re working with. Equity-based compensation comes in several forms, each with its own mechanics, tax treatment, and administrative requirements:
 			</p>
 
 			<h3>Stock Options (ISOs and NSOs)</h3>
@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
 
 			<h3>Restricted Stock Units (RSUs) and Awards (RSAs)</h3>
 			<p>
-				RSUs are a promise to deliver shares once vesting conditions are met, and they've become the most common form of equity compensation at many companies. Restricted Stock Awards (RSAs) are actual shares issued up front but subject to forfeiture until they vest.
+				RSUs are a promise to deliver shares once vesting conditions are met, and they’ve become the most common form of equity compensation at many companies. Restricted Stock Awards (RSAs) are actual shares issued up front but subject to forfeiture until they vest.
 			</p>
 
 			<h3>Performance Share Units (PSUs)</h3>
@@ -95,16 +95,16 @@ export const blogPosts: BlogPost[] = [
 				As programs grow, most companies reach a point where managing equity internally becomes a strain. The person responsible often wears several hats, juggling HR, payroll, or finance alongside equity. As volume and complexity climb, the "team of one" model starts to crack.
 			</p>
 			<p>
-				That's where an equity management company comes in. Rather than building and maintaining a full in-house team, you partner with specialists who live and breathe equity compensation. A good partner can take complete ownership of your program, augment your existing team, or step in for specific projects and peak periods.
+				That’s where an equity management company comes in. Rather than building and maintaining a full in-house team, you partner with specialists who live and breathe equity compensation. A good partner can take complete ownership of your program, augment your existing team, or step in for specific projects and peak periods.
 			</p>
 			<p>
 				Working with an equity management company typically makes sense when:
 			</p>
 			<ul>
 				<li>Your headcount and grant volume are growing faster than your capacity to manage them</li>
-				<li>You're preparing for an IPO, M&A transaction, or other liquidity event</li>
-				<li>Compliance obligations have outgrown your team's bandwidth or expertise</li>
-				<li>You're implementing or migrating to a new equity platform</li>
+				<li>You’re preparing for an IPO, M&A transaction, or other liquidity event</li>
+				<li>Compliance obligations have outgrown your team’s bandwidth or expertise</li>
+				<li>You’re implementing or migrating to a new equity platform</li>
 				<li>You need interim, fractional, or on-demand support during a vacancy or peak period</li>
 			</ul>
 
@@ -120,7 +120,7 @@ export const blogPosts: BlogPost[] = [
 
 			<h2>The Bottom Line</h2>
 			<p>
-				Equity management is far more than processing grants; it's a strategic discipline that touches talent, compliance, accounting, and the employee experience. Whether you build the capability in-house or partner with an equity management company, the goal is the same: a program that's accurate, compliant, and genuinely valuable to your people. If your equity workload is outpacing your capacity, it may be time to <a href="/contact">explore your options</a>.
+				Equity management is far more than processing grants; it’s a strategic discipline that touches talent, compliance, accounting, and the employee experience. Whether you build the capability in-house or partner with an equity management company, the goal is the same: a program that’s accurate, compliant, and genuinely valuable to your people. If your equity workload is outpacing your capacity, it may be time to <a href="/contact">explore your options</a>.
 			</p>
 		`
 	},
