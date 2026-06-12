@@ -53,7 +53,7 @@
 		{
 			title: 'Merger & Acquisition Support',
 			description:
-				"Navigate equity complexities in M&A transactions. Our services include treatment analysis, participant communications, system consolidations, regulatory compliance, and post-merger integration to ensure equity compensation doesn't become a deal impediment."
+				"Navigate equity complexities in M&A transactions. Our services include equity compensation due diligence, treatment analysis, participant communications, system consolidations, regulatory compliance, and post-merger integration to ensure equity compensation doesn't become a deal impediment."
 		},
 		{
 			title: 'SPAC Transactions',
@@ -109,7 +109,12 @@
 		{
 			question: 'What M&A equity support do you provide?',
 			answer:
-				"<p>M&A transactions create complex equity scenarios requiring quick decisions and flawless execution. We provide equity treatment analysis (acceleration, conversion, cash-out scenarios), integration planning, participant communications, data consolidation, system migrations, regulatory compliance support, and post-merger administration. Whether you're the acquirer or target, our experience helps you avoid common pitfalls and ensure equity doesn't impede deal closure.</p>"
+				"<p>M&A transactions create complex equity scenarios requiring quick decisions and flawless execution. We provide equity compensation due diligence, equity treatment analysis (acceleration, conversion, cash-out scenarios), integration planning, participant communications, data consolidation, system migrations, regulatory compliance support, and post-merger administration. Whether you're the acquirer or target, our experience helps you avoid common pitfalls and ensure equity doesn't impede deal closure.</p>"
+		},
+		{
+			question: 'Do you perform equity compensation due diligence?',
+			answer:
+				'<p>Yes. As part of M&A and other strategic transactions, we conduct equity compensation due diligence to surface risks and obligations before a deal closes. This includes reviewing outstanding grants and vesting terms, change-in-control and acceleration provisions, plan documents and share reserves, dilution and overhang analysis, tax and accounting exposure, and compliance gaps. We deliver a clear picture of the target’s equity landscape so you can negotiate and plan integration with confidence.</p>'
 		},
 		{
 			question: 'Can you help automate our equity processes?',
