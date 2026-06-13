@@ -2,6 +2,129 @@ import type { BlogPost } from '$lib/types';
 
 export const blogPosts: BlogPost[] = [
 	{
+		slug: 'what-is-equity-management',
+		title: 'What Is Equity Management? A Complete Guide for Companies',
+		metaTitle: 'What Is Equity Management? A Guide for Companies | Accelerated Equity Plans',
+		metaDescription:
+			'Equity management is the end-to-end administration of a company’s equity-based compensation. Learn what it involves, the types of equity comp, and when to partner with an equity management company.',
+		excerpt:
+			'Equity management covers everything from issuing grants to staying compliant. Here’s what it actually involves, the main types of equity-based compensation, and how to decide between managing it in-house or partnering with an equity management company.',
+		publishedDate: '2026-06-12',
+		author: {
+			name: 'Emily Bone, MBA, CEP',
+			title: 'Founder & CEO'
+		},
+		category: 'Equity Management',
+		tags: ['equity management', 'equity based compensation', 'equity compensation', 'stock plans'],
+		readingTime: 11,
+		content: `
+			<p class="lead">
+				Equity management is the discipline of administering a company’s equity-based compensation across its entire lifecycle, from designing a plan and issuing grants to tracking vesting, ensuring compliance, and supporting employees. Done well, it turns equity into a powerful tool for attracting and retaining talent. Done poorly, it creates compliance risk, accounting headaches, and frustrated employees. This guide explains what equity management involves, the main types of equity-based compensation, and how to decide whether to manage it in-house or partner with an equity management company.
+			</p>
+
+			<h2>What Is Equity Management?</h2>
+			<p>
+				At its simplest, equity management is everything a company does to operate its stock and equity compensation programs. It spans strategy and design (what to grant and to whom), day-to-day operations (processing grants, vesting, exercises, and releases), compliance and reporting (tax, securities, and accounting obligations), and the participant experience (helping employees understand and act on their awards).
+			</p>
+			<p>
+				People sometimes use "equity management," "stock plan administration," and "equity compensation" interchangeably, but they aren’t quite the same thing. Equity compensation refers to the awards themselves: the options, units, and shares a company grants. <a href="/services/equity-plan-administration">Stock plan administration</a> is the operational work of running those programs. Equity management is the broader umbrella that includes both the strategic and the operational sides of the discipline.
+			</p>
+
+			<h2>The Main Types of Equity-Based Compensation</h2>
+			<p>
+				Effective equity management starts with understanding the instruments you’re working with. Equity-based compensation comes in several forms, each with its own mechanics, tax treatment, and administrative requirements:
+			</p>
+
+			<h3>Stock Options (ISOs and NSOs)</h3>
+			<p>
+				Stock options give employees the right to purchase shares at a fixed price (the strike or exercise price) after they vest. Incentive Stock Options (ISOs) can offer favorable tax treatment but come with strict requirements, while Non-Qualified Stock Options (NSOs) are more flexible but taxed as ordinary income at exercise.
+			</p>
+
+			<h3>Restricted Stock Units (RSUs) and Awards (RSAs)</h3>
+			<p>
+				RSUs are a promise to deliver shares once vesting conditions are met, and they’ve become the most common form of equity compensation at many companies. Restricted Stock Awards (RSAs) are actual shares issued up front but subject to forfeiture until they vest.
+			</p>
+
+			<h3>Performance Share Units (PSUs)</h3>
+			<p>
+				PSUs vest based on the achievement of specific performance metrics, such as revenue targets or relative shareholder return, rather than just the passage of time. They tie equity rewards directly to business outcomes but add complexity to tracking and accounting.
+			</p>
+
+			<h3>Employee Stock Purchase Plans (ESPPs)</h3>
+			<p>
+				ESPPs let employees buy company stock, often at a discount, through payroll deductions. Qualified 423(b) plans carry specific tax and administrative rules, including Section 6039 reporting obligations.
+			</p>
+
+			<h3>Stock Appreciation Rights and Phantom Stock</h3>
+			<p>
+				Stock Appreciation Rights (SARs) pay out the increase in share value without requiring an actual purchase, while phantom stock delivers a cash equivalent tied to share price. Both let companies offer equity-like incentives without diluting ownership.
+			</p>
+
+			<h2>The Equity Management Lifecycle</h2>
+			<p>
+				Whatever instruments you use, managing them well means handling each stage of the grant lifecycle with accuracy and discipline:
+			</p>
+
+			<h3>Plan Design and Strategy</h3>
+			<p>
+				Strong equity management begins before a single grant is issued. <a href="/services/plan-process-design">Plan and process design</a> involves choosing the right award types, vesting schedules, performance metrics, and grant levels so your program is competitive, cost-effective, and aligned with your accounting and tax considerations.
+			</p>
+
+			<h3>Grant Administration</h3>
+			<p>
+				Once a plan is in place, the operational work begins: issuing grants, tracking vesting events, processing exercises and releases, and maintaining accurate records. This is the heart of day-to-day stock plan administration, and the area where errors are most costly.
+			</p>
+
+			<h3>Compliance and Reporting</h3>
+			<p>
+				Equity compensation is heavily regulated. Companies must navigate Section 16 reporting for insiders, ASC 718 expense calculations, Section 6039 information returns for ISOs and ESPPs, 409A valuations for private companies, and a range of securities and international tax requirements. Missing a filing or miscalculating an expense can mean IRS penalties, restated financials, or eroded employee trust.
+			</p>
+
+			<h3>System and Vendor Management</h3>
+			<p>
+				Most companies run their programs on a dedicated equity platform such as Carta, Shareworks, Fidelity, or Equity Edge Online. Selecting, implementing, and optimizing these systems, and integrating them with HRIS and payroll, is a discipline in itself. <a href="/services/vendor-support">Vendor support and implementation</a> ensures your technology delivers on its promise.
+			</p>
+
+			<h3>Strategic Transactions</h3>
+			<p>
+				Major events such as IPOs, mergers and acquisitions, and SPAC transactions create some of the most complex equity scenarios a company will face. <a href="/services/advanced-project-support">Advanced project support</a> for these transitions includes equity treatment analysis, due diligence, participant communications, and system migrations.
+			</p>
+
+			<h2>In-House vs. an Equity Management Company</h2>
+			<p>
+				As programs grow, most companies reach a point where managing equity internally becomes a strain. The person responsible often wears several hats, juggling HR, payroll, or finance alongside equity. As volume and complexity climb, the "team of one" model starts to crack.
+			</p>
+			<p>
+				That’s where an equity management company comes in. Rather than building and maintaining a full in-house team, you partner with specialists who live and breathe equity compensation. A good partner can take complete ownership of your program, augment your existing team, or step in for specific projects and peak periods.
+			</p>
+			<p>
+				Working with an equity management company typically makes sense when:
+			</p>
+			<ul>
+				<li>Your headcount and grant volume are growing faster than your capacity to manage them</li>
+				<li>You’re preparing for an IPO, M&A transaction, or other liquidity event</li>
+				<li>Compliance obligations have outgrown your team’s bandwidth or expertise</li>
+				<li>You’re implementing or migrating to a new equity platform</li>
+				<li>You need interim, fractional, or on-demand support during a vacancy or peak period</li>
+			</ul>
+
+			<h2>What to Look for in an Equity Management Company</h2>
+			<p>
+				Not all providers are alike. When evaluating an equity management partner, look for deep, hands-on expertise across both private and public company programs; experience with your equity platform and the major vendors; a flexible engagement model that fits your needs rather than forcing you into a one-size-fits-all package; and direct access to senior professionals rather than a rotating cast of junior staff. The right partner becomes an extension of your team, reducing risk while freeing you to focus on strategy.
+			</p>
+
+			<h2>How Accelerated Equity Plans Approaches Equity Management</h2>
+			<p>
+				At Accelerated Equity Plans, we provide end-to-end equity management for private and public companies. Our services span <a href="/services/equity-plan-administration">stock plan administration</a>, <a href="/services/plan-process-design">plan and process design</a>, <a href="/services/vendor-support">vendor support</a>, and <a href="/services/advanced-project-support">advanced project support</a> for IPOs, M&A, and other strategic transactions. Founded by industry experts with both issuer and vendor experience, we offer flexible engagement models, from full outsourcing to targeted support, so you get exactly the expertise you need, when you need it.
+			</p>
+
+			<h2>The Bottom Line</h2>
+			<p>
+				Equity management is far more than processing grants; it’s a strategic discipline that touches talent, compliance, accounting, and the employee experience. Whether you build the capability in-house or partner with an equity management company, the goal is the same: a program that’s accurate, compliant, and genuinely valuable to your people. If your equity workload is outpacing your capacity, it may be time to <a href="/contact">explore your options</a>.
+			</p>
+		`
+	},
+	{
 		slug: 'do-i-need-equity-plan-administration-service',
 		title: 'Do I Need Assistance With My Equity Plan?',
 		metaTitle: 'Do I Need Assistance With My Equity Plan? | Accelerated Equity Plans',

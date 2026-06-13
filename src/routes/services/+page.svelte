@@ -225,7 +225,7 @@
 	<section class={styles.heroSection}>
 		<div class="overflow-hidden absolute inset-0">
 			<enhanced:img
-				alt="High rise buildings"
+				alt="High-rise office buildings representing equity plan administration and consulting services"
 				class="object-cover size-full"
 				fetchpriority="high"
 				src={HeroBg}

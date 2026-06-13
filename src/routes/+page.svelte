@@ -24,10 +24,9 @@
 
 	let isMobile = true;
 
-	const title =
-		'Equity Compensation Consulting Services for Your Business | Accelerated Equity Plans';
+	const title = 'Equity Management Company & Compensation Consulting | Accelerated Equity Plans';
 	const description =
-		'Unlock the full potential of your equity programs with expert equity compensation consulting and tailored administration solutions.';
+		'A dedicated equity management company offering expert equity compensation consulting, stock plan administration, and tailored solutions to unlock the full potential of your equity programs.';
 	const path = '/';
 
 	const updateWindowSize = () => {
@@ -145,14 +144,14 @@
 		<div class="overflow-hidden absolute inset-0">
 			{#if isMobile}
 				<enhanced:img
-					alt="High rise buildings"
+					alt="High-rise office buildings representing equity management and stock plan administration"
 					class="block object-cover lg:hidden size-full"
 					fetchpriority="high"
 					src={HeroBgMobile}
 				/>
 			{:else}
 				<enhanced:img
-					alt="High rise buildings"
+					alt="High-rise office buildings representing equity management and stock plan administration"
 					class="object-cover size-full"
 					fetchpriority="high"
 					src={HeroBg}
@@ -214,10 +213,21 @@
 			<RedBar classes="mx-auto" />
 			<h2 class={styles.h2}>What We Bring to the Table</h2>
 			<p class="mt-4 font-light">
-				We manage all stock plan administration from setup to compliance, allowing you to focus on
-				your core business. We offer temporary support with flexible staffing solutions and provide
-				expertise in Mergers and Acquisitions, IPOs, SPACs, Corporate Actions, and Automation Design
-				for strategic growth.
+				We manage all
+				<a
+					class="underline hover:text-red-300"
+					href={resolve('/services/equity-plan-administration')}
+				>
+					stock plan administration
+				</a>
+				from setup to compliance, allowing you to focus on your core business. We offer temporary support
+				with flexible staffing solutions and provide expertise in
+				<a
+					class="underline hover:text-red-300"
+					href={resolve('/services/advanced-project-support')}
+				>
+					Mergers and Acquisitions, IPOs, SPACs
+				</a>, Corporate Actions, and Automation Design for strategic growth.
 			</p>
 		</div>
 
@@ -246,7 +256,7 @@
 	<section class={clsx('relative bg-stone-700 py-24 px-6', 'lg:py-32')}>
 		<div class="overflow-hidden absolute inset-0">
 			<enhanced:img
-				alt="A building with a blurred background"
+				alt="Corporate office building representing comprehensive equity plan administration services"
 				class="hidden object-cover lg:block size-full"
 				loading="lazy"
 				src={BuildingBlurredBg}
@@ -327,9 +337,9 @@
 			</div>
 			<div class="font-light prose">
 				<p>
-					Accelerated Equity Plans partners with you to boost your team's effectiveness in equity
-					compensation. We handle plan adjustments, daily operations, and future strategy, allowing
-					you to focus on leading your company forward.
+					As a dedicated equity management company, Accelerated Equity Plans partners with you to
+					boost your team's effectiveness in equity compensation. We handle plan adjustments, daily
+					operations, and future strategy, allowing you to focus on leading your company forward.
 				</p>
 			</div>
 			<div class="flex gap-x-4">

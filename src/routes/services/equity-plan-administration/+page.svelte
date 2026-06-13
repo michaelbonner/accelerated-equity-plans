@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import CustomerReviews from '$lib/components/CustomerReviews.svelte';
 	import FAQ from '$lib/components/FAQ.svelte';
@@ -12,9 +13,9 @@
 	import { styles } from '$lib/styles';
 	import { clsx } from 'clsx';
 
-	const title = 'Expert Equity Plan Administration Services | Accelerated Equity Plans';
+	const title = 'Stock Plan & Equity Plan Administration Services | Accelerated Equity Plans';
 	const description =
-		'Professional equity plan administration services including comprehensive equity management, employee education, outsourced administration, and scalable support for private and public companies.';
+		'Outsourced stock plan administration and equity plan administration services—comprehensive equity management, employee education, and interim, fractional, and on-demand support for private and public companies.';
 	const path = '/services/equity-plan-administration';
 
 	const features = [
@@ -38,9 +39,9 @@
 		},
 		{
 			icon: Graph,
-			title: 'Seasonal & Temporary Support',
+			title: 'Interim, Fractional & On-Demand Support',
 			description:
-				'Navigate peak periods with confidence. Our temporary staffing solutions provide experienced equity professionals exactly when you need them most—during annual grant cycles, year-end reporting, M&A transactions, or other high-volume periods. Seamlessly integrate our experts into your workflow without long-term commitments.'
+				'Navigate peak periods with confidence. Whether you need an interim stock plan administrator to cover a vacancy, a fractional administrator for part-time ongoing coverage, or on-demand stock administration during annual grant cycles, year-end reporting, or M&A transactions, we provide experienced equity professionals exactly when you need them—without long-term commitments.'
 		}
 	];
 
@@ -96,7 +97,17 @@
 		{
 			question: 'Can you help with equity compensation reporting and compliance?',
 			answer:
-				'<p>Absolutely. We provide comprehensive support for all equity-related reporting requirements including Form 3, 4, and 5 filings for Section 16 officers, proxy statement preparation, ASC 718 expense calculations, 423(b) ESPP compliance, and more. We stay current with regulatory changes and proactively adapt your program to maintain compliance.</p>'
+				'<p>Absolutely. We provide comprehensive support for all equity-related reporting requirements including Form 3, 4, and 5 filings for Section 16 officers, proxy statement preparation, ASC 718 expense calculations, Section 6039 information returns, 423(b) ESPP compliance, and more. We stay current with regulatory changes and proactively adapt your program to maintain compliance.</p>'
+		},
+		{
+			question: 'Do you handle Section 6039 reporting for ISOs and ESPPs?',
+			answer:
+				'<p>Yes. We manage the full Section 6039 reporting process, including preparing and furnishing Form 3921 for incentive stock option (ISO) exercises and Form 3922 for ESPP share transfers, distributing participant statements by the January 31 deadline, and filing the corresponding information returns with the IRS. We reconcile the underlying transaction data against your equity platform to ensure every reportable event is captured accurately and on time.</p>'
+		},
+		{
+			question: 'Can you provide an interim or fractional stock plan administrator?',
+			answer:
+				'<p>Yes. We offer interim stock plan administrators to cover a vacancy or leave of absence, fractional administrators who manage your program on a part-time, ongoing basis, and on-demand stock administration for short-term, project-based needs. This flexibility lets you maintain seamless administration and compliance without the cost or commitment of a full-time hire.</p>'
 		},
 		{
 			question: 'What makes your equity administration services different?',
@@ -169,7 +180,9 @@
 		<div class={clsx('relative grid gap-8', 'md:text-center')}>
 			<div class="grid gap-4">
 				<RedBar classes="md:mx-auto" />
-				<h1 class={clsx(styles.h1, 'text-white')}>Expert Equity Plan Administration Services</h1>
+				<h1 class={clsx(styles.h1, 'text-white')}>
+					Expert Stock Plan & Equity Plan Administration Services
+				</h1>
 			</div>
 			<p class="mx-auto max-w-3xl text-lg font-light text-white">
 				Expert administration services that simplify your equity compensation program. From grant
@@ -190,10 +203,10 @@
 		<div class="mx-auto max-w-7xl">
 			<div class="grid gap-8 mb-16">
 				<RedBar />
-				<h2 class={styles.h2}>Comprehensive Equity Plan Administration</h2>
+				<h2 class={styles.h2}>Comprehensive Stock Plan & Equity Plan Administration</h2>
 				<div class="prose max-w-4xl text-lg text-stone-700 font-light">
 					<p>
-						Managing equity compensation programs has become increasingly complex. Between evolving
+						Managing stock plan administration has become increasingly complex. Between evolving
 						regulatory requirements, sophisticated technology platforms, and the need to provide
 						excellent participant experiences, many companies find themselves stretched thin trying
 						to manage it all internally.
@@ -202,9 +215,9 @@
 						At Accelerated Equity Plans, we specialize in taking this burden off your shoulders. Our
 						team of dedicated equity professionals delivers tailored solutions that ensure
 						regulatory compliance, streamline operations, and create positive experiences for your
-						employees. Whether you need full outsourcing, targeted support for specific functions,
-						or temporary assistance during peak periods, we have the expertise and flexibility to
-						meet your needs.
+						employees. Whether you need fully outsourced stock plan administration, targeted support
+						for specific functions, or an interim, fractional, or on-demand stock plan administrator
+						during peak periods, we have the expertise and flexibility to meet your needs.
 					</p>
 					<p>
 						Our approach is built on three core principles: expertise, efficiency, and partnership.
@@ -290,10 +303,13 @@
 				<div>
 					<h3 class={clsx(styles.h3, 'text-stone-900')}>Companies Undergoing Transitions</h3>
 					<p class="font-light">
-						Whether you're preparing for an IPO, navigating an M&A transaction, implementing a new
-						equity platform, or experiencing rapid growth, transitions create unique challenges. Our
-						team has extensive experience supporting companies through these critical periods,
-						providing the expertise and bandwidth you need exactly when you need it most.
+						Whether you're <a href={resolve('/services/advanced-project-support')}
+							>preparing for an IPO or navigating an M&A transaction</a
+						>,
+						<a href={resolve('/services/vendor-support')}>implementing a new equity platform</a>, or
+						experiencing rapid growth, transitions create unique challenges. Our team has extensive
+						experience supporting companies through these critical periods, providing the expertise
+						and bandwidth you need exactly when you need it most.
 					</p>
 				</div>
 			</div>

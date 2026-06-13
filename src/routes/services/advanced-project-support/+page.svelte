@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import CustomerReviews from '$lib/components/CustomerReviews.svelte';
 	import FAQ from '$lib/components/FAQ.svelte';
@@ -53,7 +54,7 @@
 		{
 			title: 'Merger & Acquisition Support',
 			description:
-				"Navigate equity complexities in M&A transactions. Our services include treatment analysis, participant communications, system consolidations, regulatory compliance, and post-merger integration to ensure equity compensation doesn't become a deal impediment."
+				"Navigate equity complexities in M&A transactions. Our services include equity compensation due diligence, treatment analysis, participant communications, system consolidations, regulatory compliance, and post-merger integration to ensure equity compensation doesn't become a deal impediment."
 		},
 		{
 			title: 'SPAC Transactions',
@@ -109,7 +110,12 @@
 		{
 			question: 'What M&A equity support do you provide?',
 			answer:
-				"<p>M&A transactions create complex equity scenarios requiring quick decisions and flawless execution. We provide equity treatment analysis (acceleration, conversion, cash-out scenarios), integration planning, participant communications, data consolidation, system migrations, regulatory compliance support, and post-merger administration. Whether you're the acquirer or target, our experience helps you avoid common pitfalls and ensure equity doesn't impede deal closure.</p>"
+				"<p>M&A transactions create complex equity scenarios requiring quick decisions and flawless execution. We provide equity compensation due diligence, equity treatment analysis (acceleration, conversion, cash-out scenarios), integration planning, participant communications, data consolidation, system migrations, regulatory compliance support, and post-merger administration. Whether you're the acquirer or target, our experience helps you avoid common pitfalls and ensure equity doesn't impede deal closure.</p>"
+		},
+		{
+			question: 'Do you perform equity compensation due diligence?',
+			answer:
+				'<p>Yes. As part of M&A and other strategic transactions, we conduct equity compensation due diligence to surface risks and obligations before a deal closes. This includes reviewing outstanding grants and vesting terms, change-in-control and acceleration provisions, plan documents and share reserves, dilution and overhang analysis, tax and accounting exposure, and compliance gaps. We deliver a clear picture of the target’s equity landscape so you can negotiate and plan integration with confidence.</p>'
 		},
 		{
 			question: 'Can you help automate our equity processes?',
@@ -225,10 +231,11 @@
 				<h2 class={styles.h2}>Expert Support for Complex Equity Initiatives</h2>
 				<div class="prose max-w-4xl text-lg text-stone-700 font-light">
 					<p>
-						Major equity projects—whether an IPO, M&A transaction, global expansion, or technology
-						transformation—represent critical moments for your organization. Success requires
-						specialized expertise, careful planning, and flawless execution. Mistakes can be costly,
-						both financially and reputationally.
+						Major equity projects—whether an IPO, M&A transaction, global expansion, or a
+						<a href={resolve('/services/vendor-support')}>technology platform transformation</a
+						>—represent critical moments for your organization. Success requires specialized
+						expertise, careful planning, and flawless execution. Mistakes can be costly, both
+						financially and reputationally.
 					</p>
 					<p>
 						AEP brings deep, specialized knowledge gained from managing hundreds of complex equity
