@@ -218,7 +218,7 @@ export const aepTeam = [
             </p>
         </div>
         `,
-		linkedInLink: ''
+		linkedInLink: 'https://www.linkedin.com/in/samantha-lopeman-cep/'
 	}
 ];
 
