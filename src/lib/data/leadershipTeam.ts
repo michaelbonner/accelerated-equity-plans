@@ -1,11 +1,11 @@
 import AaronHeadShot from '../images/head-shots/aaron-head-shot.jpg?enhanced';
-import BarbaraHeadShot from '../images/head-shots/barbara-head-shot.jpg?enhanced';
 import CamHeadShot from '../images/head-shots/cam-head-shot.jpg?enhanced';
 import KaelynnHeadShot from '../images/head-shots/kaelynn-head-shot.jpg?enhanced';
 import EmHeadShot from '../images/head-shots/emily-head-shot.jpg?enhanced';
 import GraceHeadShot from '../images/head-shots/grace-head-shot.jpg?enhanced';
 import JoshHeadShot from '../images/head-shots/josh-head-shot.jpg?enhanced';
 import NeilHeadShot from '../images/head-shots/neil-head-shot.jpg?enhanced';
+import SamanthaHeadShot from '../images/head-shots/samantha-head-shot.jpg?enhanced';
 
 export const leadershipTeam = [
 	{
@@ -87,27 +87,34 @@ export const leadershipTeam = [
 
 export const aepTeam = [
 	{
-		fullName: 'Barbara Gunnufson, CEP',
-		shortName: 'Barbara',
-		imageSrc: BarbaraHeadShot,
-		imageAlt: 'Barbara Gunnufson',
+		fullName: 'Samantha Lopeman, CEP',
+		shortName: 'Samantha',
+		imageSrc: SamanthaHeadShot,
+		imageAlt: 'Samantha Lopeman',
 		specialties: [
-			'Equity Edge Online',
-			'Process optimization',
-			'System integrations',
-			'IPO preparation'
+			'Shareworks',
+			'Global Equity Plan Design',
+			'Process Improvement and Efficiency',
+			'Global Equity Plan Administration',
+			'Communication and Employee Education Strategy'
 		],
 		body: `
         <div>
             <p>
-                Barbara has been in equity compensation for over 13 years, with a background in payroll management prior to that. She has spent time as a consultant with E*TRADE and as an in-house stock administrator with multiple issuers. Her shining star moment was working at a private tech company and building a public company equity program from the ground up, for their IPO.
+                Samantha Lopeman is a Certified Equity Professional (CEP) with over 12 years of experience in leading equity programs with publicly traded companies. She brings with her a strong track record of managing complex global equity programs, building and scaling high-performing plans and driving process automation and operational efficiency.
             </p>
             <p>
-                Barbara has been serving on the NASPP Denver chapter board for nearly ten years. Additionally, she has spoken at many conferences including NASPP, Directions/Thrive, American Payroll Association and Equilar. Barbara is a social butterfly. Don’t be surprised to see her dancing the night away at various industry events. In her spare time, Barbara loves to travel and listen to live music.
+                Throughout her career, Samantha has worked with organizations ranging from emerging tech companies to Fortune 100 enterprises, bringing deep knowledge of equity compensation, regulatory compliance, and international tax. She is passionate about bridging the gap between complex financial instruments and the people they impact.
+            </p>
+            <p>
+                In addition, Samantha has served as an industry mentor and speaker, committed to advancing equity education and professional development across the field.
+            </p>
+            <p>
+                Outside of work, you can find her with her nose in a book or exploring new destinations with her family. They have visited over 11 different countries and have more on their bucket list! She lives in Phoenix with her spouse, children, and their beloved dogs — who are always ready for the next adventure.
             </p>
         </div>
         `,
-		linkedInLink: 'https://www.linkedin.com/in/barbara-g-42088515/'
+		linkedInLink: ''
 	},
 	{
 		fullName: 'Josh Ludlow, CEP',
