@@ -87,36 +87,6 @@ export const leadershipTeam = [
 
 export const aepTeam = [
 	{
-		fullName: 'Samantha Lopeman, CEP',
-		shortName: 'Samantha',
-		imageSrc: SamanthaHeadShot,
-		imageAlt: 'Samantha Lopeman',
-		specialties: [
-			'Shareworks',
-			'Global Equity Plan Design',
-			'Process Improvement and Efficiency',
-			'Global Equity Plan Administration',
-			'Communication and Employee Education Strategy'
-		],
-		body: `
-        <div>
-            <p>
-                Samantha Lopeman is a Certified Equity Professional (CEP) with over 12 years of experience in leading equity programs with publicly traded companies. She brings with her a strong track record of managing complex global equity programs, building and scaling high-performing plans and driving process automation and operational efficiency.
-            </p>
-            <p>
-                Throughout her career, Samantha has worked with organizations ranging from emerging tech companies to Fortune 100 enterprises, bringing deep knowledge of equity compensation, regulatory compliance, and international tax. She is passionate about bridging the gap between complex financial instruments and the people they impact.
-            </p>
-            <p>
-                In addition, Samantha has served as an industry mentor and speaker, committed to advancing equity education and professional development across the field.
-            </p>
-            <p>
-                Outside of work, you can find her with her nose in a book or exploring new destinations with her family. They have visited over 11 different countries and have more on their bucket list! She lives in Phoenix with her spouse, children, and their beloved dogs — who are always ready for the next adventure.
-            </p>
-        </div>
-        `,
-		linkedInLink: 'https://www.linkedin.com/in/samantha-lopeman-cep/'
-	},
-	{
 		fullName: 'Grace Segui, CEP',
 		shortName: 'Grace',
 		imageSrc: GraceHeadShot,
@@ -166,32 +136,35 @@ export const aepTeam = [
         `,
 		linkedInLink: 'https://www.linkedin.com/in/kaelynn-jones-228660219/'
 	},
-
 	{
-		fullName: 'Cam Cazier, CEP',
-		shortName: 'Cam',
-		imageSrc: CamHeadShot,
-		imageAlt: 'Cam Cazier',
+		fullName: 'Samantha Lopeman, CEP',
+		shortName: 'Samantha',
+		imageSrc: SamanthaHeadShot,
+		imageAlt: 'Samantha Lopeman',
 		specialties: [
-			'Customer Service',
-			'Project Management',
-			'Employee Education',
-			'Attention to Detail'
+			'Shareworks',
+			'Global Equity Plan Design',
+			'Process Improvement and Efficiency',
+			'Global Equity Plan Administration',
+			'Communication and Employee Education Strategy'
 		],
 		body: `
         <div>
             <p>
-                With over 12 years of experience in legal/litigation services industry, Cam has worked in various roles supporting clients, managing production teams, and ensuring exceptional service delivery and throughout his career, he has developed a passion for process improvement, client relationships, and bridging the gap between operational efficiency and client satisfaction. 
-			</p>
-			<p>
-				Now, as a Client Consultant, he is looking forward to bringing the same level of dedication, precision, and client-centered mindset to AEP!
-			</p>
-			<p>
-				When free time allows, you can find Cam at a concert, cheering for his favorite sports teams, or spending time with his wife and dog - music, sports, and family time keep him grounded and inspired.
+                Samantha Lopeman is a Certified Equity Professional (CEP) with over 12 years of experience in leading equity programs with publicly traded companies. She brings with her a strong track record of managing complex global equity programs, building and scaling high-performing plans and driving process automation and operational efficiency.
+            </p>
+            <p>
+                Throughout her career, Samantha has worked with organizations ranging from emerging tech companies to Fortune 100 enterprises, bringing deep knowledge of equity compensation, regulatory compliance, and international tax. She is passionate about bridging the gap between complex financial instruments and the people they impact.
+            </p>
+            <p>
+                In addition, Samantha has served as an industry mentor and speaker, committed to advancing equity education and professional development across the field.
+            </p>
+            <p>
+                Outside of work, you can find her with her nose in a book or exploring new destinations with her family. They have visited over 11 different countries and have more on their bucket list! She lives in Phoenix with her spouse, children, and their beloved dogs — who are always ready for the next adventure.
             </p>
         </div>
         `,
-		linkedInLink: 'http://www.linkedin.com/in/cameron-cazier-1008523a7'
+		linkedInLink: 'https://www.linkedin.com/in/samantha-lopeman-cep/'
 	},
 	{
 		fullName: 'Josh Ludlow, CEP',
@@ -219,6 +192,32 @@ export const aepTeam = [
         </div>
         `,
 		linkedInLink: 'https://www.linkedin.com/in/joshludlowcep/'
+	},
+	{
+		fullName: 'Cam Cazier, CEP',
+		shortName: 'Cam',
+		imageSrc: CamHeadShot,
+		imageAlt: 'Cam Cazier',
+		specialties: [
+			'Customer Service',
+			'Project Management',
+			'Employee Education',
+			'Attention to Detail'
+		],
+		body: `
+        <div>
+            <p>
+                With over 12 years of experience in legal/litigation services industry, Cam has worked in various roles supporting clients, managing production teams, and ensuring exceptional service delivery and throughout his career, he has developed a passion for process improvement, client relationships, and bridging the gap between operational efficiency and client satisfaction.
+			</p>
+			<p>
+				Now, as a Client Consultant, he is looking forward to bringing the same level of dedication, precision, and client-centered mindset to AEP!
+			</p>
+			<p>
+				When free time allows, you can find Cam at a concert, cheering for his favorite sports teams, or spending time with his wife and dog - music, sports, and family time keep him grounded and inspired.
+            </p>
+        </div>
+        `,
+		linkedInLink: 'http://www.linkedin.com/in/cameron-cazier-1008523a7'
 	}
 ];
 
