@@ -132,20 +132,22 @@
 	<section class={clsx(styles.heroSection, 'overflow-x-clip', 'md:min-h-[86svh] lg:px-28')}>
 		<!-- Background Div -->
 		<div class="overflow-hidden absolute inset-0">
-			<enhanced:img
-				alt="High-rise office buildings representing equity management and stock plan administration"
-				class="object-cover size-full md:hidden"
-				fetchpriority="high"
-				src={HeroBgMobile}
-				sizes="100vw"
-			/>
-			<enhanced:img
-				alt="High-rise office buildings representing equity management and stock plan administration"
-				class="hidden object-cover size-full md:block"
-				fetchpriority="high"
-				src={HeroBg}
-				sizes="100vw"
-			/>
+			<picture class="block size-full">
+				{#each Object.entries(HeroBg.sources) as [format, srcset]}
+					<source {srcset} media="(min-width: 768px)" sizes="100vw" type={`image/${format}`} />
+				{/each}
+				{#each Object.entries(HeroBgMobile.sources) as [format, srcset]}
+					<source {srcset} media="(max-width: 767px)" sizes="100vw" type={`image/${format}`} />
+				{/each}
+				<img
+					alt="High-rise office buildings representing equity management and stock plan administration"
+					class="object-cover size-full"
+					fetchpriority="high"
+					height={HeroBgMobile.img.h}
+					src={HeroBgMobile.img.src}
+					width={HeroBgMobile.img.w}
+				/>
+			</picture>
 		</div>
 
 		<div
