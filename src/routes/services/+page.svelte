@@ -159,52 +159,64 @@
 
 	const moreServices = [
 		{
+			id: 'ipos-and-spacs',
 			title: `IPOs and SPACs`,
 			body: `We provide expert support throughout the IPO process, guiding companies through the complexities and challenges of going public to ensure a successful transition. We can also be a resource as work volumes pick up and you need extra support.`
 		},
 		{
+			id: 'corporate-actions',
 			title: `Corporate Actions`,
 			body: `We help companies navigate strategic restructuring through mergers & acquisitions, stock splits, and spinoffs.`
 		},
 		{
+			id: 'automation-design-and-resources',
 			title: `Automation Design and Resources`,
 			body: `Our Automation Design and Resources empower organizations to streamline processes and boost productivity. We integrate your equity systems with payroll and HRIS for seamless data flow and reduced risk, driving both efficiency and innovation.`
 		},
 		{
+			id: 'tax-and-mobility-implementation-and-support',
 			title: `Tax and Mobility implementation and support`,
 			body: `We ensure you're maximizing tax efficiency with a review of your withholding setup and best practice advice. Plus, we offer support throughout your mobility process, from initial setup and testing to ongoing assistance.`
 		},
 
 		{
+			id: 'system-implementation',
 			title: `System implementation`,
 			body: `We streamline your equity management by supporting implementation of new systems, data conversion (spreadsheets or legacy systems), and ensuring data reconciliation for accurate financial reporting.`
 		},
 		{
+			id: 'vendor-selection-and-rfp',
 			title: `Vendor Selection and RFP`,
 			body: `We provide expert vendor selection support, guiding businesses through the process of identifying and choosing the right partners to meet their specific needs and goals`
 		},
 		{
+			id: 'system-functionality-incorporation-and-testing',
 			title: `System functionality incorporation and testing`,
 			body: `We maximize your equity system's value by supporting implementation, testing, and automation, freeing you for strategic initiatives.`
 		},
 		{
+			id: 'process-review-and-documentation',
 			title: `Process review and documentation`,
 			body: `We review and document your current processes, interview stakeholders and recommend best practices`
 		},
 
 		{
+			id: 'training',
 			title: `Training`,
 			body: `AEP helps to train your employees on administering your equity plans, best practices and creating processes that will save time and reduce risk.`
 		},
 		{
+			id: 'education',
 			title: `Education`,
 			body: `We specialize in educating employees on their equity awards, providing comprehensive guidance and resources to ensure they understand the value and implications of their stock compensation plans.`
 		},
 		{
+			id: 'system-functionality-incorporation-and-testing-secondary',
 			title: `System functionality incorporation and testing`,
 			body: `We maximize your equity system's value by supporting implementation, testing, and automation, freeing you for strategic initiatives.`
 		},
 		{
+			id: 'process-review-and-documentation-secondary',
 			title: `Process review and documentation`,
 			body: `We review and document your current processes, interview stakeholders and recommend best practices`
 		}
@@ -352,7 +364,7 @@
 			</div>
 
 			<div class="grid gap-6 mx-auto mt-12 max-w-7xl md:grid-cols-2 xl:grid-cols-4">
-				{#each moreServices as service (service.title)}
+				{#each moreServices as service (service.id)}
 					<div class={clsx(styles.blueRedGradientBackground, styles.cardHover)}>
 						<div class="flex flex-col gap-4 justify-start p-8 h-full bg-black rounded-lg">
 							<h3 class={styles.h3}>
