@@ -71,9 +71,8 @@
 			<enhanced:img
 				alt=""
 				class={clsx(
-					'aspect-square rounded-full object-cover outline-1 -outline-offset-1 outline-white/10 grayscale transition-all',
-					'group-hover:grayscale-0',
-					featured ? 'mt-4 max-w-[200px] shadow-lg' : 'max-w-[144px]'
+				'aspect-square rounded-full object-cover outline-1 -outline-offset-1 outline-white/10',
+				featured ? 'mt-4 max-w-[200px] shadow-lg' : 'max-w-[144px]'
 				)}
 				loading="lazy"
 				src={teamMember.imageSrc}
