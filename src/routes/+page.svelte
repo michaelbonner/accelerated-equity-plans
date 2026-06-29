@@ -174,7 +174,7 @@
 					Equity management company for private and public organizations
 				</p>
 				<h1 class={clsx(styles.h1Super, 'max-w-[18ch] lg:text-7xl xl:text-8xl')}>
-					Equity Management & Stock Plan Administration
+					Accelerate Your Equity's Potential
 				</h1>
 				<div class="grid max-w-[58ch] gap-4 text-lg/8 font-light text-white/90 text-pretty">
 					<p>
