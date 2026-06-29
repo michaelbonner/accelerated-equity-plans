@@ -1,4 +1,6 @@
 declare global {
+	type GtagFunction = (command: string, target: string, parameters?: Record<string, unknown>) => void;
+
 	interface Turnstile {
 		render: (
 			container: string | HTMLElement,
@@ -19,6 +21,7 @@ declare global {
 
 	interface Window {
 		$zoho: unknown;
+		gtag: GtagFunction;
 		turnstile?: Turnstile;
 	}
 }

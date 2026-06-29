@@ -99,9 +99,9 @@
 
 	const faqs = [
 		{
-			question: 'What is equity plan administration?',
+			question: 'What does an equity plan administration career involve?',
 			answer:
-				"<p>Equity plan administration involves managing all aspects of a company's stock compensation programs. This includes processing stock option grants, managing RSU vesting schedules, handling ESPP enrollments and purchases, ensuring regulatory compliance, and supporting employees with their equity awards. It's a specialized field that combines finance, HR, legal, and technology expertise.</p>"
+				'<p>A career in equity plan administration involves supporting company stock compensation programs through transaction processing, data reconciliation, participant support, reporting coordination, and platform administration. If your company is looking for equity administration support rather than a job, visit our <a href="/services/equity-plan-administration">equity plan administration services</a> page.</p>'
 		},
 		{
 			question: 'What qualifications do I need for an equity plan administration job?',
@@ -141,29 +141,47 @@
 	];
 
 	function jsonLDScript() {
-		return `<script type="application/ld+json">${JSON.stringify(generateJobPostingSchema())}</${'script'}>`;
+		return `<script type="application/ld+json">${JSON.stringify(generateCareersSchema())}</${'script'}>`;
 	}
 
-	function generateJobPostingSchema() {
+	function generateCareersSchema() {
 		return {
 			'@context': 'https://schema.org',
-			'@type': 'Organization',
-			name: 'Accelerated Equity Plans',
-			url: 'https://www.acceleratedep.com',
-			description:
-				'Accelerated Equity Plans provides specialized equity plan administration services and employs equity compensation professionals across the United States.',
-			sameAs: ['https://www.linkedin.com/company/accelerated-equity-plans/'],
-			jobPostingAvailable: true,
-			knowsAbout: [
-				'Equity Plan Administration',
-				'Stock Compensation',
-				'RSU Administration',
-				'Stock Option Management',
-				'ESPP Administration',
-				'SEC Compliance',
-				'ASC 718 Reporting'
-			]
+			'@type': 'WebPage',
+			name: 'Equity Plan Administration Jobs & Careers',
+			url: 'https://www.acceleratedep.com/careers',
+			description,
+			about: {
+				'@type': 'Thing',
+				name: 'Equity plan administration careers'
+			},
+			isPartOf: {
+				'@type': 'WebSite',
+				name: 'Accelerated Equity Plans',
+				url: 'https://www.acceleratedep.com'
+			},
+			publisher: {
+				'@type': 'Organization',
+				name: 'Accelerated Equity Plans',
+				url: 'https://www.acceleratedep.com'
+			}
 		};
+	}
+
+	function loadJobListingWidget() {
+		if (document.getElementById('joblisting-widget-script')) return;
+
+		const script = document.createElement('script');
+		script.id = 'joblisting-widget-script';
+		script.src = 'https://joblisting.app/widget.js';
+		script.async = true;
+		script.defer = true;
+		document.head.appendChild(script);
+	}
+
+	function openApplyModal() {
+		applyModalOpen = true;
+		loadJobListingWidget();
 	}
 </script>
 
@@ -176,7 +194,6 @@
 	<link rel="canonical" href={`https://www.acceleratedep.com${path}`} />
 	<meta property="og:url" content={`https://www.acceleratedep.com${path}`} />
 	{@html jsonLDScript()}
-	<script src="https://joblisting.app/widget.js" defer async></script>
 </svelte:head>
 
 <main>
@@ -223,9 +240,7 @@
 					professionals to join our team.
 				</p>
 				<div class="mt-2">
-					<button onclick={() => (applyModalOpen = true)} class={styles.redButton}
-						>Join the AEP Team!</button
-					>
+					<button onclick={openApplyModal} class={styles.redButton}>Join the AEP Team!</button>
 				</div>
 			</div>
 		</div>

@@ -22,7 +22,22 @@
 			link.setAttribute('rel', 'stylesheet');
 		});
 
-		// Lazy-load Zoho SalesIQ chat widget after page is interactive
+		const scheduleThirdPartyScript = (callback: () => void, timeout = 10000) => {
+			let loaded = false;
+			const load = () => {
+				if (loaded) return;
+				loaded = true;
+				callback();
+			};
+
+			['pointerdown', 'keydown', 'scroll'].forEach((eventName) => {
+				window.addEventListener(eventName, load, { once: true, passive: true });
+			});
+
+			setTimeout(load, timeout);
+		};
+
+		// Lazy-load Zoho SalesIQ chat widget after the initial page experience.
 		const loadZohoChat = () => {
 			const zohoGlobal =
 				typeof window.$zoho === 'object' && window.$zoho !== null
@@ -42,8 +57,7 @@
 			document.head.appendChild(script);
 		};
 
-		// Delay loading by 3 seconds to keep it off the critical path
-		setTimeout(loadZohoChat, 3000);
+		scheduleThirdPartyScript(loadZohoChat, 10000);
 
 		// Load PageSense after the page is idle to avoid render-blocking
 		const loadPageSense = () => {
@@ -54,11 +68,7 @@
 			document.head.appendChild(script);
 		};
 
-		if ('requestIdleCallback' in window) {
-			requestIdleCallback(loadPageSense);
-		} else {
-			setTimeout(loadPageSense, 3000);
-		}
+		scheduleThirdPartyScript(loadPageSense, 12000);
 	});
 
 	const navLinks: {
@@ -509,7 +519,27 @@
 	const partytownScript = `<script>${partytownSnippet()}</${'script'}>`;
 
 	function jsonLDScript() {
-		return `<script type="application/ld+json">${JSON.stringify(jsonLD())}</${'script'}>`;
+		const organizationSchema = {
+			'@context': 'https://schema.org',
+			'@type': 'Organization',
+			name: 'Accelerated Equity Plans',
+			url: 'https://www.acceleratedep.com',
+			description:
+				'Accelerated Equity Plans provides expert equity plan administration, consulting, and outsourcing services for private and public companies.',
+			logo: 'https://www.acceleratedep.com/images/brand/aep-logo.svg',
+			image: 'https://www.acceleratedep.com/images/og-image.jpg',
+			email: 'info@acceleratedep.com',
+			telephone: '+1-801-808-6238',
+			sameAs: ['https://www.linkedin.com/company/accelerated-equity-plans/'],
+			address: {
+				'@type': 'PostalAddress',
+				addressLocality: 'Salt Lake City',
+				addressRegion: 'UT',
+				addressCountry: 'US'
+			}
+		};
+
+		return `<script type="application/ld+json">${JSON.stringify(organizationSchema)}</${'script'}>`;
 	}
 </script>
 

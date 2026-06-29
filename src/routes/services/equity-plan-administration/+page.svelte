@@ -13,9 +13,10 @@
 	import { styles } from '$lib/styles';
 	import { clsx } from 'clsx';
 
-	const title = 'Stock Plan & Equity Plan Administration Services | Accelerated Equity Plans';
+	const title =
+		'Stock Plan Administration & Equity Administration Services | Accelerated Equity Plans';
 	const description =
-		'Outsourced stock plan administration and equity plan administration services—comprehensive equity management, employee education, and interim, fractional, and on-demand support for private and public companies.';
+		'Outsourced stock plan administration and equity administration services for private and public companies, including compliance, employee support, and flexible coverage.';
 	const path = '/services/equity-plan-administration';
 
 	const features = [
@@ -203,7 +204,7 @@
 		<div class="mx-auto max-w-7xl">
 			<div class="grid gap-8 mb-16">
 				<RedBar />
-				<h2 class={styles.h2}>Comprehensive Stock Plan & Equity Plan Administration</h2>
+				<h2 class={styles.h2}>Comprehensive Stock Plan Administration for Growing Companies</h2>
 				<div class="prose max-w-4xl text-lg text-stone-700 font-light">
 					<p>
 						Managing stock plan administration has become increasingly complex. Between evolving
@@ -225,6 +226,50 @@
 						platforms. We design streamlined processes that reduce manual work and minimize errors.
 						And we work collaboratively with your team, adapting our services to complement your
 						organization's unique structure and culture.
+					</p>
+					<p>
+						If you are evaluating whether to keep equity administration in-house or partner with an
+						equity management company, our team can support the operating model that fits your
+						business: fully outsourced administration, co-sourced support, temporary coverage, or
+						project-based help during reporting cycles and strategic transactions.
+					</p>
+				</div>
+			</div>
+
+			<div class="grid gap-8 mt-20">
+				<RedBar />
+				<h2 class={styles.h2}>What Our Equity Administration Team Handles</h2>
+				<div class="grid gap-6 md:grid-cols-3">
+					<div class="rounded-lg border border-stone-200 bg-stone-50 p-6">
+						<h3 class={clsx(styles.h4, 'mb-3 text-stone-900')}>Day-to-Day Stock Plan Operations</h3>
+						<p class="font-light leading-relaxed text-stone-700">
+							Grant processing, vesting events, exercises, releases, ESPP activity, data
+							reconciliation, participant support, and recurring administration workflows.
+						</p>
+					</div>
+					<div class="rounded-lg border border-stone-200 bg-stone-50 p-6">
+						<h3 class={clsx(styles.h4, 'mb-3 text-stone-900')}>Reporting & Compliance Support</h3>
+						<p class="font-light leading-relaxed text-stone-700">
+							Section 16, ASC 718 coordination, proxy and audit support, Section 6039 reporting,
+							participant statements, and controls that reduce filing and data risk.
+						</p>
+					</div>
+					<div class="rounded-lg border border-stone-200 bg-stone-50 p-6">
+						<h3 class={clsx(styles.h4, 'mb-3 text-stone-900')}>Flexible Administration Coverage</h3>
+						<p class="font-light leading-relaxed text-stone-700">
+							Interim, fractional, outsourced, and on-demand stock plan administrator support when
+							your team needs specialist capacity without adding a full-time hire.
+						</p>
+					</div>
+				</div>
+				<div class="prose max-w-4xl text-lg text-stone-700 font-light">
+					<p>
+						For additional context, read our guides to
+						<a href={resolve('/blog/stock-plan-administration-guide')}>stock plan administration</a
+						>,
+						<a href={resolve('/blog/section-6039-reporting-guide')}>Section 6039 reporting</a>, and
+						<a href={resolve('/blog/equity-compensation-services')}>equity compensation services</a
+						>.
 					</p>
 				</div>
 			</div>

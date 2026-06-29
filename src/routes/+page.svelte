@@ -148,6 +148,7 @@
 					class="block object-cover lg:hidden size-full"
 					fetchpriority="high"
 					src={HeroBgMobile}
+					sizes="100vw"
 				/>
 			{:else}
 				<enhanced:img
@@ -155,6 +156,7 @@
 					class="object-cover size-full"
 					fetchpriority="high"
 					src={HeroBg}
+					sizes="100vw"
 				/>
 			{/if}
 		</div>
@@ -179,10 +181,10 @@
 		<!-- Should be foreground div in same container -->
 		<div class="relative z-10 h-full sm:px-8">
 			<div class="grid gap-2 max-w-3xl">
-				<h1 class={styles.h1Super}>Accelerate Your <wbr />Equity's Potential</h1>
+				<h1 class={styles.h1Super}>Equity Management & Stock Plan Administration</h1>
 				<p class="mt-6 text-lg font-light leading-8 max-w-[48ch] text-pretty">
-					Bringing industry-leading expertise and support to your equity programs to deliver a
-					best-in-class experience for your team, partners, and participants.
+					Accelerated Equity Plans is an equity management company helping private and public
+					organizations run compliant, efficient equity compensation programs.
 				</p>
 				<p class="mt-2 text-lg font-light leading-8 max-w-[48ch] text-pretty">
 					Founded by industry experts with issuer and vendor experience for both private and public
@@ -219,17 +221,17 @@
 				</p>
 			</div>
 
-			<dl class="grid gap-6 mx-auto mt-12 max-w-7xl md:grid-cols-3">
+			<div class="grid gap-6 mx-auto mt-12 max-w-7xl md:grid-cols-3">
 				{#each servicesBoxes as servicesBox (servicesBox.title)}
-					<div class="flex flex-col gap-4 p-8 bg-white rounded-xl ring-1 ring-zinc-900/10">
+					<article class="flex flex-col gap-4 p-8 bg-white rounded-xl ring-1 ring-zinc-900/10">
 						<svelte:component this={servicesBox.icon} class="size-8 text-aep-red-700 shrink-0" />
-						<dt class={styles.h3}>{servicesBox.title}</dt>
-						<dd class="font-light text-zinc-600 prose prose-zinc max-w-none">
+						<h3 class={styles.h3}>{servicesBox.title}</h3>
+						<div class="font-light text-zinc-600 prose prose-zinc max-w-none">
 							{@html servicesBox.body}
-						</dd>
-					</div>
+						</div>
+					</article>
 				{/each}
-			</dl>
+			</div>
 		</div>
 		<div class="relative flex mt-10 mx-auto max-w-7xl">
 			<a href={resolve('/services')} class={styles.lightButton}>Explore All Equity Plan Services</a>
@@ -254,21 +256,21 @@
 			</div>
 		</div>
 
-		<dl class="relative grid gap-6 mx-auto mt-12 max-w-7xl sm:grid-cols-2">
+		<div class="relative grid gap-6 mx-auto mt-12 max-w-7xl sm:grid-cols-2">
 			{#each comprehensiveServices as comprehensiveService (comprehensiveService.title)}
-				<div class={clsx(styles.blueRedGradientBackground, 'bg-black/80 p-8')}>
+				<article class={clsx(styles.blueRedGradientBackground, 'bg-black/80 p-8')}>
 					<div class="flex gap-4 items-start">
 						<svelte:component
 							this={comprehensiveService.icon}
 							class={clsx('size-6 shrink-0', comprehensiveService.iconColor)}
 						/>
-						<dt class={clsx(styles.h3, 'text-white')}>
+						<h3 class={clsx(styles.h3, 'text-white')}>
 							<a class="hover:text-aep-red-300" href={resolve(comprehensiveService.detailsLink)}>
 								{comprehensiveService.title}
 							</a>
-						</dt>
+						</h3>
 					</div>
-					<dd>
+					<div>
 						<div class="font-light text-white prose prose-invert max-w-none">
 							{@html comprehensiveService.body}
 						</div>
@@ -292,10 +294,10 @@
 								Explore {comprehensiveService.title} Services
 							</a>
 						</div>
-					</dd>
-				</div>
+					</div>
+				</article>
 			{/each}
-		</dl>
+		</div>
 
 		<div class="relative flex justify-center mt-12">
 			<a href={resolve('/services')} class={styles.darkButton}>View All Services</a>
