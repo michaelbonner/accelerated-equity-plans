@@ -25,7 +25,7 @@
 	$: homeLink = navLinks.find((link) => link.name === 'Home');
 	$: servicesLink = navLinks.find((link) => link.name === 'Services');
 	$: companyLinks = navLinks.filter((link) =>
-		['About', 'Careers', 'Contact Us'].includes(link.name)
+		['About', 'Careers', 'Blog', 'Contact Us'].includes(link.name)
 	);
 </script>
 
