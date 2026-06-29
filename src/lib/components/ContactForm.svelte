@@ -123,8 +123,7 @@
 						name={field.name}
 						placeholder={field.placeholder ?? ''}
 						required={field.required}
-						rows={5}
-					></textarea>
+						rows={5}></textarea>
 				{:else}
 					<input
 						class={clsx(

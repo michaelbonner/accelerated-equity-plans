@@ -348,8 +348,7 @@
 					id="comments"
 					name="comments"
 					placeholder="Tell us about your experience, the type of role you're interested in, availability, etc."
-					rows={5}
-				></textarea>
+					rows={5}></textarea>
 			</div>
 
 			<div class="md:col-span-2">
