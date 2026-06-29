@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
 	import { resolve } from '$app/paths';
 	import type { Pathname } from '$app/types';
 	import CustomerReviews from '$lib/components/CustomerReviews.svelte';
@@ -12,6 +11,7 @@
 	import HeroBg from '$lib/images/backgrounds/high-rise-buildings.jpg?enhanced';
 	import { styles } from '$lib/styles';
 	import {
+		ArrowRight,
 		Building2,
 		DraftingCompass,
 		EarthIcon,
@@ -22,20 +22,10 @@
 	} from '@lucide/svelte';
 	import { clsx } from 'clsx';
 
-	let isMobile = true;
-
 	const title = 'Equity Management Company & Compensation Consulting | Accelerated Equity Plans';
 	const description =
 		'A dedicated equity management company offering expert equity compensation consulting, stock plan administration, and tailored solutions to unlock the full potential of your equity programs.';
 	const path = '/';
-
-	const updateWindowSize = () => {
-		isMobile = window.innerWidth < 768;
-	};
-	if (browser) {
-		updateWindowSize();
-		window.onresize = updateWindowSize;
-	}
 
 	const servicesBoxes = [
 		{
@@ -139,38 +129,38 @@
 
 <main class="bg-white isolate antialiased">
 	<!--  Hero Div -->
-	<section class={clsx(styles.heroSection, 'overflow-x-hidden', 'lg:px-28')}>
+	<section class={clsx(styles.heroSection, 'overflow-x-hidden', 'md:min-h-[86svh] lg:px-28')}>
 		<!-- Background Div -->
 		<div class="overflow-hidden absolute inset-0">
-			{#if isMobile}
-				<enhanced:img
-					alt="High-rise office buildings representing equity management and stock plan administration"
-					class="block object-cover lg:hidden size-full"
-					fetchpriority="high"
-					src={HeroBgMobile}
-					sizes="100vw"
-				/>
-			{:else}
-				<enhanced:img
-					alt="High-rise office buildings representing equity management and stock plan administration"
-					class="object-cover size-full"
-					fetchpriority="high"
-					src={HeroBg}
-					sizes="100vw"
-				/>
-			{/if}
+			<enhanced:img
+				alt="High-rise office buildings representing equity management and stock plan administration"
+				class="object-cover size-full md:hidden"
+				fetchpriority="high"
+				src={HeroBgMobile}
+				sizes="100vw"
+			/>
+			<enhanced:img
+				alt="High-rise office buildings representing equity management and stock plan administration"
+				class="hidden object-cover size-full md:block"
+				fetchpriority="high"
+				src={HeroBg}
+				sizes="100vw"
+			/>
 		</div>
 
 		<div
-			class="absolute inset-0 bg-linear-to-r from-black/90 via-black/80 to-black/70 lg:from-black/80 lg:via-black/70 lg:to-black/50"
+			class="absolute inset-0 bg-linear-to-r from-black/80 via-black/65 to-black/50 lg:from-black/82 lg:via-black/55 lg:to-black/20"
 		></div>
 		<div
-			class="w-[31vw] absolute bottom-0 left-[69vw] overflow-hidden opacity-50 md:bottom-[5%] md:opacity-100"
+			class="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-black/70 to-transparent"
+		></div>
+		<div
+			class="pointer-events-none absolute right-[-8vw] bottom-[-8%] hidden w-[42vw] max-w-3xl opacity-55 lg:block"
 		>
 			<img
 				alt=""
 				aria-hidden="true"
-				class="max-w-none opacity-90 w-[50vw]"
+				class="w-full max-w-none"
 				height="150"
 				loading="lazy"
 				src="/images/brand/aep-mark-white.svg"
@@ -178,23 +168,40 @@
 			/>
 		</div>
 
-		<!-- Should be foreground div in same container -->
-		<div class="relative z-10 h-full sm:px-8">
-			<div class="grid gap-2 max-w-3xl">
-				<h1 class={clsx(styles.h1Super, 'max-w-[16ch] leading-[0.95] lg:text-7xl xl:text-8xl')}>
+		<div class="relative z-10 w-full sm:px-8">
+			<div class="grid max-w-5xl gap-6">
+				<p class="max-w-[48ch] text-base font-medium text-aep-red-100 text-pretty sm:text-lg">
+					Equity management company for private and public organizations
+				</p>
+				<h1 class={clsx(styles.h1Super, 'max-w-[18ch] lg:text-7xl xl:text-8xl')}>
 					Equity Management & Stock Plan Administration
 				</h1>
-				<p class="mt-6 text-lg font-light leading-8 max-w-[48ch] text-pretty">
-					Accelerated Equity Plans is an equity management company helping private and public
-					organizations run compliant, efficient equity compensation programs.
-				</p>
-				<p class="mt-2 text-lg font-light leading-8 max-w-[48ch] text-pretty">
-					Founded by industry experts with issuer and vendor experience for both private and public
-					organizations, we can handle all of your equity administration needs.
-				</p>
-				<div class="flex gap-x-4 mt-8">
-					<a href={resolve('/contact')} class={styles.redButton}>Contact us today</a>
+				<div class="grid max-w-[58ch] gap-4 text-lg/8 font-light text-white/90 text-pretty">
+					<p>
+						Accelerated Equity Plans helps companies run compliant, efficient equity compensation
+						programs with senior support across administration, systems, reporting, and strategic
+						transactions.
+					</p>
+					<p>
+						Founded by industry experts with issuer and vendor experience, we can handle all of your
+						equity administration needs.
+					</p>
 				</div>
+				<div class="flex flex-col gap-3 pt-2 sm:flex-row">
+					<a href={resolve('/contact')} class={styles.redButton}>Contact us today</a>
+					<a href={resolve('/services')} class={clsx(styles.darkButton, 'gap-2')}>
+						Explore services
+						<ArrowRight class="size-4 shrink-0" aria-hidden="true" />
+					</a>
+				</div>
+				<ul
+					role="list"
+					class="grid max-w-4xl gap-3 pt-6 text-base text-white/75 sm:grid-cols-3 sm:text-sm"
+				>
+					<li class="border-l border-white/20 pl-4">Stock plan administration</li>
+					<li class="border-l border-white/20 pl-4">Equity platform support</li>
+					<li class="border-l border-white/20 pl-4">IPO, M&A, and compliance projects</li>
+				</ul>
 			</div>
 		</div>
 	</section>
