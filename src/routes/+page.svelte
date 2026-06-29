@@ -246,7 +246,7 @@
 				sizes="100vw"
 			/>
 		</div>
-		<div class="absolute inset-0 lg:bg-transparent bg-white/80"></div>
+		<div class="absolute inset-0 lg:bg-black/50"></div>
 		<div class="relative mx-auto max-w-7xl">
 			<div class="grid gap-4">
 				<RedBar />
@@ -306,7 +306,7 @@
 		class={clsx('py-24 relative px-6', 'md:min-h-[80vh] md:flex md:flex-col md:justify-center')}
 	>
 		<div class="mx-auto max-w-7xl w-full">
-			<div class={clsx('max-w-2xl grid gap-8', 'md:pl-24')}>
+			<div class={clsx('max-w-2xl grid gap-8', 'md:ml-[35vw] md:pl-12 lg:ml-[30vw] lg:pl-24')}>
 				<div class="grid gap-4">
 					<RedBar />
 					<h2 class={clsx(styles.h2, 'max-w-[28ch]')}>
