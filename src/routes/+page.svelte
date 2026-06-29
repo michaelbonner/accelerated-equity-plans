@@ -129,7 +129,7 @@
 
 <main class="bg-white isolate antialiased">
 	<!--  Hero Div -->
-	<section class={clsx(styles.heroSection, 'overflow-x-hidden', 'md:min-h-[86svh] lg:px-28')}>
+	<section class={clsx(styles.heroSection, 'overflow-x-clip', 'md:min-h-[86svh] lg:px-28')}>
 		<!-- Background Div -->
 		<div class="overflow-hidden absolute inset-0">
 			<enhanced:img
