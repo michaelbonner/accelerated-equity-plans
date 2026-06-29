@@ -101,7 +101,12 @@
 		{
 			question: 'What does an equity plan administration career involve?',
 			answer:
-				'<p>A career in equity plan administration involves supporting company stock compensation programs through transaction processing, data reconciliation, participant support, reporting coordination, and platform administration. If your company is looking for equity administration support rather than a job, visit our <a href="/services/equity-plan-administration">equity plan administration services</a> page.</p>'
+				'<p>A career in equity plan administration involves supporting company stock ' +
+				'compensation programs through transaction processing, data reconciliation, ' +
+				'participant support, reporting coordination, and platform administration. If your ' +
+				'company is looking for equity administration support rather than a job, visit our ' +
+				'<a href="/services/equity-plan-administration">equity plan administration services</a> ' +
+				'page.</p>'
 		},
 		{
 			question: 'What qualifications do I need for an equity plan administration job?',
@@ -141,7 +146,9 @@
 	];
 
 	function jsonLDScript() {
-		return `<script type="application/ld+json">${JSON.stringify(generateCareersSchema())}</${'script'}>`;
+		const schema = JSON.stringify(generateCareersSchema());
+
+		return `<script type="application/ld+json">${schema}</${'script'}>`;
 	}
 
 	function generateCareersSchema() {
@@ -176,6 +183,9 @@
 		script.src = 'https://joblisting.app/widget.js';
 		script.async = true;
 		script.defer = true;
+		script.onerror = () => {
+			script.remove();
+		};
 		document.head.appendChild(script);
 	}
 

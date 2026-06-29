@@ -519,27 +519,7 @@
 	const partytownScript = `<script>${partytownSnippet()}</${'script'}>`;
 
 	function jsonLDScript() {
-		const organizationSchema = {
-			'@context': 'https://schema.org',
-			'@type': 'Organization',
-			name: 'Accelerated Equity Plans',
-			url: 'https://www.acceleratedep.com',
-			description:
-				'Accelerated Equity Plans provides expert equity plan administration, consulting, and outsourcing services for private and public companies.',
-			logo: 'https://www.acceleratedep.com/images/brand/aep-logo.svg',
-			image: 'https://www.acceleratedep.com/images/og-image.jpg',
-			email: 'info@acceleratedep.com',
-			telephone: '+1-801-808-6238',
-			sameAs: ['https://www.linkedin.com/company/accelerated-equity-plans/'],
-			address: {
-				'@type': 'PostalAddress',
-				addressLocality: 'Salt Lake City',
-				addressRegion: 'UT',
-				addressCountry: 'US'
-			}
-		};
-
-		return `<script type="application/ld+json">${JSON.stringify(organizationSchema)}</${'script'}>`;
+		return `<script type="application/ld+json">${JSON.stringify(jsonLD())}</${'script'}>`;
 	}
 </script>
 

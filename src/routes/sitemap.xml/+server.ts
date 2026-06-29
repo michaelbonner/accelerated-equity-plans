@@ -16,23 +16,23 @@ export async function GET() {
 			path: '/services/vendor-support',
 			priority: '0.9',
 			changefreq: 'monthly',
-			lastmod: '2026-06-29'
+			lastmod: '2026-06-12'
 		},
 		{
 			path: '/services/advanced-project-support',
 			priority: '0.9',
 			changefreq: 'monthly',
-			lastmod: '2026-06-29'
+			lastmod: '2026-06-12'
 		},
 		{
 			path: '/services/plan-process-design',
 			priority: '0.9',
 			changefreq: 'monthly',
-			lastmod: '2026-06-29'
+			lastmod: '2026-04-21'
 		},
-		{ path: '/about', priority: '0.8', changefreq: 'monthly', lastmod: '2026-06-29' },
+		{ path: '/about', priority: '0.8', changefreq: 'monthly', lastmod: '2026-04-20' },
 		{ path: '/careers', priority: '0.7', changefreq: 'monthly', lastmod: '2026-06-29' },
-		{ path: '/contact', priority: '0.7', changefreq: 'monthly', lastmod: '2026-06-29' },
+		{ path: '/contact', priority: '0.7', changefreq: 'monthly', lastmod: '2026-02-08' },
 		{ path: '/blog', priority: '0.8', changefreq: 'weekly', lastmod: '2026-06-29' }
 	];
 

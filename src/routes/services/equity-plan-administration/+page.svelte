@@ -130,14 +130,13 @@
 		return {
 			'@context': 'https://schema.org',
 			'@type': 'Service',
-			name: 'Equity Plan Administration',
+			name: 'Stock Plan Administration & Equity Administration Services',
 			provider: {
 				'@type': 'Organization',
 				name: 'Accelerated Equity Plans',
 				url: 'https://www.acceleratedep.com'
 			},
-			description:
-				'Specialized equity plan administration services including comprehensive equity management, employee education, outsourced administration, and scalable support solutions.',
+			description,
 			areaServed: 'United States',
 			serviceType: 'Equity Plan Administration',
 			hasOfferCatalog: {
