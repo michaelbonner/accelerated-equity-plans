@@ -181,10 +181,8 @@
 		<!-- Should be foreground div in same container -->
 		<div class="relative z-10 h-full sm:px-8">
 			<div class="grid gap-2 max-w-3xl">
-				<h1 class={clsx(styles.h1Super, 'max-w-[13ch] leading-[0.95] lg:text-7xl xl:text-8xl')}>
-					<span class="block">Equity Management</span>
-					<span class="block">& Stock Plan</span>
-					<span class="block">Administration</span>
+				<h1 class={clsx(styles.h1Super, 'max-w-[16ch] leading-[0.95] lg:text-7xl xl:text-8xl')}>
+					Equity Management & Stock Plan Administration
 				</h1>
 				<p class="mt-6 text-lg font-light leading-8 max-w-[48ch] text-pretty">
 					Accelerated Equity Plans is an equity management company helping private and public
