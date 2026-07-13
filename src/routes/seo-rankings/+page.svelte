@@ -5,6 +5,7 @@
 		keywords,
 		reportDate,
 		previousReportDate,
+		type DevicePosition,
 		type KeywordRanking
 	} from '$lib/data/seoRankings';
 
@@ -18,18 +19,27 @@
 			day: 'numeric'
 		});
 
-	const ranking = $derived(keywords.filter((k) => k.currentPosition !== null));
-	const topTen = $derived(ranking.filter((k) => (k.currentPosition as number) <= 10));
-	const newlyRanking = $derived(ranking.filter((k) => k.isNew));
+	// A keyword counts as ranking if it appears in Google on either device.
+	const isRanking = (k: KeywordRanking) => k.desktop.current !== null || k.mobile.current !== null;
+
+	// Best (lowest) current position across the two devices.
+	const bestPosition = (k: KeywordRanking) => {
+		const vals = [k.desktop.current, k.mobile.current].filter((v): v is number => v !== null);
+		return vals.length ? Math.min(...vals) : null;
+	};
+
+	const deviceImproved = (d: DevicePosition) =>
+		!d.isNew && d.previous !== null && d.current !== null && d.current < d.previous;
+
+	const ranking = $derived(keywords.filter(isRanking));
+	const topTen = $derived(ranking.filter((k) => (bestPosition(k) as number) <= 10));
+	const newlyRanking = $derived(ranking.filter((k) => k.desktop.isNew || k.mobile.isNew));
 	const improved = $derived(
-		ranking.filter(
-			(k) =>
-				!k.isNew &&
-				k.previousPosition !== null &&
-				(k.currentPosition as number) < (k.previousPosition as number)
-		)
+		ranking.filter((k) => deviceImproved(k.desktop) || deviceImproved(k.mobile))
 	);
-	const monthlyTraffic = $derived(ranking.reduce((sum, k) => sum + k.currentTraffic, 0));
+	const monthlyTraffic = $derived(
+		ranking.reduce((sum, k) => sum + k.desktop.traffic + k.mobile.traffic, 0)
+	);
 
 	const summary = $derived([
 		{ value: keywords.length, label: 'Keywords tracked' },
@@ -38,16 +48,16 @@
 		{ value: newlyRanking.length, label: 'New this period' }
 	]);
 
-	// Highlights: ranking keywords ordered by current position (best first).
+	// Highlights: ranking keywords ordered by best current position (best first).
 	const highlights = $derived(
-		[...ranking].sort((a, b) => (a.currentPosition as number) - (b.currentPosition as number))
+		[...ranking].sort((a, b) => (bestPosition(a) as number) - (bestPosition(b) as number))
 	);
 
-	const positionChange = (k: KeywordRanking) => {
-		if (k.isNew) return { label: 'New', kind: 'new' as const };
-		if (k.previousPosition === null || k.currentPosition === null)
-			return { label: '—', kind: 'none' as const };
-		const delta = k.previousPosition - k.currentPosition;
+	const deviceChange = (d: DevicePosition) => {
+		if (d.isNew) return { label: 'New', kind: 'new' as const };
+		if (d.previous !== null && d.current === null) return { label: 'Lost', kind: 'down' as const };
+		if (d.previous === null || d.current === null) return { label: '—', kind: 'none' as const };
+		const delta = d.previous - d.current;
 		if (delta > 0) return { label: `▲ ${delta}`, kind: 'up' as const };
 		if (delta < 0) return { label: `▼ ${Math.abs(delta)}`, kind: 'down' as const };
 		return { label: 'No change', kind: 'none' as const };
@@ -68,26 +78,24 @@
 	const careersMismatch = $derived(
 		ranking
 			.filter((k) => k.url === '/careers' && !k.keyword.includes('job'))
-			.sort((a, b) => (a.currentPosition as number) - (b.currentPosition as number))
+			.sort((a, b) => (bestPosition(a) as number) - (bestPosition(b) as number))
 	);
 
-	// Keywords ranking on page two (positions 11–20) that a focused push could
+	// Keywords ranking on page two (best position 11–20) that a focused push could
 	// move onto page one. Excludes the careers-page mismatches shown above.
 	const nearPageOne = $derived(
 		ranking
-			.filter(
-				(k) =>
-					(k.currentPosition as number) >= 11 &&
-					(k.currentPosition as number) <= 20 &&
-					k.url !== '/careers'
-			)
-			.sort((a, b) => (a.currentPosition as number) - (b.currentPosition as number))
+			.filter((k) => {
+				const best = bestPosition(k) as number;
+				return best >= 11 && best <= 20 && k.url !== '/careers';
+			})
+			.sort((a, b) => (bestPosition(a) as number) - (bestPosition(b) as number))
 	);
 
-	// High-volume keywords we're targeting but not yet ranking for.
+	// High-volume keywords we're targeting but not yet ranking on either device.
 	const untappedTargets = $derived(
 		keywords
-			.filter((k) => k.currentPosition === null && k.volume >= 100)
+			.filter((k) => !isRanking(k) && k.volume >= 100)
 			.sort((a, b) => b.volume - a.volume)
 			.slice(0, 5)
 	);
@@ -99,6 +107,38 @@
 	<meta name="robots" content="noindex, nofollow" />
 </svelte:head>
 
+{#snippet deviceBadge(label: string, d: DevicePosition)}
+	{@const change = deviceChange(d)}
+	<div class="rounded-lg bg-stone-50 p-3 ring-1 ring-stone-900/5">
+		<div class="text-xs font-medium tracking-wide text-stone-400 uppercase">{label}</div>
+		<div class="mt-1">
+			{#if d.current !== null}
+				<span
+					class={clsx(
+						'text-2xl font-semibold',
+						d.current <= 3 ? 'text-aep-red-700' : 'text-stone-900'
+					)}>#{d.current}</span
+				>
+			{:else}
+				<span class="text-2xl font-semibold text-stone-300">—</span>
+			{/if}
+		</div>
+		<div class={clsx('mt-1 text-xs', changeClass(change.kind))}>{change.label}</div>
+	</div>
+{/snippet}
+
+{#snippet deviceCell(d: DevicePosition)}
+	{@const change = deviceChange(d)}
+	<div class="flex flex-col items-center leading-tight">
+		{#if d.current !== null}
+			<span class="font-semibold text-stone-900">#{d.current}</span>
+		{:else}
+			<span class="text-stone-300">—</span>
+		{/if}
+		<span class={clsx('text-xs', changeClass(change.kind))}>{change.label}</span>
+	</div>
+{/snippet}
+
 <main class="bg-stone-50">
 	<section class="px-6 pt-32 pb-12 sm:pt-40">
 		<div class="mx-auto max-w-7xl">
@@ -106,7 +146,8 @@
 			<h1 class={clsx(styles.h1, 'mt-3 not-italic')}>SEO Rankings Report</h1>
 			<p class="mt-5 max-w-3xl text-lg leading-8 font-light text-stone-600">
 				A snapshot of how Accelerated Equity Plans is ranking for the equity compensation keywords
-				we're targeting. Positions reflect Google organic search results in the United States.
+				we're targeting. Positions reflect Google organic search results in the United States,
+				tracked separately for desktop and mobile.
 			</p>
 			<p class="mt-4 text-sm text-stone-500">
 				Reporting period: {formatDate(previousReportDate)} →
@@ -148,31 +189,16 @@
 		<div class="mx-auto max-w-7xl">
 			<h2 class={clsx(styles.h3, 'not-italic')}>Ranking highlights</h2>
 			<p class="mt-2 text-stone-600">
-				Keywords where the site currently appears in Google search results, ordered by position.
+				Keywords where the site currently appears in Google search results, ordered by best position
+				across desktop and mobile.
 			</p>
 			<div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 				{#each highlights as k (k.keyword)}
-					{@const change = positionChange(k)}
 					<div class="flex flex-col rounded-xl bg-white p-5 ring-1 ring-stone-900/5">
-						<div class="flex items-start justify-between gap-3">
-							<span class="font-medium text-stone-900">{k.keyword}</span>
-							<span
-								class={clsx(
-									'flex size-10 shrink-0 items-center justify-center rounded-lg text-lg font-semibold',
-									(k.currentPosition as number) <= 3
-										? 'bg-aep-red-700 text-white'
-										: 'bg-stone-100 text-stone-900'
-								)}
-								title="Current Google position"
-							>
-								#{k.currentPosition}
-							</span>
-						</div>
-						<div class="mt-3 flex items-center gap-3 text-sm">
-							<span class={changeClass(change.kind)}>{change.label}</span>
-							{#if !k.isNew && k.previousPosition !== null}
-								<span class="text-stone-400">was #{k.previousPosition}</span>
-							{/if}
+						<span class="font-medium text-stone-900">{k.keyword}</span>
+						<div class="mt-4 grid grid-cols-2 gap-3">
+							{@render deviceBadge('Desktop', k.desktop)}
+							{@render deviceBadge('Mobile', k.mobile)}
 						</div>
 					</div>
 				{/each}
@@ -202,7 +228,7 @@
 						{#each careersMismatch as k (k.keyword)}
 							<li class="flex items-center justify-between gap-3">
 								<span class="text-stone-700">{k.keyword}</span>
-								<span class="shrink-0 font-semibold text-stone-900">#{k.currentPosition}</span>
+								<span class="shrink-0 font-semibold text-stone-900">#{bestPosition(k)}</span>
 							</li>
 						{/each}
 					</ul>
@@ -219,7 +245,7 @@
 						{#each nearPageOne as k (k.keyword)}
 							<li class="flex items-center justify-between gap-3">
 								<span class="text-stone-700">{k.keyword}</span>
-								<span class="shrink-0 font-semibold text-stone-900">#{k.currentPosition}</span>
+								<span class="shrink-0 font-semibold text-stone-900">#{bestPosition(k)}</span>
 							</li>
 						{/each}
 					</ul>
@@ -252,34 +278,25 @@
 		<div class="mx-auto max-w-7xl">
 			<h2 class={clsx(styles.h3, 'not-italic')}>All tracked keywords</h2>
 			<p class="mt-2 text-stone-600">
-				The complete set of keywords we're monitoring. Keywords without a position are targets we're
-				building toward.
+				The complete set of keywords we're monitoring, with desktop and mobile positions side by
+				side. Keywords without a position are targets we're building toward.
 			</p>
 			<div class="mt-6 overflow-x-auto rounded-xl bg-white ring-1 ring-stone-900/5">
 				<table class="w-full min-w-[640px] text-left text-sm">
 					<thead>
 						<tr class="border-b border-stone-200 text-xs tracking-wide text-stone-500 uppercase">
 							<th class="px-5 py-3 font-medium">Keyword</th>
-							<th class="px-5 py-3 text-center font-medium">Position</th>
-							<th class="px-5 py-3 text-center font-medium">Change</th>
+							<th class="px-5 py-3 text-center font-medium">Desktop</th>
+							<th class="px-5 py-3 text-center font-medium">Mobile</th>
 							<th class="px-5 py-3 text-right font-medium">Monthly searches</th>
 						</tr>
 					</thead>
 					<tbody class="divide-y divide-stone-100">
 						{#each keywords as k (k.keyword)}
-							{@const change = positionChange(k)}
-							<tr class={clsx(k.currentPosition === null && 'text-stone-400')}>
+							<tr class={clsx(!isRanking(k) && 'text-stone-400')}>
 								<td class="px-5 py-3 font-medium text-stone-800">{k.keyword}</td>
-								<td class="px-5 py-3 text-center">
-									{#if k.currentPosition !== null}
-										<span class="font-semibold text-stone-900">#{k.currentPosition}</span>
-									{:else}
-										<span class="text-stone-300">—</span>
-									{/if}
-								</td>
-								<td class={clsx('px-5 py-3 text-center', changeClass(change.kind))}>
-									{change.label}
-								</td>
+								<td class="px-5 py-3 text-center">{@render deviceCell(k.desktop)}</td>
+								<td class="px-5 py-3 text-center">{@render deviceCell(k.mobile)}</td>
 								<td class="px-5 py-3 text-right tabular-nums text-stone-600">
 									{k.volume > 0 ? k.volume.toLocaleString() : '—'}
 								</td>
@@ -289,8 +306,9 @@
 				</table>
 			</div>
 			<p class="mt-4 text-xs text-stone-400">
-				Position = ranking in Google US organic results. Monthly searches = estimated US search
-				volume. Confidential — prepared for Accelerated Equity Plans.
+				Position = ranking in Google US organic results, tracked separately for desktop and mobile.
+				Monthly searches = estimated US search volume. Confidential — prepared for Accelerated
+				Equity Plans.
 			</p>
 		</div>
 	</section>
