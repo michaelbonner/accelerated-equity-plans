@@ -1,620 +1,529 @@
 // SEO ranking report data for the /seo-rankings client report page.
 //
-// To update with a new report:
-//   1. Update `reportDate` (the "Current update date" from the export) and
-//      `previousReportDate` (the prior "Previous update date").
-//   2. Replace the `keywords` array below with the new export's rows.
+// Positions are tracked separately for desktop and mobile Google results.
 //
-// Position values: a number is the Google ranking position; `null` means the
-// keyword is not currently ranking in the tracked results. `isNew` flags a
-// keyword that started ranking during this reporting period.
+// To update with a new report:
+//   1. Update `reportDate` (this export's date) and `previousReportDate` (the
+//      prior report's date).
+//   2. Replace the `keywords` array below, merging the desktop and mobile
+//      exports. Each keyword carries a `desktop` and a `mobile` DevicePosition.
+//
+// DevicePosition fields:
+//   previous / current — Google ranking position for that device; `null` means
+//     the keyword is not ranking in the tracked results for that device.
+//   isNew — the keyword started ranking on that device during this period.
+//   traffic — estimated monthly organic visits from that device.
+
+export interface DevicePosition {
+	previous: number | null;
+	current: number | null;
+	isNew: boolean;
+	traffic: number;
+}
 
 export interface KeywordRanking {
 	keyword: string;
-	previousPosition: number | null;
-	currentPosition: number | null;
-	isNew: boolean;
+	desktop: DevicePosition;
+	mobile: DevicePosition;
 	volume: number;
-	currentTraffic: number;
 	difficulty: number;
 	tag: string | null;
 	url: string | null;
 }
 
-export const reportDate = '2026-07-05';
-export const previousReportDate = '2026-06-28';
+export const reportDate = '2026-07-13';
+export const previousReportDate = '2026-07-05';
+
+const pos = (
+	previous: number | null,
+	current: number | null,
+	isNew: boolean,
+	traffic: number
+): DevicePosition => ({ previous, current, isNew, traffic });
 
 export const keywords: KeywordRanking[] = [
 	{
 		keyword: 'equity plan & process design services',
-		previousPosition: 1,
-		currentPosition: 1,
-		isNew: false,
-		volume: 10,
-		currentTraffic: 4,
-		difficulty: 1,
+		desktop: pos(1, 1, false, 1),
+		mobile: pos(1, 1, false, 1),
+		volume: 0,
+		difficulty: 0,
 		tag: null,
 		url: '/services/plan-process-design'
 	},
 	{
 		keyword: 'temporary stock administration support',
-		previousPosition: 1,
-		currentPosition: 1,
-		isNew: false,
-		volume: 10,
-		currentTraffic: 3,
+		desktop: pos(1, 1, false, 1),
+		mobile: pos(10, 3, false, 0),
+		volume: 0,
 		difficulty: 0,
 		tag: null,
 		url: '/services/equity-plan-administration'
 	},
 	{
 		keyword: 'interim stock plan administrator',
-		previousPosition: 4,
-		currentPosition: 1,
-		isNew: false,
+		desktop: pos(4, 1, false, 0),
+		mobile: pos(6, 4, false, 0),
 		volume: 0,
-		currentTraffic: 0,
 		difficulty: 0,
 		tag: 'advanced-project',
 		url: '/services/equity-plan-administration'
 	},
 	{
 		keyword: 'on-demand stock administration',
-		previousPosition: null,
-		currentPosition: 1,
-		isNew: true,
+		desktop: pos(null, 1, true, 0),
+		mobile: pos(1, 3, false, 0),
 		volume: 0,
-		currentTraffic: 0,
-		difficulty: 9,
+		difficulty: 3,
 		tag: 'advanced-project',
-		url: null
+		url: '/services/equity-plan-administration'
 	},
 	{
 		keyword: 'equity platform implementation',
-		previousPosition: null,
-		currentPosition: 3,
-		isNew: true,
+		desktop: pos(null, 3, true, 0),
+		mobile: pos(null, 3, true, 0),
 		volume: 0,
-		currentTraffic: 0,
-		difficulty: 0,
+		difficulty: 1,
 		tag: 'vendor-support',
-		url: null
+		url: '/services/vendor-support'
 	},
 	{
 		keyword: 'equity plan administration',
-		previousPosition: 4,
-		currentPosition: 4,
-		isNew: false,
+		desktop: pos(4, 4, false, 15),
+		mobile: pos(9, 4, false, 14),
 		volume: 150,
-		currentTraffic: 13,
 		difficulty: 0,
 		tag: null,
 		url: '/careers'
 	},
 	{
 		keyword: 'outsourced stock plan administration',
-		previousPosition: null,
-		currentPosition: 6,
-		isNew: true,
+		desktop: pos(null, 6, true, 0),
+		mobile: pos(null, 6, true, 0),
 		volume: 0,
-		currentTraffic: 0,
 		difficulty: 0,
 		tag: 'stock-plan',
-		url: null
-	},
-	{
-		keyword: 'equity administration',
-		previousPosition: 8,
-		currentPosition: 7,
-		isNew: false,
-		volume: 100,
-		currentTraffic: 5,
-		difficulty: 1,
-		tag: null,
-		url: '/careers'
-	},
-	{
-		keyword: 'equity administration jobs',
-		previousPosition: 6,
-		currentPosition: 7,
-		isNew: false,
-		volume: 30,
-		currentTraffic: 2,
-		difficulty: 0,
-		tag: null,
-		url: '/careers'
+		url: '/services/equity-plan-administration'
 	},
 	{
 		keyword: 'stock plan administration outsourcing',
-		previousPosition: 9,
-		currentPosition: 7,
-		isNew: false,
-		volume: 10,
-		currentTraffic: 0,
+		desktop: pos(9, 7, false, 0),
+		mobile: pos(1, 6, false, 0),
+		volume: 0,
 		difficulty: 0,
 		tag: 'stock-plan',
 		url: '/services/equity-plan-administration'
+	},
+	{
+		keyword: 'equity administration jobs',
+		desktop: pos(6, 7, false, 2),
+		mobile: pos(8, 6, false, 3),
+		volume: 40,
+		difficulty: 0,
+		tag: null,
+		url: '/careers'
+	},
+	{
+		keyword: 'equity administration',
+		desktop: pos(8, 7, false, 8),
+		mobile: pos(8, 7, false, 8),
+		volume: 150,
+		difficulty: 0,
+		tag: null,
+		url: '/careers'
+	},
+	{
+		keyword: 'stock administration services',
+		desktop: pos(15, 11, false, 0),
+		mobile: pos(18, 7, false, 0),
+		volume: 0,
+		difficulty: 0,
+		tag: 'stock-plan',
+		url: '/blog/stock-plan-administration-guide'
 	},
 	{
 		keyword: 'equity administration outsourcing',
-		previousPosition: 12,
-		currentPosition: 8,
-		isNew: false,
+		desktop: pos(12, 8, false, 0),
+		mobile: pos(12, 8, false, 0),
 		volume: 0,
-		currentTraffic: 0,
 		difficulty: 0,
 		tag: 'stock-plan',
 		url: '/services/equity-plan-administration'
 	},
 	{
+		keyword: 'equity edge online administration',
+		desktop: pos(13, 11, false, 0),
+		mobile: pos(3, 9, false, 0),
+		volume: 0,
+		difficulty: 0,
+		tag: 'vendor-support',
+		url: '/careers'
+	},
+	{
 		keyword: 'stock plan administration services',
-		previousPosition: 13,
-		currentPosition: 9,
-		isNew: false,
-		volume: 10,
-		currentTraffic: 0,
+		desktop: pos(13, 9, false, 0),
+		mobile: pos(14, 9, false, 0),
+		volume: 0,
 		difficulty: 0,
 		tag: 'stock-plan',
 		url: '/services/equity-plan-administration'
 	},
 	{
 		keyword: 'full stock administration outsourcing',
-		previousPosition: null,
-		currentPosition: 10,
-		isNew: true,
-		volume: 10,
-		currentTraffic: 0,
+		desktop: pos(null, 10, true, 0),
+		mobile: pos(null, 10, true, 0),
+		volume: 0,
 		difficulty: 0,
 		tag: null,
-		url: null
-	},
-	{
-		keyword: 'stock plan administration',
-		previousPosition: null,
-		currentPosition: 11,
-		isNew: true,
-		volume: 450,
-		currentTraffic: 5,
-		difficulty: 0,
-		tag: 'stock-plan',
-		url: null
-	},
-	{
-		keyword: 'stock administration services',
-		previousPosition: 15,
-		currentPosition: 11,
-		isNew: false,
-		volume: 0,
-		currentTraffic: 0,
-		difficulty: 1,
-		tag: 'stock-plan',
 		url: '/services/equity-plan-administration'
 	},
 	{
-		keyword: 'equity edge online administration',
-		previousPosition: 13,
-		currentPosition: 11,
-		isNew: false,
-		volume: 0,
-		currentTraffic: 0,
+		keyword: 'stock plan administration',
+		desktop: pos(null, 11, true, 6),
+		mobile: pos(null, 16, true, 2),
+		volume: 300,
 		difficulty: 0,
-		tag: 'vendor-support',
-		url: '/careers'
+		tag: 'stock-plan',
+		url: '/blog/stock-plan-administration-guide'
 	},
 	{
 		keyword: '6039 reporting',
-		previousPosition: null,
-		currentPosition: 12,
-		isNew: true,
+		desktop: pos(null, 12, true, 2),
+		mobile: pos(null, null, false, 0),
 		volume: 80,
-		currentTraffic: 1,
 		difficulty: 0,
 		tag: 'compliance',
-		url: null
+		url: '/blog/section-6039-reporting-guide'
 	},
 	{
 		keyword: 'employee share plan administration',
-		previousPosition: null,
-		currentPosition: 12,
-		isNew: true,
-		volume: 50,
-		currentTraffic: 1,
+		desktop: pos(null, 12, true, 1),
+		mobile: pos(null, null, false, 0),
+		volume: 40,
 		difficulty: 1,
 		tag: null,
-		url: null
+		url: '/blog/stock-plan-administration-guide'
 	},
 	{
 		keyword: 'equity edge online support',
-		previousPosition: null,
-		currentPosition: 12,
-		isNew: true,
+		desktop: pos(null, 12, true, 0),
+		mobile: pos(null, 13, true, 0),
 		volume: 0,
-		currentTraffic: 0,
 		difficulty: 0,
 		tag: 'vendor-support',
-		url: null
+		url: '/services/vendor-support'
+	},
+	{
+		keyword: 'espp administration',
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, 21, true, 0),
+		volume: 0,
+		difficulty: 4,
+		tag: 'compliance',
+		url: '/blog/stock-plan-administration-guide'
+	},
+	{
+		keyword: 'espp administration services',
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, 24, true, 0),
+		volume: 0,
+		difficulty: 2,
+		tag: 'compliance',
+		url: '/blog/stock-plan-administration-guide'
 	},
 	{
 		keyword: 'equity management',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 2100,
-		currentTraffic: 0,
-		difficulty: 39,
+		difficulty: 22,
 		tag: null,
 		url: null
 	},
 	{
 		keyword: 'equity management company',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
-		volume: 600,
-		currentTraffic: 0,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
+		volume: 700,
 		difficulty: 45,
 		tag: null,
 		url: null
 	},
 	{
 		keyword: 'equity based compensation',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
-		volume: 300,
-		currentTraffic: 0,
-		difficulty: 7,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
+		volume: 250,
+		difficulty: 5,
 		tag: null,
 		url: null
 	},
 	{
 		keyword: 'equity compensation services',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(39, null, false, 0),
 		volume: 150,
-		currentTraffic: 0,
-		difficulty: 1,
+		difficulty: 5,
 		tag: 'head-term',
-		url: null
+		url: '/'
 	},
 	{
 		keyword: 'equity compensation management',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
-		volume: 100,
-		currentTraffic: 0,
-		difficulty: 1,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
+		volume: 150,
+		difficulty: 3,
 		tag: 'head-term',
-		url: null
-	},
-	{
-		keyword: 'employee equity compensation',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
-		volume: 80,
-		currentTraffic: 0,
-		difficulty: 0,
-		tag: null,
 		url: null
 	},
 	{
 		keyword: 'employee equity program',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
-		volume: 80,
-		currentTraffic: 0,
-		difficulty: 4,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
+		volume: 100,
+		difficulty: 5,
 		tag: null,
 		url: null
 	},
 	{
 		keyword: 'stock plan administrator',
-		previousPosition: 22,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(22, null, false, 0),
+		mobile: pos(40, null, false, 0),
 		volume: 80,
-		currentTraffic: 0,
 		difficulty: 0,
 		tag: 'stock-plan',
 		url: '/careers'
 	},
 	{
-		keyword: 'consulting for equity',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
-		volume: 40,
-		currentTraffic: 0,
-		difficulty: 12,
+		keyword: 'employee equity compensation',
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
+		volume: 70,
+		difficulty: 4,
 		tag: null,
 		url: null
 	},
 	{
-		keyword: 'equity compensation consulting',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
-		volume: 30,
-		currentTraffic: 0,
-		difficulty: 1,
+		keyword: 'consulting for equity',
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
+		volume: 60,
+		difficulty: 21,
 		tag: null,
 		url: null
 	},
 	{
 		keyword: 'equity consultant',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 30,
-		currentTraffic: 0,
-		difficulty: 38,
+		difficulty: 43,
+		tag: null,
+		url: null
+	},
+	{
+		keyword: 'equity compensation consulting',
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
+		volume: 20,
+		difficulty: 2,
 		tag: null,
 		url: null
 	},
 	{
 		keyword: 'equity compensation consultant',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
-		volume: 20,
-		currentTraffic: 0,
-		difficulty: 2,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
+		volume: 10,
+		difficulty: 0,
 		tag: null,
 		url: null
 	},
 	{
-		keyword: 'espp administration services',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
-		volume: 20,
-		currentTraffic: 0,
-		difficulty: 2,
-		tag: 'compliance',
-		url: null
-	},
-	{
-		keyword: 'carta equity administration',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		keyword: 'section 16 reporting support',
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 10,
-		currentTraffic: 0,
-		difficulty: 23,
-		tag: 'vendor-support',
-		url: null
-	},
-	{
-		keyword: 'espp administration',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
-		volume: 10,
-		currentTraffic: 0,
 		difficulty: 4,
 		tag: 'compliance',
 		url: null
 	},
 	{
-		keyword: 'rsu administration',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
-		volume: 10,
-		currentTraffic: 0,
-		difficulty: 5,
-		tag: 'compliance',
-		url: null
-	},
-	{
 		keyword: 'carta administration support',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
 		difficulty: 7,
 		tag: 'vendor-support',
 		url: null
 	},
 	{
-		keyword: 'equity compensation due diligence',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		keyword: 'carta equity administration',
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
-		difficulty: 3,
+		difficulty: 21,
+		tag: 'vendor-support',
+		url: null
+	},
+	{
+		keyword: 'equity compensation due diligence',
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
+		volume: 0,
+		difficulty: 2,
 		tag: 'advanced-project',
 		url: null
 	},
 	{
 		keyword: 'equity compensation ipo support',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
 		difficulty: 0,
 		tag: 'advanced-project',
 		url: null
 	},
 	{
 		keyword: 'equity compensation reconciliation',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
 		difficulty: 0,
 		tag: 'compliance',
 		url: null
 	},
 	{
 		keyword: 'equity compensation tax reporting',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
 		difficulty: 2,
 		tag: 'compliance',
 		url: null
 	},
 	{
 		keyword: 'equity software migration',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
 		difficulty: 0,
 		tag: 'vendor-support',
 		url: null
 	},
 	{
 		keyword: 'fidelity stock plan services support',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
-		difficulty: 29,
+		difficulty: 9,
 		tag: 'vendor-support',
 		url: null
 	},
 	{
 		keyword: 'fractional stock plan administrator',
-		previousPosition: 16,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(16, null, false, 0),
+		mobile: pos(6, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
-		difficulty: 1,
+		difficulty: 0,
 		tag: 'advanced-project',
 		url: '/services/equity-plan-administration'
 	},
 	{
 		keyword: 'global equity mobility',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
 		difficulty: 0,
 		tag: 'advanced-project',
 		url: null
 	},
 	{
 		keyword: 'ipo equity readiness',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
 		difficulty: 0,
 		tag: 'advanced-project',
 		url: null
 	},
 	{
 		keyword: 'm&a equity compensation support',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
 		difficulty: 0,
 		tag: 'advanced-project',
 		url: null
 	},
 	{
 		keyword: 'mobility tax equity compensation',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
 		difficulty: 0,
 		tag: 'advanced-project',
 		url: null
 	},
 	{
 		keyword: 'pre-ipo equity preparation',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
 		difficulty: 2,
 		tag: 'advanced-project',
 		url: null
 	},
 	{
-		keyword: 'section 16 reporting support',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		keyword: 'rsu administration',
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
-		difficulty: 2,
+		difficulty: 5,
 		tag: 'compliance',
 		url: null
 	},
 	{
 		keyword: 'section 6039 filing services',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
 		difficulty: 0,
 		tag: 'compliance',
 		url: null
 	},
 	{
 		keyword: 'shareworks administration support',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
-		difficulty: 0,
+		difficulty: 32,
 		tag: 'vendor-support',
 		url: null
 	},
 	{
 		keyword: 'spac equity administration',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
-		difficulty: 19,
+		difficulty: 18,
 		tag: 'advanced-project',
 		url: null
 	},
 	{
 		keyword: 'stock based compensation consulting',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
-		difficulty: 2,
+		difficulty: 0,
 		tag: 'head-term',
 		url: null
 	},
 	{
 		keyword: 'stock compensation consulting',
-		previousPosition: null,
-		currentPosition: null,
-		isNew: false,
+		desktop: pos(null, null, false, 0),
+		mobile: pos(null, null, false, 0),
 		volume: 0,
-		currentTraffic: 0,
 		difficulty: 1,
 		tag: 'head-term',
 		url: null
