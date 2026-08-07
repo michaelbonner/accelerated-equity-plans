@@ -247,7 +247,8 @@ export const aepTeam: TeamMember[] = [
                 Outside of work, Jennifer is passionate about travel and enjoys exploring new cultures and cuisines with her family. A recent hobby has sparked her creative side: designing custom clickers and using 3D printing technology to print household items and gifts for family and friends. She’s always on the lookout for the next addition to her growing JDM collection, which currently includes an R34 Skyline, Evo9 Wagon, WRX STI, Subaru Sambar, and GR Corolla.
             </p>
         </div>
-        `
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/jennifer-lubivy-mba/'
 	},
 	{
 		fullName: 'Shannon Minch',
