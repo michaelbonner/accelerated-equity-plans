@@ -1,3 +1,15 @@
+import type { Picture } from '@sveltejs/enhanced-img';
+
+export interface TeamMember {
+	fullName: string;
+	shortName: string;
+	imageSrc: Picture;
+	imageAlt: string;
+	specialties: string[];
+	body: string;
+	linkedInLink?: string;
+}
+
 export interface Review {
 	id: number;
 	name: string;

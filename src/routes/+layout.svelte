@@ -164,7 +164,7 @@
 				name: member.fullName,
 				image: member.imageSrc.img.src,
 				description: stripHtmlTags(member.body),
-				sameAs: [member.linkedInLink]
+				...(member.linkedInLink ? { sameAs: [member.linkedInLink] } : {})
 			})),
 			hasOfferCatalog: {
 				'@context': 'https://schema.org',
