@@ -300,7 +300,8 @@ export const aepTeam: TeamMember[] = [
                 Outside of work, Adam is an avid outdoorsman. Whether he’s out hiking on the trails, carving down the mountain, or playing with dogs, you can usually find him outside. To him, the best weekends are filled with family, friends, fishing, and golfing.
             </p>
         </div>
-        `
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/adam-bell-b20bab46/'
 	}
 ];
 
