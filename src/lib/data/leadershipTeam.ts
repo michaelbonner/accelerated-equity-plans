@@ -273,7 +273,8 @@ export const aepTeam: TeamMember[] = [
                 Outside of work, Shannon is a proud mom of two energetic boys and two energetic dogs. In her personal time, you’ll often find her singing or crocheting.
             </p>
         </div>
-        `
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/shannon-minch-cep-26a0743b/'
 	},
 	{
 		fullName: 'Adam Bell',
