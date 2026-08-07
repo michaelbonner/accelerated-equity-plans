@@ -222,7 +222,8 @@ export const aepTeam: TeamMember[] = [
                 In her personal time, Sara enjoys camping, kayaking, horseback riding, biking, and reading. Her parents live with her in Idaho, along with their three cats and two dogs.
             </p>
         </div>
-        `
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/sarajanegronberg/'
 	},
 	{
 		fullName: 'Jennifer Lubivy',
