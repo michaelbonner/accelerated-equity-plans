@@ -252,15 +252,16 @@ export const aepTeam: TeamMember[] = [
 		linkedInLink: 'https://www.linkedin.com/in/jennifer-lubivy-mba/'
 	},
 	{
-		fullName: 'Shannon Minch',
+		fullName: 'Shannon Minch, CEP',
 		shortName: 'Shannon',
 		imageSrc: ShannonHeadShot,
 		imageAlt: 'Shannon Minch',
 		specialties: [
-			'Equity Edge Online',
-			'Process Optimization',
-			'Client Service and Relationship Management',
-			'Problem Solving'
+			'Public Equity Plan Administration',
+			'Workflows',
+			'Employee Education',
+			'EEO',
+			'Process Optimization'
 		],
 		body: `
         <div>
