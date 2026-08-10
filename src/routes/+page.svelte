@@ -341,12 +341,12 @@
 		</div>
 
 		<div
-			class="hidden w-[31vw] absolute bottom-0 right-[69vw] overflow-hidden opacity-50 md:block md:bottom-[10%] md:opacity-100"
+			class="absolute bottom-0 right-[69vw] hidden w-[31vw] overflow-hidden opacity-50 md:inset-y-[10%] md:block md:opacity-100"
 		>
 			<img
 				alt=""
 				aria-hidden="true"
-				class="max-w-none -translate-x-1/2 w-[50vw]"
+				class="h-full w-auto max-w-none -translate-x-1/2"
 				height="150"
 				loading="lazy"
 				src="/images/brand/aep-mark.svg"
