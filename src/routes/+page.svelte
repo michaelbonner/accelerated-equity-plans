@@ -133,10 +133,10 @@
 		<!-- Background Div -->
 		<div class="overflow-hidden absolute inset-0">
 			<picture class="block size-full">
-				{#each Object.entries(HeroBg.sources) as [format, srcset]}
+				{#each Object.entries(HeroBg.sources) as [format, srcset] (format)}
 					<source {srcset} media="(min-width: 768px)" sizes="100vw" type={`image/${format}`} />
 				{/each}
-				{#each Object.entries(HeroBgMobile.sources) as [format, srcset]}
+				{#each Object.entries(HeroBgMobile.sources) as [format, srcset] (format)}
 					<source {srcset} media="(max-width: 767px)" sizes="100vw" type={`image/${format}`} />
 				{/each}
 				<img
