@@ -2,6 +2,8 @@ import type { TeamMember } from '../types';
 import AaronHeadShot from '../images/head-shots/aaron-head-shot.jpg?enhanced';
 import AdamHeadShot from '../images/head-shots/adam-head-shot.jpg?enhanced';
 import CamHeadShot from '../images/head-shots/cam-head-shot.jpg?enhanced';
+import CrosbyHeadShot from '../images/head-shots/crosby-head-shot.jpg?enhanced';
+import DevinHeadShot from '../images/head-shots/devin-head-shot.jpg?enhanced';
 import KaelynnHeadShot from '../images/head-shots/kaelynn-head-shot.jpg?enhanced';
 import EmHeadShot from '../images/head-shots/emily-head-shot.jpg?enhanced';
 import GraceHeadShot from '../images/head-shots/grace-head-shot.jpg?enhanced';
@@ -328,6 +330,57 @@ export const aepTeam: TeamMember[] = [
             </p>
             <p>
                 Outside of work, Rita is a travel enthusiast looking for her next country to explore. She enjoys riding ATVs, jet skiing, and kayaking, and she has even raced a supercar. While at home in Chicago, she enjoys museums, jazz clubs, and the city’s delicious food scene.
+            </p>
+        </div>
+        `
+	},
+	{
+		fullName: 'Devin Parkinson',
+		shortName: 'Devin',
+		imageSrc: DevinHeadShot,
+		imageAlt: 'Devin Parkinson',
+		specialties: [
+			'Equity Plan Administration',
+			'Equity Edge Online',
+			'Tax Certification',
+			'Employee Communication',
+			'Leadership'
+		],
+		body: `
+        <div>
+            <p>
+                Devin Parkinson began his career in finance with Fidelity Investments, where he discovered a passion for equity compensation and helping employees navigate the complexities of stock plans. After three years with Fidelity, he joined E*TRADE, where he spent six years growing from Team Lead to Manager within Stock Plan Services. During that time, he led customer service teams, developed and delivered department-wide training programs, and helped drive improvements that enhanced both the client and employee experience.
+            </p>
+            <p>
+                With nearly a decade of experience supporting equity compensation programs, Devin is passionate about solving complex challenges, building strong relationships, and creating exceptional experiences for clients. He is excited to bring that same energy and commitment to Accelerated Equity Plans, partnering with organizations to make equity administration more efficient, effective, and people-focused.
+            </p>
+            <p>
+                Outside of work, Devin enjoys spending time with his wife and two children, watching and playing sports, and running a BBQ catering business where he shares his love of smoked barbecue with family, friends, and the local community.
+            </p>
+        </div>
+        `
+	},
+	{
+		fullName: 'Crosby White',
+		shortName: 'Crosby',
+		imageSrc: CrosbyHeadShot,
+		imageAlt: 'Crosby White',
+		specialties: [
+			'Automation Design',
+			'Custom Workflow Development',
+			'Systems Integration',
+			'Process Optimization'
+		],
+		body: `
+        <div>
+            <p>
+                Crosby White is a technical product specialist and equity professional at Accelerated Equity Plans, bringing a strong technical background and a fresh perspective to the equity compensation industry. Holding a Bachelor of Science in Computer Science from the University of Utah, Crosby combines a deep understanding of modern software systems, data structures, and user-focused technology to approach industry challenges from a unique angle.
+            </p>
+            <p>
+                Crosby excels at bridging the gap between complex technical infrastructure and user-centric operations. Driven by a passion for innovation, automation, and efficiency, he focuses on introducing smart technology solutions that simplify complex processes, streamline equity administration, and create better experiences for clients and their employees.
+            </p>
+            <p>
+                Outside of work, Crosby is an avid outdoorsman who loves hitting the ski slopes, going for a run, or playing a match of tennis. Above all, he enjoys spending time with his wife and toddler, and his favorite way to recharge is a family trip exploring a new place together.
             </p>
         </div>
         `
