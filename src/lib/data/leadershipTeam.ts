@@ -1,13 +1,20 @@
+import type { TeamMember } from '../types';
 import AaronHeadShot from '../images/head-shots/aaron-head-shot.jpg?enhanced';
+import AdamHeadShot from '../images/head-shots/adam-head-shot.jpg?enhanced';
 import CamHeadShot from '../images/head-shots/cam-head-shot.jpg?enhanced';
+import CrosbyHeadShot from '../images/head-shots/crosby-head-shot.jpg?enhanced';
+import DevinHeadShot from '../images/head-shots/devin-head-shot.jpg?enhanced';
 import KaelynnHeadShot from '../images/head-shots/kaelynn-head-shot.jpg?enhanced';
 import EmHeadShot from '../images/head-shots/emily-head-shot.jpg?enhanced';
 import GraceHeadShot from '../images/head-shots/grace-head-shot.jpg?enhanced';
-import JoshHeadShot from '../images/head-shots/josh-head-shot.jpg?enhanced';
+import JenniferHeadShot from '../images/head-shots/jennifer-head-shot.jpg?enhanced';
 import NeilHeadShot from '../images/head-shots/neil-head-shot.jpg?enhanced';
 import SamanthaHeadShot from '../images/head-shots/samantha-head-shot.jpg?enhanced';
+import RitaHeadShot from '../images/head-shots/rita-head-shot.jpg?enhanced';
+import SaraHeadShot from '../images/head-shots/sara-head-shot.jpg?enhanced';
+import ShannonHeadShot from '../images/head-shots/shannon-head-shot.jpg?enhanced';
 
-export const leadershipTeam = [
+export const leadershipTeam: TeamMember[] = [
 	{
 		fullName: 'Emily Bone, MBA, CEP',
 		shortName: 'Emily',
@@ -85,7 +92,7 @@ export const leadershipTeam = [
 	}
 ];
 
-export const aepTeam = [
+export const aepTeam: TeamMember[] = [
 	{
 		fullName: 'Grace Segui, CEP',
 		shortName: 'Grace',
@@ -167,33 +174,6 @@ export const aepTeam = [
 		linkedInLink: 'https://www.linkedin.com/in/samantha-lopeman-cep/'
 	},
 	{
-		fullName: 'Josh Ludlow, CEP',
-		shortName: 'Josh',
-		imageSrc: JoshHeadShot,
-		imageAlt: 'Josh Ludlow',
-		specialties: [
-			'Equity Plan Administration',
-			'Process Improvement and Automation',
-			'IPO Readiness',
-			'Private and Public Equity Programs',
-			'Custom Reporting and Reconciliation'
-		],
-		body: `
-        <div>
-            <p>
-                Josh Ludlow is an equity compensation consultant with a background in scaling and automating stock plan administration for both high-growth startups and established private companies. After several years in the industry, he joined Accelerated Equity Plans in 2024, where he helps clients implement streamlined, compliant, and people-friendly equity programs.
-            </p>
-            <p>
-                Prior to consulting, Josh held in-house roles supporting equity and compensation functions, giving him a practical, end-to-end understanding of equity lifecycle management. He enjoys solving complex equity puzzles and partnering with clients to make stock plans work better for everyone involved.
-            </p>
-            <p>
-                Outside of work, Josh is a proud dad to a toddler and welcomed their 2nd baby in June of 2025. When he’s not decoding RSUs and ESPPs, he’s focused on family life, finding time for golf and basketball, and occasionally losing sleep over Utah Jazz scores.
-            </p>
-        </div>
-        `,
-		linkedInLink: 'https://www.linkedin.com/in/joshludlowcep/'
-	},
-	{
 		fullName: 'Cam Cazier, CEP',
 		shortName: 'Cam',
 		imageSrc: CamHeadShot,
@@ -218,6 +198,195 @@ export const aepTeam = [
         </div>
         `,
 		linkedInLink: 'http://www.linkedin.com/in/cameron-cazier-1008523a7'
+	},
+	{
+		fullName: 'Sara Kennedy, CEP',
+		shortName: 'Sara',
+		imageSrc: SaraHeadShot,
+		imageAlt: 'Sara Kennedy',
+		specialties: [
+			'Equity Plan Administration',
+			'Training',
+			'Process Improvement',
+			'Form 4s',
+			'Equity Edge Online',
+			'Fidelity',
+			'Certent'
+		],
+		body: `
+        <div>
+            <p>
+                Sara Kennedy’s career started in legal, which has always been her passion. However, as her previous employer, Pennant, was preparing to go public, the CEO asked her if she was interested in becoming the Stock Plan Administrator. Always looking for a new challenge, she said yes. Over seven years later and now a CEP, guess what her new passion is?
+            </p>
+            <p>
+                Sara’s experience in equity has been with RSAs and NQSOs, and she is excited to expand her skill set, especially with ESPPs. She also brings with her experience with process improvement, software implementation, and general legal knowledge. At Pennant, she worked with the CEO and AppDev team to develop an app for grant nominations.
+            </p>
+            <p>
+                In her personal time, Sara enjoys camping, kayaking, horseback riding, biking, and reading. Her parents live with her in Idaho, along with their three cats and two dogs.
+            </p>
+        </div>
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/sarajanegronberg/'
+	},
+	{
+		fullName: 'Jennifer Lubivy',
+		shortName: 'Jennifer',
+		imageSrc: JenniferHeadShot,
+		imageAlt: 'Jennifer Lubivy',
+		specialties: [
+			'End-to-End Stock Plan Administration',
+			'Employee Communication and Education',
+			'Process Improvement and Efficiency',
+			'Cross-Functional & External Stakeholder Collaboration'
+		],
+		body: `
+        <div>
+            <p>
+                Jennifer Lubivy joined AEP as a Senior Consulting Manager, bringing more than 15 years of experience in equity compensation. Her journey in stock administration began in 2010 while completing her MBA and working at bebe Stores. Most recently, Jennifer spent over three years as Senior Manager of Stock Administration at Dynavax Technologies, where she led end-to-end equity plan administration and played a key role in enhancing operational efficiency through process improvements, workflow integration, intranet development, and the creation of comprehensive process documentation and admin user guides.
+            </p>
+            <p>
+                Originally from Singapore and raised in Calgary, Alberta, Jennifer relocated to the Bay Area in California in 2001 before making Northern Nevada home in 2021. She and her spouse stay busy with a toddler, three dogs, two goats, and one cat.
+            </p>
+            <p>
+                Outside of work, Jennifer is passionate about travel and enjoys exploring new cultures and cuisines with her family. A recent hobby has sparked her creative side: designing custom clickers and using 3D printing technology to print household items and gifts for family and friends. She’s always on the lookout for the next addition to her growing JDM collection, which currently includes an R34 Skyline, Evo9 Wagon, WRX STI, Subaru Sambar, and GR Corolla.
+            </p>
+        </div>
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/jennifer-lubivy-mba/'
+	},
+	{
+		fullName: 'Shannon Minch, CEP',
+		shortName: 'Shannon',
+		imageSrc: ShannonHeadShot,
+		imageAlt: 'Shannon Minch',
+		specialties: [
+			'Public Equity Plan Administration',
+			'Workflows',
+			'Employee Education',
+			'EEO',
+			'Process Optimization'
+		],
+		body: `
+        <div>
+            <p>
+                Shannon Minch is a Consulting Manager at AEP, bringing a strong track record of leadership and client partnership across the financial services industry. Prior to joining AEP, Shannon served as a Client Service Manager at E*TRADE/Morgan Stanley, specializing in Equity Edge Online and process optimization solutions.
+            </p>
+            <p>
+                With a diverse background spanning commercial credit cards, retail banking branch management, and mortgage services, Shannon offers a deep understanding of financial operations and customer experience from the C-Suite down to participant levels. She is excited to apply her passion for problem solving to the unique challenges AEP clients bring to the table.
+            </p>
+            <p>
+                Outside of work, Shannon is a proud mom of two energetic boys and two energetic dogs. In her personal time, you’ll often find her singing or crocheting.
+            </p>
+        </div>
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/shannon-minch-cep-26a0743b/'
+	},
+	{
+		fullName: 'Adam Bell',
+		shortName: 'Adam',
+		imageSrc: AdamHeadShot,
+		imageAlt: 'Adam Bell',
+		specialties: [
+			'Private & Public Equity Plan Administration',
+			'Financial Reporting',
+			'Employee Education',
+			'IPO Readiness',
+			'Process Optimization'
+		],
+		body: `
+        <div>
+            <p>
+                Adam Bell comes to us with over 10 years of experience in equity compensation, having worked across public and private companies of all sizes and industries throughout North America. He has built a strong track record in stock plan administration, regulatory compliance, process improvement, and providing creative solutions.
+            </p>
+            <p>
+                Leading teams to help organizations streamline operations and navigate the ever-changing complexities in the equity space is a driving force in Adam’s career. Whether it be an emerging startup or an established public enterprise, helping people succeed has always been a core value.
+            </p>
+            <p>
+                Outside of work, Adam is an avid outdoorsman. Whether he’s out hiking on the trails, carving down the mountain, or playing with dogs, you can usually find him outside. To him, the best weekends are filled with family, friends, fishing, and golfing.
+            </p>
+        </div>
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/adam-bell-b20bab46/'
+	},
+	{
+		fullName: 'Rita Davis, CEP',
+		shortName: 'Rita',
+		imageSrc: RitaHeadShot,
+		imageAlt: 'Rita Davis',
+		specialties: [
+			'Private Market',
+			'Shareworks',
+			'Carta',
+			'Outsourced Administration',
+			'Data Reconciliation',
+			'Tender Offers',
+			'Onboarding'
+		],
+		body: `
+        <div>
+            <p>
+                Rita Davis has been in equity compensation since 2019, when she started as a Client Success Manager at Morgan Stanley. During her tenure, she guided clients through Shareworks platform navigation, financial reporting, third-party integrations, process improvement, IPO readiness, and custom ad hoc reporting. She spent her final year as an IPO project specialist, where she managed the transition from private to public company configurations and administration.
+            </p>
+            <p>
+                In her next chapter, Rita has worked closely with clients as an Equity Consultant, providing day-to-day stock administration, financial reporting, audits, reconciliations, efficiency across cross-functional teams, and special projects. Her specialties include reprices, mergers and acquisitions, stock splits, and tender offers.
+            </p>
+            <p>
+                Outside of work, Rita is a travel enthusiast looking for her next country to explore. She enjoys riding ATVs, jet skiing, and kayaking, and she has even raced a supercar. While at home in Chicago, she enjoys museums, jazz clubs, and the city’s delicious food scene.
+            </p>
+        </div>
+        `
+	},
+	{
+		fullName: 'Devin Parkinson',
+		shortName: 'Devin',
+		imageSrc: DevinHeadShot,
+		imageAlt: 'Devin Parkinson',
+		specialties: [
+			'Equity Plan Administration',
+			'Equity Edge Online',
+			'Tax Certification',
+			'Employee Communication',
+			'Leadership'
+		],
+		body: `
+        <div>
+            <p>
+                Devin Parkinson began his career in finance with Fidelity Investments, where he discovered a passion for equity compensation and helping employees navigate the complexities of stock plans. After three years with Fidelity, he joined E*TRADE, where he spent six years growing from Team Lead to Manager within Stock Plan Services. During that time, he led customer service teams, developed and delivered department-wide training programs, and helped drive improvements that enhanced both the client and employee experience.
+            </p>
+            <p>
+                With nearly a decade of experience supporting equity compensation programs, Devin is passionate about solving complex challenges, building strong relationships, and creating exceptional experiences for clients. He is excited to bring that same energy and commitment to Accelerated Equity Plans, partnering with organizations to make equity administration more efficient, effective, and people-focused.
+            </p>
+            <p>
+                Outside of work, Devin enjoys spending time with his wife and two children, watching and playing sports, and running a BBQ catering business where he shares his love of smoked barbecue with family, friends, and the local community.
+            </p>
+        </div>
+        `
+	},
+	{
+		fullName: 'Crosby White',
+		shortName: 'Crosby',
+		imageSrc: CrosbyHeadShot,
+		imageAlt: 'Crosby White',
+		specialties: [
+			'Technical Troubleshooting',
+			'Process Automation and Optimization',
+			'Data Analytics',
+			'API Integration',
+			'Platform Implementation and Management'
+		],
+		body: `
+        <div>
+            <p>
+                Crosby White is a technical product specialist and equity professional at Accelerated Equity Plans, bringing a strong technical background and a fresh perspective to the equity compensation industry. Holding a Bachelor of Science in Computer Science from the University of Utah, Crosby combines a deep understanding of modern software systems, data structures, and user-focused technology to approach industry challenges from a unique angle.
+            </p>
+            <p>
+                Crosby excels at bridging the gap between complex technical infrastructure and user-centric operations. Driven by a passion for innovation, automation, and efficiency, he focuses on introducing smart technology solutions that simplify complex processes, streamline equity administration, and create better experiences for clients and their employees.
+            </p>
+            <p>
+                Outside of work, Crosby is an avid outdoorsman who loves hitting the ski slopes, going for a run, or playing a match of tennis. Above all, he enjoys spending time with his wife and toddler, and his favorite way to recharge is a family trip exploring a new place together.
+            </p>
+        </div>
+        `
 	}
 ];
 

@@ -2,6 +2,7 @@
 	import { resolve } from '$app/paths';
 	import { aepTeam, leadershipTeam } from '$lib/data/leadershipTeam';
 	import { styles } from '$lib/styles';
+	import type { TeamMember } from '$lib/types';
 	import { clsx } from 'clsx';
 	import RedBar from './RedBar.svelte';
 	import LinkedIn from './icons/LinkedIn.svelte';
@@ -54,7 +55,7 @@
 	</div>
 </section>
 
-{#snippet teamCard(teamMember: (typeof leadershipTeam)[number], featured: boolean)}
+{#snippet teamCard(teamMember: TeamMember, featured: boolean)}
 	<li
 		class={clsx(
 			'group',
