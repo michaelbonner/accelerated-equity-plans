@@ -318,7 +318,9 @@ export const aepTeam: TeamMember[] = [
 			'Shareworks',
 			'Carta',
 			'Outsourced Administration',
-			'Data Reconciliation'
+			'Data Reconciliation',
+			'Tender Offers',
+			'Onboarding'
 		],
 		body: `
         <div>
@@ -366,10 +368,11 @@ export const aepTeam: TeamMember[] = [
 		imageSrc: CrosbyHeadShot,
 		imageAlt: 'Crosby White',
 		specialties: [
-			'Automation Design',
-			'Custom Workflow Development',
-			'Systems Integration',
-			'Process Optimization'
+			'Technical Troubleshooting',
+			'Process Automation and Optimization',
+			'Data Analytics',
+			'API Integration',
+			'Platform Implementation and Management'
 		],
 		body: `
         <div>
