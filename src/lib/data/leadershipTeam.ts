@@ -8,6 +8,7 @@ import GraceHeadShot from '../images/head-shots/grace-head-shot.jpg?enhanced';
 import JenniferHeadShot from '../images/head-shots/jennifer-head-shot.jpg?enhanced';
 import NeilHeadShot from '../images/head-shots/neil-head-shot.jpg?enhanced';
 import SamanthaHeadShot from '../images/head-shots/samantha-head-shot.jpg?enhanced';
+import RitaHeadShot from '../images/head-shots/rita-head-shot.jpg?enhanced';
 import SaraHeadShot from '../images/head-shots/sara-head-shot.jpg?enhanced';
 import ShannonHeadShot from '../images/head-shots/shannon-head-shot.jpg?enhanced';
 
@@ -304,6 +305,32 @@ export const aepTeam: TeamMember[] = [
         </div>
         `,
 		linkedInLink: 'https://www.linkedin.com/in/adam-bell-b20bab46/'
+	},
+	{
+		fullName: 'Rita Davis, CEP',
+		shortName: 'Rita',
+		imageSrc: RitaHeadShot,
+		imageAlt: 'Rita Davis',
+		specialties: [
+			'Private Market',
+			'Shareworks',
+			'Carta',
+			'Outsourced Administration',
+			'Data Reconciliation'
+		],
+		body: `
+        <div>
+            <p>
+                Rita Davis has been in equity compensation since 2019, when she started as a Client Success Manager at Morgan Stanley. During her tenure, she guided clients through Shareworks platform navigation, financial reporting, third-party integrations, process improvement, IPO readiness, and custom ad hoc reporting. She spent her final year as an IPO project specialist, where she managed the transition from private to public company configurations and administration.
+            </p>
+            <p>
+                In her next chapter, Rita has worked closely with clients as an Equity Consultant, providing day-to-day stock administration, financial reporting, audits, reconciliations, efficiency across cross-functional teams, and special projects. Her specialties include reprices, mergers and acquisitions, stock splits, and tender offers.
+            </p>
+            <p>
+                Outside of work, Rita is a travel enthusiast looking for her next country to explore. She enjoys riding ATVs, jet skiing, and kayaking, and she has even raced a supercar. While at home in Chicago, she enjoys museums, jazz clubs, and the city’s delicious food scene.
+            </p>
+        </div>
+        `
 	}
 ];
 
