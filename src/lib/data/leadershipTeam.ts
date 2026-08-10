@@ -334,7 +334,8 @@ export const aepTeam: TeamMember[] = [
                 Outside of work, Rita is a travel enthusiast looking for her next country to explore. She enjoys riding ATVs, jet skiing, and kayaking, and she has even raced a supercar. While at home in Chicago, she enjoys museums, jazz clubs, and the city’s delicious food scene.
             </p>
         </div>
-        `
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/rita-d-ba9b07153'
 	},
 	{
 		fullName: 'Devin Parkinson',
@@ -360,7 +361,8 @@ export const aepTeam: TeamMember[] = [
                 Outside of work, Devin enjoys spending time with his wife and two children, watching and playing sports, and running a BBQ catering business where he shares his love of smoked barbecue with family, friends, and the local community.
             </p>
         </div>
-        `
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/devin-parkinson/'
 	},
 	{
 		fullName: 'Crosby White',
@@ -386,7 +388,8 @@ export const aepTeam: TeamMember[] = [
                 Outside of work, Crosby is an avid outdoorsman who loves hitting the ski slopes, going for a run, or playing a match of tennis. Above all, he enjoys spending time with his wife and toddler, and his favorite way to recharge is a family trip exploring a new place together.
             </p>
         </div>
-        `
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/crosby-white-92aa09295/'
 	}
 ];
 
