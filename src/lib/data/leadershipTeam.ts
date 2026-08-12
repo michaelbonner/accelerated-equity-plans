@@ -174,7 +174,7 @@ export const aepTeam: TeamMember[] = [
 		linkedInLink: 'https://www.linkedin.com/in/samantha-lopeman-cep/'
 	},
 	{
-		fullName: 'Cam Cazier, CEP',
+		fullName: 'Cam Cazier',
 		shortName: 'Cam',
 		imageSrc: CamHeadShot,
 		imageAlt: 'Cam Cazier',
