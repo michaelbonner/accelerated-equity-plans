@@ -1,5 +1,6 @@
 import type { TeamMember } from '../types';
 import AaronHeadShot from '../images/head-shots/aaron-head-shot.jpg?enhanced';
+import AbigailHeadShot from '../images/head-shots/abigail-head-shot.jpg?enhanced';
 import AdamHeadShot from '../images/head-shots/adam-head-shot.jpg?enhanced';
 import CamHeadShot from '../images/head-shots/cam-head-shot.jpg?enhanced';
 import CrosbyHeadShot from '../images/head-shots/crosby-head-shot.jpg?enhanced';
@@ -8,6 +9,7 @@ import KaelynnHeadShot from '../images/head-shots/kaelynn-head-shot.jpg?enhanced
 import EmHeadShot from '../images/head-shots/emily-head-shot.jpg?enhanced';
 import GraceHeadShot from '../images/head-shots/grace-head-shot.jpg?enhanced';
 import JenniferHeadShot from '../images/head-shots/jennifer-head-shot.jpg?enhanced';
+import JillianHeadShot from '../images/head-shots/jillian-head-shot.jpg?enhanced';
 import NeilHeadShot from '../images/head-shots/neil-head-shot.jpg?enhanced';
 import SamanthaHeadShot from '../images/head-shots/samantha-head-shot.jpg?enhanced';
 import RitaHeadShot from '../images/head-shots/rita-head-shot.jpg?enhanced';
@@ -390,6 +392,59 @@ export const aepTeam: TeamMember[] = [
         </div>
         `,
 		linkedInLink: 'https://www.linkedin.com/in/crosby-white-92aa09295/'
+	},
+	{
+		fullName: 'Jillian King, CEP',
+		shortName: 'Jillian',
+		imageSrc: JillianHeadShot,
+		imageAlt: 'Jillian King',
+		specialties: [
+			'Shareworks',
+			'Equity Administration',
+			'Process Design',
+			'Process Improvement and Efficiency',
+			'Training'
+		],
+		body: `
+        <div>
+            <p>
+                Jillian King is a Certified Equity Professional (CEP) with more than five years of experience supporting publicly traded companies in the administration of equity compensation programs. She began her career on the brokerage side, where she partnered with clients using the Shareworks equity platform, helping them navigate equity plan administration and maximize the platform’s capabilities.
+            </p>
+            <p>
+                With a master’s degree in Education, Jillian is passionate about teaching and empowering equity administrators. She enjoys translating complex equity concepts into practical, easy-to-understand guidance and is dedicated to helping clients build confidence in managing their equity programs through Shareworks. She excels at developing efficient, scalable processes that drive organizational success.
+            </p>
+            <p>
+                Jillian lives in Phoenix, Arizona, with her spouse, two children, three dogs, and an ever-growing collection of houseplants.
+            </p>
+        </div>
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/jillian-king-m-ed-cep-bb654016/'
+	},
+	{
+		fullName: 'Abigail Rosser',
+		shortName: 'Abigail',
+		imageSrc: AbigailHeadShot,
+		imageAlt: 'Abigail Rosser',
+		specialties: [
+			'Social Media Interactions',
+			'Customer Service',
+			'Option Exercise Optimization',
+			'Office Management Solutions'
+		],
+		body: `
+        <div>
+            <p>
+                Abigail Rosser joined AEP as an Equity Analyst, bringing a fresh perspective as she balances her career with her studies as a current student at the University of South Carolina. Prior to joining AEP, Abigail gained valuable experience through several retail positions, building a strong foundation in customer service and communication. She is new to the world of equity compensation and is excited to grow her expertise in the field.
+            </p>
+            <p>
+                Originally from Salt Lake City, Utah, Abigail made the move to Greenville, South Carolina, in the summer of 2022. The relocation marked an exciting new chapter for her, and she has since enjoyed settling into her new home and exploring everything the Greenville area has to offer.
+            </p>
+            <p>
+                Outside of work, Abigail is a movie lover who also shares her home with three dogs. Whether she’s catching the newest release in theaters or curling up for a classic favorite, movies are one of her go-to ways to relax and recharge.
+            </p>
+        </div>
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/abigail-r-3a100b34a/'
 	}
 ];
 
