@@ -417,7 +417,8 @@ export const aepTeam: TeamMember[] = [
                 Jillian lives in Phoenix, Arizona, with her spouse, two children, three dogs, and an ever-growing collection of houseplants.
             </p>
         </div>
-        `
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/jillian-king-m-ed-cep-bb654016/'
 	},
 	{
 		fullName: 'Abigail Rosser',
@@ -442,7 +443,8 @@ export const aepTeam: TeamMember[] = [
                 Outside of work, Abigail is a movie lover who also shares her home with three dogs. Whether she’s catching the newest release in theaters or curling up for a classic favorite, movies are one of her go-to ways to relax and recharge.
             </p>
         </div>
-        `
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/abigail-r-3a100b34a/'
 	}
 ];
 
