@@ -3,9 +3,9 @@
 	import type { Pathname } from '$app/types';
 	import CustomerReviews from '$lib/components/CustomerReviews.svelte';
 	import FooterCallout from '$lib/components/FooterCallout.svelte';
-	import MeetTheTeam from '$lib/components/MeetTheTeam.svelte';
 	import PartnerRibbon from '$lib/components/PartnerRibbon.svelte';
 	import RedBar from '$lib/components/RedBar.svelte';
+	import { leadershipTeam } from '$lib/data/leadershipTeam';
 	import BuildingBlurredBg from '$lib/images/backgrounds/building-blurred-bg.jpg?enhanced';
 	import HeroBgMobile from '$lib/images/backgrounds/high-rise-buildings-mobile.jpg?enhanced';
 	import HeroBg from '$lib/images/backgrounds/high-rise-buildings.jpg?enhanced';
@@ -355,7 +355,51 @@
 		</div>
 	</section>
 
-	<MeetTheTeam />
+	<section
+		class="relative overflow-hidden bg-stone-700 bg-cover bg-center px-6 py-24 text-white lg:py-32"
+		style="background-image: url('/images/patterns/Pattern-0224_Pattern-Arrows.svg')"
+		aria-labelledby="team-preview-heading"
+	>
+		<div class="absolute inset-0 bg-stone-400/30"></div>
+		<div
+			class="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-20"
+		>
+			<div class="grid max-w-3xl gap-6">
+				<div class="grid gap-4">
+					<RedBar />
+					<h2 id="team-preview-heading" class={clsx(styles.h2, 'max-w-[24ch]')}>
+						Senior expertise, directly involved
+					</h2>
+				</div>
+				<p class="max-w-[62ch] text-lg/8 font-light text-white/85 text-pretty">
+					Our specialists bring decades of issuer, vendor, and consulting experience to every
+					engagement. Meet the people who will work alongside your team.
+				</p>
+				<div>
+					<a
+						href={resolve('/about#meet-the-team' as Pathname)}
+						class={clsx(styles.darkButton, 'gap-2')}
+					>
+						Meet the full AEP team
+						<ArrowRight class="size-4 shrink-0" aria-hidden="true" />
+					</a>
+				</div>
+			</div>
+
+			<ul role="list" class="flex -space-x-5 lg:justify-end">
+				{#each leadershipTeam as teamMember (teamMember.fullName)}
+					<li class="relative first:z-30 nth-2:z-20 nth-3:z-10">
+						<enhanced:img
+							alt={teamMember.imageAlt}
+							class="aspect-square w-28 rounded-full object-cover shadow-xl ring-4 ring-stone-700 sm:w-36 lg:w-44"
+							loading="lazy"
+							src={teamMember.imageSrc}
+						/>
+					</li>
+				{/each}
+			</ul>
+		</div>
+	</section>
 
 	<CustomerReviews />
 
