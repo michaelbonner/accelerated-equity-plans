@@ -3,6 +3,7 @@ import AaronHeadShot from '../images/head-shots/aaron-head-shot.jpg?enhanced';
 import AbigailHeadShot from '../images/head-shots/abigail-head-shot.jpg?enhanced';
 import AdamHeadShot from '../images/head-shots/adam-head-shot.jpg?enhanced';
 import CamHeadShot from '../images/head-shots/cam-head-shot.jpg?enhanced';
+import CarsonHeadShot from '../images/head-shots/carson-head-shot.jpg?enhanced';
 import CrosbyHeadShot from '../images/head-shots/crosby-head-shot.jpg?enhanced';
 import DevinHeadShot from '../images/head-shots/devin-head-shot.jpg?enhanced';
 import KaelynnHeadShot from '../images/head-shots/kaelynn-head-shot.jpg?enhanced';
@@ -445,6 +446,33 @@ export const aepTeam: TeamMember[] = [
         </div>
         `,
 		linkedInLink: 'https://www.linkedin.com/in/abigail-r-3a100b34a/'
+	},
+	{
+		fullName: 'Carson Jones',
+		shortName: 'Carson',
+		imageSrc: CarsonHeadShot,
+		imageAlt: 'Carson Jones',
+		specialties: [
+			'AI & Workflow Automation',
+			'Systems Integration',
+			'CRM & Service Platforms',
+			'Product Management',
+			'Data Conversion'
+		],
+		body: `
+        <div>
+            <p>
+                Carson Jones is the Technical Solutions Manager at Accelerated Equity Plans (AEP), where he builds the AI-powered platform behind the firm’s services — AI assistants that handle time tracking, ticketing, and client communications; data conversion pipelines; and the integrations that tie it all together across the business systems and equity platforms the team uses every day. The goal is simple: automate the busywork so AEP’s consultants can give every client their full attention.
+            </p>
+            <p>
+                Carson came to AEP after more than a decade at E*TRADE from Morgan Stanley, where he worked his way up from the financial services front lines to Product Manager and Assistant Vice President, leading product for Salesforce Service Cloud and the firm’s internal CRM. He has spent his career building the systems that great client service runs on — at AEP, he gets to build them from the ground up, with AI at the core.
+            </p>
+            <p>
+                Outside of work, Carson loves traveling the world — if he hasn’t been there yet, it’s on the list.
+            </p>
+        </div>
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/carson-jones-65079856/'
 	}
 ];
 
