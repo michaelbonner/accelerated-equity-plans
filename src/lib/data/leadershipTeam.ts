@@ -471,7 +471,8 @@ export const aepTeam: TeamMember[] = [
                 Outside of work, Carson loves traveling the world — if he hasn’t been there yet, it’s on the list.
             </p>
         </div>
-        `
+        `,
+		linkedInLink: 'https://www.linkedin.com/in/carson-jones-65079856/'
 	}
 ];
 
