@@ -24,25 +24,25 @@
 			icon: Bank,
 			title: 'Comprehensive Equity Management',
 			description:
-				'End-to-end management of your equity compensation program, from initial grant issuance through vesting, exercise, and settlement. We handle all aspects of the grant lifecycle while collaborating seamlessly with your Payroll, HR, Accounting, Legal, and Treasury teams to ensure smooth execution and regulatory compliance.'
+				'We manage the grant lifecycle from issuance through vesting, exercise, and settlement. Our administrators coordinate directly with Payroll, HR, Accounting, Legal, and Treasury so transactions are processed correctly and on time.'
 		},
 		{
 			icon: Education,
 			title: 'Employee Education & Onboarding',
 			description:
-				'Empower your employees with clear, accessible education about their equity compensation. We provide comprehensive resources, personalized onboarding sessions, and ongoing support to help employees understand the value of their equity awards and make informed decisions throughout their equity journey.'
+				'We give employees clear materials, onboarding sessions, and a place to bring their questions. They learn what they have been granted, how it works, and where to find the information they need.'
 		},
 		{
 			icon: People,
 			title: 'Outsourced Administration & Scalable Support',
 			description:
-				'Let us take complete ownership of your equity plan administration. Our team provides ongoing, day-to-day management of your program with flexible staffing solutions that scale with your needs. Whether you need full outsourcing or targeted support for specific functions, we adapt to your workload and business requirements.'
+				'Our team can own day-to-day administration or take responsibility for selected workflows. You can increase or reduce support as transaction volume, deadlines, and internal capacity change.'
 		},
 		{
 			icon: Graph,
 			title: 'Interim, Fractional & On-Demand Support',
 			description:
-				'Navigate peak periods with confidence. Whether you need an interim stock plan administrator to cover a vacancy, a fractional administrator for part-time ongoing coverage, or on-demand stock administration during annual grant cycles, year-end reporting, or M&A transactions, we provide experienced equity professionals exactly when you need them—without long-term commitments.'
+				'Bring in an interim administrator for a vacancy, a fractional administrator for ongoing part-time coverage, or short-term help for annual grants, year-end reporting, and M&A. You get an experienced equity professional for the period you need.'
 		}
 	];
 
@@ -50,22 +50,22 @@
 		{
 			title: 'Regulatory Compliance Expertise',
 			description:
-				'Stay ahead of complex regulatory requirements with our deep knowledge of SEC rules, tax regulations, and accounting standards. We ensure your equity program maintains full compliance with all applicable regulations, reducing risk and protecting your organization.'
+				'Our team works with SEC reporting, tax rules, accounting standards, and plan requirements every day. We build the required checks and deadlines into the administration process to reduce missed filings and avoidable errors.'
 		},
 		{
 			title: 'Process Efficiency & Automation',
 			description:
-				'Streamline your equity administration with optimized workflows and automated processes. We identify opportunities to reduce manual work, minimize errors, and free your team to focus on strategic initiatives rather than administrative tasks.'
+				'We find repetitive work, unnecessary handoffs, and places where errors enter the process. Then we simplify or automate those steps so your team spends less time correcting data and moving files.'
 		},
 		{
 			title: 'Vendor Platform Expertise',
 			description:
-				"Maximize the value of your equity management platform. Our team has extensive experience with all major vendor systems and can help you leverage advanced features, optimize configurations, and ensure you're getting the most from your technology investment."
+				'Our team works across major equity platforms. We can correct configurations, introduce useful features, and remove workarounds that no longer make sense.'
 		},
 		{
 			title: 'Flexible Engagement Models',
 			description:
-				'Choose the support model that fits your needs—from full outsourcing to targeted project assistance or temporary staffing. Our flexible engagement options let you access precisely the expertise you need, when you need it, without over-committing resources.'
+				'Choose full outsourcing, support for a defined set of tasks, or temporary staffing. The engagement can change when your workload or internal team changes.'
 		}
 	];
 
@@ -108,7 +108,7 @@
 		{
 			question: 'Can you provide an interim or fractional stock plan administrator?',
 			answer:
-				'<p>Yes. We offer interim stock plan administrators to cover a vacancy or leave of absence, fractional administrators who manage your program on a part-time, ongoing basis, and on-demand stock administration for short-term, project-based needs. This flexibility lets you maintain seamless administration and compliance without the cost or commitment of a full-time hire.</p>'
+				'<p>Yes. We offer interim stock plan administrators to cover a vacancy or leave of absence, fractional administrators who manage your program on a part-time, ongoing basis, and on-demand stock administration for short-term, project-based needs. This keeps required administration and compliance work moving without the cost or commitment of a full-time hire.</p>'
 		},
 		{
 			question: 'What makes your equity administration services different?',

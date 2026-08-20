@@ -28,22 +28,22 @@
 		{
 			icon: People,
 			title: 'Community',
-			body: "<p>At AEP, we're more than just a workplace; we're a community of passionate individuals united by a shared commitment to a culture of ownership, continuous learning, and fostering an environment where growth and fun go hand in hand.</p>"
+			body: '<p>People at AEP take ownership of their work, share what they know, and make time to help one another. We take the work seriously without making the workplace stiff.</p>'
 		},
 		{
 			icon: Key,
 			title: 'Employee Ownership',
-			body: "<p>If you're someone who believes in the transformative power of employee ownership and thrives in an environment that values collaboration, innovation, and personal development, then we want to hear from you.</p>"
+			body: '<p>We believe employee ownership works best when people understand it. That belief shapes both our client work and the way we run AEP.</p>'
 		},
 		{
 			icon: Growth,
 			title: 'Growth',
-			body: "<p>We're seeking dedicated professionals to join our team. Whether you're an industry veteran or just starting your career, AEP offers exciting opportunities for growth, advancement, and making a meaningful impact.</p>"
+			body: "<p>Whether you already know equity compensation or are building your career in the field, you'll have room to take on harder work and learn from experienced consultants.</p>"
 		},
 		{
 			icon: LightningBolt,
 			title: 'Dynamic Team',
-			body: '<p>Join our dynamic team to make a meaningful impact, grow your skills, and have fun. At AEP, we value your unique talents and offer a supportive environment for career advancement.</p>'
+			body: '<p>Our team brings different backgrounds and specialties to the work. You will collaborate closely with colleagues while building expertise of your own.</p>'
 		}
 	];
 

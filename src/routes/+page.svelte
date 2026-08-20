@@ -24,24 +24,24 @@
 
 	const title = 'Equity Management Company & Compensation Consulting | Accelerated Equity Plans';
 	const description =
-		'A dedicated equity management company offering expert equity compensation consulting, stock plan administration, and tailored solutions to unlock the full potential of your equity programs.';
+		'Equity compensation consulting and stock plan administration for private and public companies, with support for systems, reporting, compliance, and transactions.';
 	const path = '/';
 
 	const servicesBoxes = [
 		{
 			icon: SquareChartGantt,
 			title: 'Why Equity Compensation Consulting Matters',
-			body: `<p>Navigating the world of equity compensation is complex. Companies face evolving regulations, the challenge of motivating and retaining key talent, and the need to balance shareholder and employee interests. Market volatility and rapid company growth only add to the complexity. At AEP, we understand these challenges and partner with you to build, manage, and optimize equity programs that drive engagement and business outcomes—while ensuring compliance every step of the way.</p>`
+			body: `<p>Equity compensation has to work for employees, shareholders, and the teams responsible for compliance. That gets harder as regulations change, markets move, and companies grow. AEP helps you build and run a program that supports the business without losing control of the details.</p>`
 		},
 		{
 			icon: FileChartPie,
 			title: 'Our Approach: Data-Driven, People-Focused',
-			body: '<p>We combine deep industry knowledge with technology and data analytics to deliver actionable insights for your equity programs. Our team leverages benchmarking, real-time reporting, and best-in-class platforms to give you clarity and confidence in your decision-making. Whether you’re evaluating plan effectiveness, preparing for an audit, or seeking to improve employee participation, we provide the tools and expertise to help you succeed.</p>'
+			body: '<p>We pair hands-on equity experience with benchmarking, reporting, and the systems your team already uses. The result is practical information you can use to assess a plan, prepare for an audit, or understand why employees are not participating.</p>'
 		},
 		{
 			icon: EarthIcon,
 			title: 'Who We Serve',
-			body: '<p>AEP supports organizations at every stage—from high-growth startups and pre-IPO companies to established public enterprises. We have deep experience across technology, biotech, financial services, and more. If you’re building, scaling, or optimizing an equity program, we’re ready to help.</p>'
+			body: '<p>AEP works with growing startups, pre-IPO companies, and established public companies. Our team has supported equity programs in technology, biotech, financial services, and other industries.</p>'
 		}
 	];
 
@@ -60,7 +60,7 @@
 			id: 'equity-plan-administration',
 			title: 'Equity Plan Administration',
 			detailsLink: '/services/equity-plan-administration',
-			body: '<p>Our specialized services in stock plan administration are crafted to address the unique needs of businesses seeking to streamline their equity management processes. Our team of dedicated professionals delivers tailored solutions that ensure regulatory compliance and seamless management of employee stock compensation programs. Trust AEP to handle the complexities of your stock plan administration, allowing you to focus on your core business objectives. </p>',
+			body: '<p>We run the recurring work behind your stock plan, including grants, releases, reporting, compliance, and employee support. We can own the full program or add experienced help where your internal team needs it.</p>',
 			tags: [
 				'Outsourced administration',
 				'Seasonal & temporary support',
@@ -75,7 +75,7 @@
 			id: 'vendor-support',
 			title: 'Vendor Support',
 			detailsLink: '/services/vendor-support',
-			body: "<p>Maximize the potential of your equity system with AEP's expert vendor support. Whether you aim to optimize your current equity administration platform or seek to find and implement a new one, AEP is here to help. We specialize in all vendor platforms and will guide you through finding, implementing, and optimizing the platform that best suits your needs.</p>",
+			body: '<p>We help you choose, implement, and improve equity administration platforms. Our team works across major vendors, so the recommendation starts with your requirements rather than a preferred system.</p>',
 			tags: [
 				'Expedited system implementation',
 				'Data conversion and audit',
@@ -90,7 +90,7 @@
 			id: 'advanced-project-support',
 			title: 'Advanced Project Support',
 			detailsLink: '/services/advanced-project-support',
-			body: '<p>AEP offers a comprehensive suite of services designed to empower businesses across various industries and lifecycles. Our focus on quality, integrity, and client satisfaction ensures that we partner effectively with businesses to navigate challenges, optimize operations, and unlock opportunities for long-term success.</p>',
+			body: '<p>IPOs, acquisitions, corporate actions, and global expansion create more equity work than many internal teams can absorb. AEP provides experienced project support for the analysis, coordination, testing, and communication these events require.</p>',
 			tags: [
 				'Mergers & Acquisitions',
 				'IPOs & SPACs',
@@ -106,7 +106,7 @@
 			id: 'plan-process-design',
 			title: 'Plan & Process Design',
 			detailsLink: '/services/plan-process-design',
-			body: '<p>AEP assists both private and public companies in their stock plan administration by providing expert guidance and comprehensive solutions. From the initial design and implementation of your equity plans to ongoing management and compliance, AEP has you covered.</p>',
+			body: '<p>We review how your equity program works today, document the gaps, and design processes your team can maintain. Our consultants also train administrators and help put the right controls in place.</p>',
 			tags: [
 				'Process review, enhancement, and documentation',
 				'Incorporation of best practices to mitigate risk',
@@ -329,9 +329,9 @@
 				<div class="prose max-w-none">
 					<p class="text-lg font-light text-zinc-600 max-w-[56ch] text-pretty">
 						As a dedicated equity management company, Accelerated Equity Plans partners with you to
-						boost your team's effectiveness in equity compensation. We handle plan adjustments,
-						daily operations, and future strategy, allowing you to focus on leading your company
-						forward.
+						take work off your internal team without taking them out of the process. We handle plan
+						adjustments, daily administration, and longer-term planning so they can focus on the
+						decisions that need their attention.
 					</p>
 				</div>
 				<div class="flex gap-x-4">

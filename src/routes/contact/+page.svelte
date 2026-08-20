@@ -12,7 +12,7 @@
 
 	const title = 'Contact Accelerated Equity Plans | Expert Equity Consulting & Support';
 	const description =
-		'Get in touch with Accelerated Equity Plans for personalized equity plan consulting, system support, and expert guidance. Call, email, or fill out our contact form to start your equity management journey today.';
+		'Contact Accelerated Equity Plans about equity plan administration, consulting, system support, or a specific project.';
 	const path = '/contact';
 </script>
 
@@ -45,10 +45,8 @@
 				<h1 class={styles.h1}>Contact Us Today</h1>
 				<div class="max-w-full prose">
 					<p class="mx-auto mt-6 max-w-3xl text-lg font-light leading-8 text-white">
-						Gain peace of mind with our expert team dedicated to supporting your success. Whether
-						you need help with equity planning, system implementation, or ongoing support, we're
-						here to provide personalized solutions and guidance, helping you navigate with
-						confidence.
+						Tell us where your equity program needs support. We can help with plan administration,
+						system implementation, process design, or a specific project.
 					</p>
 				</div>
 			</div>
@@ -138,10 +136,8 @@
 					<div class="p-8 text-white bg-black rounded-xl">
 						<h3 class={styles.h4}>Contact Us</h3>
 						<p class="mt-4 font-light">
-							Ready to take the next step? Fill out the form below and let us know how we can help.
-							Whether you have questions, need expert advice, or just want to chat about your
-							business goals, our team is here to support you every step of the way. We look forward
-							to connecting!
+							Use the form below to describe your equity program and the help you need. We will
+							review your note and follow up to discuss the scope, timing, and next steps.
 						</p>
 						<ContactForm />
 					</div>
@@ -239,8 +235,7 @@
 					<p class="text-3xl font-bold font-headings text-red-700">100%</p>
 					<p class="mt-2 text-stone-700 font-medium">U.S.-Based Team</p>
 					<p class="mt-1 text-sm text-stone-500">
-						Every team member is based in the United States, ensuring seamless communication and
-						compliance expertise.
+						Every team member is based in the United States and works directly with client teams.
 					</p>
 				</div>
 			</div>

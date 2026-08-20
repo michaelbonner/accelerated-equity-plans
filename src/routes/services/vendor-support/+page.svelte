@@ -23,25 +23,25 @@
 			icon: Nodes,
 			title: 'Streamlined System Implementation',
 			description:
-				'Navigate the complexities of equity system implementation with confidence. We expedite the setup process, manage project timelines, coordinate with vendors, and ensure a smooth transition to your new platform. Our structured approach minimizes disruption while rapidly delivering functionality to your team.'
+				'We plan the implementation, coordinate with the vendor, and keep decisions and deadlines moving. Before launch, we confirm that the new platform supports the workflows your team depends on.'
 		},
 		{
 			icon: Database,
 			title: 'Data Management & Integration',
 			description:
-				'Transform your equity data with precision and care. We handle complete data conversion from spreadsheets or legacy systems, conduct thorough data audits to ensure accuracy, and integrate with your HRIS, payroll, and other third-party systems. Our rigorous quality control processes guarantee your data integrity throughout the migration.'
+				'We convert data from spreadsheets or legacy systems, audit it against the source, and connect the new platform with HRIS, payroll, and other systems. Reconciliation and documented review points protect the data throughout the move.'
 		},
 		{
 			icon: DocumentCheck,
 			title: 'RFP Guidance & System Selection',
 			description:
-				'Make informed decisions about your equity technology investment. We guide you through the entire RFP process, from defining requirements and evaluating vendors to negotiating contracts. Our vendor-agnostic approach ensures you select the platform that truly fits your needs, not just the one with the best sales pitch.'
+				'We help define requirements, prepare the RFP, evaluate demonstrations, compare vendors, and support contract discussions. Because we work across platforms, we can assess each option against the way your program actually operates.'
 		},
 		{
 			icon: TestTube,
 			title: 'Comprehensive Functionality Testing',
 			description:
-				'Ensure your equity system performs flawlessly before going live. We conduct thorough testing of all critical functionality including grant processing, vesting schedules, tax calculations, reporting, and integrations. Our detailed test plans and quality assurance processes identify and resolve issues before they impact your operations.'
+				'Before go-live, we test grant processing, vesting schedules, tax calculations, reporting, and integrations. Detailed test cases make failures visible while there is still time to correct them.'
 		}
 	];
 
@@ -65,7 +65,7 @@
 		{
 			title: 'Shareworks Administration Support',
 			description:
-				'We provide expert Shareworks (Morgan Stanley at Work) administration support, including implementation, data migration, participant management, reporting, and ongoing optimization. Our team helps you unlock the platform’s advanced capabilities and keep your equity program running smoothly.'
+				'We support Shareworks implementation, data migration, participant management, reporting, and ongoing administration. We can also review the current setup and introduce platform features that replace manual work.'
 		},
 		{
 			title: 'Fidelity Stock Plan Services Support',
@@ -83,22 +83,22 @@
 		{
 			title: 'Maximize Platform Value',
 			description:
-				"Most companies utilize only a fraction of their equity platform's capabilities. Our team helps you unlock advanced features, automate manual processes, and optimize configurations to get the maximum return on your technology investment."
+				'Many companies use only the basic features of their equity platform. We review the configuration, identify useful features that are not in use, and automate work the system can already handle.'
 		},
 		{
 			title: 'Reduce Implementation Risk',
 			description:
-				'System implementations often face delays, budget overruns, and functionality gaps. Our proven methodology and hands-on project management dramatically reduce these risks, ensuring on-time delivery and complete functionality.'
+				'Implementations slip when requirements, ownership, or testing are unclear. We make those decisions explicit, track open items, and test critical workflows before the launch date.'
 		},
 		{
 			title: 'Vendor-Agnostic Expertise',
 			description:
-				'Unlike vendor professional services teams focused on a single platform, we bring cross-platform expertise. This broader perspective helps you implement best practices regardless of your chosen vendor and ensures objective guidance on system selection.'
+				'Our consultants work across major equity platforms. That experience helps us compare vendors and recommend configurations based on your requirements instead of one system’s default approach.'
 		},
 		{
 			title: 'Seamless Data Migration',
 			description:
-				'Data migration is often the riskiest part of any system change. Our meticulous approach to data conversion, validation, and reconciliation ensures 100% accuracy while maintaining full audit trails and compliance documentation.'
+				'We map, convert, validate, and reconcile migrated data against the source system. The project retains the review history and supporting documentation needed for later audits.'
 		}
 	];
 
@@ -306,8 +306,8 @@
 				<h2 class={styles.h2}>Platform-Specific Support</h2>
 				<p class="prose max-w-4xl text-lg text-stone-700 font-light">
 					Need help with a specific equity platform? Our administrators work in these systems every
-					day. Below are a few of the platforms we support most often—each engagement is tailored to
-					your configuration, data, and team.
+					day. These are a few of the platforms we support most often. The work depends on your
+					configuration, data, and team.
 				</p>
 			</div>
 

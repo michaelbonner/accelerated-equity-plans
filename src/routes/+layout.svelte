@@ -194,7 +194,7 @@
 										'@type': 'Service',
 										name: 'Comprehensive Equity Management',
 										description:
-											'Grant lifecycle administration and collaboration with internal teams for seamless execution.'
+											'Grant lifecycle administration coordinated with Payroll, HR, Accounting, Legal, and Treasury.'
 									}
 								},
 								{

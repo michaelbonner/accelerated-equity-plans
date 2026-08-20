@@ -9,7 +9,7 @@
 
 	const title = 'About Accelerated Equity Plans | Equity Compensation Experts';
 	const description =
-		'Learn how Accelerated Equity Plans empowers companies with expert equity compensation solutions. Discover our story, principles, and leadership team dedicated to maximizing the impact of your stock plans.';
+		'Learn about Accelerated Equity Plans, our approach to equity compensation consulting, and the experienced team that supports our clients.';
 	const path = '/about';
 </script>
 
@@ -49,11 +49,9 @@
 				/>
 				<h1 class={styles.h1}>About Accelerated Equity Plans</h1>
 				<p class="mx-auto mt-6 max-w-3xl text-lg font-light leading-8">
-					We empower companies to harness the full potential of equity compensation with strategic
-					solutions to attract, retain, and motivate top talent. Our comprehensive services ensure
-					equity plans are effectively managed and aligned with business goals, creating a
-					competitive advantage. Leverage our expertise to maximize the impact of your equity
-					programs and foster a motivated, loyal workforce driving your company’s success.
+					We help companies design and run equity programs that employees can understand and
+					internal teams can manage. Our work covers daily administration, systems, compliance, and
+					the projects that come with growth or a major transaction.
 				</p>
 			</div>
 		</div>
@@ -69,21 +67,20 @@
 		<div class="mt-8 max-w-full font-medium prose prose-lg">
 			<p>
 				<span class="text-red-700">Our Founding.</span> Founded in 2021 by industry experts determined
-				to share their wealth of knowledge and provide unparalleled support to the field, Accelerated
-				Equity stands as a beacon of expertise and dedication.
+				to share their experience and give companies a more responsive option for equity support, Accelerated
+				Equity Plans has grown into a team of seasoned administrators and consultants.
 			</p>
 			<p>
-				<span class="text-red-700">Our Principles.</span> At Accelerated Equity, we transcend mere execution
-				of equity plans; we prioritize empowering our clients with a deep understanding of the underlying
-				principles driving their strategies. Leveraging the collective expertise of our seasoned team,
-				we forge strong partnerships within the industry to deliver a truly exceptional experience.
+				<span class="text-red-700">Our Principles.</span> We do more than process transactions. We explain
+				the reasoning behind the work, document what matters, and make sure clients understand the program
+				they are responsible for. We also work closely with the legal, tax, accounting, payroll, and platform
+				partners involved in each plan.
 			</p>
 			<p>
-				<span class="text-red-700">Our Track Record.</span> Our success is evident: from guiding private
-				and pre-IPO ventures to supporting some of the world's largest multinational corporations, our
-				commitment to excellence knows no bounds. At AEP, we are dedicated to empowering our clients with
-				the tools and understanding necessary to navigate the complexities of equity planning with confidence
-				and clarity.
+				<span class="text-red-700">Our Track Record.</span> We have supported private and pre-IPO companies
+				as well as large multinational public companies. That range gives our clients access to people
+				who have seen how equity programs change as a company grows, adds new award types, or enters new
+				markets.
 			</p>
 		</div>
 	</section>
@@ -100,9 +97,8 @@
 			</div>
 			<div class="font-light prose">
 				<p>
-					Send us an email or give us a call to discover how our experts can assist you. Our team is
-					ready to provide personalized solutions and support to elevate your stock plan and meet
-					your business needs. Contact us today to get started!
+					Tell us what is working, what is not, and where your team needs help. We will talk through
+					the problem and recommend the right level of support for your stock plan.
 				</p>
 			</div>
 			<div class="flex gap-x-4">
