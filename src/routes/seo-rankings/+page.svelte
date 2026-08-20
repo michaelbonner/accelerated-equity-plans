@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { styles } from '$lib/styles';
+	import { ChevronDown, ChevronsUpDown, ChevronUp } from '@lucide/svelte';
 	import { clsx } from 'clsx';
 	import {
 		keywords,
@@ -99,6 +100,54 @@
 			.sort((a, b) => b.volume - a.volume)
 			.slice(0, 5)
 	);
+
+	// Sorting for the full keyword table. A null `sortKey` keeps the curated
+	// order from the data file: ranking keywords by best position, then the
+	// remaining targets by search volume.
+	type SortKey = 'keyword' | 'desktop' | 'mobile' | 'volume';
+
+	let sortKey = $state<SortKey | null>(null);
+	let sortAsc = $state(true);
+
+	// The direction each column starts in when it's first selected — best
+	// position and A–Z ascending, biggest search volume first.
+	const initialAsc: Record<SortKey, boolean> = {
+		keyword: true,
+		desktop: true,
+		mobile: true,
+		volume: false
+	};
+
+	const toggleSort = (key: SortKey) => {
+		if (sortKey !== key) {
+			sortKey = key;
+			sortAsc = initialAsc[key];
+		} else if (sortAsc === initialAsc[key]) {
+			sortAsc = !sortAsc;
+		} else {
+			// A third click on the active column restores the default order.
+			sortKey = null;
+		}
+	};
+
+	const sortedKeywords = $derived.by(() => {
+		const key = sortKey;
+		if (key === null) return keywords;
+		const dir = sortAsc ? 1 : -1;
+		// Array.prototype.sort is stable, so ties keep the default order.
+		return [...keywords].sort((a, b) => {
+			if (key === 'keyword') return a.keyword.localeCompare(b.keyword) * dir;
+			if (key === 'volume') return (a.volume - b.volume) * dir;
+			const posA = a[key].current;
+			const posB = b[key].current;
+			// Keywords not ranking on that device stay at the bottom either way.
+			if (posA === null || posB === null) {
+				if (posA === posB) return 0;
+				return posA === null ? 1 : -1;
+			}
+			return (posA - posB) * dir;
+		});
+	});
 </script>
 
 <svelte:head>
@@ -125,6 +174,33 @@
 		</div>
 		<div class={clsx('mt-1 text-xs', changeClass(change.kind))}>{change.label}</div>
 	</div>
+{/snippet}
+
+{#snippet sortHeader(key: SortKey, label: string, align: string)}
+	{@const active = sortKey === key}
+	<th
+		scope="col"
+		class={clsx('px-5 py-3 font-medium', align)}
+		aria-sort={active ? (sortAsc ? 'ascending' : 'descending') : 'none'}
+	>
+		<button
+			type="button"
+			onclick={() => toggleSort(key)}
+			class={clsx(
+				'group inline-flex cursor-pointer items-center gap-1.5 uppercase hover:text-stone-800',
+				active && 'text-stone-800'
+			)}
+		>
+			<span>{label}</span>
+			{#if !active}
+				<ChevronsUpDown class="size-3.5 shrink-0 text-stone-300 group-hover:text-stone-500" />
+			{:else if sortAsc}
+				<ChevronUp class="size-3.5 shrink-0 text-aep-red-700" />
+			{:else}
+				<ChevronDown class="size-3.5 shrink-0 text-aep-red-700" />
+			{/if}
+		</button>
+	</th>
 {/snippet}
 
 {#snippet deviceCell(d: DevicePosition)}
@@ -279,20 +355,21 @@
 			<h2 class={clsx(styles.h3, 'not-italic')}>All tracked keywords</h2>
 			<p class="mt-2 text-stone-600">
 				The complete set of keywords we're monitoring, with desktop and mobile positions side by
-				side. Keywords without a position are targets we're building toward.
+				side. Keywords without a position are targets we're building toward. Click any column
+				heading to sort — a third click returns to the default order.
 			</p>
 			<div class="mt-6 overflow-x-auto rounded-xl bg-white ring-1 ring-stone-900/5">
 				<table class="w-full min-w-[640px] text-left text-sm">
 					<thead>
 						<tr class="border-b border-stone-200 text-xs tracking-wide text-stone-500 uppercase">
-							<th class="px-5 py-3 font-medium">Keyword</th>
-							<th class="px-5 py-3 text-center font-medium">Desktop</th>
-							<th class="px-5 py-3 text-center font-medium">Mobile</th>
-							<th class="px-5 py-3 text-right font-medium">Monthly searches</th>
+							{@render sortHeader('keyword', 'Keyword', 'text-left')}
+							{@render sortHeader('desktop', 'Desktop', 'text-center')}
+							{@render sortHeader('mobile', 'Mobile', 'text-center')}
+							{@render sortHeader('volume', 'Monthly searches', 'text-right')}
 						</tr>
 					</thead>
 					<tbody class="divide-y divide-stone-100">
-						{#each keywords as k (k.keyword)}
+						{#each sortedKeywords as k (k.keyword)}
 							<tr class={clsx(!isRanking(k) && 'text-stone-400')}>
 								<td class="px-5 py-3 font-medium text-stone-800">{k.keyword}</td>
 								<td class="px-5 py-3 text-center">{@render deviceCell(k.desktop)}</td>
