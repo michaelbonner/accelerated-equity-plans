@@ -15,7 +15,7 @@
 
 	const title = 'Advanced Equity Project Support & Consulting | Accelerated Equity Plans';
 	const description =
-		'Expert support for complex equity projects including M&A, IPOs, SPACs, plan modifications, automation, global mobility, and system integrations. Navigate critical transitions with confidence.';
+		'Project support for M&A, IPOs, SPACs, plan modifications, automation, global mobility, and equity system integrations.';
 	const path = '/services/advanced-project-support';
 
 	const features = [
@@ -23,25 +23,25 @@
 			icon: Events,
 			title: 'Strategic Transactions & Equity Events',
 			description:
-				'Navigate the complexities of Mergers & Acquisitions, IPOs, SPACs, and other strategic transactions with expert guidance. We manage equity treatment analysis, participant communications, system conversions, and regulatory compliance to ensure smooth execution of even the most complex corporate events.'
+				'We support equity treatment analysis, participant communications, system conversions, and compliance work for M&A, IPOs, SPACs, and other corporate events. Our consultants coordinate the details across internal teams and external advisors.'
 		},
 		{
 			icon: Path,
 			title: 'Equity Plan Modifications & Automation',
 			description:
-				'Transform your equity operations through strategic plan modifications and intelligent automation. We help you design process improvements, implement workflow automation, eliminate manual tasks, and leverage technology to increase efficiency while reducing risk and operational costs.'
+				'We redesign plan workflows and automate repetitive steps where the process and controls are clear. The goal is less manual entry, fewer handoffs, and a record your team can review.'
 		},
 		{
 			icon: Trailer,
 			title: 'Global Workforce Mobility Support',
 			description:
-				'Support your global workforce with comprehensive mobility solutions. We provide expert guidance on international equity compensation, tax compliance across jurisdictions, mobility grant tracking, and participant education to ensure seamless experiences for relocating employees.'
+				'We help track mobile employees and grants, coordinate tax requirements across jurisdictions, and explain the equity impact to participants. Our team works with your tax and legal advisors on country-specific requirements.'
 		},
 		{
 			icon: GridBlock,
 			title: 'Seamless System Integrations',
 			description:
-				'Create a unified technology ecosystem by integrating your equity platform with HRIS, payroll, and other enterprise systems. We design automated data flows that eliminate manual reconciliation, reduce errors, ensure data consistency, and provide real-time visibility across your technology stack.'
+				'We connect the equity platform with HRIS, payroll, and other business systems. Each integration includes data mapping, validation rules, error handling, and a reconciliation process.'
 		}
 	];
 
@@ -49,12 +49,12 @@
 		{
 			title: 'IPO Preparation & Execution',
 			description:
-				'Transform your private company equity program for public markets. We handle Section 16 setup, insider trading policy development, Form S-8 preparation, transition from private to public grant types, participant education, and all operational changes required for your public debut.'
+				'We prepare private-company equity operations for public-company requirements, including Section 16 setup, insider trading policies, Form S-8 preparation, award transitions, and participant education.'
 		},
 		{
 			title: 'Merger & Acquisition Support',
 			description:
-				"Navigate equity complexities in M&A transactions. Our services include equity compensation due diligence, treatment analysis, participant communications, system consolidations, regulatory compliance, and post-merger integration to ensure equity compensation doesn't become a deal impediment."
+				'We support equity due diligence, award treatment analysis, participant communications, system consolidation, compliance, and post-close integration. This gives the deal team a clear view of equity obligations before and after closing.'
 		},
 		{
 			title: 'SPAC Transactions',
@@ -64,12 +64,12 @@
 		{
 			title: 'Corporate Restructuring',
 			description:
-				'Execute complex equity adjustments for spinoffs, stock splits, reverse splits, and other corporate restructuring events. We ensure accurate adjustments, clear participant communications, and seamless system updates while maintaining compliance and audit trails.'
+				'We calculate and process equity adjustments for spinoffs, stock splits, reverse splits, and other restructurings. The work includes participant communications, system updates, reconciliation, and audit support.'
 		},
 		{
 			title: 'Global Expansion',
 			description:
-				'Extend your equity program internationally with confidence. We help you navigate local regulations, establish compliant grant structures, implement tax-efficient approaches, and educate international participants about their awards.'
+				'We help companies extend equity programs into new countries, coordinating local rules, grant structures, tax considerations, and participant education with the appropriate advisors.'
 		},
 		{
 			title: 'System Modernization',
@@ -110,7 +110,7 @@
 		{
 			question: 'What M&A equity support do you provide?',
 			answer:
-				"<p>M&A transactions create complex equity scenarios requiring quick decisions and flawless execution. We provide equity compensation due diligence, equity treatment analysis (acceleration, conversion, cash-out scenarios), integration planning, participant communications, data consolidation, system migrations, regulatory compliance support, and post-merger administration. Whether you're the acquirer or target, our experience helps you avoid common pitfalls and ensure equity doesn't impede deal closure.</p>"
+				"<p>M&A transactions create equity questions that need quick, well-documented decisions. We support due diligence, award treatment analysis, integration planning, participant communications, data consolidation, system migrations, compliance, and post-merger administration. Whether you're the acquirer or target, we help identify equity obligations before they delay the deal.</p>"
 		},
 		{
 			question: 'Do you perform equity compensation due diligence?',
@@ -211,8 +211,8 @@
 				<h1 class={clsx(styles.h1, 'text-white')}>Advanced Equity Project Support Services</h1>
 			</div>
 			<p class="mx-auto max-w-3xl text-lg font-light text-white">
-				Navigate complex equity projects with confidence. From IPOs and M&A to automation and global
-				expansion, we provide the specialized expertise you need for success.
+				Bring in experienced help for the equity work behind IPOs, M&A, automation, and global
+				expansion.
 			</p>
 		</div>
 	</section>
@@ -231,25 +231,20 @@
 				<h2 class={styles.h2}>Expert Support for Complex Equity Initiatives</h2>
 				<div class="prose max-w-4xl text-lg text-stone-700 font-light">
 					<p>
-						Major equity projects—whether an IPO, M&A transaction, global expansion, or a
-						<a href={resolve('/services/vendor-support')}>technology platform transformation</a
-						>—represent critical moments for your organization. Success requires specialized
-						expertise, careful planning, and flawless execution. Mistakes can be costly, both
-						financially and reputationally.
+						Major equity projects, including an IPO, M&A transaction, global expansion, or a
+						<a href={resolve('/services/vendor-support')}>technology platform transformation</a>,
+						put extra pressure on equity teams. They require specialized knowledge, careful
+						planning, and accurate execution. Mistakes can be costly and difficult to unwind.
 					</p>
 					<p>
-						AEP brings deep, specialized knowledge gained from managing hundreds of complex equity
-						projects across industries. We understand the technical requirements, regulatory
-						complexities, and operational challenges that come with high-stakes equity initiatives.
-						More importantly, we know how to navigate these successfully while managing risk and
-						meeting tight deadlines.
+						AEP has managed hundreds of complex equity projects across industries. We understand the
+						technical requirements, regulatory constraints, and operational work behind these
+						events, including the dependencies that can threaten a deadline.
 					</p>
 					<p>
-						Our approach combines proven methodologies with the flexibility to adapt to your unique
-						circumstances. We integrate seamlessly with your team, providing the specialized
-						expertise and additional bandwidth you need precisely when you need it. Whether you
-						require comprehensive project management or targeted support for specific work streams,
-						we deliver results that enable your business objectives.
+						We work inside your existing project structure or manage the equity workstream directly.
+						The scope can cover the full project or a defined set of tasks where the internal team
+						needs more capacity.
 					</p>
 				</div>
 			</div>

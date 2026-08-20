@@ -23,25 +23,25 @@
 			icon: FolderEdit,
 			title: 'Streamlined & Optimized Equity Management',
 			description:
-				'Transform your equity program through comprehensive review and optimization. We analyze your current processes, identify inefficiencies and risks, document workflows, and implement best practices that enhance efficiency while minimizing compliance risk. The result is a streamlined program that runs smoothly and supports your business objectives.'
+				'We review how your equity program operates, identify weak controls and wasted effort, and document the workflows that need to change. Then we help put the new process into daily use.'
 		},
 		{
 			icon: Presentation,
 			title: 'Expert Administrator Training & Support',
 			description:
-				'Empower your team with the knowledge and skills they need for success. We provide comprehensive training on equity administration fundamentals, platform-specific system training, process documentation, and ongoing coaching. Your administrators gain confidence and competence to manage your program effectively.'
+				'We train administrators on equity fundamentals, the company’s platform, and its own procedures. Training can include working sessions, reference materials, and follow-up coaching.'
 		},
 		{
 			icon: Stars,
 			title: 'Data-Driven Decision Making',
 			description:
-				'Make informed decisions about your equity compensation strategy with industry intelligence and competitive insights. We provide ongoing trend analysis, peer benchmarking, regulatory updates, and strategic recommendations to keep your Long-Term Incentive plans competitive and effective.'
+				'We use peer benchmarks, market trends, and regulatory updates to inform Long-Term Incentive plan decisions. Recommendations connect that data to the company’s talent goals and operating constraints.'
 		},
 		{
 			icon: Umbrella,
 			title: 'Risk Mitigation Through Best Practices',
 			description:
-				'Protect your organization by incorporating proven best practices into your equity program. We help you establish strong controls, implement proper governance, ensure regulatory compliance, and create audit trails that stand up to scrutiny. Reduce risk while maintaining operational efficiency.'
+				'We help establish approval workflows, ownership, compliance checks, and audit records. These controls reduce risk without adding review steps that the team cannot maintain.'
 		}
 	];
 
@@ -54,7 +54,7 @@
 		{
 			title: 'Process Assessment & Optimization',
 			description:
-				'Comprehensive review of your current equity administration processes to identify improvement opportunities. We document workflows, highlight inefficiencies, recommend optimizations, and help you implement streamlined processes that reduce manual work and risk.'
+				'We document current equity administration workflows, identify weak points, and help implement changes that reduce manual work and risk.'
 		},
 		{
 			title: 'Governance & Controls',
@@ -64,7 +64,7 @@
 		{
 			title: 'Compliance Program Development',
 			description:
-				'Build comprehensive compliance programs tailored to your requirements. Whether you need Section 16 programs for public companies, insider trading policies, 409A compliance for private companies, or international regulatory compliance, we provide expert guidance and implementation support.'
+				'We help build Section 16 programs, insider trading policies, private-company 409A processes, and international compliance workflows around the company’s actual requirements.'
 		},
 		{
 			title: 'Plan Document Services',
@@ -74,7 +74,7 @@
 		{
 			title: 'Change Management',
 			description:
-				'Successfully navigate changes to your equity program through structured change management. We help you communicate changes effectively, train stakeholders, manage resistance, and ensure smooth adoption of new processes, systems, or plan designs.'
+				'When a process, system, or plan changes, we prepare communications, train the affected teams, and track whether the new way of working has taken hold.'
 		}
 	];
 
@@ -236,8 +236,8 @@
 						At AEP, we help both private and public companies design equity programs that align with
 						business objectives, attract and retain talent, and operate efficiently. Our consulting
 						approach combines strategic thinking with operational practicality. We don't just
-						recommend what sounds good in theory—we design solutions that actually work in your
-						environment with your constraints.
+						recommend what sounds good in theory. We design solutions that work in your environment
+						with your constraints.
 					</p>
 					<p>
 						Our team brings deep expertise in equity plan design, regulatory compliance, operational
@@ -342,8 +342,8 @@
 					<h3 class={clsx(styles.h3)}>3. Design Optimal Solutions</h3>
 					<p class="font-light text-white/90">
 						We develop recommendations grounded in best practices but tailored to your specific
-						needs. Our designs balance competing objectives—effectiveness vs. simplicity, automation
-						vs. control, flexibility vs. governance—to create practical solutions.
+						needs. Our designs account for competing objectives such as effectiveness and
+						simplicity, automation and control, or flexibility and governance.
 					</p>
 				</div>
 

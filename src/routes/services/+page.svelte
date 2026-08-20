@@ -31,7 +31,7 @@
 
 	const title = 'Equity Plan Administration & Consulting Services | Accelerated Equity Plans';
 	const description =
-		'Discover comprehensive equity plan administration, vendor support, project consulting, and process design services with Accelerated Equity Plans. Get expert help with stock plans, M&A, IPOs, automation, and more; tailored for private and public companies.';
+		'Equity plan administration, vendor support, project consulting, and process design for private and public companies.';
 	const path = '/services';
 
 	const servicesSections = [
@@ -39,7 +39,7 @@
 			icon: Money,
 			id: 'equity-plan-administration',
 			title: 'Equity Plan Administration',
-			body: '<p>Our specialized services in stock plan administration are crafted to address the unique needs of businesses seeking to streamline their equity management processes. Our team of dedicated professionals delivers tailored solutions that ensure regulatory compliance and seamless management of employee stock compensation programs. Trust AEP to handle the complexities of your stock plan administration, allowing you to focus on your core business objectives.</p>',
+			body: '<p>We handle the recurring work behind your stock plan, including grants, releases, reporting, compliance, and employee support. AEP can run the full program or work alongside your internal team on selected responsibilities.</p>',
 			servicesBackgroundColor: 'bg-red-700',
 			detailsLink: '/services/equity-plan-administration',
 			services: [
@@ -69,7 +69,7 @@
 			icon: Buildings,
 			id: 'vendor-support',
 			title: 'Vendor Support',
-			body: "<p>Maximize the potential of your equity system with AEP's expert vendor support. Whether you aim to optimize your current equity administration platform or seek to find and implement a new one, AEP is here to help. We specialize in all vendor platforms and will guide you through finding, implementing, and optimizing the platform that best suits your needs.</p>",
+			body: '<p>We help companies choose, implement, migrate, test, and improve equity administration platforms. Because we work across major vendors, we can focus on the system and configuration that fit your requirements.</p>',
 			servicesBackgroundColor: 'bg-aep-teal',
 			detailsLink: '/services/vendor-support',
 			services: [
@@ -99,7 +99,7 @@
 			icon: GridCheck,
 			id: 'advanced-project-support',
 			title: 'Advanced Project Support',
-			body: '<p>AEP offers a comprehensive suite of services designed to empower businesses across various industries and lifecycles. Our focus on quality, integrity, and client satisfaction ensures that we partner effectively with businesses to navigate challenges, optimize operations, and unlock opportunities for long-term success.</p>',
+			body: '<p>IPOs, acquisitions, corporate actions, and global expansion can create a sharp increase in equity work. We provide experienced project support for the analysis, coordination, testing, and communication required to get through those events.</p>',
 			servicesBackgroundColor: 'bg-black',
 			detailsLink: '/services/advanced-project-support',
 			services: [
@@ -116,7 +116,7 @@
 				{
 					icon: Trailer,
 					title: 'Global Workforce Mobility Support',
-					body: '<p>We offer comprehensive support for mobility adoption, ensuring a seamless experience for your relocating employees.</p>'
+					body: '<p>We help track mobile employees and grants, coordinate with tax advisors, and explain how a move affects each participant’s awards.</p>'
 				},
 				{
 					icon: GridBlock,
@@ -129,7 +129,7 @@
 			icon: Compass,
 			id: 'plan-process-design',
 			title: 'Plan & Process Design',
-			body: '<p>AEP assists both private and public companies in their stock plan administration by providing expert guidance and comprehensive solutions. From the initial design and implementation of your equity plans to ongoing management and compliance, AEP has you covered.</p>',
+			body: '<p>We review how an equity program operates, document the gaps, and design processes the team can maintain. Our consultants also train administrators and help put practical controls in place.</p>',
 			servicesBackgroundColor: 'bg-aep-teal-dark',
 			detailsLink: '/services/plan-process-design',
 			services: [
@@ -171,7 +171,7 @@
 		{
 			id: 'automation-design-and-resources',
 			title: `Automation Design and Resources`,
-			body: `Our Automation Design and Resources empower organizations to streamline processes and boost productivity. We integrate your equity systems with payroll and HRIS for seamless data flow and reduced risk, driving both efficiency and innovation.`
+			body: `We automate repetitive equity tasks and connect equity systems with payroll and HRIS. This reduces manual entry, gives teams consistent data, and adds controls around each transfer.`
 		},
 		{
 			id: 'tax-and-mobility-implementation-and-support',
