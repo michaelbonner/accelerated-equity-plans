@@ -5,20 +5,13 @@
 	import RedBar from '$lib/components/RedBar.svelte';
 	import EmilyHeadShot from '$lib/images/head-shots/emily-head-shot.jpg?enhanced';
 	import { styles } from '$lib/styles';
-	import { toISODateTime } from '$lib/utils/date';
+	import { formatDisplayDate, toISODateTime } from '$lib/utils/date';
+	import { blogFilterHref } from '$lib/utils/tags';
 	import { clsx } from 'clsx';
 
 	let { data } = $props();
 
 	const post = $derived(data.post);
-
-	function formatDate(dateString: string): string {
-		return new Date(dateString).toLocaleDateString('en-US', {
-			year: 'numeric',
-			month: 'long',
-			day: 'numeric'
-		});
-	}
 
 	const jsonLD = $derived({
 		'@context': 'https://schema.org',
@@ -126,7 +119,7 @@
 					</div>
 					<span class="text-stone-600">|</span>
 					<time datetime={post.publishedDate} class="text-stone-400">
-						{formatDate(post.publishedDate)}
+						{formatDisplayDate(post.publishedDate)}
 					</time>
 				</div>
 			</div>
@@ -160,13 +153,25 @@
 		</div>
 
 		<div class="mt-16 pt-8 border-t border-stone-200">
-			<div class="flex flex-wrap gap-2">
+			<h2 id="article-topics" class="text-xs font-medium tracking-widest text-stone-500 uppercase">
+				Topics in this article
+			</h2>
+			<ul role="list" aria-labelledby="article-topics" class="flex flex-wrap gap-2 mt-4">
 				{#each post.tags as tag (tag)}
-					<span class="px-3 py-1 bg-stone-100 text-stone-600 rounded-full text-sm">
-						{tag}
-					</span>
+					<li>
+						<a
+							href={blogFilterHref({ tag })}
+							class={clsx(
+								'inline-flex px-3 py-1 text-sm no-underline bg-stone-100 rounded-full text-stone-600 transition-colors first-letter:uppercase',
+								'hover:bg-aep-red-50 hover:text-aep-red-800',
+								'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-aep-red-700'
+							)}
+						>
+							{tag}
+						</a>
+					</li>
 				{/each}
-			</div>
+			</ul>
 		</div>
 	</article>
 

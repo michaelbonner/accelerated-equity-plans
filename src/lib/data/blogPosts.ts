@@ -14,7 +14,7 @@ export const blogPosts: BlogPost[] = [
 			name: 'Emily Bone, MBA, CEP',
 			title: 'Founder & CEO'
 		},
-		category: 'Equity Management',
+		category: 'Fundamentals',
 		tags: ['equity management', 'equity based compensation', 'equity compensation', 'stock plans'],
 		readingTime: 11,
 		content: `
@@ -137,7 +137,7 @@ export const blogPosts: BlogPost[] = [
 			name: 'Emily Bone, MBA, CEP',
 			title: 'Founder & CEO'
 		},
-		category: 'Equity Administration',
+		category: 'Administration',
 		tags: ['equity administration', 'stock plans', 'outsourcing', 'compliance'],
 		readingTime: 7,
 		content: `
@@ -257,7 +257,7 @@ export const blogPosts: BlogPost[] = [
 			name: 'Emily Bone, MBA, CEP',
 			title: 'Founder & CEO'
 		},
-		category: 'Stock Plan Administration',
+		category: 'Administration',
 		tags: [
 			'stock plan administration',
 			'equity administration',
@@ -393,7 +393,7 @@ export const blogPosts: BlogPost[] = [
 			name: 'Emily Bone, MBA, CEP',
 			title: 'Founder & CEO'
 		},
-		category: 'Equity Compensation',
+		category: 'Choosing a Partner',
 		tags: [
 			'equity compensation services',
 			'equity compensation consulting',
@@ -463,7 +463,7 @@ export const blogPosts: BlogPost[] = [
 			name: 'Emily Bone, MBA, CEP',
 			title: 'Founder & CEO'
 		},
-		category: 'Equity Management',
+		category: 'Choosing a Partner',
 		tags: ['equity management company', 'equity management', 'equity administration outsourcing'],
 		readingTime: 6,
 		content: `
