@@ -67,7 +67,7 @@
 			)}
 		>
 			<enhanced:img
-				alt=""
+				alt={teamMember.imageAlt}
 				class={clsx(
 					'aspect-square rounded-full object-cover outline-1 -outline-offset-1 outline-white/10',
 					featured ? 'mt-4 max-w-[200px] shadow-lg' : 'max-w-[144px]'
