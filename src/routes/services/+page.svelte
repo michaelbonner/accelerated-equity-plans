@@ -75,7 +75,7 @@
 			services: [
 				{
 					icon: Nodes,
-					title: 'System implementation',
+					title: 'Platform implementation',
 					body: '<p>We run the setup: configuration, testing, and the cutover from your current system.</p>'
 				},
 				{
@@ -135,7 +135,7 @@
 			services: [
 				{
 					icon: FolderEdit,
-					title: 'Process review and documentation',
+					title: 'Process review and redesign',
 					body: '<p>We review how the program runs today, document each process, and fix the steps that create risk.</p>'
 				},
 				{
@@ -209,16 +209,6 @@
 			id: 'education',
 			title: `Education`,
 			body: `We teach employees what their awards are worth, when they vest, and what they owe in tax.`
-		},
-		{
-			id: 'system-functionality-incorporation-and-testing-secondary',
-			title: `System functionality incorporation and testing`,
-			body: `We test new functionality before you turn it on, and automate what your team repeats.`
-		},
-		{
-			id: 'process-review-and-documentation-secondary',
-			title: `Process review and documentation`,
-			body: `We interview the people who run each process, document how it actually works, and recommend changes.`
 		}
 	];
 </script>

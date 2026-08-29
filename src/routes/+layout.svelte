@@ -247,8 +247,9 @@
 									'@type': 'Offer',
 									itemOffered: {
 										'@type': 'Service',
-										name: 'System Implementation',
-										description: 'Expedited system setup and smooth transition to new platforms.'
+										name: 'Platform Implementation',
+										description:
+											'Configuration, testing, and cutover from your current equity platform.'
 									}
 								},
 								{
@@ -352,9 +353,9 @@
 									'@type': 'Offer',
 									itemOffered: {
 										'@type': 'Service',
-										name: 'Process Review and Documentation',
+										name: 'Process Review and Redesign',
 										description:
-											'Review, enhancement, and documentation of equity programs for efficiency and risk minimization.'
+											'Review and documentation of equity program processes, and redesign of the steps that create risk.'
 									}
 								},
 								{
