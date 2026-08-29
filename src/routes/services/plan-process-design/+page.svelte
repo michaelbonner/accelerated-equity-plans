@@ -49,7 +49,7 @@
 		{
 			title: 'Equity plan design & strategy',
 			description:
-				'We help you select grant types, structure vesting schedules, set grant levels, and draft plan documents with enough room to change later without a shareholder vote.'
+				'We help you select grant types, structure vesting schedules, set grant levels, and draft plan documents that your counsel can sign off on and your administrators can actually run.'
 		},
 		{
 			title: 'Process assessment & optimization',

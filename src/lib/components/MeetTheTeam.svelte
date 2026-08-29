@@ -23,7 +23,7 @@
 				<RedBar />
 				<h2 class={clsx(styles.h2, 'max-w-[24ch] text-balance')}>Meet the leadership team</h2>
 				<div class="prose prose-invert max-w-[64ch] font-light">
-					<p>The three of them founded AEP and still work directly on client engagements.</p>
+					<p>Emily founded AEP in 2021. All three work directly on client engagements.</p>
 				</div>
 			</div>
 

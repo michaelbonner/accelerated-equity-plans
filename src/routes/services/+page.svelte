@@ -326,7 +326,7 @@
 								href={resolve(servicesSection.detailsLink as Pathname)}
 								class={clsx(styles.redButton, 'inline-flex items-center gap-2')}
 							>
-								Explore {servicesSection.title} Services
+								Explore {servicesSection.title}
 							</a>
 						</div>
 					{/if}
