@@ -46,7 +46,7 @@
 <section class="py-24 px-6 bg-white">
 	<div class="mx-auto max-w-4xl">
 		<div class="grid gap-4 text-center mb-12">
-			<h2 class={styles.h2}>Frequently Asked Questions</h2>
+			<h2 class={styles.h2}>Frequently asked questions</h2>
 			<p class="text-stone-600 text-lg">
 				Common questions about our {serviceName} services
 			</p>

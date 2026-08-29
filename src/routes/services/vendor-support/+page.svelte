@@ -21,25 +21,25 @@
 	const features = [
 		{
 			icon: Nodes,
-			title: 'Streamlined System Implementation',
+			title: 'System implementation',
 			description:
 				'We plan the implementation, coordinate with the vendor, and keep decisions and deadlines moving. Before launch, we confirm that the new platform supports the workflows your team depends on.'
 		},
 		{
 			icon: Database,
-			title: 'Data Management & Integration',
+			title: 'Data management & integration',
 			description:
 				'We convert data from spreadsheets or legacy systems, audit it against the source, and connect the new platform with HRIS, payroll, and other systems. Reconciliation and documented review points protect the data throughout the move.'
 		},
 		{
 			icon: DocumentCheck,
-			title: 'RFP Guidance & System Selection',
+			title: 'RFP guidance & system selection',
 			description:
 				'We help define requirements, prepare the RFP, evaluate demonstrations, compare vendors, and support contract discussions. Because we work across platforms, we can assess each option against the way your program actually operates.'
 		},
 		{
 			icon: TestTube,
-			title: 'Comprehensive Functionality Testing',
+			title: 'Functionality testing',
 			description:
 				'Before go-live, we test grant processing, vesting schedules, tax calculations, reporting, and integrations. Detailed test cases make failures visible while there is still time to correct them.'
 		}
@@ -58,45 +58,45 @@
 
 	const platformSupport = [
 		{
-			title: 'Carta Administration Support',
+			title: 'Carta administration support',
 			description:
-				'From initial implementation to day-to-day Carta equity administration, our team helps you configure your cap table, automate grant and vesting workflows, run 409A and ASC 718 reporting, and resolve the issues that slow your team down. Whether you are moving onto Carta or optimizing an existing instance, we bring hands-on expertise.'
+				'From initial implementation to day-to-day Carta equity administration, we configure your cap table, automate grant and vesting workflows, run 409A and ASC 718 reporting, and clear the issues that block your team. We work with companies moving onto Carta and with companies already on it.'
 		},
 		{
-			title: 'Shareworks Administration Support',
+			title: 'Shareworks administration support',
 			description:
 				'We support Shareworks implementation, data migration, participant management, reporting, and ongoing administration. We can also review the current setup and introduce platform features that replace manual work.'
 		},
 		{
-			title: 'Fidelity Stock Plan Services Support',
+			title: 'Fidelity Stock Plan Services support',
 			description:
-				'Get specialized support for Fidelity Stock Plan Services (PSW), from onboarding and data conversion to grant processing, reconciliation, and reporting. We help you streamline operations and make the most of your Fidelity platform.'
+				'We support Fidelity Stock Plan Services (PSW) from onboarding and data conversion through grant processing, reconciliation, and reporting.'
 		},
 		{
-			title: 'Equity Edge Online Support',
+			title: 'Equity Edge Online support',
 			description:
-				'Our team offers deep Equity Edge Online (EEO) support and administration, covering implementation, configuration, transaction processing, tax reporting, and integrations. We help E*TRADE / Morgan Stanley at Work clients optimize EEO and reduce manual work.'
+				'We support Equity Edge Online (EEO) implementation, configuration, transaction processing, tax reporting, and integrations, and we replace the manual steps E*TRADE and Morgan Stanley at Work clients often work around.'
 		}
 	];
 
 	const benefits = [
 		{
-			title: 'Maximize Platform Value',
+			title: 'Maximize platform value',
 			description:
 				'Many companies use only the basic features of their equity platform. We review the configuration, identify useful features that are not in use, and automate work the system can already handle.'
 		},
 		{
-			title: 'Reduce Implementation Risk',
+			title: 'Reduce implementation risk',
 			description:
 				'Implementations slip when requirements, ownership, or testing are unclear. We make those decisions explicit, track open items, and test critical workflows before the launch date.'
 		},
 		{
-			title: 'Vendor-Agnostic Expertise',
+			title: 'Vendor-agnostic expertise',
 			description:
 				'Our consultants work across major equity platforms. That experience helps us compare vendors and recommend configurations based on your requirements instead of one system’s default approach.'
 		},
 		{
-			title: 'Seamless Data Migration',
+			title: 'Data migration',
 			description:
 				'We map, convert, validate, and reconcile migrated data against the source system. The project retains the review history and supporting documentation needed for later audits.'
 		}
@@ -106,7 +106,7 @@
 		{
 			question: 'Which equity management platforms do you support?',
 			answer:
-				"<p>We have extensive experience with all major equity management platforms including E*TRADE, Fidelity, Shareworks, Certent, Carta, Computershare, Schwab, Global Shares, and many others. Our team stays current with platform updates, new features, and best practices across all vendors. Whether you're implementing a new system or optimizing your current platform, we bring deep technical knowledge and practical implementation experience.</p>"
+				'<p>We work across E*TRADE, Fidelity, Shareworks, Certent, Carta, Computershare, Schwab, and Global Shares. Our team tracks platform updates and new features across those vendors, whether you are implementing a new system or reworking the one you have.</p>'
 		},
 		{
 			question: 'How long does a typical system implementation take?',
@@ -116,12 +116,12 @@
 		{
 			question: 'Can you help us select the right equity management system?',
 			answer:
-				'<p>Absolutely. We provide comprehensive support throughout the vendor selection process including requirements gathering, RFP development, vendor demonstrations, feature comparison analysis, and contract negotiation support. Our vendor-agnostic approach ensures you receive objective guidance focused on your specific needs rather than vendor relationships or commissions.</p>'
+				'<p>Yes. We gather requirements, develop the RFP, sit through vendor demonstrations, compare features, and support contract negotiation. We take no commission from any vendor, so the recommendation reflects your requirements.</p>'
 		},
 		{
 			question: 'What does your data migration process include?',
 			answer:
-				'<p>Our data migration process is comprehensive and rigorous. We start with a complete data inventory and quality assessment. We then develop detailed mapping specifications, perform data conversion, conduct multi-level validation testing, and reconcile all data against source systems. We provide full documentation of the migration process and maintain audit trails for compliance purposes. Our goal is 100% data accuracy with zero loss of historical information.</p>'
+				'<p>We start with a data inventory and quality assessment, then develop mapping specifications, convert the data, run multi-level validation testing, and reconcile everything against the source systems. You get documentation of the migration and audit trails for compliance.</p>'
 		},
 		{
 			question: 'Do you provide post-implementation support?',
@@ -131,7 +131,7 @@
 		{
 			question: 'Can you integrate our equity system with other applications?',
 			answer:
-				'<p>Yes, we specialize in integrating equity platforms with HRIS systems (Workday, SAP SuccessFactors, Oracle, ADP, etc.), payroll providers, financial systems, and other enterprise applications. We design automated data flows that reduce manual work, minimize errors, and ensure data consistency across systems. Our integration approach balances automation with appropriate controls and audit trails.</p>'
+				'<p>Yes. We integrate equity platforms with HRIS systems (Workday, SAP SuccessFactors, Oracle, ADP), payroll providers, and financial systems. The automated data flows cut manual entry, and each one carries its own controls and audit trail.</p>'
 		},
 		{
 			question: "What if we're unhappy with our current vendor platform?",
@@ -141,7 +141,7 @@
 		{
 			question: 'How do you ensure our implementation stays on budget and schedule?',
 			answer:
-				'<p>We use proven project management methodologies with clearly defined phases, deliverables, and success criteria. We provide detailed project plans with realistic timelines, conduct regular status updates, proactively identify and address risks, and maintain strict change control processes. Our experience implementing dozens of equity systems helps us anticipate and avoid common pitfalls that cause delays and cost overruns.</p>'
+				'<p>Each phase has defined deliverables and success criteria, and we track open items in a plan you can see. Most delays come from unclear requirements or a scope change nobody priced, so we put both in writing as they come up.</p>'
 		}
 	];
 
@@ -161,7 +161,7 @@
 				url: 'https://www.acceleratedep.com'
 			},
 			description:
-				'Expert vendor support for equity management systems including implementation, data migration, RFP guidance, system selection, and comprehensive functionality testing.',
+				'Vendor support for equity management systems: implementation, data migration, RFP guidance, system selection, and functionality testing.',
 			areaServed: 'United States',
 			serviceType: 'Vendor Support',
 			hasOfferCatalog: {
@@ -205,12 +205,11 @@
 		<div class={clsx('relative grid gap-8', 'md:text-center')}>
 			<div class="grid gap-4">
 				<RedBar classes="md:mx-auto" />
-				<h1 class={clsx(styles.h1, 'text-white')}>Equity Management Vendor Support Services</h1>
+				<h1 class={clsx(styles.h1, 'text-white')}>Equity management vendor support services</h1>
 			</div>
 			<p class="mx-auto max-w-3xl text-lg font-light text-white">
-				Maximize the value of your equity management platform. From vendor selection and
-				implementation to optimization and integration, we ensure your technology investment
-				delivers results.
+				We help you pick an equity management platform, stand it up, move your data onto it, and
+				connect it to the systems around it.
 			</p>
 		</div>
 	</section>
@@ -226,34 +225,31 @@
 		<div class="mx-auto max-w-7xl">
 			<div class="grid gap-8 mb-16">
 				<RedBar />
-				<h2 class={styles.h2}>Expert Vendor Support for Every Stage</h2>
+				<h2 class={styles.h2}>Expert vendor support for every stage</h2>
 				<div class="prose max-w-4xl text-lg text-stone-700 font-light">
 					<p>
-						Your equity management platform is a critical piece of technology infrastructure. When
-						properly implemented and optimized, it streamlines operations, reduces risk, and
-						provides valuable insights. But getting there requires expertise that most companies
-						don't have in-house.
+						An equity platform is only as good as its configuration. Most companies implement one
+						once, with a team that has never done it before, and live with those decisions for
+						years.
 					</p>
 					<p>
 						Whether you're selecting a new vendor, implementing a platform, migrating from a legacy
 						system, or looking to optimize your current setup, AEP provides the specialized
 						knowledge and hands-on support you need. Our team has implemented and provides ongoing
 						<a href={resolve('/services/equity-plan-administration')}>stock plan administration</a> across
-						all major platforms, giving us unique insight into what works, what doesn't, and how to avoid
-						common pitfalls.
+						all major platforms, so we know which configurations hold up once real transaction volume
+						arrives.
 					</p>
 					<p>
-						We take a vendor-agnostic approach, focused solely on your success rather than platform
-						sales or vendor relationships. This objectivity, combined with our deep technical
-						expertise and practical implementation experience, helps you make smart decisions and
-						achieve better outcomes from your equity technology investments.
+						We take no commission from any vendor. That means we can tell you when the platform you
+						have is fine and the problem is the configuration, which is often the case.
 					</p>
 				</div>
 			</div>
 
 			<div class="grid gap-8 mt-20">
 				<RedBar />
-				<h2 class={styles.h2}>Our Vendor Support Services</h2>
+				<h2 class={styles.h2}>Our vendor support services</h2>
 				<div class={clsx('grid gap-6 mt-8', 'md:grid-cols-2')}>
 					{#each features as feature (feature.title)}
 						<div
@@ -278,7 +274,7 @@
 		<div class="mx-auto max-w-7xl">
 			<div class="grid gap-8 mb-12 text-center">
 				<RedBar classes="mx-auto" />
-				<h2 class={styles.h2}>Platforms We Support</h2>
+				<h2 class={styles.h2}>Platforms we support</h2>
 				<p class="text-lg font-light text-stone-300 max-w-3xl mx-auto">
 					Our team has hands-on experience with all major equity management platforms. We stay
 					current with platform updates, new features, and industry best practices.
@@ -303,7 +299,7 @@
 		<div class="mx-auto max-w-7xl">
 			<div class="grid gap-8 mb-12">
 				<RedBar />
-				<h2 class={styles.h2}>Platform-Specific Support</h2>
+				<h2 class={styles.h2}>Platform-specific support</h2>
 				<p class="prose max-w-4xl text-lg text-stone-700 font-light">
 					Need help with a specific equity platform? Our administrators work in these systems every
 					day. These are a few of the platforms we support most often. The work depends on your
@@ -326,7 +322,7 @@
 		<div class="mx-auto max-w-7xl">
 			<div class="grid gap-8 mb-12">
 				<RedBar />
-				<h2 class={styles.h2}>Why Partner with AEP for Vendor Support</h2>
+				<h2 class={styles.h2}>Why partner with AEP for vendor support</h2>
 			</div>
 
 			<div class={clsx('grid gap-6', 'md:grid-cols-2')}>
@@ -344,52 +340,47 @@
 		<div class="mx-auto max-w-4xl">
 			<div class="grid gap-8 mb-12">
 				<RedBar />
-				<h2 class={styles.h2}>Our Implementation Approach</h2>
+				<h2 class={styles.h2}>Our implementation approach</h2>
 			</div>
 
 			<div class="grid gap-8 text-stone-700 prose prose-lg max-w-none">
 				<div>
-					<h3 class={clsx(styles.h3, 'text-stone-900')}>1. Discovery & Planning</h3>
+					<h3 class={clsx(styles.h3, 'text-stone-900')}>1. Discovery & planning</h3>
 					<p class="font-light">
-						We begin every engagement with a thorough assessment of your requirements, current
-						state, and success criteria. This foundation ensures alignment and sets clear
-						expectations for the project.
+						We document your requirements, your current state, and what has to be true at go-live,
+						before anyone touches a system.
 					</p>
 				</div>
 
 				<div>
-					<h3 class={clsx(styles.h3, 'text-stone-900')}>2. Design & Configuration</h3>
+					<h3 class={clsx(styles.h3, 'text-stone-900')}>2. Design & configuration</h3>
 					<p class="font-light">
-						Working collaboratively with your team, we design the optimal system configuration, data
-						structure, and workflows. We document all decisions and obtain sign-off before
-						proceeding to build.
+						We design the configuration, data structure, and workflows with your team, then get each
+						decision written down and signed off before the build starts.
 					</p>
 				</div>
 
 				<div>
-					<h3 class={clsx(styles.h3, 'text-stone-900')}>3. Data Migration & Testing</h3>
+					<h3 class={clsx(styles.h3, 'text-stone-900')}>3. Data migration & testing</h3>
 					<p class="font-light">
-						Our rigorous data migration process includes multiple validation checkpoints and
-						complete reconciliation. We conduct comprehensive testing of all functionality before
-						allowing any production use.
+						We migrate the data through several validation checkpoints and reconcile it against the
+						source system. Nothing goes into production use until the functionality has been tested.
 					</p>
 				</div>
 
 				<div>
-					<h3 class={clsx(styles.h3, 'text-stone-900')}>4. Training & Go-Live</h3>
+					<h3 class={clsx(styles.h3, 'text-stone-900')}>4. Training & go-live</h3>
 					<p class="font-light">
-						We provide comprehensive training for administrators and end users, create
-						documentation, and deliver hands-on support during go-live. Our goal is a smooth
-						transition with confident users.
+						We train administrators and end users, write the documentation they will refer back to,
+						and staff the go-live itself.
 					</p>
 				</div>
 
 				<div>
-					<h3 class={clsx(styles.h3, 'text-stone-900')}>5. Optimization & Support</h3>
+					<h3 class={clsx(styles.h3, 'text-stone-900')}>5. Optimization & support</h3>
 					<p class="font-light">
-						Post-implementation, we help you continuously improve your use of the platform through
-						optimization consulting, advanced feature adoption, and ongoing support as your needs
-						evolve.
+						After go-live we stay available to turn on features you deferred, adjust configurations,
+						and work through what the first few cycles surface.
 					</p>
 				</div>
 			</div>

@@ -30,17 +30,17 @@
 	const servicesBoxes = [
 		{
 			icon: SquareChartGantt,
-			title: 'Why Equity Compensation Consulting Matters',
-			body: `<p>Equity compensation has to work for employees, shareholders, and the teams responsible for compliance. That gets harder as regulations change, markets move, and companies grow. AEP helps you build and run a program that supports the business without losing control of the details.</p>`
+			title: 'Where equity programs fall behind',
+			body: `<p>Your equity program answers to employees, shareholders, and auditors at the same time. A funding round, a new award type, or a move into a new country can put it out of step with all three. AEP builds and runs the program, from grant records through the filings your auditors ask for.</p>`
 		},
 		{
 			icon: FileChartPie,
-			title: 'Our Approach: Data-Driven, People-Focused',
-			body: '<p>We pair hands-on equity experience with benchmarking, reporting, and the systems your team already uses. The result is practical information you can use to assess a plan, prepare for an audit, or understand why employees are not participating.</p>'
+			title: 'How we work',
+			body: '<p>We work in benchmarking, reporting, and the systems your team already uses. You end up knowing whether a plan is competitive, whether you are ready for an audit, and why employees are not participating.</p>'
 		},
 		{
 			icon: EarthIcon,
-			title: 'Who We Serve',
+			title: 'Who we serve',
 			body: '<p>AEP works with growing startups, pre-IPO companies, and established public companies. Our team has supported equity programs in technology, biotech, financial services, and other industries.</p>'
 		}
 	];
@@ -58,7 +58,7 @@
 			icon: HandCoins,
 			iconColor: 'text-aep-red-500',
 			id: 'equity-plan-administration',
-			title: 'Equity Plan Administration',
+			title: 'Equity plan administration',
 			detailsLink: '/services/equity-plan-administration',
 			body: '<p>We run the recurring work behind your stock plan, including grants, releases, reporting, compliance, and employee support. We can own the full program or add experienced help where your internal team needs it.</p>',
 			tags: [
@@ -73,9 +73,9 @@
 			icon: Building2,
 			iconColor: 'text-aep-teal',
 			id: 'vendor-support',
-			title: 'Vendor Support',
+			title: 'Vendor support',
 			detailsLink: '/services/vendor-support',
-			body: '<p>We help you choose, implement, and improve equity administration platforms. Our team works across major vendors, so the recommendation starts with your requirements rather than a preferred system.</p>',
+			body: '<p>We help you choose, implement, and improve equity administration platforms. Our team works across Carta, Certent, Fidelity, Schwab, Morgan Stanley at Work, and Global Shares, so the recommendation starts with your requirements.</p>',
 			tags: [
 				'Expedited system implementation',
 				'Data conversion and audit',
@@ -88,7 +88,7 @@
 			icon: Grid2x2Check,
 			iconColor: 'text-aep-red-500',
 			id: 'advanced-project-support',
-			title: 'Advanced Project Support',
+			title: 'Advanced project support',
 			detailsLink: '/services/advanced-project-support',
 			body: '<p>IPOs, acquisitions, corporate actions, and global expansion create more equity work than many internal teams can absorb. AEP provides experienced project support for the analysis, coordination, testing, and communication these events require.</p>',
 			tags: [
@@ -104,12 +104,12 @@
 			icon: DraftingCompass,
 			iconColor: 'text-aep-teal',
 			id: 'plan-process-design',
-			title: 'Plan & Process Design',
+			title: 'Plan & process design',
 			detailsLink: '/services/plan-process-design',
 			body: '<p>We review how your equity program works today, document the gaps, and design processes your team can maintain. Our consultants also train administrators and help put the right controls in place.</p>',
 			tags: [
 				'Process review, enhancement, and documentation',
-				'Incorporation of best practices to mitigate risk',
+				'Controls and documentation that hold up in an audit',
 				'Administrator system and process training',
 				'Industry trends and analysis for LTI Plan consideration'
 			]
@@ -176,7 +176,7 @@
 					Equity management company for private and public organizations
 				</p>
 				<h1 class={clsx(styles.h1Super, 'max-w-[18ch] lg:text-7xl xl:text-8xl')}>
-					Accelerate Your Equity's Potential
+					Accelerate your equity's potential
 				</h1>
 				<div class="grid max-w-[58ch] gap-4 text-lg/8 font-light text-white/90 text-pretty">
 					<p>
@@ -185,8 +185,8 @@
 						transactions.
 					</p>
 					<p>
-						Founded by industry experts with issuer and vendor experience, we can handle all of your
-						equity administration needs.
+						The administrators who founded AEP in 2021 came from issuer stock plan teams, Deloitte's
+						equity practice, and the brokers that service equity plans.
 					</p>
 				</div>
 				<div class="flex flex-col gap-3 pt-2 sm:flex-row">
@@ -212,23 +212,22 @@
 		<div class="mx-auto max-w-7xl">
 			<div class="grid gap-4">
 				<RedBar />
-				<h2 class={clsx(styles.h2, 'max-w-[30ch]')}>What We Bring to the Table</h2>
+				<h2 class={clsx(styles.h2, 'max-w-[30ch]')}>What we handle</h2>
 				<p class="mt-2 max-w-[64ch] text-lg font-light text-zinc-600 text-pretty">
-					We manage all
+					We manage
 					<a
 						class="text-aep-red-700 underline hover:text-aep-red-600"
 						href={resolve('/services/equity-plan-administration')}
 					>
 						stock plan administration
 					</a>
-					from setup to compliance, allowing you to focus on your core business. We offer temporary support
-					with flexible staffing solutions and provide expertise in
+					from setup to compliance. We cover seasonal peaks and temporary gaps on your team, and we handle
 					<a
 						class="text-aep-red-700 underline hover:text-aep-red-600"
 						href={resolve('/services/advanced-project-support')}
 					>
 						Mergers and Acquisitions, IPOs, SPACs
-					</a>, Corporate Actions, and Automation Design for strategic growth.
+					</a>, Corporate Actions, and Automation Design.
 				</p>
 			</div>
 
@@ -245,7 +244,7 @@
 			</div>
 		</div>
 		<div class="relative flex mt-10 mx-auto max-w-7xl">
-			<a href={resolve('/services')} class={styles.lightButton}>Explore All Equity Plan Services</a>
+			<a href={resolve('/services')} class={styles.lightButton}>Explore all equity plan services</a>
 		</div>
 	</section>
 
@@ -263,7 +262,7 @@
 		<div class="relative mx-auto max-w-7xl">
 			<div class="grid gap-4">
 				<RedBar />
-				<h2 class={clsx(styles.h2, 'max-w-[24ch] text-white')}>Our Comprehensive Services</h2>
+				<h2 class={clsx(styles.h2, 'max-w-[24ch] text-white')}>Our services</h2>
 			</div>
 		</div>
 
@@ -302,7 +301,7 @@
 						</div>
 						<div class="mt-8">
 							<a href={resolve(comprehensiveService.detailsLink)} class={styles.darkButton}>
-								Explore {comprehensiveService.title} Services
+								Explore {comprehensiveService.title}
 							</a>
 						</div>
 					</div>
@@ -311,7 +310,7 @@
 		</div>
 
 		<div class="relative flex justify-center mt-12">
-			<a href={resolve('/services')} class={styles.darkButton}>View All Services</a>
+			<a href={resolve('/services')} class={styles.darkButton}>Explore all services</a>
 		</div>
 	</section>
 
@@ -323,15 +322,14 @@
 				<div class="grid gap-4">
 					<RedBar />
 					<h2 class={clsx(styles.h2, 'max-w-[28ch]')}>
-						Elevate Your Equity Management with Expert Support
+						Equity management that keeps your team in charge
 					</h2>
 				</div>
 				<div class="prose max-w-none">
 					<p class="text-lg font-light text-zinc-600 max-w-[56ch] text-pretty">
-						As a dedicated equity management company, Accelerated Equity Plans partners with you to
-						take work off your internal team without taking them out of the process. We handle plan
-						adjustments, daily administration, and longer-term planning so they can focus on the
-						decisions that need their attention.
+						Accelerated Equity Plans takes the recurring work off your internal team and keeps them
+						in the loop on every decision. We handle plan adjustments, daily administration, and
+						long-term planning. Your team stays the one signing off.
 					</p>
 				</div>
 				<div class="flex gap-x-4">
@@ -372,8 +370,9 @@
 					</h2>
 				</div>
 				<p class="max-w-[62ch] text-lg/8 font-light text-white/85 text-pretty">
-					Our specialists bring decades of issuer, vendor, and consulting experience to every
-					engagement. Meet the people who will work alongside your team.
+					Our leadership has run equity on the issuer side at companies like Unity and Sonder, and
+					on the vendor side at Fidelity and Morgan Stanley. Ten of the seventeen people on our team
+					are Certified Equity Professionals.
 				</p>
 				<div>
 					<a
@@ -408,7 +407,7 @@
 			<div class="grid gap-2">
 				<RedBar classes="mx-auto" />
 				<h2 class={clsx(styles.h2, 'mx-auto max-w-[30ch] text-center')}>
-					Seamless Collaboration with Trusted Vendors
+					Vendors and partners we work with
 				</h2>
 			</div>
 			<div class="mt-12 md:mt-24">

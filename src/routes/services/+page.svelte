@@ -38,120 +38,120 @@
 		{
 			icon: Money,
 			id: 'equity-plan-administration',
-			title: 'Equity Plan Administration',
+			title: 'Equity plan administration',
 			body: '<p>We handle the recurring work behind your stock plan, including grants, releases, reporting, compliance, and employee support. AEP can run the full program or work alongside your internal team on selected responsibilities.</p>',
 			servicesBackgroundColor: 'bg-red-700',
 			detailsLink: '/services/equity-plan-administration',
 			services: [
 				{
 					icon: Bank,
-					title: 'Comprehensive Equity Management',
-					body: '<p>We handle everything from grant lifecycle administration to collaborating with internal teams (Payroll, HR, Accounting, Legal & Treasury) to ensure smooth execution.</p>'
+					title: 'Full grant lifecycle management',
+					body: '<p>We run the grant lifecycle and coordinate with Payroll, HR, Accounting, Legal, and Treasury on the handoffs between them.</p>'
 				},
 				{
 					icon: Education,
-					title: 'Employee Education & Onboarding',
-					body: '<p>We provide educational resources for employees and support a positive experience throughout their equity journey.</p>'
+					title: 'Employee education & onboarding',
+					body: '<p>We give employees resources that explain what they hold, when it vests, and what happens at exercise.</p>'
 				},
 				{
 					icon: People,
-					title: 'Outsourced Administration & Scalable Support',
-					body: '<p>We take ownership of your entire equity plan, offering ongoing administration and flexible staffing solutions to adapt to your workload.</p>'
+					title: 'Outsourced administration & scalable support',
+					body: '<p>We take ownership of the entire plan, and we scale the hours up or down as your workload changes.</p>'
 				},
 				{
 					icon: Graph,
-					title: 'Seasonal & Temporary Support',
-					body: '<p>Need additional support during peak times? We offer temporary staffing solutions to seamlessly manage your equity plan.</p>'
+					title: 'Seasonal & temporary support',
+					body: '<p>We cover peak periods like year-end reporting and vest cycles without you adding headcount.</p>'
 				}
 			]
 		},
 		{
 			icon: Buildings,
 			id: 'vendor-support',
-			title: 'Vendor Support',
-			body: '<p>We help companies choose, implement, migrate, test, and improve equity administration platforms. Because we work across major vendors, we can focus on the system and configuration that fit your requirements.</p>',
+			title: 'Vendor support',
+			body: '<p>We help companies choose, implement, migrate, test, and improve equity administration platforms. Because we work across Carta, Certent, Fidelity, Schwab, Morgan Stanley at Work, and Global Shares, we can focus on the system and configuration that fit your requirements.</p>',
 			servicesBackgroundColor: 'bg-aep-teal',
 			detailsLink: '/services/vendor-support',
 			services: [
 				{
 					icon: Nodes,
-					title: 'Streamlined System Implementation',
-					body: '<p>We expedite system setup, ensuring a smooth transition and rapid functionality.</p>'
+					title: 'System implementation',
+					body: '<p>We run the setup: configuration, testing, and the cutover from your current system.</p>'
 				},
 				{
 					icon: Database,
-					title: 'Data Management & Integration',
-					body: '<p>We handle data conversion, audit, and integration with 3rd party systems for accurate and unified information.</p>'
+					title: 'Data management & integration',
+					body: '<p>We convert and audit your data, then connect the platform to your other systems.</p>'
 				},
 				{
 					icon: DocumentCheck,
-					title: 'RFP Guidance & System Selection',
-					body: '<p>We provide expert guidance throughout the RFP process to help you select the optimal equity management system.</p>'
+					title: 'RFP guidance & system selection',
+					body: '<p>We help you build the requirements list, run the RFP, and compare the responses.</p>'
 				},
 				{
 					icon: TestTube,
-					title: 'Comprehensive Functionality Testing',
-					body: '<p>We ensure your chosen system functions flawlessly through thorough incorporation and testing.</p>'
+					title: 'Functionality testing',
+					body: '<p>We test the configuration against your real award types and edge cases before go-live.</p>'
 				}
 			]
 		},
 		{
 			icon: GridCheck,
 			id: 'advanced-project-support',
-			title: 'Advanced Project Support',
+			title: 'Advanced project support',
 			body: '<p>IPOs, acquisitions, corporate actions, and global expansion can create a sharp increase in equity work. We provide experienced project support for the analysis, coordination, testing, and communication required to get through those events.</p>',
 			servicesBackgroundColor: 'bg-black',
 			detailsLink: '/services/advanced-project-support',
 			services: [
 				{
 					icon: Events,
-					title: 'Strategic Transactions & Equity Events',
-					body: '<p>We guide you through Mergers & Acquisitions, IPOs, SPACs, and other equity events to ensure a smooth process.</p>'
+					title: 'Strategic transactions & equity events',
+					body: '<p>We handle the equity side of mergers, acquisitions, IPOs, and SPACs: award conversions, participant communications, and the reporting each one triggers.</p>'
 				},
 				{
 					icon: Path,
-					title: 'Equity Plan Modifications & Automation',
-					body: '<p>We assist with plan modifications and design automation solutions to streamline your workflow and improve efficiency.</p>'
+					title: 'Equity plan modifications & automation',
+					body: '<p>We process plan modifications and automate the steps your team currently does by hand.</p>'
 				},
 				{
 					icon: Trailer,
-					title: 'Global Workforce Mobility Support',
+					title: 'Global workforce mobility support',
 					body: '<p>We help track mobile employees and grants, coordinate with tax advisors, and explain how a move affects each participant’s awards.</p>'
 				},
 				{
 					icon: GridBlock,
-					title: 'Seamless Integrations',
-					body: '<p>We integrate your equity systems with HRIS and Payroll for effortless data flow and centralized management.</p>'
+					title: 'System integrations',
+					body: '<p>We connect your equity system to HRIS and payroll so grant, vest, and tax data moves without manual entry.</p>'
 				}
 			]
 		},
 		{
 			icon: Compass,
 			id: 'plan-process-design',
-			title: 'Plan & Process Design',
+			title: 'Plan & process design',
 			body: '<p>We review how an equity program operates, document the gaps, and design processes the team can maintain. Our consultants also train administrators and help put practical controls in place.</p>',
 			servicesBackgroundColor: 'bg-aep-teal-dark',
 			detailsLink: '/services/plan-process-design',
 			services: [
 				{
 					icon: FolderEdit,
-					title: 'Streamlined & Optimized Equity Management',
-					body: '<p>We review, enhance, and document your program for peak efficiency, incorporating best practices to minimize risk.</p>'
+					title: 'Process review and documentation',
+					body: '<p>We review how the program runs today, document each process, and fix the steps that create risk.</p>'
 				},
 				{
 					icon: Presentation,
-					title: 'Expert Administrator Training & Support',
-					body: '<p>We equip your team with the knowledge and skills they need through comprehensive administrator system and process training.</p>'
+					title: 'Administrator training',
+					body: '<p>We train your administrators on the system and the processes they will own.</p>'
 				},
 				{
 					icon: Stars,
-					title: 'Data-Driven Decision Making',
-					body: '<p>We provide ongoing industry trend analysis to inform your Long-Term Incentive (LTI) plan decisions and keep you ahead of the curve.</p>'
+					title: 'Industry trends and analysis',
+					body: '<p>We track what comparable companies are doing so your Long-Term Incentive (LTI) decisions start from current data.</p>'
 				},
 				{
 					icon: Umbrella,
-					title: 'Risk Mitigation Through Best Practices',
-					body: '<p>We incorporate industry best practices into your equity program to minimize risk and ensure compliance.</p>'
+					title: 'Controls and compliance',
+					body: '<p>We add the controls and documentation an auditor asks for.</p>'
 				}
 			]
 		}
@@ -161,64 +161,64 @@
 		{
 			id: 'ipos-and-spacs',
 			title: `IPOs and SPACs`,
-			body: `We provide expert support throughout the IPO process, guiding companies through the complexities and challenges of going public to ensure a successful transition. We can also be a resource as work volumes pick up and you need extra support.`
+			body: `We support the equity side of going public, from pre-IPO cleanup through the first post-IPO reporting cycles. We can also add capacity when work volume spikes.`
 		},
 		{
 			id: 'corporate-actions',
-			title: `Corporate Actions`,
-			body: `We help companies navigate strategic restructuring through mergers & acquisitions, stock splits, and spinoffs.`
+			title: `Corporate actions`,
+			body: `We handle the equity work in mergers and acquisitions, stock splits, and spinoffs.`
 		},
 		{
 			id: 'automation-design-and-resources',
-			title: `Automation Design and Resources`,
+			title: `Automation design and resources`,
 			body: `We automate repetitive equity tasks and connect equity systems with payroll and HRIS. This reduces manual entry, gives teams consistent data, and adds controls around each transfer.`
 		},
 		{
 			id: 'tax-and-mobility-implementation-and-support',
-			title: `Tax and Mobility implementation and support`,
-			body: `We ensure you're maximizing tax efficiency with a review of your withholding setup and best practice advice. Plus, we offer support throughout your mobility process, from initial setup and testing to ongoing assistance.`
+			title: `Tax and mobility implementation and support`,
+			body: `We review your withholding setup and flag what needs correcting. We also support mobility from initial setup and testing through ongoing tracking.`
 		},
 
 		{
 			id: 'system-implementation',
 			title: `System implementation`,
-			body: `We streamline your equity management by supporting implementation of new systems, data conversion (spreadsheets or legacy systems), and ensuring data reconciliation for accurate financial reporting.`
+			body: `We support new system implementations, convert data from spreadsheets or legacy systems, and reconcile it so financial reporting ties out.`
 		},
 		{
 			id: 'vendor-selection-and-rfp',
-			title: `Vendor Selection and RFP`,
-			body: `We provide expert vendor selection support, guiding businesses through the process of identifying and choosing the right partners to meet their specific needs and goals`
+			title: `Vendor selection and RFP`,
+			body: `We help you identify candidate vendors, compare them against your requirements, and choose one.`
 		},
 		{
 			id: 'system-functionality-incorporation-and-testing',
 			title: `System functionality incorporation and testing`,
-			body: `We maximize your equity system's value by supporting implementation, testing, and automation, freeing you for strategic initiatives.`
+			body: `We test new functionality before you turn it on, and automate what your team repeats.`
 		},
 		{
 			id: 'process-review-and-documentation',
 			title: `Process review and documentation`,
-			body: `We review and document your current processes, interview stakeholders and recommend best practices`
+			body: `We interview the people who run each process, document how it actually works, and recommend changes.`
 		},
 
 		{
 			id: 'training',
 			title: `Training`,
-			body: `AEP helps to train your employees on administering your equity plans, best practices and creating processes that will save time and reduce risk.`
+			body: `We train your team to administer the plan and to document the processes they build.`
 		},
 		{
 			id: 'education',
 			title: `Education`,
-			body: `We specialize in educating employees on their equity awards, providing comprehensive guidance and resources to ensure they understand the value and implications of their stock compensation plans.`
+			body: `We teach employees what their awards are worth, when they vest, and what they owe in tax.`
 		},
 		{
 			id: 'system-functionality-incorporation-and-testing-secondary',
 			title: `System functionality incorporation and testing`,
-			body: `We maximize your equity system's value by supporting implementation, testing, and automation, freeing you for strategic initiatives.`
+			body: `We test new functionality before you turn it on, and automate what your team repeats.`
 		},
 		{
 			id: 'process-review-and-documentation-secondary',
 			title: `Process review and documentation`,
-			body: `We review and document your current processes, interview stakeholders and recommend best practices`
+			body: `We interview the people who run each process, document how it actually works, and recommend changes.`
 		}
 	];
 </script>
@@ -246,12 +246,11 @@
 		<div class="absolute inset-0 bg-black/80"></div>
 		<div class={clsx('relative grid gap-16', 'md:gap-24')}>
 			<div class={clsx('relative grid gap-8', 'md:text-center')}>
-				<h1 class={clsx(styles.h1, 'text-white')}>Our Services</h1>
+				<h1 class={clsx(styles.h1, 'text-white')}>Our services</h1>
 				<p class="mx-auto max-w-3xl text-lg font-light text-white prose">
-					From plan setup and compliance to ongoing management, we ensure your stock plans run
-					smoothly. Need temporary support? We offer flexible staffing solutions. Expanding your
-					horizons? Our expertise covers Mergers & Acquisitions, IPOs, SPACs, and Corporate Actions.
-					Let us design automation solutions to streamline your processes and fuel strategic growth.
+					We set up plans, keep them compliant, and run them day to day. We cover peak periods
+					without you adding headcount, and we handle the equity work in mergers and acquisitions,
+					IPOs, SPACs, and corporate actions. We also automate the steps your team repeats.
 				</p>
 			</div>
 			<div
@@ -359,7 +358,7 @@
 			<div class="grid gap-12 mx-auto max-w-7xl">
 				<div class="grid gap-4 text-center">
 					<RedBar classes="mx-auto" />
-					<h2 class={styles.h2}>More Services</h2>
+					<h2 class={styles.h2}>More services</h2>
 				</div>
 			</div>
 

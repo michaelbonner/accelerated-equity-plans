@@ -179,7 +179,7 @@
 		<div class="bg-stone-50 rounded-xl p-8">
 			<div class="grid gap-4">
 				<RedBar />
-				<h2 class={styles.h3}>Need Help With Your Equity Plan?</h2>
+				<h2 class={styles.h3}>Need help with your equity plan?</h2>
 			</div>
 			<p class="mt-4 text-stone-600 font-light">
 				Our team of equity compensation experts is ready to help you navigate the complexities of

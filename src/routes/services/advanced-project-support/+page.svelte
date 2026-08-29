@@ -21,25 +21,25 @@
 	const features = [
 		{
 			icon: Events,
-			title: 'Strategic Transactions & Equity Events',
+			title: 'Strategic transactions & equity events',
 			description:
 				'We support equity treatment analysis, participant communications, system conversions, and compliance work for M&A, IPOs, SPACs, and other corporate events. Our consultants coordinate the details across internal teams and external advisors.'
 		},
 		{
 			icon: Path,
-			title: 'Equity Plan Modifications & Automation',
+			title: 'Equity plan modifications & automation',
 			description:
 				'We redesign plan workflows and automate repetitive steps where the process and controls are clear. The goal is less manual entry, fewer handoffs, and a record your team can review.'
 		},
 		{
 			icon: Trailer,
-			title: 'Global Workforce Mobility Support',
+			title: 'Global workforce mobility support',
 			description:
 				'We help track mobile employees and grants, coordinate tax requirements across jurisdictions, and explain the equity impact to participants. Our team works with your tax and legal advisors on country-specific requirements.'
 		},
 		{
 			icon: GridBlock,
-			title: 'Seamless System Integrations',
+			title: 'System integrations',
 			description:
 				'We connect the equity platform with HRIS, payroll, and other business systems. Each integration includes data mapping, validation rules, error handling, and a reconciliation process.'
 		}
@@ -47,57 +47,57 @@
 
 	const projectTypes = [
 		{
-			title: 'IPO Preparation & Execution',
+			title: 'IPO preparation & execution',
 			description:
 				'We prepare private-company equity operations for public-company requirements, including Section 16 setup, insider trading policies, Form S-8 preparation, award transitions, and participant education.'
 		},
 		{
-			title: 'Merger & Acquisition Support',
+			title: 'Merger & acquisition support',
 			description:
 				'We support equity due diligence, award treatment analysis, participant communications, system consolidation, compliance, and post-close integration. This gives the deal team a clear view of equity obligations before and after closing.'
 		},
 		{
-			title: 'SPAC Transactions',
+			title: 'SPAC transactions',
 			description:
-				'Manage equity compensation through SPAC mergers and de-SPAC transactions. We provide specialized expertise in equity plan conversions, participant communications, regulatory compliance, and operational transitions unique to SPAC structures.'
+				'We manage equity compensation through SPAC mergers and de-SPAC transactions, covering plan conversions, participant communications, regulatory compliance, and the operational transitions specific to SPAC structures.'
 		},
 		{
-			title: 'Corporate Restructuring',
+			title: 'Corporate restructuring',
 			description:
 				'We calculate and process equity adjustments for spinoffs, stock splits, reverse splits, and other restructurings. The work includes participant communications, system updates, reconciliation, and audit support.'
 		},
 		{
-			title: 'Global Expansion',
+			title: 'Global expansion',
 			description:
 				'We help companies extend equity programs into new countries, coordinating local rules, grant structures, tax considerations, and participant education with the appropriate advisors.'
 		},
 		{
-			title: 'System Modernization',
+			title: 'System modernization',
 			description:
-				'Upgrade from legacy systems or spreadsheet-based processes to modern equity platforms. We manage the complete transformation including vendor selection, data migration, process redesign, and change management to deliver operational excellence.'
+				'We move companies off legacy systems and spreadsheets onto current equity platforms, covering vendor selection, data migration, process redesign, and the retraining that comes with it.'
 		}
 	];
 
 	const benefits = [
 		{
-			title: 'Deep Specialized Expertise',
+			title: 'Deep specialized expertise',
 			description:
-				"Complex projects demand specialized knowledge. Our team brings extensive experience managing hundreds of IPOs, M&A transactions, system implementations, and other challenging equity projects. We've seen and solved the problems you're likely to encounter."
+				'Our consultants have worked IPOs, M&A transactions, and system implementations from the issuer side, the vendor side, and the advisory side. Ten of the seventeen people on our team are Certified Equity Professionals.'
 		},
 		{
-			title: 'Risk Mitigation',
+			title: 'Risk mitigation',
 			description:
-				'High-stakes projects carry significant risk. Our structured approach, proven methodologies, and quality control processes help you avoid costly mistakes, regulatory issues, and operational disruptions that can derail critical initiatives.'
+				'Equity mistakes in a transaction are expensive and hard to unwind. We work from a documented plan with review points, so errors surface during testing rather than after a filing.'
 		},
 		{
-			title: 'Bandwidth & Agility',
+			title: 'Bandwidth & agility',
 			description:
-				'Major projects often strain internal resources. We provide experienced professionals who ramp up quickly, integrate seamlessly with your team, and deliver results without requiring long-term headcount commitments.'
+				'We provide administrators who can start without a long ramp-up and leave when the project ends, so a six-month spike does not become a permanent hire.'
 		},
 		{
-			title: 'Objective Perspective',
+			title: 'Objective perspective',
 			description:
-				'External experts bring fresh perspectives and best practices from across the industry. We challenge assumptions, identify blind spots, and recommend optimal approaches based on what actually works, not just theoretical ideals.'
+				'We have no stake in the process you already built. We question the assumptions behind it and say when a workaround has outlived the problem it solved.'
 		}
 	];
 
@@ -105,7 +105,7 @@
 		{
 			question: 'How do you support companies going through an IPO?',
 			answer:
-				'<p>Our IPO support is comprehensive and typically begins 6-12 months before your target IPO date. We help you establish Section 16 compliance programs, develop insider trading policies, prepare equity-related S-1 disclosures, transition from private to public grant types, set up quarterly blackout period processes, implement post-IPO reporting requirements, and educate participants about changes to their equity awards. We can supplement your team during the intense pre-IPO period and continue supporting you post-IPO as you adjust to public company requirements.</p>'
+				'<p>Our IPO support typically begins 6-12 months before your target IPO date. We help you establish Section 16 compliance programs, develop insider trading policies, prepare equity-related S-1 disclosures, transition from private to public grant types, set up quarterly blackout period processes, implement post-IPO reporting requirements, and educate participants about changes to their equity awards. We can supplement your team during the intense pre-IPO period and continue supporting you post-IPO as you adjust to public company requirements.</p>'
 		},
 		{
 			question: 'What M&A equity support do you provide?',
@@ -120,12 +120,12 @@
 		{
 			question: 'Can you help automate our equity processes?',
 			answer:
-				'<p>Absolutely. We start by reviewing your current processes to identify automation opportunities and pain points. We then design automated workflows leveraging your equity platform capabilities, HRIS/Payroll integrations, and other technologies. Common automation projects include grant processing, vesting notifications, tax withholding, data reconciliation, and reporting. Our goal is to eliminate manual work, reduce errors, and free your team for strategic initiatives.</p>'
+				'<p>Yes. We review your current processes to find what is repetitive and where errors enter, then design automated workflows using your equity platform, HRIS and payroll integrations, and other systems. Common projects cover grant processing, vesting notifications, tax withholding, data reconciliation, and reporting.</p>'
 		},
 		{
 			question: 'Do you support global equity programs?',
 			answer:
-				'<p>Yes, we have extensive experience with international equity compensation across numerous countries. We help you navigate local securities laws, tax regulations, and compliance requirements. Our services include mobility grant tracking, hypothetical tax calculations, shadow payroll coordination, international participant education, and local reporting. We work with your legal and tax advisors to implement compliant, tax-efficient global equity strategies.</p>'
+				'<p>Yes. We work through local securities laws, tax regulations, and compliance requirements with your legal and tax advisors. That covers mobility grant tracking, hypothetical tax calculations, shadow payroll coordination, participant education, and local reporting.</p>'
 		},
 		{
 			question: 'How do you integrate equity systems with our other applications?',
@@ -140,12 +140,12 @@
 		{
 			question: 'Can you provide support during peak periods only?',
 			answer:
-				'<p>Yes, many of our project engagements are time-bound. We can provide intensive support during critical periods like IPO preparation, M&A execution, system implementations, or year-end activities, then scale back once the peak period passes. This flexibility lets you access specialized expertise exactly when you need it without long-term commitments.</p>'
+				'<p>Yes. Many of our engagements are time-bound: heavy support through IPO preparation, M&A execution, a system implementation, or year-end, then scaled back once the peak passes.</p>'
 		},
 		{
 			question: 'How do you ensure project success?',
 			answer:
-				'<p>Our project approach emphasizes clear objectives, detailed planning, regular communication, proactive risk management, and quality control. We define success criteria upfront, develop comprehensive project plans, conduct regular status reviews, identify and address risks early, and maintain rigorous testing and validation processes. Our methodology is based on hundreds of successful projects and continuous refinement of what works.</p>'
+				'<p>We define success criteria at the start, keep a project plan you can see, hold regular status reviews, and raise risks while there is still time to act on them. Testing and validation happen before each milestone, not after.</p>'
 		}
 	];
 
@@ -208,7 +208,7 @@
 		<div class={clsx('relative grid gap-8', 'md:text-center')}>
 			<div class="grid gap-4">
 				<RedBar classes="md:mx-auto" />
-				<h1 class={clsx(styles.h1, 'text-white')}>Advanced Equity Project Support Services</h1>
+				<h1 class={clsx(styles.h1, 'text-white')}>Advanced equity project support services</h1>
 			</div>
 			<p class="mx-auto max-w-3xl text-lg font-light text-white">
 				Bring in experienced help for the equity work behind IPOs, M&A, automation, and global
@@ -228,7 +228,7 @@
 		<div class="mx-auto max-w-7xl">
 			<div class="grid gap-8 mb-16">
 				<RedBar />
-				<h2 class={styles.h2}>Expert Support for Complex Equity Initiatives</h2>
+				<h2 class={styles.h2}>Expert support for complex equity initiatives</h2>
 				<div class="prose max-w-4xl text-lg text-stone-700 font-light">
 					<p>
 						Major equity projects, including an IPO, M&A transaction, global expansion, or a
@@ -237,9 +237,10 @@
 						planning, and accurate execution. Mistakes can be costly and difficult to unwind.
 					</p>
 					<p>
-						AEP has managed hundreds of complex equity projects across industries. We understand the
-						technical requirements, regulatory constraints, and operational work behind these
-						events, including the dependencies that can threaten a deadline.
+						Our consultants have run this work from inside issuer equity teams and from the vendor
+						side, at private companies and at large multinational public companies. We know the
+						technical requirements, the regulatory constraints, and the dependencies that quietly
+						threaten a deadline.
 					</p>
 					<p>
 						We work inside your existing project structure or manage the equity workstream directly.
@@ -251,7 +252,7 @@
 
 			<div class="grid gap-8 mt-20">
 				<RedBar />
-				<h2 class={styles.h2}>Our Advanced Project Services</h2>
+				<h2 class={styles.h2}>Our advanced project services</h2>
 				<div class={clsx('grid gap-6 mt-8', 'md:grid-cols-2')}>
 					{#each features as feature (feature.title)}
 						<div
@@ -276,7 +277,7 @@
 		<div class="mx-auto max-w-7xl">
 			<div class="grid gap-8 mb-12">
 				<RedBar />
-				<h2 class={styles.h2}>Complex Projects We Support</h2>
+				<h2 class={styles.h2}>Complex projects we support</h2>
 				<p class="text-lg text-stone-600 font-light max-w-3xl">
 					We bring specialized expertise to your most challenging equity initiatives
 				</p>
@@ -297,7 +298,7 @@
 		<div class="mx-auto max-w-7xl">
 			<div class="grid gap-8 mb-12">
 				<RedBar />
-				<h2 class={styles.h2}>Why Choose AEP for Complex Projects</h2>
+				<h2 class={styles.h2}>Why choose AEP for complex projects</h2>
 			</div>
 
 			<div class={clsx('grid gap-6', 'md:grid-cols-2')}>
@@ -319,43 +320,40 @@
 		<div class="relative mx-auto max-w-4xl">
 			<div class="grid gap-8 mb-12 text-center">
 				<RedBar classes="mx-auto" />
-				<h2 class={styles.h2}>Our Project Methodology</h2>
+				<h2 class={styles.h2}>Our project methodology</h2>
 			</div>
 
 			<div class="grid gap-8 prose prose-lg max-w-none prose-invert">
 				<div>
-					<h3 class={clsx(styles.h3)}>Assessment & Planning</h3>
+					<h3 class={clsx(styles.h3)}>Assessment & planning</h3>
 					<p class="font-light text-stone-300">
-						Every successful project begins with thorough discovery. We assess your current state,
-						define clear objectives, identify risks, and develop comprehensive project plans with
-						realistic timelines and resource requirements.
+						We assess your current state, define what the project has to deliver, name the risks,
+						and build a plan with timelines and resourcing your team can hold us to.
 					</p>
 				</div>
 
 				<div>
-					<h3 class={clsx(styles.h3)}>Collaborative Execution</h3>
+					<h3 class={clsx(styles.h3)}>Collaborative execution</h3>
 					<p class="font-light text-stone-300">
-						We work hand-in-hand with your team, providing specialized expertise while respecting
-						your organizational knowledge. Our collaborative approach ensures alignment, knowledge
-						transfer, and sustainable results beyond project completion.
+						We work alongside your team rather than around it. Your people know the history behind
+						the decisions we are changing, and the project goes faster when that knowledge is in the
+						room.
 					</p>
 				</div>
 
 				<div>
-					<h3 class={clsx(styles.h3)}>Quality Assurance</h3>
+					<h3 class={clsx(styles.h3)}>Quality assurance</h3>
 					<p class="font-light text-stone-300">
-						Rigorous quality control is built into every phase. We conduct thorough reviews,
-						multiple levels of testing, comprehensive validation, and final verification to ensure
-						deliverables meet the highest standards.
+						Each phase carries its own reviews, testing, and validation, and nothing moves to the
+						next phase on the strength of an assumption.
 					</p>
 				</div>
 
 				<div>
-					<h3 class={clsx(styles.h3)}>Knowledge Transfer</h3>
+					<h3 class={clsx(styles.h3)}>Knowledge transfer</h3>
 					<p class="font-light text-stone-300">
-						Project success means your team is empowered to sustain results. We provide
-						comprehensive documentation, training, and hands-on support to ensure smooth transitions
-						and ongoing operational excellence.
+						We leave behind documentation and trained administrators, so your team can run what we
+						built after we are gone.
 					</p>
 				</div>
 			</div>
