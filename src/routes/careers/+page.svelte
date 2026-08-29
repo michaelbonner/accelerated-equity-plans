@@ -32,7 +32,7 @@
 		},
 		{
 			icon: Key,
-			title: 'Employee Ownership',
+			title: 'Employee ownership',
 			body: '<p>We believe employee ownership works best when people understand it. That belief shapes both our client work and the way we run AEP.</p>'
 		},
 		{
@@ -42,7 +42,7 @@
 		},
 		{
 			icon: LightningBolt,
-			title: 'Dynamic Team',
+			title: 'Dynamic team',
 			body: '<p>Our team brings different backgrounds and specialties to the work. You will collaborate closely with colleagues while building expertise of your own.</p>'
 		}
 	];
@@ -50,25 +50,25 @@
 	const careerOpportunities = [
 		{
 			icon: Bank,
-			title: 'Equity Consultant',
+			title: 'Equity consultant',
 			description:
 				'Manage day-to-day equity plan operations including grant processing, vesting schedules, exercises, and settlements. Work with RSUs, stock options, ESPPs, and other equity vehicles across major platforms like E*TRADE, Fidelity, and Shareworks.'
 		},
 		{
 			icon: Education,
-			title: 'Senior Equity Consultant',
+			title: 'Senior equity consultant',
 			description:
-				"Manage more complex day-to-day equity plan operations, multiple system expertise, ability to handle multiple competing priorities, employee education, and build a foundational relationship to meet and exceed all clients' needs."
+				'Handle the more complex day-to-day operations across multiple systems and competing deadlines, run employee education sessions, and become the client contact your accounts rely on.'
 		},
 		{
 			icon: Graph,
-			title: 'Consulting Manager',
+			title: 'Consulting manager',
 			description:
-				'Partner with clients to optimize their equity programs, implement new platforms, design efficient processes, and provide strategic guidance on equity compensation best practices.'
+				'Work with clients to improve their equity programs, implement new platforms, redesign processes, and advise on plan structure.'
 		},
 		{
 			icon: DocumentCheck,
-			title: 'Consulting Director',
+			title: 'Consulting director',
 			description:
 				'Build in-depth relationships, handle complex equity compensation scenarios, support SEC reporting for public companies, assist with ASC 718 calculations, and provide expertise on equity plan design and compliance matters.'
 		}
@@ -76,22 +76,22 @@
 
 	const qualifications = [
 		{
-			title: 'Experience with Equity Platforms',
+			title: 'Experience with equity platforms',
 			description:
 				'Familiarity with major equity management systems such as E*TRADE Corporate Services, Fidelity Stock Plan Services, Morgan Stanley Shareworks, Certent, Carta, or Equity Edge Online.'
 		},
 		{
-			title: 'Knowledge of Equity Compensation',
+			title: 'Knowledge of equity compensation',
 			description:
 				'Understanding of stock options (ISOs/NSOs), restricted stock units (RSUs), employee stock purchase plans (ESPPs), performance shares, and other equity award types.'
 		},
 		{
-			title: 'Attention to Detail',
+			title: 'Attention to detail',
 			description:
-				'Strong analytical skills and meticulous attention to detail for handling sensitive financial data, complex calculations, and regulatory compliance requirements.'
+				'The work involves sensitive financial data, calculations that have to be right the first time, and filings with deadlines. Small errors get expensive.'
 		},
 		{
-			title: 'Communication Skills',
+			title: 'Communication skills',
 			description:
 				'Ability to explain complex equity concepts clearly to employees, collaborate with cross-functional teams, and build strong client relationships.'
 		}
@@ -116,7 +116,7 @@
 		{
 			question: 'Do you offer remote or hybrid work options?',
 			answer:
-				'<p>Yes, we offer flexible work arrangements including remote and hybrid options for many positions. We believe in empowering our team members to work in environments where they can be most productive while maintaining strong collaboration and communication with colleagues and clients.</p>'
+				'<p>Yes. Many positions are remote or hybrid. We care that you are reachable during client hours and present for the team, not where you sit.</p>'
 		},
 		{
 			question: 'What career growth opportunities exist in equity compensation?',
@@ -126,7 +126,7 @@
 		{
 			question: 'What benefits does AEP offer employees?',
 			answer:
-				'<p>AEP offers a comprehensive benefits package including competitive compensation, health insurance, retirement plans, professional development opportunities, and equity participation in the company. We invest in our team through ongoing training, industry conference attendance, and support for professional certifications like the CEP program.</p>'
+				'<p>Health insurance, retirement plans, equity participation in AEP itself, and paid support for the CEP designation, including exam fees and study time. We also send people to industry conferences.</p>'
 		},
 		{
 			question: 'How do I apply for a position at Accelerated Equity Plans?',
@@ -141,7 +141,7 @@
 		{
 			question: 'Do I need a Certified Equity Professional (CEP) certification to work at AEP?',
 			answer:
-				'<p>While CEP certification is not required to join our team, we highly value the designation and actively support employees pursuing it. The CEP program demonstrates deep knowledge of equity compensation and commitment to the profession. We provide study resources, exam preparation support, and cover certification costs for team members.</p>'
+				'<p>While CEP certification is not required to join our team, we highly value the designation and actively support employees pursuing it. The CEP is the credential the field recognizes. We provide study resources, exam preparation support, and cover certification costs for team members.</p>'
 		}
 	];
 
@@ -222,13 +222,12 @@
 		<!-- Should be foreground div in same container -->
 		<div class={clsx('relative z-10 h-full', 'sm:px-8 sm:text-center')}>
 			<div class={clsx('grid gap-4 prose-white max-w-5xl', 'sm:mx-auto')}>
-				<h1 class={styles.h1}>Equity Plan Administration Jobs & Careers</h1>
+				<h1 class={styles.h1}>Equity plan administration jobs & careers</h1>
 				<div class="max-w-full prose">
 					<p class="mx-auto mt-6 max-w-3xl text-lg font-light leading-8 text-white">
-						Build your career in equity compensation with Accelerated Equity Plans. We're seeking
-						talented professionals passionate about stock compensation, employee ownership, and
-						delivering exceptional client service. Join a team where your expertise in equity plan
-						administration makes a real impact.
+						We hire equity professionals at every level, from people processing their first grants
+						to consultants who have taken a company public. Ten of the seventeen people here are
+						Certified Equity Professionals, and we pay for the next person to sit the exam.
 					</p>
 				</div>
 			</div>
@@ -244,11 +243,8 @@
 						<Document />
 					</div>
 				</div>
-				<h2 class={styles.h3}>Send Us Your Resume</h2>
-				<p>
-					Interested in an equity plan administration career? We're always looking for talented
-					professionals to join our team.
-				</p>
+				<h2 class={styles.h3}>Send us your resume</h2>
+				<p>We keep resumes on file and reach out when a role opens that fits.</p>
 				<div class="mt-2">
 					<button onclick={openApplyModal} class={styles.redButton}>Join the AEP Team!</button>
 				</div>
@@ -262,7 +258,7 @@
 		<section class={clsx('max-w-7xl mx-auto py-24', 'md:py-36')}>
 			<div class="grid gap-2">
 				<RedBar />
-				<h2 class={styles.h2}>Why Work For Us?</h2>
+				<h2 class={styles.h2}>Why work for us?</h2>
 			</div>
 			<div class={clsx('max-w-7xl mx-auto grid gap-4 mt-12', 'sm:grid-cols-2', 'lg:grid-cols-4')}>
 				{#each reasonsToWorkForUs as reason (reason.title)}
@@ -288,28 +284,24 @@
 			<div class="mx-auto max-w-7xl">
 				<div class="grid gap-8 mb-16">
 					<RedBar />
-					<h2 class={styles.h2}>Careers in Equity Plan Administration</h2>
+					<h2 class={styles.h2}>Careers in equity plan administration</h2>
 					<div class="prose max-w-4xl text-lg text-stone-700 font-light">
 						<p>
-							Equity plan administration is a specialized and rewarding field at the intersection of
-							finance, human resources, and technology. As more companies embrace employee ownership
-							through stock compensation, the demand for skilled equity professionals continues to
-							grow. Whether you're an experienced equity administrator or looking to transition into
-							this dynamic field, AEP offers opportunities to build your expertise and advance your
-							career.
+							Equity plan administration sits between finance, HR, and the systems that hold the
+							records. It is a small field, and the people in it tend to stay, because the knowledge
+							takes years to build and transfers well between companies.
 						</p>
 						<p>
-							At Accelerated Equity Plans, you'll work with leading companies across industries,
-							gaining exposure to diverse equity programs and complex scenarios. Our team handles
-							everything from routine grant processing to sophisticated M&A transactions, giving you
-							the breadth of experience that accelerates professional growth.
+							At AEP you work across several client programs instead of one. In a year you might
+							process routine grants, migrate a company onto a new platform, and work an M&A award
+							conversion, which is more variety than most in-house roles offer.
 						</p>
 					</div>
 				</div>
 
 				<div class="grid gap-8 mt-24">
 					<RedBar />
-					<h2 class={styles.h2}>Types of Equity Administration Roles</h2>
+					<h2 class={styles.h2}>Types of equity administration roles</h2>
 					<div class={clsx('grid gap-6 mt-4', 'md:grid-cols-2')}>
 						{#each careerOpportunities as opportunity (opportunity.title)}
 							<div
@@ -334,11 +326,9 @@
 			<div class="mx-auto max-w-7xl">
 				<div class="grid gap-8 mb-12">
 					<RedBar />
-					<h2 class={styles.h2}>What We Look For</h2>
+					<h2 class={styles.h2}>What we look for</h2>
 					<p class="text-lg text-stone-700 font-light max-w-4xl">
-						We hire equity compensation professionals at all experience levels. While specific
-						requirements vary by role, here are the core skills and qualifications we value in
-						candidates for equity plan administration jobs.
+						Requirements vary by role, but these four come up in every one.
 					</p>
 				</div>
 
@@ -357,38 +347,34 @@
 			<div class="mx-auto max-w-4xl">
 				<div class="grid gap-8 mb-12">
 					<RedBar />
-					<h2 class={styles.h2}>Your Path to a Stock Compensation Career</h2>
+					<h2 class={styles.h2}>Your path to a stock compensation career</h2>
 				</div>
 
 				<div class="grid gap-8 text-stone-700 prose prose-lg max-w-none">
 					<div>
-						<h3 class={clsx(styles.h3, 'text-stone-900')}>Entry-Level Opportunities</h3>
+						<h3 class={clsx(styles.h3, 'text-stone-900')}>Entry-level opportunities</h3>
 						<p class="font-light">
-							New to equity compensation? We welcome candidates from finance, accounting, HR, and
-							operations backgrounds who are eager to learn. Entry-level roles focus on transaction
-							processing, data management, and participant support, providing a solid foundation in
-							equity plan administration fundamentals.
+							We take candidates from finance, accounting, HR, and operations with no equity
+							background. Entry-level roles cover transaction processing, data management, and
+							participant support, which is where everyone in this field starts.
 						</p>
 					</div>
 
 					<div>
-						<h3 class={clsx(styles.h3, 'text-stone-900')}>Experienced Professionals</h3>
+						<h3 class={clsx(styles.h3, 'text-stone-900')}>Experienced professionals</h3>
 						<p class="font-light">
-							Bring your equity expertise to AEP and expand your skills working with diverse clients
-							and complex scenarios. We value professionals with experience in stock option
-							administration, RSU processing, ESPP management, SEC compliance, and equity platform
-							management. Senior roles offer opportunities to mentor others and shape client
-							solutions.
+							We look for experience in stock option administration, RSU processing, ESPP
+							management, SEC compliance, and platform administration. Senior roles include
+							mentoring and scoping client work.
 						</p>
 					</div>
 
 					<div>
-						<h3 class={clsx(styles.h3, 'text-stone-900')}>Career Changers</h3>
+						<h3 class={clsx(styles.h3, 'text-stone-900')}>Career changers</h3>
 						<p class="font-light">
-							Considering a transition into equity compensation? Your transferable skills matter.
-							We've seen successful equity professionals emerge from customer service, banking,
-							legal support, and corporate HR roles. If you're detail-oriented, analytically minded,
-							and passionate about learning, we'd love to hear from you.
+							Good equity administrators come out of customer service, banking, legal support, and
+							corporate HR. The work rewards people who are careful with detail and comfortable
+							explaining a number to someone who is worried about it.
 						</p>
 					</div>
 				</div>
@@ -399,33 +385,29 @@
 			<div class="mx-auto max-w-4xl">
 				<div class="grid gap-8 mb-12">
 					<RedBar />
-					<h2 class={styles.h2}>Professional Development</h2>
+					<h2 class={styles.h2}>Professional development</h2>
 				</div>
 
 				<div class="grid gap-8 text-stone-700 prose prose-lg max-w-none">
-					<p class="font-light">
-						We invest in our team's growth because your success drives our success. AEP provides
-						comprehensive professional development opportunities to help you build expertise in
-						equity plan administration and advance your career.
-					</p>
+					<p class="font-light">What we provide:</p>
 
 					<ul class="font-light space-y-4">
 						<li>
-							<strong class="text-stone-900">Certified Equity Professional (CEP) Support:</strong> We
+							<strong class="text-stone-900">Certified Equity Professional (CEP) support.</strong> We
 							cover exam fees, provide study materials, and offer paid study time for team members pursuing
 							their CEP designation.
 						</li>
 						<li>
-							<strong class="text-stone-900">Industry Conferences:</strong> Attend leading equity compensation
-							conferences to stay current on trends, expand your network, and learn from industry experts.
+							<strong class="text-stone-900">Industry conferences.</strong> We send people to the major
+							equity compensation conferences each year.
 						</li>
 						<li>
-							<strong class="text-stone-900">Cross-Training:</strong> Gain exposure to different aspects
-							of equity administration through cross-training opportunities and diverse client assignments.
+							<strong class="text-stone-900">Cross-training.</strong> You rotate across client assignments
+							rather than staying on one account.
 						</li>
 						<li>
-							<strong class="text-stone-900">Mentorship:</strong> Learn from experienced equity professionals
-							who are invested in your growth and success.
+							<strong class="text-stone-900">Mentorship.</strong> You learn directly from consultants
+							who have run these programs at issuers and at vendors.
 						</li>
 					</ul>
 				</div>

@@ -62,22 +62,22 @@
 	<section class={clsx('px-6 max-w-5xl mx-auto py-24', 'md:py-36')}>
 		<div class="grid gap-2">
 			<RedBar />
-			<h2 class={styles.h2}>Our History</h2>
+			<h2 class={styles.h2}>Our history</h2>
 		</div>
 		<div class="mt-8 max-w-full font-medium prose prose-lg">
 			<p>
-				<span class="text-red-700">Our Founding.</span> Founded in 2021 by industry experts determined
-				to share their experience and give companies a more responsive option for equity support, Accelerated
-				Equity Plans has grown into a team of seasoned administrators and consultants.
+				<span class="text-red-700">Our founding.</span> Emily Bone started AEP in 2021 after fifteen years
+				on both the issuer and vendor sides, having watched too many equity professionals run a whole
+				program alone with nowhere to turn. The team is now seventeen people, ten of them Certified Equity
+				Professionals.
 			</p>
 			<p>
-				<span class="text-red-700">Our Principles.</span> We do more than process transactions. We explain
-				the reasoning behind the work, document what matters, and make sure clients understand the program
-				they are responsible for. We also work closely with the legal, tax, accounting, payroll, and platform
-				partners involved in each plan.
+				<span class="text-red-700">Our principles.</span> We explain the reasoning behind the work, document
+				what matters, and make sure clients understand the program they are responsible for. We also work
+				closely with the legal, tax, accounting, payroll, and platform partners involved in each plan.
 			</p>
 			<p>
-				<span class="text-red-700">Our Track Record.</span> We have supported private and pre-IPO companies
+				<span class="text-red-700">Our track record.</span> We have supported private and pre-IPO companies
 				as well as large multinational public companies. That range gives our clients access to people
 				who have seen how equity programs change as a company grows, adds new award types, or enters new
 				markets.
@@ -93,7 +93,7 @@
 		<div class={clsx('max-w-2xl grid gap-8 mx-auto', 'md:pl-24')}>
 			<div class="grid gap-4">
 				<RedBar />
-				<h2 class={styles.h2}>Let Us Help You Elevate Your Stock Plan!</h2>
+				<h2 class={styles.h2}>Tell us what your stock plan needs</h2>
 			</div>
 			<div class="font-light prose">
 				<p>

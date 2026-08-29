@@ -385,7 +385,7 @@
 
 <div class:hidden={!submitted} class="flex min-h-56 items-center">
 	<div class="prose">
-		<h2>Application Received. Thank You!</h2>
+		<h2>Application received. Thank you!</h2>
 		<p>
 			We'll review your application and reach out if there's a potential fit. In the meantime, feel
 			free to email us at

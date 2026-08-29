@@ -219,7 +219,7 @@
 	<section class="px-6 pt-32 pb-12 sm:pt-40">
 		<div class="mx-auto max-w-7xl">
 			<p class="text-sm font-medium tracking-wide text-aep-red-700 uppercase">Private report</p>
-			<h1 class={clsx(styles.h1, 'mt-3 not-italic')}>SEO Rankings Report</h1>
+			<h1 class={clsx(styles.h1, 'mt-3 not-italic')}>SEO rankings report</h1>
 			<p class="mt-5 max-w-3xl text-lg leading-8 font-light text-stone-600">
 				A snapshot of how Accelerated Equity Plans is ranking for the equity compensation keywords
 				we're targeting. Positions reflect Google organic search results in the United States,

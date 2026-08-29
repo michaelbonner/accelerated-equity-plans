@@ -21,25 +21,25 @@
 	const features = [
 		{
 			icon: FolderEdit,
-			title: 'Streamlined & Optimized Equity Management',
+			title: 'Process review and documentation',
 			description:
 				'We review how your equity program operates, identify weak controls and wasted effort, and document the workflows that need to change. Then we help put the new process into daily use.'
 		},
 		{
 			icon: Presentation,
-			title: 'Expert Administrator Training & Support',
+			title: 'Administrator training',
 			description:
 				'We train administrators on equity fundamentals, the company’s platform, and its own procedures. Training can include working sessions, reference materials, and follow-up coaching.'
 		},
 		{
 			icon: Stars,
-			title: 'Data-Driven Decision Making',
+			title: 'Industry trends and analysis',
 			description:
 				'We use peer benchmarks, market trends, and regulatory updates to inform Long-Term Incentive plan decisions. Recommendations connect that data to the company’s talent goals and operating constraints.'
 		},
 		{
 			icon: Umbrella,
-			title: 'Risk Mitigation Through Best Practices',
+			title: 'Controls and compliance',
 			description:
 				'We help establish approval workflows, ownership, compliance checks, and audit records. These controls reduce risk without adding review steps that the team cannot maintain.'
 		}
@@ -47,32 +47,32 @@
 
 	const designServices = [
 		{
-			title: 'Equity Plan Design & Strategy',
+			title: 'Equity plan design & strategy',
 			description:
-				'Design equity compensation programs aligned with your business strategy and talent objectives. We help you select appropriate grant types, structure vesting schedules, set grant levels, and create plan documents that provide flexibility while ensuring compliance.'
+				'We help you select grant types, structure vesting schedules, set grant levels, and draft plan documents that your counsel can sign off on and your administrators can actually run.'
 		},
 		{
-			title: 'Process Assessment & Optimization',
+			title: 'Process assessment & optimization',
 			description:
 				'We document current equity administration workflows, identify weak points, and help implement changes that reduce manual work and risk.'
 		},
 		{
-			title: 'Governance & Controls',
+			title: 'Governance & controls',
 			description:
-				'Establish strong governance frameworks for your equity program. We help you design approval workflows, implement segregation of duties, create control documentation, and establish monitoring procedures that ensure proper oversight and compliance.'
+				'We design approval workflows, separate the duties that should not sit with one person, document the controls, and set up the monitoring that proves they ran.'
 		},
 		{
-			title: 'Compliance Program Development',
+			title: 'Compliance program development',
 			description:
 				'We help build Section 16 programs, insider trading policies, private-company 409A processes, and international compliance workflows around the company’s actual requirements.'
 		},
 		{
-			title: 'Plan Document Services',
+			title: 'Plan document services',
 			description:
-				'Expert review and drafting of equity plan documents, grant agreements, policies, and procedures. We ensure your documents are legally sound, operationally practical, and aligned with your program objectives while providing the flexibility you need.'
+				'We review and draft equity plan documents, grant agreements, policies, and procedures, with your counsel on the legal terms and us on whether the document can actually be administered.'
 		},
 		{
-			title: 'Change Management',
+			title: 'Change management',
 			description:
 				'When a process, system, or plan changes, we prepare communications, train the affected teams, and track whether the new way of working has taken hold.'
 		}
@@ -80,24 +80,24 @@
 
 	const benefits = [
 		{
-			title: 'Strategic Alignment',
+			title: 'Strategic alignment',
 			description:
-				'Your equity program should support your broader business and talent strategies, not exist in isolation. We ensure your plan design, grant practices, and operational processes align with and reinforce your organizational objectives.'
+				'We connect plan design and grant practice back to what the company is trying to do: who it needs to hire, how long it needs them, and what it can afford to dilute.'
 		},
 		{
-			title: 'Operational Excellence',
+			title: 'Less manual work',
 			description:
-				'Well-designed processes run smoothly, require less manual effort, and produce better outcomes. Our process optimization approach eliminates waste, reduces errors, and frees your team to focus on strategic initiatives rather than firefighting.'
+				'We cut the duplicate entry, the reconciliations that exist because two systems disagree, and the review steps nobody reads. Your team gets the hours back.'
 		},
 		{
-			title: 'Risk Management',
+			title: 'Risk management',
 			description:
-				'Equity administration carries regulatory, financial, and reputational risks. Our best practice approach helps you identify and mitigate these risks through proper controls, clear documentation, and compliance programs that protect your organization.'
+				'A missed Section 16 filing or a mispriced grant is expensive and public. We put controls, documentation, and compliance checks around the transactions most likely to produce one.'
 		},
 		{
-			title: 'Knowledge & Capability Building',
+			title: 'Knowledge & capability building',
 			description:
-				'Our consulting engagements build internal capability, not dependency. Through training, documentation, and knowledge transfer, we ensure your team has the skills and confidence to sustain excellence after our engagement concludes.'
+				'We train your administrators and document what we build, so the program does not depend on us being available.'
 		}
 	];
 
@@ -110,22 +110,22 @@
 		{
 			question: 'What does a process review and optimization engagement involve?',
 			answer:
-				'<p>We begin by documenting your current equity administration processes through interviews, observation, and document review. We then analyze these processes to identify inefficiencies, risks, manual work that could be automated, and gaps in controls or documentation. We provide detailed recommendations for improvements and help you prioritize and implement optimizations. Many clients see significant time savings, reduced errors, and improved compliance from process optimization engagements.</p>'
+				'<p>We document your current processes through interviews, observation, and document review, then identify the wasted steps, the risks, the manual work worth automating, and the gaps in controls or documentation. You get prioritized recommendations, and we help implement them.</p>'
 		},
 		{
 			question: 'Can you help us establish best practices for our equity program?',
 			answer:
-				'<p>Absolutely. We bring extensive knowledge of industry best practices across equity administration. This includes operational best practices (process design, quality control, documentation), compliance best practices (regulatory requirements, internal controls, audit readiness), and strategic best practices (plan design, competitive positioning, participant experience). We help you implement practices appropriate for your size, industry, and maturity level.</p>'
+				'<p>Yes. That covers process design, quality control, and documentation on the operational side; regulatory requirements, internal controls, and audit readiness on the compliance side; and plan design and participant experience on the strategic side. We scale what we recommend to your size and stage.</p>'
 		},
 		{
 			question: 'Do you provide training for our equity administration team?',
 			answer:
-				"<p>Yes, we offer comprehensive training programs tailored to your team's needs. This can include equity compensation fundamentals, platform-specific system training, process-specific training (e.g., grant processing, vesting, exercise), regulatory compliance training, and train-the-trainer programs. We customize content and delivery to match your team's experience level and learning preferences, combining presentations, hands-on exercises, and reference materials.</p>"
+				"<p>Yes. Training can cover equity compensation fundamentals, your specific platform, individual processes such as grant processing, vesting, and exercise, regulatory compliance, and train-the-trainer sessions. We match the content to your team's experience level and combine presentations, hands-on exercises, and reference materials.</p>"
 		},
 		{
 			question: 'How do you help with compliance requirements?',
 			answer:
-				'<p>We provide expert guidance on all equity-related compliance requirements including Section 16 compliance for public companies, insider trading policy development and implementation, 409A compliance for private companies, securities law compliance, international tax and regulatory requirements, and audit readiness. We help you understand requirements, design compliant processes, implement necessary controls, and document everything appropriately.</p>'
+				'<p>We cover Section 16 compliance for public companies, insider trading policy development and implementation, 409A compliance for private companies, securities law compliance, international tax and regulatory requirements, and audit readiness. We help you understand requirements, design compliant processes, implement necessary controls, and document everything appropriately.</p>'
 		},
 		{
 			question: 'What kind of ongoing support do you provide?',
@@ -203,11 +203,11 @@
 		<div class={clsx('relative grid gap-8', 'md:text-center')}>
 			<div class="grid gap-4">
 				<RedBar classes="md:mx-auto" />
-				<h1 class={clsx(styles.h1, 'text-white')}>Equity Plan & Process Design Services</h1>
+				<h1 class={clsx(styles.h1, 'text-white')}>Equity plan & process design services</h1>
 			</div>
 			<p class="mx-auto max-w-3xl text-lg font-light text-white">
-				Design and optimize your equity compensation program for maximum effectiveness. Strategic
-				guidance from plan design through operational excellence.
+				We design equity programs and the processes that run them, then help your team put both into
+				daily use.
 			</p>
 		</div>
 	</section>
@@ -223,35 +223,30 @@
 		<div class="mx-auto max-w-7xl">
 			<div class="grid gap-8 mb-16">
 				<RedBar />
-				<h2 class={styles.h2}>Strategic Equity Program Design & Optimization</h2>
+				<h2 class={styles.h2}>Strategic equity program design & optimization</h2>
 				<div class="prose max-w-4xl text-lg text-stone-700 font-light">
 					<p>
-						Effective equity compensation programs don't happen by accident. They require thoughtful
-						design, efficient processes, strong controls, and continuous refinement. Whether you're
-						establishing a new equity program, optimizing an existing one, or preparing for a major
-						transition, strategic planning and smart process design create the foundation for
-						success.
+						Most equity programs are not designed so much as accumulated. A grant type gets added
+						for one hire, a spreadsheet fills a gap in the platform, an approval step outlives the
+						person who asked for it. The result works until volume, an audit, or a transaction tests
+						it.
 					</p>
 					<p>
-						At AEP, we help both private and public companies design equity programs that align with
-						business objectives, attract and retain talent, and operate efficiently. Our consulting
-						approach combines strategic thinking with operational practicality. We don't just
-						recommend what sounds good in theory. We design solutions that work in your environment
-						with your constraints.
+						We help private and public companies design programs that hold up under that pressure.
+						Every recommendation has to be something your team can run on a Tuesday, with the
+						headcount and systems you actually have.
 					</p>
 					<p>
-						Our team brings deep expertise in equity plan design, regulatory compliance, operational
-						best practices, and industry trends. We've worked with hundreds of companies across
-						industries and stages, giving us perspective on what works, what doesn't, and how to
-						avoid common pitfalls. We partner with you to build programs and processes that deliver
-						results while managing risk and controlling costs.
+						Our consultants have designed and administered these programs from inside issuer teams,
+						at vendors, and in advisory practices, at companies from pre-IPO through large
+						multinational public filers.
 					</p>
 				</div>
 			</div>
 
 			<div class="grid gap-8 mt-20">
 				<RedBar />
-				<h2 class={styles.h2}>Our Plan & Process Design Services</h2>
+				<h2 class={styles.h2}>Our plan & process design services</h2>
 				<div class={clsx('grid gap-6 mt-8', 'md:grid-cols-2')}>
 					{#each features as feature (feature.title)}
 						<div
@@ -276,7 +271,7 @@
 		<div class="mx-auto max-w-7xl">
 			<div class="grid gap-8 mb-12">
 				<RedBar />
-				<h2 class={styles.h2}>Comprehensive Design & Consulting Services</h2>
+				<h2 class={styles.h2}>Comprehensive design & consulting services</h2>
 				<p class="text-lg text-stone-600 font-light max-w-3xl">
 					From initial plan design to ongoing optimization, we provide expert guidance across all
 					aspects of your equity program
@@ -298,7 +293,7 @@
 		<div class="mx-auto max-w-7xl">
 			<div class="grid gap-8 mb-12">
 				<RedBar />
-				<h2 class={styles.h2}>The Value of Expert Design & Optimization</h2>
+				<h2 class={styles.h2}>The value of expert design & optimization</h2>
 			</div>
 
 			<div class={clsx('grid gap-6', 'md:grid-cols-2')}>
@@ -316,52 +311,48 @@
 		<div class="mx-auto max-w-5xl">
 			<div class="grid gap-8 mb-12 text-center">
 				<BlackBar classes="mx-auto" />
-				<h2 class={styles.h2}>Our Consulting Approach</h2>
+				<h2 class={styles.h2}>Our consulting approach</h2>
 			</div>
 
 			<div class="grid gap-8 text-white prose prose-lg max-w-none prose-invert">
 				<div>
-					<h3 class={clsx(styles.h3)}>1. Understand Your Context</h3>
+					<h3 class={clsx(styles.h3)}>1. Understand your context</h3>
 					<p class="font-light text-white/90">
-						We begin by deeply understanding your business, culture, objectives, and constraints.
-						This context is essential for designing solutions that fit your organization rather than
-						forcing you into generic frameworks.
+						We learn your business, your constraints, and the history behind the current setup
+						before recommending anything.
 					</p>
 				</div>
 
 				<div>
-					<h3 class={clsx(styles.h3)}>2. Analyze Current State</h3>
+					<h3 class={clsx(styles.h3)}>2. Analyze current state</h3>
 					<p class="font-light text-white/90">
-						Through document review, process observation, stakeholder interviews, and data analysis,
-						we gain a complete picture of your current program, processes, and challenges. This
-						assessment forms the foundation for our recommendations.
+						We review documents, watch the processes run, interview the people who own them, and
+						check the data against what the process is supposed to produce.
 					</p>
 				</div>
 
 				<div>
-					<h3 class={clsx(styles.h3)}>3. Design Optimal Solutions</h3>
+					<h3 class={clsx(styles.h3)}>3. Design optimal solutions</h3>
 					<p class="font-light text-white/90">
-						We develop recommendations grounded in best practices but tailored to your specific
-						needs. Our designs account for competing objectives such as effectiveness and
-						simplicity, automation and control, or flexibility and governance.
+						Every design trades something off: automation against control, flexibility against
+						governance, thoroughness against the hours your team has. We make those trades
+						explicitly and tell you what each one costs.
 					</p>
 				</div>
 
 				<div>
-					<h3 class={clsx(styles.h3)}>4. Support Implementation</h3>
+					<h3 class={clsx(styles.h3)}>4. Support implementation</h3>
 					<p class="font-light text-white/90">
-						Good ideas only create value when successfully implemented. We provide hands-on support
-						to help you execute changes, including project management, change management, training,
-						documentation, and ongoing coaching until new processes are fully adopted.
+						We stay through the change itself: project management, training, documentation, and
+						coaching until the new process is the one people actually use.
 					</p>
 				</div>
 
 				<div>
-					<h3 class={clsx(styles.h3)}>5. Enable Continuous Improvement</h3>
+					<h3 class={clsx(styles.h3)}>5. Enable continuous improvement</h3>
 					<p class="font-light text-white/90">
-						We equip your team with frameworks, tools, and knowledge to sustain improvements and
-						continue optimizing over time. Our goal is building internal capability, not creating
-						dependency on external consultants.
+						We hand over the tools and the reasoning behind each decision, so your team can keep
+						adjusting the program without calling us back.
 					</p>
 				</div>
 			</div>
@@ -372,35 +363,34 @@
 		<div class="mx-auto max-w-4xl">
 			<div class="grid gap-8 mb-12">
 				<RedBar />
-				<h2 class={styles.h2}>Who Benefits from Our Consulting Services</h2>
+				<h2 class={styles.h2}>Who benefits from our consulting services</h2>
 			</div>
 
 			<div class="grid gap-8 text-stone-700 prose prose-lg max-w-none">
 				<div>
 					<h3 class={clsx(styles.h3, 'text-stone-900')}>
-						Companies Establishing New Equity Programs
+						Companies establishing new equity programs
 					</h3>
 					<p class="font-light">
-						Getting it right from the start prevents costly mistakes and rework. We help you design
-						plans, select platforms, establish processes, and build internal capability to manage
-						your program effectively from day one.
+						Early decisions about grant types, vesting, and record-keeping are expensive to reverse
+						later. We help you design the plan, pick the platform, and set up the processes before
+						the first grant goes out.
 					</p>
 				</div>
 
 				<div>
 					<h3 class={clsx(styles.h3, 'text-stone-900')}>
-						Organizations with Underperforming Programs
+						Organizations with underperforming programs
 					</h3>
 					<p class="font-light">
-						If your equity program feels inefficient, risky, or misaligned with objectives, we can
-						help. Through comprehensive assessment and redesign, we transform struggling programs
-						into well-oiled operations that support your business.
+						If your program takes too many hours, produces surprises at audit, or no longer matches
+						what you promised employees, we assess it and rebuild the parts that are failing.
 					</p>
 				</div>
 
 				<div>
 					<h3 class={clsx(styles.h3, 'text-stone-900')}>
-						Companies Preparing for Major Transitions
+						Companies preparing for major transitions
 					</h3>
 					<p class="font-light">
 						IPOs, significant growth, M&A, and other transitions often require program redesign. We
@@ -411,12 +401,11 @@
 
 				<div>
 					<h3 class={clsx(styles.h3, 'text-stone-900')}>
-						Teams Needing Knowledge & Skill Development
+						Teams needing knowledge & skill development
 					</h3>
 					<p class="font-light">
-						Build internal expertise through our training and coaching services. We transfer
-						knowledge that empowers your team to manage your program confidently and competently
-						without continuous external support.
+						We train and coach your administrators so the program does not depend on an outside
+						consultant staying on retainer.
 					</p>
 				</div>
 			</div>

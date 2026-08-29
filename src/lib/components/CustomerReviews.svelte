@@ -11,7 +11,7 @@
 	>
 		<div class="grid gap-2">
 			<RedBar classes="mx-auto" />
-			<h2 class={styles.h2}>What Our Customers are Saying</h2>
+			<h2 class={styles.h2}>What our customers are saying</h2>
 		</div>
 
 		<div class="mx-auto w-full max-w-7xl">

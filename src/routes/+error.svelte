@@ -21,22 +21,21 @@
 				<p class="text-9xl font-bold font-headings text-red-700">{page.status}</p>
 				<h1 class={styles.h1}>
 					{#if page.status === 404}
-						Page Not Found
+						Page not found
 					{:else}
-						Something Went Wrong
+						Something went wrong
 					{/if}
 				</h1>
 				<p class="mx-auto mt-4 max-w-xl text-lg font-light leading-8 text-stone-300">
 					{#if page.status === 404}
-						The page you're looking for doesn't exist or has been moved. Let's get you back on
-						track.
+						This page doesn't exist, or it has moved.
 					{:else}
 						{page.error?.message || 'An unexpected error occurred. Please try again later.'}
 					{/if}
 				</p>
 				<div class="flex flex-wrap gap-4 justify-center mt-4">
-					<a href={resolve('/')} class={styles.redButton}>Go to Homepage</a>
-					<a href={resolve('/contact')} class={styles.darkButton}>Contact Us</a>
+					<a href={resolve('/')} class={styles.redButton}>Go to the homepage</a>
+					<a href={resolve('/contact')} class={styles.darkButton}>Contact us</a>
 				</div>
 			</div>
 		</div>

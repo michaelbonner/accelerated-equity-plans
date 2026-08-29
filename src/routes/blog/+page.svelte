@@ -131,7 +131,7 @@
 			{:else}
 				<div class="grid gap-2">
 					<RedBar />
-					<h2 class={clsx(styles.h2, 'max-w-[24ch]')}>Latest Articles</h2>
+					<h2 class={clsx(styles.h2, 'max-w-[24ch]')}>Latest articles</h2>
 				</div>
 
 				{#if selectedTag}

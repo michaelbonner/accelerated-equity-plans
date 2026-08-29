@@ -91,7 +91,7 @@
 				{
 					name: 'Equity Plan Administration',
 					href: '/services/equity-plan-administration',
-					description: 'Comprehensive equity management and administration services'
+					description: 'Equity management and stock plan administration services'
 				},
 				{
 					name: 'Vendor Support',
@@ -192,7 +192,7 @@
 									'@type': 'Offer',
 									itemOffered: {
 										'@type': 'Service',
-										name: 'Comprehensive Equity Management',
+										name: 'Full Grant Lifecycle Management',
 										description:
 											'Grant lifecycle administration coordinated with Payroll, HR, Accounting, Legal, and Treasury.'
 									}
@@ -247,8 +247,9 @@
 									'@type': 'Offer',
 									itemOffered: {
 										'@type': 'Service',
-										name: 'Streamlined System Implementation',
-										description: 'Expedited system setup and smooth transition to new platforms.'
+										name: 'Platform Implementation',
+										description:
+											'Configuration, testing, and cutover from your current equity platform.'
 									}
 								},
 								{
@@ -271,7 +272,7 @@
 									'@type': 'Offer',
 									itemOffered: {
 										'@type': 'Service',
-										name: 'Comprehensive Functionality Testing',
+										name: 'Functionality Testing',
 										description: 'Thorough incorporation and testing of equity management systems.'
 									}
 								}
@@ -288,7 +289,7 @@
 							name: 'Accelerated Equity Plans'
 						},
 						description:
-							'Comprehensive support for strategic transactions, equity events, plan modifications, automation, global mobility, and system integrations.',
+							'Support for strategic transactions, equity events, plan modifications, automation, global mobility, and system integrations.',
 						serviceType: 'Advanced Project Support',
 						areaServed: 'United States',
 						hasOfferCatalog: {
@@ -324,7 +325,7 @@
 									'@type': 'Offer',
 									itemOffered: {
 										'@type': 'Service',
-										name: 'Seamless Integrations',
+										name: 'System Integrations',
 										description: 'Integration of equity systems with HRIS and Payroll.'
 									}
 								}
@@ -352,9 +353,9 @@
 									'@type': 'Offer',
 									itemOffered: {
 										'@type': 'Service',
-										name: 'Streamlined & Optimized Equity Management',
+										name: 'Process Review and Redesign',
 										description:
-											'Review, enhancement, and documentation of equity programs for efficiency and risk minimization.'
+											'Review and documentation of equity program processes, and redesign of the steps that create risk.'
 									}
 								},
 								{
@@ -362,8 +363,7 @@
 									itemOffered: {
 										'@type': 'Service',
 										name: 'Expert Administrator Training & Support',
-										description:
-											'Comprehensive training for administrators on systems and processes.'
+										description: 'Training for administrators on systems and processes.'
 									}
 								},
 								{
@@ -426,7 +426,7 @@
 									itemOffered: {
 										'@type': 'Service',
 										name: 'Automation Design and Resources',
-										description: 'Automation solutions for process streamlining and productivity.'
+										description: 'Automation of repetitive equity processes.'
 									}
 								},
 								{
